@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Suspense, useRef, useState } from 'react'
+import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 
+import { Environment, OrbitControls } from "@react-three/drei";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
+const Model = () => {
+  const gltf = useLoader(GLTFLoader, "./duck.gltf");
+  return (
+    <>
+      <primitive object={gltf.scene} scale={1} />
+    </>
+  );
+};
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <div className="App">
+        <Canvas className='Canvas'>
+          <Suspense fallback={null}>
+            {/* <pointLight position={[10, 10, 10]} /> */}
+            <directionalLight />
+            <ambientLight color={0x7f7f7f}/>
+            <Model />
+            <OrbitControls />
+            {/* <Environment preset="sunset" background /> */}
+          </Suspense>
+        </Canvas>
+      </div>
+    </body>
   );
 }
 
