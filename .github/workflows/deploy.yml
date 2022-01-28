@@ -16,11 +16,13 @@ jobs:
       with:
         node-version: '14'
     
-    - name: Install yarn and run unittest
-      run: |
-        yarn
-        yarn build
-        ls
+    - uses: c-hive/gha-yarn-cache@v2
+
+    - name: Install yarn
+      run: yarn
+    
+    - name: Build website
+      run: yarn build
       env:
         CI: false
       
