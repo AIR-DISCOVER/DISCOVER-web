@@ -24,8 +24,7 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: AIR-DISCOVER/DISCOVER-web/discover-web
-        registry: docker.pkg.github.com
-        username: AIR-DISCOVER # ${{ secrets.GITHUB_USERNAME }}
+        registry: ghcr.io
+        username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-        dockerfile: Dockerfile
         tags: latest
