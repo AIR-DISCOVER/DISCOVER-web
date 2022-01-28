@@ -1,8 +1,8 @@
 import './App.css';
-import React, { Suspense, useRef, useState } from 'react'
-import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import React, { Suspense} from 'react'
+import { Canvas, useLoader } from '@react-three/fiber'
 
-import { Environment, OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const Model = () => {
