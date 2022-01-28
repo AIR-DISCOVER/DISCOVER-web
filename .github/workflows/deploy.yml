@@ -21,8 +21,8 @@ jobs:
         yarn
         yarn build
         ls
-      # env:
-      #   CI: true
+      env:
+        CI: false
       
     - name: Publish to Github Container registry
       uses: elgohr/Publish-Docker-Github-Action@master
