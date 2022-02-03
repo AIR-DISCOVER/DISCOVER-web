@@ -1,34 +1,103 @@
 import './App.css';
-import React, { Suspense} from 'react'
-import { Canvas, useLoader } from '@react-three/fiber'
-
-import { OrbitControls } from "@react-three/drei";
+import React, { Suspense, useRef } from 'react'
+import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-
+import ResponsiveAppBar from './components/layouts/Header';
+import { makeStyles } from '@mui/styles';
+import { OrbitControls, useGLTF } from '@react-three/drei';
+import { OrthographicCamera } from 'three';
 const Model = () => {
-  const gltf = useLoader(GLTFLoader, "./duck.gltf");
-  return (
-    <>
-      <primitive object={gltf.scene} scale={1} />
-    </>
+  const ref = useRef()
+  // const rest = 
+  const scenes = [
+    [useLoader(GLTFLoader, "./rest.gltf"), [-137, -40, 200]],
+    [useLoader(GLTFLoader, "./office1.gltf"), [-319, -22.25, -210]],
+    [useLoader(GLTFLoader, "./office2.gltf"), [-70.7, -40, -32]],
+    [useLoader(GLTFLoader, "./indoor.gltf"), [-217.2, -22.25, 93]],
+    [useLoader(GLTFLoader, "./meeting.gltf"), [-311, -22.25, 128.35]],
+
+  ]
+  // move model:
+  // useFrame((state, delta) => { ref.current.rotation.y += 0.000 })
+  return (<group ref={ref}>
+    {scenes.map((scene, idx) => {
+      return (<mesh position={scene[1]} key={idx}>
+        <primitive object={scene[0].scene} scale={1} />
+      </mesh>)
+    })}
+  </group>
   );
 };
-function App() {
+useGLTF.preload('./rest.gltf')
+useGLTF.preload('./office1.gltf')
+useGLTF.preload('./office2.gltf')
+useGLTF.preload('./work1.gltf')
+
+function Dolly() {
+  // This one makes the camera move in and out
+  useFrame(({ clock, camera }) => {
+    // camera.position.z = 0 + Math.sin(clock.getElapsedTime()) * 30
+    // camera.rotation.y = Math.PI * Math.cos(clock.getElapsedTime() * 0.25)
+    // camera.rotation.y = Math.PI
+    // camera.position.z = -20
+    
+    // News
+    camera.position.set(-30, 0, 100)
+    camera.rotation.set(0, 0, 0)
+    // camera.fov = 60 // FIXME
+
+    // About
+    camera.position.set(-80, 0, -20)
+    camera.rotation.set(0, -Math.PI / 6, 0)
+    
+    // Research
+    camera.position.set(-45, 0, 210)
+    camera.rotation.set(0, Math.PI / 9, 0)
+    
+    // People
+    camera.position.set(-20, -5, -30)
+    camera.rotation.set(0, -Math.PI / 12 * 5, 0)
+
+    // Join Us
+    camera.position.set(-40, -3, 80)
+    camera.rotation.set(0, Math.PI / 24 * 5, 0)
+
+    // console.log(camera.rotation)
+
+  })
+  return null
+}
+
+const Scene = () => {
   return (
-    <body>
+    <Canvas className='Canvas' camera={{ fov: 60, position: [0, 0, 0] }}>
+      <Suspense fallback={null}>
+        <directionalLight />
+        <ambientLight color={0x7f7f7f} />
+        <Model />
+        {/* <OrbitControls /> */}
+        <Dolly />
+      </Suspense>
+    </Canvas>
+  );
+}
+
+
+const useStyles = makeStyles(theme => ({
+  appbar: { position: 'sticky', top: 0 },
+  body: { position: 'sticky', top: 0 },
+}))
+
+function App() {
+  const classes = useStyles();
+  return (<>
+    {/* <ResponsiveAppBar className={classes.appbar}></ResponsiveAppBar> */}
+    <body className={classes.body}>
       <div className="App">
-        <Canvas className='Canvas'>
-          <Suspense fallback={null}>
-            {/* <pointLight position={[10, 10, 10]} /> */}
-            <directionalLight />
-            <ambientLight color={0x7f7f7f}/>
-            <Model />
-            <OrbitControls />
-            {/* <Environment preset="sunset" background /> */}
-          </Suspense>
-        </Canvas>
+        <Scene />
       </div>
     </body>
+  </>
   );
 }
 

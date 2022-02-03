@@ -25,12 +25,3 @@ jobs:
       run: yarn build
       env:
         CI: false
-      
-    - name: Publish to Github Container registry
-      uses: elgohr/Publish-Docker-Github-Action@master
-      with:
-        name: AIR-DISCOVER/discover-web
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-        tags: latest
