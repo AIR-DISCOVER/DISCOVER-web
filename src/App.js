@@ -33,6 +33,28 @@ useGLTF.preload('./office1.gltf')
 useGLTF.preload('./office2.gltf')
 useGLTF.preload('./work1.gltf')
 
+const linear = (x, fn) => (fn(x))
+
+const AnimeGenerate = (fn, fade = linear) => ((camera, time, duration = 2) => {
+  if (time < duration) {
+    camera.position.x = fade(time / duration, fn)
+    camera.position.y = fade(time / duration, fn)
+    camera.position.z = fade(time / duration, fn)
+    camera.rotation.x = fade(time / duration, fn)
+    camera.rotation.y = fade(time / duration, fn)
+    camera.rotation.z = fade(time / duration, fn)
+  }
+  else {
+    camera.position.x = fn(1.)
+    camera.position.y = fn(1.)
+    camera.position.z = fn(1.)
+    camera.rotation.x = fn(1.)
+    camera.rotation.y = fn(1.)
+    camera.rotation.z = fn(1.)
+  }
+}
+)
+
 function Dolly() {
   // This one makes the camera move in and out
   useFrame(({ clock, camera }) => {
@@ -40,27 +62,27 @@ function Dolly() {
     // camera.rotation.y = Math.PI * Math.cos(clock.getElapsedTime() * 0.25)
     // camera.rotation.y = Math.PI
     // camera.position.z = -20
-    
+
     // News
     camera.position.set(-30, 0, 100)
     camera.rotation.set(0, 0, 0)
-    // camera.fov = 60 // FIXME
+    camera.setFocalLength(40 + 10 * Math.sin(clock.getElapsedTime() * 2))
 
-    // About
-    camera.position.set(-80, 0, -20)
-    camera.rotation.set(0, -Math.PI / 6, 0)
-    
-    // Research
-    camera.position.set(-45, 0, 210)
-    camera.rotation.set(0, Math.PI / 9, 0)
-    
-    // People
-    camera.position.set(-20, -5, -30)
-    camera.rotation.set(0, -Math.PI / 12 * 5, 0)
+    // // About
+    // camera.position.set(-80, 0, -20)
+    // camera.rotation.set(0, -Math.PI / 6, 0)
 
-    // Join Us
-    camera.position.set(-40, -3, 80)
-    camera.rotation.set(0, Math.PI / 24 * 5, 0)
+    // // Research
+    // camera.position.set(-45, 0, 210)
+    // camera.rotation.set(0, Math.PI / 9, 0)
+
+    // // People
+    // camera.position.set(-20, -5, -30)
+    // camera.rotation.set(0, -Math.PI / 12 * 5, 0)
+
+    // // Join Us
+    // camera.position.set(-40, -3, 80)
+    // camera.rotation.set(0, Math.PI / 24 * 5, 0)
 
     // console.log(camera.rotation)
 
