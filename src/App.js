@@ -1,11 +1,13 @@
 import './App.css';
-import React, { Suspense, useRef } from 'react'
-import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import React, { Suspense, useRef, useState } from 'react'
+import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import ResponsiveAppBar from './components/layouts/Header';
 import { makeStyles } from '@mui/styles';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { OrthographicCamera } from 'three';
+import { Button } from '@mui/material';
+import { PerspectiveCamera } from 'three';
 const Model = () => {
   const ref = useRef()
   // const rest = 
@@ -55,18 +57,39 @@ const AnimeGenerate = (fn, fade = linear) => ((camera, time, duration = 2) => {
 }
 )
 
-function Dolly() {
-  // This one makes the camera move in and out
+const Another = () => {
   useFrame(({ clock, camera }) => {
+    camera.position.set(-80, 0, -20)
+    camera.rotation.set(0, -Math.PI / 6, 0)
+  })
+  return null
+}
+
+function Dolly(state_in) {
+  // This one makes the camera move in and out
+
+  useFrame((state, delta) => {
     // camera.position.z = 0 + Math.sin(clock.getElapsedTime()) * 30
     // camera.rotation.y = Math.PI * Math.cos(clock.getElapsedTime() * 0.25)
     // camera.rotation.y = Math.PI
     // camera.position.z = -20
 
     // News
-    camera.position.set(-30, 0, 100)
-    camera.rotation.set(0, 0, 0)
-    camera.setFocalLength(40 + 10 * Math.sin(clock.getElapsedTime() * 2))
+    if (state_in.state_in) {
+
+      state.camera.position.set(-30, 0, 100)
+      state.camera.rotation.set(0, 0, 0)
+      state.camera.setFocalLength(40 + 10 * Math.sin(state.clock.getElapsedTime() * 2))
+      state.camera.updateProjectionMatrix();
+    } else {
+      state.camera.position.set(-80, 0, -20)
+      state.camera.rotation.set(0, -Math.PI / 6, 0)
+      state.camera.setFocalLength(40 + 10 * Math.sin(state.clock.getElapsedTime() * 2))
+      state.camera.updateProjectionMatrix();
+    }
+    // console.log(state_in.state_in)
+    // (state_in)
+    // camera.setFocalLength(state ? 60 : 30)
 
     // // About
     // camera.position.set(-80, 0, -20)
@@ -90,15 +113,19 @@ function Dolly() {
   return null
 }
 
-const Scene = () => {
+const Scene = (state) => {
+  var camera = new PerspectiveCamera({ fov: 60, position: [0, 0, 0] })
+
   return (
-    <Canvas className='Canvas' camera={{ fov: 60, position: [0, 0, 0] }}>
+    <Canvas className='Canvas' camera={camera}>
       <Suspense fallback={null}>
         <directionalLight />
         <ambientLight color={0x7f7f7f} />
         <Model />
         {/* <OrbitControls /> */}
-        <Dolly />
+        {/* <Dolly /> */}
+        <Dolly state_in={state.state} />
+        {/* {state ? (<Another />) : (<Dolly state={state} />)} */}
       </Suspense>
     </Canvas>
   );
@@ -111,12 +138,15 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function App() {
+  const [state, setState] = useState(true)
+
   const classes = useStyles();
   return (<>
     {/* <ResponsiveAppBar className={classes.appbar}></ResponsiveAppBar> */}
+    <Button onClick={() => { setState(!state); console.log(state) }}>Click me{state ? "" : ": Freeze!"}</Button>
     <body className={classes.body}>
       <div className="App">
-        <Scene />
+        <Scene state={state} />
       </div>
     </body>
   </>
