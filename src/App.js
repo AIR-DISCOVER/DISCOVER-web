@@ -61,12 +61,12 @@ const PathGenerate = (src, dst) => (t) => {
   if (t < 1) {
 
     return [
-      src[0] * t + dst[0] * (1 - t),
-      src[1] * t + dst[1] * (1 - t),
-      src[2] * t + dst[2] * (1 - t),
-      src[3] * t + dst[3] * (1 - t),
-      src[4] * t + dst[4] * (1 - t),
-      src[5] * t + dst[5] * (1 - t),
+      src[0] * (1 - t) + dst[0] * t,
+      src[1] * (1 - t) + dst[1] * t,
+      src[2] * (1 - t) + dst[2] * t,
+      src[3] * (1 - t) + dst[3] * t,
+      src[4] * (1 - t) + dst[4] * t,
+      src[5] * (1 - t) + dst[5] * t,
     ]
   } else {
     return dst;
@@ -111,50 +111,53 @@ const Dolly = (states) => {
 
 const RefDolly = forwardRef((states, ref) => {
   const [trigger, setTrigger] = useState(-1);
-  const [fn, setFn] = useState((t) => [0, 0, 0, 0, 0, 0]);
+  const [fn, setFn] = useState(() => ((t) => [t, 0, 0, 0, 0, 0]));
   const clock = useThree((state) => state.clock)
   const camera = useThree((state) => state.camera)
   useImperativeHandle(ref, () => ({
-    setTrig() { setTrigger(clock.getElapsedTime()) }
-  }));
-  useImperativeHandle(ref, () => ({
-    setF() {
+    setTrig: () => { setTrigger(clock.getElapsedTime()) },
+    setF: (option) => {
       var dst = null
-      if (states.tab === 'Home') {
+      if (option === 'Home') {
         dst = [0, 0, 0, 0, 0, 0]
-      } else if (states.tab === 'News') {
+      } else if (option === 'News') {
         dst = [-30, 0, 100, 0, 0, 0]
-      } else if (states.tab === 'About') {
-        dst = [-80, 0, -20, 0, -Math.Pi / 6, 0]
-      } else if (states.tab === 'Research') {
-        dst = [-45, 0, 210, 0, Math.Pi / 9, 0]
-      } else if (states.tab === 'People') {
+      } else if (option === 'About') {
+        dst = [-80, 0, -20, 0, -Math.PI / 6, 0]
+      } else if (option === 'Research') {
+        dst = [-45, 0, 210, 0, Math.PI / 9, 0]
+      } else if (option === 'People') {
         dst = [-20, -5, -30, 0, -Math.PI / 12 * 5, 0]
-      } else if (states.tab === 'Join Us') {
+      } else if (option === 'Join Us') {
         dst = [-40, -3, 80, 0, Math.PI / 24 * 5, 0]
       } else {
         alert("invalid")
       }
-      setFn(PathGenerate([
+      console.log(trigger, 'x', camera.position.x, 'y', camera.position.y, 'z', camera.position.z, 'rx', camera.rotation.x, 'ry', camera.rotation.y, 'rz', camera.rotation.z, dst[0], dst[1], dst[2], dst[3], dst[4], dst[5])
+      setFn(() => (PathGenerate([
         camera.position.x,
         camera.position.y,
         camera.position.z,
         camera.rotation.x,
         camera.rotation.y,
         camera.rotation.z,
-      ], dst))
+      ], dst)))
     }
   }));
   useFrame((state, delta) => {
     if (states.tab === "Home") {
+      state.camera.position.set(0, 0, 0)
+      state.camera.rotation.set(0, 0, 0)
       state.camera.position.z = 0 + Math.sin(state.clock.getElapsedTime()) * 30
       state.camera.rotation.y = Math.PI * Math.cos(state.clock.getElapsedTime() * 0.25)
     } else {
-      const position = fn(state.clock.getElapsedTime() - trigger)
+      const position = fn((state.clock.getElapsedTime() - trigger) / 1)
       state.camera.position.set(position[0], position[1], position[2])
-      state.camera.rotation.set(position[4], position[5], position[6])
-      state.camera.setFocalLength(40 + 10 * Math.sin(state.clock.getElapsedTime() * 2))
+      state.camera.rotation.set(position[3], position[4], position[5])
+      // state.camera.setFocalLength(40 + 10 * Math.sin(state.clock.getElapsedTime() * 2))
     }
+    // console.log('x', state.camera.position.x, 'y', state.camera.position.y, 'z', state.camera.position.z, 'rx', state.camera.rotation.x, 'ry', state.camera.rotation.y, 'rz', state.camera.rotation.z)
+    // console.log((state.clock.getElapsedTime() - trigger))
     state.camera.updateProjectionMatrix();
   })
   return null
@@ -168,7 +171,7 @@ const Scene = (states) => {
         <ambientLight color={0x7f7f7f} />
         <Model />
         {/* <OrbitControls /> */}
-        <Dolly ref={states.ref} state_in={states.state} tab={states.tab}  />
+        <RefDolly ref={states.cref} state_in={states.state} tab={states.tab} />
       </Suspense>
     </Canvas>
   );
@@ -190,19 +193,17 @@ function App() {
   const classes = useStyles();
 
   return (<>
-    {/* <ResponsiveAppBar className={classes.appbar}></ResponsiveAppBar> */}
     {tabs.map((x, idx) => (<Button key={idx} onClick={() => {
       setState(!state);
       setTab(x);
-      // controlRef.current.setTrig()
-      // controlRef.current.setF()
-      // setTrigger(clock.getElapsedTime());
-      // setFn(PathGenerate([camera.position.x, camera.position.y, camera.position.z, camera.rotation.x, camera.rotation.y, camera.rotation.z], [0, 0, 0, 0, 0, 0]));
+      // console.log(controlRef.current)
+      controlRef.current.setTrig()
+      controlRef.current.setF(x)
     }}>{x}</Button>))}
 
     <body className={classes.body}>
       <div className="App">
-        <Scene ref={controlRef} state={state} tab={tab} />
+        <Scene cref={controlRef} state={state} tab={tab} />
       </div>
     </body>
   </>
