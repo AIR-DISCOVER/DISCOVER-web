@@ -137,7 +137,6 @@ const RefDolly = forwardRef((states, ref) => {
       } else {
         alert("invalid")
       }
-      console.log(trigger, 'x', camera.position.x, 'y', camera.position.y, 'z', camera.position.z, 'rx', camera.rotation.x, 'ry', camera.rotation.y, 'rz', camera.rotation.z, dst[0], dst[1], dst[2], dst[3], dst[4], dst[5])
       if (tab !== option) {
         setFn(() => (
           tab === 'Home' || option === 'Home' ?
@@ -163,8 +162,6 @@ const RefDolly = forwardRef((states, ref) => {
       state.camera.rotation.y = Math.PI * Math.cos(state.clock.getElapsedTime() * 0.25)
     } else {
       const position = fn((state.clock.getElapsedTime() - trigger) / 1)
-      console.log(fn)
-      console.log(position)
       state.camera.position.set(position[0], position[1], position[2])
       state.camera.rotation.set(position[3], position[4], position[5])
       // state.camera.setFocalLength(40 + 10 * Math.sin(state.clock.getElapsedTime() * 2))
