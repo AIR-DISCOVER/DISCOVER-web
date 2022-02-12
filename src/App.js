@@ -211,16 +211,16 @@ const SmoothPathGenerateInner = (x, y) => (z) => {
   else if (x === "About" && y === "Research") {
     if (z <= 0.3) { let tmp = z; return [-80 + 200 * tmp, 0, -20, 0, -Math.PI / 6 + Math.PI * tmp / 2.4, 0]; }
     else if (z <= 0.4) { let tmp = z - 0.3; return [-20 + 30 * tmp, 0, -20, 0, - Math.PI / 24 + Math.PI * tmp / 2.4, 0]; }
-    else if (z <= 0.5) { let tmp = z - 0.4; return [-17, -20 + 2200 * tmp, 0, 0, 0, 0]; }
-    else if (z <= 0.6) { let tmp = z - 0.5; return [-17 - 30 * tmp, 200 + 100 * tmp, 0, 0, 0, 0]; }
-    else if (z <= 0.7) { let tmp = z - 0.6; return [-20 - 150 * tmp, 0, 210, 0, Math.PI * tmp / 1.8, 0]; }
-    else { let tmp = (z - 0.7) / 3; return [-35 - 10 * tmp, 0, 210, 0, Math.PI / 18 + Math.PI * tmp / 1.8, 0]; }
+    else if (z <= 0.7) { let tmp = (z - 0.4) / 3; return [-17, 0, -20 + 2200 * tmp, 0, 0, 0]; }
+    else if (z <= 0.8) { let tmp = z - 0.7; return [-17 - 30 * tmp, 0, 200 + 100 * tmp, 0, 0, 0]; }
+    else if (z <= 0.9) { let tmp = z - 0.8; return [-20 - 150 * tmp, 0, 210, 0, Math.PI * tmp / 1.8, 0]; }
+    else { let tmp = z - 0.9; return [-35 - 100 * tmp, 0, 210, 0, Math.PI / 18 + Math.PI * tmp / 1.8, 0]; }
   }
   else if (x === "Research" && y === "About") {
-    if (z <= 0.3) { let tmp = z / 3; return [-45 + 10 * tmp, 0, 210, 0, Math.PI / 9 - Math.PI * tmp / 1.8, 0]; }
-    else if (z <= 0.4) { let tmp = z - 0.3; return [-35 + 150 * tmp, 0, 210, 0, Math.PI / 18 - Math.PI * tmp / 1.8, 0]; }
-    else if (z <= 0.5) { let tmp = z - 0.4; return [-20 + 30 * tmp, 210 - 100 * tmp, 0, 0, 0, 0]; }
-    else if (z <= 0.6) { let tmp = z - 0.5; return [-17, 200 - 2200 * tmp, 0, 0, 0, 0]; }
+    if (z <= 0.1) { let tmp = z ; return [-45 + 100 * tmp, 0, 210, 0, Math.PI / 9 - Math.PI * tmp / 1.8, 0]; }
+    else if (z <= 0.2) { let tmp = z - 0.1; return [-35 + 150 * tmp, 0, 210, 0, Math.PI / 18 - Math.PI * tmp / 1.8, 0]; }
+    else if (z <= 0.3) { let tmp = z - 0.2; return [-20 + 30 * tmp, 0, 210 - 100 * tmp, 0, 0, 0]; }
+    else if (z <= 0.6) { let tmp = (z - 0.3) / 3; return [-17, 0, 200 - 2200 * tmp, 0, 0, 0]; }
     else if (z <= 0.7) { let tmp = z - 0.6; return [-17 - 30 * tmp, 0, -20, 0, - Math.PI * tmp / 2.4, 0]; }
     else { let tmp = z - 0.7; return [-20 - 200 * tmp, 0, -20, 0, -Math.PI / 24 - Math.PI * tmp / 2.4, 0]; }
   }
@@ -228,14 +228,14 @@ const SmoothPathGenerateInner = (x, y) => (z) => {
     if (z <= 0.1) { let tmp = z; return [-45 + 100 * tmp, 0, 210, 0, Math.PI / 9 - Math.PI * tmp / 1.8, 0]; }
     else if (z <= 0.2) { let tmp = z - 0.1; return [-35 + 150 * tmp, 0, 210, 0, Math.PI / 18 - Math.PI * tmp / 1.8, 0]; }
     else if (z <= 0.3) { let tmp = z - 0.2; return [-20 + 30 * tmp, 0, 210 - 100 * tmp, 0, 0, 0]; }
-    else if (z <= 0.4) { let tmp = z - 0.3; return [-17, 0, 200 - 2200 * tmp, 0, 0, 0]; }
-    else if (z <= 0.8) { let tmp = z - 0.4; return [-17 - 7.5 * tmp, - 10 * tmp, -20 - 20 * tmp, 0, - Math.PI * tmp / 1.2, 0]; }
+    else if (z <= 0.7) { let tmp = (z - 0.3) / 4; return [-17, 0, 200 - 2200 * tmp, 0, 0, 0]; }
+    else if (z <= 0.8) { let tmp = z - 0.7; return [-17 - 30 * tmp, - 40 * tmp, -20 - 80 * tmp, 0, - Math.PI * 4 * tmp / 1.2, 0]; }
     else { let tmp = (z - 0.8) / 2; return [-20, -4 - 10 * tmp, -28 - 20 * tmp, 0, -Math.PI * 4 / 12 - Math.PI * tmp / 1.2, 0]; }
   }
   else if (x === "People" && y === "Research") {
     if (z <= 0.2) { let tmp = z / 2; return [-20, -5 + 10 * tmp, - 30 + 20 * tmp, 0, -Math.PI * 5 / 12 + Math.PI * tmp / 1.2, 0]; }
-    else if (z <= 0.6) { let tmp = z - 0.2; return [-20 + 7.5 * tmp, -4 + 10 * tmp, -28 + 20 * tmp, 0, -Math.PI * 4 / 12 + Math.PI * tmp / 1.2, 0]; }
-    else if (z <= 0.7) { let tmp = z - 0.6; return [-17, 0, -20 + 2200 * tmp, 0, 0, 0]; }
+    else if (z <= 0.3) { let tmp = z - 0.2; return [-20 + 30 * tmp, -4 + 40 * tmp, -28 + 80 * tmp, 0, -Math.PI * 4 / 12 + Math.PI * 4 * tmp / 1.2, 0]; }
+    else if (z <= 0.7) { let tmp = (z - 0.3) / 4; return [-17, 0, -20 + 2200 * tmp, 0, 0, 0]; }
     else if (z <= 0.8) { let tmp = z - 0.7; return [-17 - 30 * tmp, 0, 200 + 100 * tmp, 0, 0, 0]; }
     else if (z <= 0.9) { let tmp = z - 0.8; return [-20 - 150 * tmp, 0, 210, 0, + Math.PI * tmp / 1.8, 0]; }
     else { let tmp = z - 0.9; return [-35 - 100 * tmp, 0, 210, 0, Math.PI / 18 + Math.PI * tmp / 1.8, 0]; }
@@ -248,7 +248,7 @@ const SmoothPathGenerateInner = (x, y) => (z) => {
   else if (x === "Join Us" && y === "People") {
     if (z <= 0.3) { let tmp = z / 3; return [-40 + 230 * tmp, -3 + 30 * tmp, 80, 0, Math.PI * 5 / 24 - Math.PI * 5 * tmp / 2.4, 0]; }
     else if (z <= 0.6) { let tmp = (z - 0.3) / 3; return [-17, 0, 80 - 1000 * tmp, 0, 0, 0]; }
-    else { let tmp = (z - 0.6) / 4; return [-17 - 30 * tmp, -20 - 100 * tmp, 0, -Math.PI * 5 * tmp / 1.2, 0]; }
+    else { let tmp = (z - 0.6) / 4; return [-17 - 30 * tmp, -50 * tmp, -20 - 100 * tmp, 0, -Math.PI * 5 * tmp / 1.2, 0]; }
   }
   else if (x === "Join Us" && y === "News") {
     let tmp = z / 10; return [-40 + 100 * tmp, -3 + 30 * tmp, 80 + 200 * tmp, 0, Math.PI * 5 / 24 - Math.PI * 5 * tmp / 2.4, 0];
@@ -267,10 +267,10 @@ const SmoothPathGenerateInner = (x, y) => (z) => {
     else { let tmp = (z - 0.6) / 4; return [-17 - 130 * tmp, 0, 100, 0, 0, 0]; }
   }
   else if (x === "About" && y === "People") {
-    let tmp = z / 10; return [-80 + 600 * tmp, -50 * tmp, - 300 * tmp, 0, -Math.PI / 6 - Math.PI * tmp / 0.4, 0];
+    let tmp = z / 10; return [-80 + 600 * tmp, -50 * tmp, -20 - 100 * tmp, 0, -Math.PI / 6 - Math.PI * tmp / 0.4, 0];
   }
   else if (x === "People" && y === "About") {
-    let tmp = z / 10; return [-20 - 600 * tmp, -5 + 50 * tmp, -30 + 300 * tmp, 0, -Math.PI / 6 - Math.PI * tmp / 0.4, 0];
+    let tmp = z / 10; return [-20 - 600 * tmp, -5 + 50 * tmp, -30 + 100 * tmp, 0, -Math.PI * 5 / 12 + Math.PI * tmp / 0.4, 0];
   }
   else if (x === "Research" && y === "Join Us") {
     if (z <= 0.4) { let tmp = z / 4; return [-45 + 280 * tmp, 0, 210, 0, Math.PI * 1 / 9 - Math.PI * tmp / 0.9, 0]; }
@@ -285,7 +285,7 @@ const SmoothPathGenerateInner = (x, y) => (z) => {
   else if (x === "People" && y === "News") {
     if (z <= 0.4) { let tmp = z / 4; return [-20 + 30 * tmp, -5 + 50 * tmp, -30, 0, -Math.PI * 5 / 12 + Math.PI * 4 * tmp / 1.2, 0]; }
     else if (z <= 0.7) { let tmp = (z - 0.4) / 3; return [-17, 0, -30 + 1300 * tmp, 0, -Math.PI * 1 / 12, 0]; }
-    else { let tmp = (z - 0.7) / 3; return [-17 - 130 * tmp, -0, 100, 0, -Math * 1 / 12 + Math.PI * tmp / 1.2, 0]; }
+    else { let tmp = (z - 0.7) / 3; return [-17 - 130 * tmp, 0, 100, 0, -Math.PI / 12 + Math.PI * tmp / 1.2, 0]; }
   }
   else if (x === "News" && y === "People") {
     if (z <= 0.3) { let tmp = z / 3; return [-30 + 130 * tmp, 0, 100, 0, Math.PI * tmp / 1.2, 0]; }
