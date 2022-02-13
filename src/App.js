@@ -8,7 +8,14 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import { OrthographicCamera } from 'three';
 import { Box, Button, Grid } from '@mui/material';
 import { PerspectiveCamera } from 'three';
-import { Link } from 'react-router-dom';
+import {
+  Link,
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Blog from './blog/Blog';
+
 const Model = () => {
   const ref = useRef()
   const scenes = [
@@ -339,7 +346,7 @@ const useStyles = makeStyles(theme => ({
 
 // Home, News, Research, People, Join Us, About
 
-function App() {
+function Home() {
   const controlRef = useRef();
   const tabs = ['Home', 'News', 'Research', 'People', 'Join Us', 'About']
   const fn = (tabName) => tabName;
@@ -347,7 +354,8 @@ function App() {
   const [tab, setTab] = useState("Home")
   const classes = useStyles();
 
-  return (<div className={classes.main}>
+  return (
+  <div className={classes.main}>
     <div className={classes.canvas}>
       <div className="App">
         <Scene cref={controlRef} state={state} tab={tab} />
@@ -381,6 +389,30 @@ function App() {
       </Grid>
     </Grid>
   </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<Blog name={'blog-post.1.md'} />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
