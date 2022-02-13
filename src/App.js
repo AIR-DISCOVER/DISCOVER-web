@@ -10,7 +10,6 @@ import { Button } from '@mui/material';
 import { PerspectiveCamera } from 'three';
 const Model = () => {
   const ref = useRef()
-  // const rest = 
   const scenes = [
     [useLoader(GLTFLoader, "./rest.gltf"), [-137, -40, 200]],
     [useLoader(GLTFLoader, "./office1.gltf"), [-319, -22.25, -210]],
@@ -19,17 +18,17 @@ const Model = () => {
     [useLoader(GLTFLoader, "./meeting.gltf"), [-311, -22.25, 128.35]],
 
   ]
-  // move model:
-  // useFrame((state, delta) => { ref.current.rotation.y += 0.000 })
-  return (<group ref={ref}>
-    {scenes.map((scene, idx) => {
-      return (<mesh position={scene[1]} key={idx}>
-        <primitive object={scene[0].scene} scale={1} />
-      </mesh>)
-    })}
-  </group>
+  return (
+    <group ref={ref}>
+      {scenes.map((scene, idx) => {
+        return (<mesh position={scene[1]} key={idx}>
+          <primitive object={scene[0].scene} scale={1} />
+        </mesh>)
+      })}
+    </group>
   );
 };
+
 useGLTF.preload('./rest.gltf')
 useGLTF.preload('./office1.gltf')
 useGLTF.preload('./office2.gltf')
