@@ -349,53 +349,55 @@ const useStyles = makeStyles(theme => ({
 function Home() {
   const controlRef = useRef();
   const tabs = ['Home', 'News', 'Research', 'People', 'Join Us', 'About']
-  const fn = (tabName) => tabName;
+  const fn = (tabName) => (
+    <Link to="/joinus"> {tabName} </Link>
+  );
   const [state, setState] = useState(true)
   const [tab, setTab] = useState("Home")
   const classes = useStyles();
 
   return (
-  <div className={classes.main}>
-    <div className={classes.canvas}>
-      <div className="App">
-        <Scene cref={controlRef} state={state} tab={tab} />
+    <div className={classes.main}>
+      <div className={classes.canvas}>
+        <div className="App">
+          <Scene cref={controlRef} state={state} tab={tab} />
+        </div>
       </div>
+      <Grid container className={classes.container}>
+        <Grid item xs={12} md={4} className={classes.header}>
+          <Box className={classes.logoBox}>
+            <img src='./site-logo.png' alt='site-logo' style={{ maxWidth: "100%", maxHeight: "100%" }} />
+          </Box>
+          {tabs.map((x, idx) => (
+            <>
+              <Box className={classes.tabBox}>
+                <Button key={idx} onClick={() => {
+                  setState(!state);
+                  setTab(x);
+                  // console.log(controlRef.current)
+                  controlRef.current.setTrig(tab, x)
+                  controlRef.current.setF(tab, x)
+                }}>
+                  {x}
+                </Button>
+              </Box>
+            </>
+          ))}
+        </Grid>
+        <Grid item md={8} xs={12} className={classes.body}>
+          <Box className={classes.contentBox}>
+            {fn(tab)}
+          </Box>
+        </Grid>
+      </Grid>
     </div>
-    <Grid container className={classes.container}>
-      <Grid item xs={12} md={4} className={classes.header}>
-        <Box className={classes.logoBox}>
-          <img src='./site-logo.png' alt='site-logo' style={{ maxWidth: "100%", maxHeight: "100%" }} />
-        </Box>
-        {tabs.map((x, idx) => (
-          <>
-            <Box className={classes.tabBox}>
-              <Button key={idx} onClick={() => {
-                setState(!state);
-                setTab(x);
-                // console.log(controlRef.current)
-                controlRef.current.setTrig(tab, x)
-                controlRef.current.setF(tab, x)
-              }}>
-                {x}
-              </Button>
-            </Box>
-          </>
-        ))}
-      </Grid>
-      <Grid item md={8} xs={12} className={classes.body}>
-        <Box className={classes.contentBox}>
-          {fn(tab)}
-        </Box>
-      </Grid>
-    </Grid>
-  </div>
   );
 }
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      {/* <div>
         <nav>
           <ul>
             <li>
@@ -405,13 +407,18 @@ function App() {
               <Link to="/about">About</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<Blog name={'blog-post.1.md'} />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="home" element={<Blog name={'blog-post.1.md'} />} />
+        <Route path="news" element={<Blog name={'blog-post.2.md'} />} />
+        <Route path="research" element={<Blog name={'blog-post.3.md'} />} />
+        <Route path="people" element={<Blog name={'blog-post.1.md'} />} />
+        <Route path="joinus" element={<Blog name={'blog-post.2.md'} />} />
+        <Route path="about" element={<Blog name={'blog-post.3.md'} />} />
+      </Routes>
+      {/* </div> */}
     </BrowserRouter>
   );
 }
