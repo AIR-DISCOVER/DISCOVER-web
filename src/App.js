@@ -6,11 +6,18 @@ import ResponsiveAppBar from './components/layouts/Header';
 import { makeStyles } from '@mui/styles';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { OrthographicCamera } from 'three';
-import { Button } from '@mui/material';
+import { Box, Button, Grid } from '@mui/material';
 import { PerspectiveCamera } from 'three';
+import {
+  Link,
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Blog from './blog/Blog';
+
 const Model = () => {
   const ref = useRef()
-  // const rest = 
   const scenes = [
     [useLoader(GLTFLoader, "./rest.gltf"), [-137, -40, 200]],
     [useLoader(GLTFLoader, "./office1.gltf"), [-319, -22.25, -210]],
@@ -19,21 +26,22 @@ const Model = () => {
     [useLoader(GLTFLoader, "./meeting.gltf"), [-311, -22.25, 128.35]],
 
   ]
-  // move model:
-  // useFrame((state, delta) => { ref.current.rotation.y += 0.000 })
-  return (<group ref={ref}>
-    {scenes.map((scene, idx) => {
-      return (<mesh position={scene[1]} key={idx}>
-        <primitive object={scene[0].scene} scale={1} />
-      </mesh>)
-    })}
-  </group>
+  return (
+    <group ref={ref}>
+      {scenes.map((scene, idx) => {
+        return (<mesh position={scene[1]} key={idx}>
+          <primitive object={scene[0].scene} scale={1} />
+        </mesh>)
+      })}
+    </group>
   );
 };
+
 useGLTF.preload('./rest.gltf')
 useGLTF.preload('./office1.gltf')
 useGLTF.preload('./office2.gltf')
-useGLTF.preload('./work1.gltf')
+useGLTF.preload('./indoor.gltf')
+useGLTF.preload('./meeting.gltf')
 
 const linear = (x, fn) => (fn(x))
 
@@ -217,7 +225,7 @@ const SmoothPathGenerateInner = (x, y) => (z) => {
     else { let tmp = z - 0.9; return [-35 - 100 * tmp, 0, 210, 0, Math.PI / 18 + Math.PI * tmp / 1.8, 0]; }
   }
   else if (x === "Research" && y === "About") {
-    if (z <= 0.1) { let tmp = z ; return [-45 + 100 * tmp, 0, 210, 0, Math.PI / 9 - Math.PI * tmp / 1.8, 0]; }
+    if (z <= 0.1) { let tmp = z; return [-45 + 100 * tmp, 0, 210, 0, Math.PI / 9 - Math.PI * tmp / 1.8, 0]; }
     else if (z <= 0.2) { let tmp = z - 0.1; return [-35 + 150 * tmp, 0, 210, 0, Math.PI / 18 - Math.PI * tmp / 1.8, 0]; }
     else if (z <= 0.3) { let tmp = z - 0.2; return [-20 + 30 * tmp, 0, 210 - 100 * tmp, 0, 0, 0]; }
     else if (z <= 0.6) { let tmp = (z - 0.3) / 3; return [-17, 0, 200 - 2200 * tmp, 0, 0, 0]; }
@@ -305,34 +313,113 @@ const SmoothPathGenerateInner = (x, y) => (z) => {
 }
 
 const useStyles = makeStyles(theme => ({
+  main: { position: 'relative', display: 'inline-block', width: '100%', height: '100%' },
   appbar: { position: 'sticky', top: 0 },
-  body: { position: 'sticky', top: 0 },
+  canvas: { position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh' },
+  header: {
+    background: 'rgba(0,0,0,0.5)', position: 'relative',
+    height: '100vh',
+    // width: '20%',
+    minWidth: '20rem',
+    maxWidth: '6rem',
+  },
+  body: {
+    background: 'rgba(0,0,0,0.5)', position: 'relative',
+    height: '100vh',
+    padding: '3rem',
+    // width: '20%',
+  },
+  headerBox: {
+    height: "100%",
+    width: "100%",
+    // maxWidth: '6rem',
+  },
+  container: { width: '100%', height: '100%' },
+  logoBox: { maxHeight: '20vh', height: '100%', display: 'flex', justifyContent: 'center' },
+  tabBox: {},
+  contentBox: {
+    position: 'relative',
+    // background: 'red',
+    width: '100%',
+  }
 }))
 
 // Home, News, Research, People, Join Us, About
 
-function App() {
+function Home() {
   const controlRef = useRef();
   const tabs = ['Home', 'News', 'Research', 'People', 'Join Us', 'About']
+  const fn = (tabName) => (
+    <Link to="/joinus"> {tabName} </Link>
+  );
   const [state, setState] = useState(true)
   const [tab, setTab] = useState("Home")
   const classes = useStyles();
 
-  return (<>
-    {tabs.map((x, idx) => (<Button key={idx} onClick={() => {
-      setState(!state);
-      setTab(x);
-      // console.log(controlRef.current)
-      controlRef.current.setTrig(tab, x)
-      controlRef.current.setF(tab, x)
-    }}>{x}</Button>))}
-
-    <body className={classes.body}>
-      <div className="App">
-        <Scene cref={controlRef} state={state} tab={tab} />
+  return (
+    <div className={classes.main}>
+      <div className={classes.canvas}>
+        <div className="App">
+          <Scene cref={controlRef} state={state} tab={tab} />
+        </div>
       </div>
-    </body>
-  </>
+      <Grid container className={classes.container}>
+        <Grid item xs={12} md={4} className={classes.header}>
+          <Box className={classes.logoBox}>
+            <img src='./site-logo.png' alt='site-logo' style={{ maxWidth: "100%", maxHeight: "100%" }} />
+          </Box>
+          {tabs.map((x, idx) => (
+            <>
+              <Box className={classes.tabBox}>
+                <Button key={idx} onClick={() => {
+                  setState(!state);
+                  setTab(x);
+                  // console.log(controlRef.current)
+                  controlRef.current.setTrig(tab, x)
+                  controlRef.current.setF(tab, x)
+                }}>
+                  {x}
+                </Button>
+              </Box>
+            </>
+          ))}
+        </Grid>
+        <Grid item md={8} xs={12} className={classes.body}>
+          <Box className={classes.contentBox}>
+            {fn(tab)}
+          </Box>
+        </Grid>
+      </Grid>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      {/* <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </nav> */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="home" element={<Blog name={'blog-post.1.md'} />} />
+        <Route path="news" element={<Blog name={'blog-post.2.md'} />} />
+        <Route path="research" element={<Blog name={'blog-post.3.md'} />} />
+        <Route path="people" element={<Blog name={'blog-post.1.md'} />} />
+        <Route path="joinus" element={<Blog name={'blog-post.2.md'} />} />
+        <Route path="about" element={<Blog name={'blog-post.3.md'} />} />
+      </Routes>
+      {/* </div> */}
+    </BrowserRouter>
   );
 }
 
