@@ -14,19 +14,6 @@ import Sidebar from './Sidebar';
 import Footer from './Footer';
 import { useState, useEffect } from 'react'
 
-const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
-];
-
 const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
   description:
@@ -61,19 +48,6 @@ const sidebar = {
   title: 'About',
   description:
     'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-  archives: [
-    { title: 'March 2020', url: '#' },
-    { title: 'February 2020', url: '#' },
-    { title: 'January 2020', url: '#' },
-    { title: 'November 1999', url: '#' },
-    { title: 'October 1999', url: '#' },
-    { title: 'September 1999', url: '#' },
-    { title: 'August 1999', url: '#' },
-    { title: 'July 1999', url: '#' },
-    { title: 'June 1999', url: '#' },
-    { title: 'May 1999', url: '#' },
-    { title: 'April 1999', url: '#' },
-  ],
   social: [
     { name: 'GitHub', icon: GitHubIcon },
     { name: 'Twitter', icon: TwitterIcon },
@@ -85,39 +59,58 @@ const theme = createTheme();
 
 export default function Blog(props) {
 
-  const [posts, setPosts] = useState([])
+  const [post, setPost] = useState('');
+  const [meta, setMeta] = useState({});
+  const [posts, setPosts] = useState({})
   useEffect(() => {
-    var _posts = []
-    fetch(props.name)
+    fetch('/posts.json')
+    .then((res) => {
+      res.text()
+        .then((json) => {
+          setPosts(JSON.parse(json));
+          console.log(json)
+        })
+    })
+    .catch((err) => { console.log(err) });
+    fetch('/' + props.group + '/' +props.name + '/index.md')
       .then((res) => {
         res.text()
           .then((text) => {
-            _posts.push(text);
-            setPosts(_posts)
+            setPost(text)
           })
       })
       .catch((err) => { console.log(err) });
 
-  }, [])
+    fetch('/' + props.group + '/' + props.name + '/meta.json')
+      .then((res) => {
+        res.text()
+          .then((json) => {
+            setMeta(JSON.parse(json));
+          })
+      })
+      .catch((err) => { console.log(err) });
+    
+  }, [props.name, props.group])
+
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="xl" disableGutters>
-        <Header title={props.name.substring(0, props.name.length - 3)} sections={sections} />
+      <Container maxWidth={false} disableGutters>
+        <Header title={meta.title} />
         <main>
           <Grid container spacing={4} sx={{ padding: 4 }}>
             <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.archives}
+              posts={posts}
+              title={sidebar.social}
               social={sidebar.social}
             />
-            <Main title="From the firehose" posts={posts} />
+            <Main meta={meta} post={post} />
           </Grid>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
-            {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
+            {featuredPosts.map((_post) => (
+              <FeaturedPost key={_post.title} post={_post} />
             ))}
           </Grid>
         </main>

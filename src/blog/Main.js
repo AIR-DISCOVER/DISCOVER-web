@@ -4,9 +4,12 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import Markdown from './Markdown';
+function Image(props) {
+  return <img {...props} style={{ maxWidth: '100%' }} />
+}
 
 function Main(props) {
-  const { posts, title } = props;
+  const { post, meta } = props;
 
   return (
     <Grid
@@ -16,18 +19,17 @@ function Main(props) {
       sx={{
         '& .markdown': {
           py: 0,
+          width: '100%'
         },
       }}
     >
       {/* <Typography variant="h6" gutterBottom>
-        {title}
+        {meta.title}
       </Typography>
       <Divider /> */}
-      {posts.map((post) => (
-        <Markdown className="markdown" key={post.substring(0, 40)}>
-          {post}
-        </Markdown>
-      ))}
+      <Markdown content={post} className="markdown" key={post.substring(0, 40)}>
+        {post}
+      </Markdown>
     </Grid>
   );
 }

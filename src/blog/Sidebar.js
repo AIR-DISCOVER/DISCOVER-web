@@ -5,27 +5,57 @@ import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import { useState } from 'react';
+import {
+  List, ListItem, ListItemButton, ListItemIcon, ListItemText,
+  ListSubheader, Collapse
+} from '@mui/material';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import StarBorder from '@mui/icons-material/StarBorder';
+
 
 function Sidebar(props) {
-  const { archives, description, social, title } = props;
+  const { posts, social } = props;
+
+  const [hciOpen, setHciOpen] = useState(true);
 
   return (
-    <Grid item xs={12} md={3}>
-      <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
+    <Grid item xs={12} md={2.5}>
+      {/* <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
         <Typography variant="h6" gutterBottom>
           {title}
         </Typography>
         <Typography>{description}</Typography>
-      </Paper>
+      </Paper> */}
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
-        Archives
+        Research Projects
       </Typography>
-      {archives.map((archive) => (
-        <Link display="block" variant="body1" href={archive.url} key={archive.title}>
-          {archive.title}
-        </Link>
-      ))}
+      <List
+        sx={{ width: '100%', bgcolor: 'background.paper' }}
+        component="nav"
+      >
+        <ListItemButton onClick={() => { setHciOpen(!hciOpen) }}>
+          {/* <ListItemIcon>
+            <InboxIcon />
+          </ListItemIcon> */}
+          <ListItemText primary="HCI" />
+          {hciOpen ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={hciOpen} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            {posts.hci && posts.hci.map((post) =>
+              <ListItem sx={{ pl: 4 }}>
+                <a component="a" href={"/research/hci/" + post.replace(/\s+/g, '-')}>
 
+                  <ListItemText primary={post}>
+                    <Link>d</Link>
+                  </ListItemText>
+                </a>
+              </ListItem>)}
+          </List>
+        </Collapse>
+      </List>
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
       </Typography>

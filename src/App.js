@@ -1,5 +1,5 @@
 import './App.css';
-import React, { forwardRef, Suspense, useImperativeHandle, useRef, useState } from 'react'
+import React, { forwardRef, Suspense, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import ResponsiveAppBar from './components/layouts/Header';
@@ -12,8 +12,10 @@ import {
   Link,
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
+
 import Blog from './blog/Blog';
 
 const Model = () => {
@@ -23,7 +25,7 @@ const Model = () => {
     [useLoader(GLTFLoader, "./office1.gltf"), [-319, -22.25, -210]],
     [useLoader(GLTFLoader, "./office2.gltf"), [-70.7, -40, -32]],
     [useLoader(GLTFLoader, "./indoor.gltf"), [-217.2, -22.25, 93]],
-    [useLoader(GLTFLoader, "./meeting.gltf"), [-311, -22.25, 128.35]],
+    // [useLoader(GLTFLoader, "./meeting.gltef"), [-311, -22.25, 128.35]],
 
   ]
   return (
@@ -41,7 +43,7 @@ useGLTF.preload('./rest.gltf')
 useGLTF.preload('./office1.gltf')
 useGLTF.preload('./office2.gltf')
 useGLTF.preload('./indoor.gltf')
-useGLTF.preload('./meeting.gltf')
+// useGLTF.preload('./meeting.gltf')
 
 const linear = (x, fn) => (fn(x))
 
@@ -348,12 +350,17 @@ const useStyles = makeStyles(theme => ({
 
 function Home() {
   const controlRef = useRef();
-  const tabs = ['Home', 'News', 'Research', 'People', 'Join Us', 'About']
-  const fn = (tabName) => (
-    <Link to="/joinus"> {tabName} </Link>
-  );
+  const tabs = [
+    ['Home', 'home'],
+    ['News', 'news'],
+    ['Research', 'research'],
+    ['People', 'people'],
+    ['Join Us', 'joinus'],
+    ['About', 'about'],
+  ]
   const [state, setState] = useState(true)
   const [tab, setTab] = useState("Home")
+  const [jump, setJump] = useState("Home")
   const classes = useStyles();
 
   return (
@@ -373,12 +380,13 @@ function Home() {
               <Box className={classes.tabBox}>
                 <Button key={idx} onClick={() => {
                   setState(!state);
-                  setTab(x);
+                  setTab(x[0]);
+                  setJump(x[1]);
                   // console.log(controlRef.current)
-                  controlRef.current.setTrig(tab, x)
-                  controlRef.current.setF(tab, x)
+                  controlRef.current.setTrig(tab, x[0])
+                  controlRef.current.setF(tab, x[0])
                 }}>
-                  {x}
+                  {x[0]}
                 </Button>
               </Box>
             </>
@@ -386,7 +394,7 @@ function Home() {
         </Grid>
         <Grid item md={8} xs={12} className={classes.body}>
           <Box className={classes.contentBox}>
-            {fn(tab)}
+            <Link to={jump}> {tab} </Link>
           </Box>
         </Grid>
       </Grid>
@@ -395,30 +403,39 @@ function Home() {
 }
 
 function App() {
+  const [posts, setPosts] = useState({})
+  useEffect(() => {
+    fetch('/posts.json')
+      .then((res) => {
+        res.text()
+          .then((json) => {
+            setPosts(JSON.parse(json));
+            console.log(json)
+          })
+      })
+      .catch((err) => { console.log(err) });
+  }, []);
   return (
     <BrowserRouter>
-      {/* <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav> */}
-
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="home" element={<Blog name={'blog-post.1.md'} />} />
-        <Route path="news" element={<Blog name={'blog-post.2.md'} />} />
-        <Route path="research" element={<Blog name={'blog-post.3.md'} />} />
-        <Route path="people" element={<Blog name={'blog-post.1.md'} />} />
-        <Route path="joinus" element={<Blog name={'blog-post.2.md'} />} />
-        <Route path="about" element={<Blog name={'blog-post.3.md'} />} />
+        <Route path="/home" element={<Blog group={'hci'} name={'blog-post.1'} />} />
+        <Route path="/news" element={<Blog group={'hci'} name={'blog-post.2'} />} />
+        <Route path="/research">
+          <Route index element={<Navigate to="hci" replace />} />
+          <Route path="hci">
+            <Route index element={<Navigate to="Guide-Dogs" replace />} />
+            {posts.hci &&
+              posts.hci.map((post) =>
+                <Route path={post.replace(/\s+/g, '-')} element={<Blog group={'hci'} name={post} />} />
+              )}
+          </Route>
+        </Route>
+        <Route path="/guidedog" element={<Blog group={'hci'} name={'guide_dog'} />} />
+        <Route path="/people" element={<Blog group={'hci'} name={'blog-post.1'} />} />
+        <Route path="/joinus" element={<Blog group={'hci'} name={'blog-post.2'} />} />
+        <Route path="/about" element={<Blog group={'hci'} name={'blog-post.3'} />} />
       </Routes>
-      {/* </div> */}
     </BrowserRouter>
   );
 }
