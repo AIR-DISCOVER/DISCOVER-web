@@ -15,81 +15,54 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: '40vh',
+    // height: '40vh',
     minHeight: '20rem',
-    backgroundImage: 'url("./header.png")',
+    // backgroundImage: 'url(/header.png)',
+    background: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/header.png') no-repeat 0% 20%/ cover",
     borderBottom: 1,
   },
   logoBox: {
-    width: "25rem",
+    width: "15rem",
     // maxWidth: "100%",
     maxHeight: "100%",
-    alignSelf: 'flex-start'
+    alignSelf: 'flex-start',
+    display: 'flex'
   },
   titleBox: {
     paddingLeft: "1rem",
     paddingRight: "1rem",
     paddingBottom: "2rem",
-    width: "100%"
+    width: "100%",
+    display: 'flex'
   }
 }))
 
 function Header(props) {
-  const { sections, title } = props;
+  const { title } = props;
   const classes = useStyles()
   return (
     <>
       <Toolbar
         className={classes.toolbar}
-      // style={{
-      //   minHeight: '49vh',
-      //   backgroundImage: 'url("./header.png")',
-      //   display: 'flex'
-      // }}
-      // className={classes.toolbar}
       >
-        {/* <Button size="small">Subscribe</Button> */}
-        <Box className={classes.logoBox}>
-          <img src='./site-logo.png' alt='site-logo' style={{ maxWidth: "100%", maxHeight: "100%" }} />
+        <Box className={classes.logoBox} component='a' href='/'>
+          <img src='/site-logo.png' alt='site-logo' style={{ maxWidth: "100%", maxHeight: "100%" }} />
         </Box>
         <Box className={classes.titleBox}>
 
           <Typography
             component="h2"
-            variant="h5"
+            variant="h3"
             color="white"
-            align="center"
-            sx={{ textShadow: "2px 2px 2px grey", flex: 1 }}
-            noWrap
+            align="left"
+            fontFamily="Gill Sans"
+            sx={{ textShadow: "2px 2px 2px grey", flex: 1, width: '100%', height: '100%', paddingLeft: 8, paddingRight: 8, wordWrap: 'break-word', overflow: 'visible' }}
+            // noWrap
           >
             {title}
           </Typography>
         </Box>
-        {/* <IconButton>
-          <SearchIcon />
-        </IconButton>
-        <Button variant="outlined" size="small">
-          Sign up
-        </Button> */}
       </Toolbar>
-      {/* <Toolbar
-        component="nav"
-        variant="dense"
-        sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
-      >
-        {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            {section.title}
-          </Link>
-        ))}
-      </Toolbar> */}
     </>
   );
 }
