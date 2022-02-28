@@ -378,7 +378,7 @@ function Home() {
         <Grid item xs={12} sm={12} md lg className={classes.body}>
           <Box className={classes.contentBox}>
             Brief Introduction\n
-            <Link to={'/#/' + jump}> {tab} </Link>
+            <Link to={jump}> {tab} </Link>
           </Box>
         </Grid>
       </Grid>
