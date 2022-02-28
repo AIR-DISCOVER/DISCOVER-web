@@ -176,7 +176,7 @@ export default function Blog(props) {
             <Grid item xs={0} md={0} xl={1.5} />
             <Grid item xs={0} md={2.5} xl={1.5} />
             <Grid item xs={12} md={9.5} xl={6}>
-              <Box sx={{ padding: 1 }}>
+              <Box sx={{ padding: 0 }}>
                 {/* <MainFeaturedPost post={mainFeaturedPost} /> */}
                 <Grid container spacing={4}>
                   {related.map((p) => (
