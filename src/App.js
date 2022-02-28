@@ -41,13 +41,23 @@ function App() {
         <Route path="news" element={<Navigate to="research" replace />} />
         <Route path="research">
           <Route index element={<Navigate to="hci" replace />} />
-          <Route path="hci">
-            <Route index element={<Navigate to="Guide-Dogs" replace />} />
-            {posts.hci &&
-              posts.hci.map((post) =>
+          {posts.hci &&
+            <Route path="hci">
+              <Route index element={<Navigate to={posts.hci[0].replace(/\s+/g, '-')} replace />} />
+              {posts.hci.map((post) =>
                 <Route path={post.replace(/\s+/g, '-')} element={<Blog group={'hci'} name={post} />} />
               )}
-          </Route>
+            </Route>
+          }
+          {posts.sun &&
+            <Route path="sun">
+              <Route index element={<Navigate to={posts.sun[0].replace(/\s+/g, '-')} replace />} />
+              {posts.sun.map((post) =>
+                <Route path={post.replace(/\s+/g, '-')} element={<Blog group={'sun'} name={post} />} />
+              )}
+            </Route>
+          }
+          <Route path="*" element={<Blog group={'null'} name={'null'} />} />
         </Route>
         <Route path="people" element={<Navigate to="research" replace />} />
         <Route path="joinus" element={<Navigate to="research" replace />} />
