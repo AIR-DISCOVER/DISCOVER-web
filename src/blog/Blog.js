@@ -13,12 +13,13 @@ import Main from './Main';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import { useState, useEffect } from 'react'
+import { Box } from '@mui/material';
 
 const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
   description:
     "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: 'https://source.unsplash.com/random',
+  image: '/images/guide_dog_1.json',
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
@@ -29,7 +30,7 @@ const featuredPosts = [
     date: 'Nov 12',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random',
+    image: '/images/guide_dog_1.json',
     imageLabel: 'Image Text',
   },
   {
@@ -37,7 +38,7 @@ const featuredPosts = [
     date: 'Nov 11',
     description:
       'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random',
+    image: '/images/guide_dog_1.json',
     imageLabel: 'Image Text',
   },
 ];
@@ -62,8 +63,9 @@ export default function Blog(props) {
   const [post, setPost] = useState('');
   const [meta, setMeta] = useState({});
   const [posts, setPosts] = useState({})
+  const [related, setRelated] = useState([])
   useEffect(() => {
-    fetch('/resources/posts.json')
+    fetch('/resources/research/posts.json')
       .then((res) => {
         res.text()
           .then((json) => {
@@ -71,7 +73,7 @@ export default function Blog(props) {
           })
       })
       .catch((err) => { console.log(err) });
-    fetch('/resources/' + props.group + '/' + props.name + '/index.md')
+    fetch('/resources/research/' + props.group + '/' + props.name + '.md')
       .then((res) => {
         res.text()
           .then((text) => {
@@ -80,39 +82,74 @@ export default function Blog(props) {
       })
       .catch((err) => { console.log(err) });
 
-    fetch('/resources/' + props.group + '/' + props.name + '/meta.json')
-      .then((res) => {
-        res.text()
-          .then((json) => {
-            Promise.resolve(json).then(JSON.parse).then((re) => { setMeta(re) }).catch((err) => { console.log(err); console.log(props) })
+    fetch('/resources/research/' + props.group + '/' + props.name + '.json')
+      .then((res) => res.text()
+        .then((json) => {
+          Promise.resolve(json).then(JSON.parse).then((re) => {
+            setMeta(re)
           })
-      })
+        }).catch((err) => { console.log(err); console.log(props) })
+      )
       .catch((err) => { console.log(err) });
 
   }, [props])
+
+  async function fetch_sequence(related, setfn) {
+    let posts = []
+    for (const post of related.hci) {
+      let response = await fetch('/resources/research/hci/' + post + '.json')
+      let text = await response.text()
+      let json = JSON.parse(text)
+      posts.push(json)
+    }
+    for (const post of related.sun) {
+      let response = await fetch('/resources/research/sun/' + post + '.json')
+      let text = await response.text()
+      let json = JSON.parse(text)
+      posts.push(json)
+    }
+
+    setfn(posts)
+  }
+
+  useEffect(() => {
+    meta.related && fetch_sequence(meta.related, setRelated)
+  }, [meta])
+
 
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth={false} disableGutters>
-        <Header title={meta.title} />
-        <main>
-          <Grid container spacing={4} sx={{ padding: 4 }}>
-            <Sidebar
-              posts={posts}
-              title={sidebar.social}
-              social={sidebar.social}
-            />
-            <Main meta={meta} post={post} />
+        <Header group={props.group} title={related.length} />
+        <Grid container spacing={4} sx={{ padding: 4 }}>
+          <Sidebar
+            posts={posts}
+            title={sidebar.social}
+            social={sidebar.social}
+          />
+          <Main meta={meta} post={post} />
+        </Grid>
+        <Grid container spacing={4} sx={{ padding: 4 }}>
+          <Grid item xs={0} md={2.5} />
+          <Grid item xs={12} md={9.5}>
+            <Box>
+              Related
+            </Box>
           </Grid>
-          <MainFeaturedPost post={mainFeaturedPost} />
-          <Grid container spacing={4}>
-            {featuredPosts.map((_post) => (
-              <FeaturedPost key={_post.title} post={_post} />
-            ))}
+          <Grid item xs={0} md={2.5} />
+          <Grid item xs={12} md={9.5}>
+            <Box sx={{ padding: 4 }}>
+              {/* <MainFeaturedPost post={mainFeaturedPost} /> */}
+              <Grid container spacing={4}>
+                {related.length > 0 && related.map((p) => (
+                  <FeaturedPost key={p.title} post={p} />
+                ))}
+              </Grid>
+            </Box>
           </Grid>
-        </main>
+        </Grid>
       </Container>
       <Footer
         title="Footer"

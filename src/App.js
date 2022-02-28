@@ -23,7 +23,7 @@ import Home from './home/Home';
 function App() {
   const [posts, setPosts] = useState({})
   useEffect(() => {
-    fetch('/resources/posts.json')
+    fetch('/resources/research/posts.json')
       .then((res) => {
         res.text()
           .then((json) => {

@@ -11,9 +11,15 @@ function FeaturedPost(props) {
   const { post } = props;
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={3}>
       <CardActionArea component="a" href="#">
-        <Card sx={{ display: 'flex' }}>
+        <Card sx={{ display: 'flex', flexDirection: 'column' }}>
+          <CardMedia
+            component="img"
+            sx={{ width: '100%', maxHeight: '10rem', display: { xs: 'none', sm: 'block' } }}
+            image={post.image}
+            alt={post.imageLabel}
+          />
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h5">
               {post.title}
@@ -28,12 +34,6 @@ function FeaturedPost(props) {
               Continue reading...
             </Typography>
           </CardContent>
-          <CardMedia
-            component="img"
-            sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
-            image={post.image}
-            alt={post.imageLabel}
-          />
         </Card>
       </CardActionArea>
     </Grid>

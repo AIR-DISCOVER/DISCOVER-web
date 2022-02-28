@@ -9,6 +9,7 @@ import {
   Link,
 } from "react-router-dom";
 import SvgButton from '../components/elements/SvgButton';
+import Markdown from '../blog/Markdown';
 
 const Model = () => {
   const ref = useRef()
@@ -329,6 +330,13 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     position: 'relative',
     width: '100%',
+    height: '100vh',
+    overflow: 'auto'
+  },
+  text: {
+    fontFamily: 'Tahoma',
+    fontSize: '1rem',
+    lineHeight: '1.5rem',
   }
 }))
 
@@ -377,7 +385,32 @@ function Home() {
         </Grid>
         <Grid item xs={12} sm={12} md lg className={classes.body}>
           <Box className={classes.contentBox}>
-            Brief Introduction\n
+            <div className={classes.text}>
+              AIR DISCOVER HCI Team is a Human-centered AI research team that focuses on creating AI-driven systems that amplify and augment human abilities and well-being.
+              <br />
+              <br />
+              We are now interested in the following three research topics:
+              <br />
+              - Understanding and modeling long-term human behaviors and emotions in the real world through wearable or ubiquitous contactless sensors.
+              <br />
+              - Building novelty human-in-the-loop AI/Robotics systems, such as in transportation, manufacturing, education, health, work, housing, and entertainment.
+              <br />
+              - Exploring methods and algorithms enabling effective human-AI collaboration that make human partnerships more productive, creative, accessible, and enjoyable.
+              <br />
+              <br />
+              AIR DISCOVER SUN Team is mainly focusing on computer vision. Computer vision is the art of tracing light, along two paths:
+              <br />
+              - From images to the physical world;
+              <br />
+              - From images to our brains. Along the first path, we recover the 3D structure, material, texture, and light transport, from RGB images.
+              <br />
+              Along the second path, we infer entity category, attribute, affordance, and other cognitive properties, as precepted by humans. We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people.
+              <br />
+              <br />
+              AIR DISCOVER Hardware Lab aims to fulfill the requirement of robotics research in AIR here, especially to unleash the potential of novel sensor/actuator systems for the mobility of robots, and 3D printing for various rapid material forming. For electronics development, the typical components set is provided and precision processing like soldering and SMT reflow system is equipped. A portable and powerful oscilloscope is always available to take to anywhere, together with precision power suppliers come the workbench for PCB assembly and test. 3D printing system and workbench come with an egative pressure fume cupboard to enable systematic research on resin-based additive manufacture. In the same while, a small-scale FDM farm enables daily usage of structures forming in the Hardware Lab in DISCOVER.
+
+
+            </div>
             <Link to={jump}> {tab} </Link>
           </Box>
         </Grid>
