@@ -11,14 +11,14 @@ function MarkdownListItem(props) {
 
 function MarkdownImage(props) {
   return (
-    <div style={{ padding: '1rem', height: '100%', width: '100%' }}>
-      <img src={props.src} alt="" style={props.style} />
+    <div style={{ paddingBottom: '1rem', paddingTop: '1rem', height: '100%', width: '100%' }}>
+      <img src={props.src} alt="" style={{...props.style,  maxHeight: '30vh', objectFit: 'cover'}} />
     </div>
   )
 }
 function MarkdownImageInline(props) {
   return (
-    <span style={{ padding: '1rem', height: '100%', width: '100%' }}>
+    <span style={{ paddingBottom: '1rem', paddingTop: '1rem', height: '100%', width: '100%', maxHeight: '30vh' }}>
       <img src={props.src} alt="" style={props.style} />
     </span>
   )
@@ -65,7 +65,7 @@ const options = {
     },
     p: {
       component: Typography,
-      props: { paragraph: true, fontFamily: 'Arial' },
+      props: { paragraph: true, fontFamily: 'Helvetica', textAlign: 'justify' },
     },
     a: { component: Link },
     li: {
