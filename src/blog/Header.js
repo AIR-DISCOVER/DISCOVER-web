@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     // height: '40vh',
-    minHeight: '20rem',
+    minHeight: '25rem',
     // backgroundImage: 'url(/header.png)',
     background: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/header.png') no-repeat 0% 20%/ cover",
     borderBottom: 1,

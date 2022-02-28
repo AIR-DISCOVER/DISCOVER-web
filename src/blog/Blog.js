@@ -63,7 +63,7 @@ export default function Blog(props) {
   const [meta, setMeta] = useState({});
   const [posts, setPosts] = useState({})
   useEffect(() => {
-    fetch('/posts.json')
+    fetch('/resources/posts.json')
     .then((res) => {
       res.text()
         .then((json) => {
@@ -72,7 +72,7 @@ export default function Blog(props) {
         })
     })
     .catch((err) => { console.log(err) });
-    fetch('/' + props.group + '/' +props.name + '/index.md')
+    fetch('/resources/' + props.group + '/' +props.name + '/index.md')
       .then((res) => {
         res.text()
           .then((text) => {
@@ -81,7 +81,7 @@ export default function Blog(props) {
       })
       .catch((err) => { console.log(err) });
 
-    fetch('/' + props.group + '/' + props.name + '/meta.json')
+    fetch('/resources/' + props.group + '/' + props.name + '/meta.json')
       .then((res) => {
         res.text()
           .then((json) => {
