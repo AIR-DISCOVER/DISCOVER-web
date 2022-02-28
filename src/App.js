@@ -11,6 +11,7 @@ import { PerspectiveCamera } from 'three';
 import {
   Link,
   BrowserRouter,
+  HashRouter,
   Routes,
   Route,
   Navigate
@@ -33,12 +34,12 @@ function App() {
       .catch((err) => { console.log(err) });
   }, []);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Blog group={'hci'} name={'blog-post.1'} />} />
-        <Route path="/news" element={<Blog group={'hci'} name={'blog-post.2'} />} />
-        <Route path="/research">
+        <Route path="" element={<Home />} />
+        <Route path="home" element={<Navigate to="research" replace />} />
+        <Route path="news" element={<Navigate to="research" replace />} />
+        <Route path="research">
           <Route index element={<Navigate to="hci" replace />} />
           <Route path="hci">
             <Route index element={<Navigate to="Guide-Dogs" replace />} />
@@ -48,12 +49,12 @@ function App() {
               )}
           </Route>
         </Route>
-        <Route path="/guidedog" element={<Blog group={'hci'} name={'guide_dog'} />} />
-        <Route path="/people" element={<Blog group={'hci'} name={'blog-post.1'} />} />
-        <Route path="/joinus" element={<Blog group={'hci'} name={'blog-post.2'} />} />
-        <Route path="/about" element={<Blog group={'hci'} name={'blog-post.3'} />} />
+        <Route path="people" element={<Navigate to="research" replace />} />
+        <Route path="joinus" element={<Navigate to="research" replace />} />
+        <Route path="about" element={<Navigate to="research" replace />} />
+        <Route path="*" element={<Navigate to="" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
