@@ -19,6 +19,7 @@ function Sidebar(props) {
   const { posts, social } = props;
 
   const [hciOpen, setHciOpen] = useState(true);
+  const [sunOpen, setSunOpen] = useState(true);
 
   return (
     <Grid item xs={12} md={2.5}>
@@ -36,9 +37,6 @@ function Sidebar(props) {
         component="nav"
       >
         <ListItemButton onClick={() => { setHciOpen(!hciOpen) }}>
-          {/* <ListItemIcon>
-            <InboxIcon />
-          </ListItemIcon> */}
           <ListItemText primary="HCI" />
           {hciOpen ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
@@ -47,14 +45,28 @@ function Sidebar(props) {
             {posts.hci && posts.hci.map((post) =>
               <ListItem sx={{ pl: 4 }}>
                 <a component="a" href={"/#/research/hci/" + post.replace(/\s+/g, '-')}>
-
-                  <ListItemText primary={post}>
-                    <Link>d</Link>
-                  </ListItemText>
+                  <ListItemText primary={post} />
                 </a>
-              </ListItem>)}
+              </ListItem>
+              )}
           </List>
         </Collapse>
+        <ListItemButton onClick={() => { setSunOpen(!sunOpen) }}>
+          <ListItemText primary="Scene Understanding" />
+          {sunOpen ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={sunOpen} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            {posts.sun && posts.sun.map((post) =>
+              <ListItem sx={{ pl: 4 }}>
+                <a component="a" href={"/#/research/sun/" + post.replace(/\s+/g, '-')}>
+                  <ListItemText primary={post} />
+                </a>
+              </ListItem>
+              )}
+          </List>
+        </Collapse>
+
       </List>
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social

@@ -58,7 +58,7 @@ const sidebar = {
 const theme = createTheme();
 
 export default function Blog(props) {
-
+  // ! fixme: when props is not valid
   const [post, setPost] = useState('');
   const [meta, setMeta] = useState({});
   const [posts, setPosts] = useState({})

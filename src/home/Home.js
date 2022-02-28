@@ -12,19 +12,25 @@ import SvgButton from '../components/elements/SvgButton';
 
 const Model = () => {
   const ref = useRef()
-  const scenes = [
-    [useLoader(GLTFLoader, "./rest.gltf"), [-137, -40, 200]],
-    [useLoader(GLTFLoader, "./office1.gltf"), [-319, -22.25, -210]],
-    [useLoader(GLTFLoader, "./office2.gltf"), [-70.7, -40, -32]],
-    [useLoader(GLTFLoader, "./indoor.gltf"), [-217.2, -22.25, 93]],
-    // [useLoader(GLTFLoader, "./meeting.gltef"), [-311, -22.25, 128.35]],
+  const scenes = useLoader(GLTFLoader,
+    ["/rest.gltf",
+      "/office1.gltf",
+      "/office2.gltf",
+      "/indoor.gltf",]);
+  const locations =
+    [[-137, -40, 200],
+    [-319, -22.25, -210],
+    [-70.7, -40, -32],
+    [-217.2, -22.25, 93],
+    ]
+  // [useLoader(GLTFLoader, "./meeting.gltef"), [-311, -22.25, 128.35]],
 
-  ]
+
   return (
     <group ref={ref}>
       {scenes.map((scene, idx) => {
-        return (<mesh position={scene[1]} key={idx}>
-          <primitive object={scene[0].scene} scale={1} />
+        return (<mesh position={locations[idx]} key={idx}>
+          <primitive object={scene.scene} scale={1} />
         </mesh>)
       })}
     </group>
@@ -35,7 +41,6 @@ useGLTF.preload('./rest.gltf')
 useGLTF.preload('./office1.gltf')
 useGLTF.preload('./office2.gltf')
 useGLTF.preload('./indoor.gltf')
-// useGLTF.preload('./meeting.gltf')
 
 const linear = (x, fn) => (fn(x))
 
@@ -319,7 +324,7 @@ const useStyles = makeStyles(theme => ({
   },
   container: { width: '100%', height: '100%' },
   logoBox: { maxHeight: '10vh', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', paddingBottom: '5rem', paddingTop: '2rem' },
-  tabBox: {display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '10vh'},
+  tabBox: { display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '10vh' },
   contentBox: {
     color: 'white',
     position: 'relative',
@@ -373,7 +378,7 @@ function Home() {
         <Grid item xs={12} sm={12} md lg className={classes.body}>
           <Box className={classes.contentBox}>
             Brief Introduction\n
-            <Link to={jump}> {tab} </Link>
+            <Link to={'/#/' + jump}> {tab} </Link>
           </Box>
         </Grid>
       </Grid>
