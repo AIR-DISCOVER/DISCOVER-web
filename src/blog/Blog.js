@@ -13,7 +13,7 @@ import Main from './Main';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import { useState, useEffect } from 'react'
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
@@ -96,17 +96,25 @@ export default function Blog(props) {
 
   async function fetch_sequence(related, setfn) {
     let posts = []
-    for (const post of related.hci) {
-      let response = await fetch('/resources/research/hci/' + post + '.json')
-      let text = await response.text()
-      let json = JSON.parse(text)
-      posts.push(json)
+    if (related.hci) {
+      for (const post of related.hci) {
+        let response = await fetch('/resources/research/hci/' + post + '.json')
+        let text = await response.text()
+        let json = JSON.parse(text)
+        json['_which'] = 'hci'
+        json['_post'] = post
+        posts.push(json)
+      }
     }
-    for (const post of related.sun) {
-      let response = await fetch('/resources/research/sun/' + post + '.json')
-      let text = await response.text()
-      let json = JSON.parse(text)
-      posts.push(json)
+    if (related.sun) {
+      for (const post of related.sun) {
+        let response = await fetch('/resources/research/sun/' + post + '.json')
+        let text = await response.text()
+        let json = JSON.parse(text)
+        json['_which'] = 'sun'
+        json['_post'] = post
+        posts.push(json)
+      }
     }
 
     setfn(posts)
@@ -114,7 +122,8 @@ export default function Blog(props) {
 
   useEffect(() => {
     meta.related && fetch_sequence(meta.related, setRelated)
-  }, [meta])
+    return ()=>{setRelated([])}
+  }, [props, meta])
 
 
 
@@ -123,33 +132,62 @@ export default function Blog(props) {
       <CssBaseline />
       <Container maxWidth={false} disableGutters>
         <Header group={props.group} title={meta.title} />
-        <Grid container spacing={4} sx={{ padding: 4 }}>
+        <Grid container sx={{ padding: 4 }}>
+          <Grid item xs={0} md={0} xl={1.2} />
           <Sidebar
             posts={posts}
             title={sidebar.social}
             social={sidebar.social}
           />
           <Main meta={meta} post={post} />
+          <Grid item xs={0} md={0} xl={3} />
         </Grid>
-        <Grid container spacing={4} sx={{ padding: 4 }}>
-          <Grid item xs={0} md={2.5} />
-          <Grid item xs={12} md={9.5}>
-            <Box>
-              Related
-            </Box>
+        {related.length > 0 &&
+          <Grid container sx={{ padding: 4 }}>
+            <Grid item xs={0} md={0} xl={1.5} />
+            <Grid item xs={0} md={2.5} xl={1.5} />
+            <Grid item xs={12} md={9.5} xl={6}>
+              <hr
+                style={{
+                  color: 'rgba(229,229,229,0)',
+                  backgroundColor: 'rgba(0,0,0,0)',
+                  height: 2
+                }}
+              />
+            </Grid>
+            <Grid item xs={0} md={0} xl={3} />
+
+            <Grid item xs={0} md={0} xl={1.5} />
+            <Grid item xs={0} md={2.5} xl={1.5} />
+            <Grid item xs={12} md={9.5} xl={6}>
+              <Typography
+                component="h2"
+                variant="h3"
+                align="left"
+                fontFamily="Gill Sans"
+                fontSize="1.6rem"
+                color="#757575"
+                paddingBottom="2rem">
+                Related Contents
+              </Typography>
+            </Grid>
+            <Grid item xs={0} md={0} xl={3} />
+
+            <Grid item xs={0} md={0} xl={1.5} />
+            <Grid item xs={0} md={2.5} xl={1.5} />
+            <Grid item xs={12} md={9.5} xl={6}>
+              <Box sx={{ padding: 1 }}>
+                {/* <MainFeaturedPost post={mainFeaturedPost} /> */}
+                <Grid container spacing={4}>
+                  {related.map((p) => (
+                    <FeaturedPost key={p.title} post={p} />
+                  ))}
+                </Grid>
+              </Box>
+            </Grid>
+            <Grid item xs={0} md={0} xl={3} />
           </Grid>
-          <Grid item xs={0} md={2.5} />
-          <Grid item xs={12} md={9.5}>
-            <Box sx={{ padding: 4 }}>
-              {/* <MainFeaturedPost post={mainFeaturedPost} /> */}
-              <Grid container spacing={4}>
-                {related.length > 0 && related.map((p) => (
-                  <FeaturedPost key={p.title} post={p} />
-                ))}
-              </Grid>
-            </Box>
-          </Grid>
-        </Grid>
+        }
       </Container>
       <Footer
         title="Footer"
