@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import { makeStyles } from '@mui/styles';
+import { Container, Grid } from '@mui/material';
 
 
 const useStyles = makeStyles(theme => ({
@@ -16,54 +17,82 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     justifyContent: 'space-between',
     // height: '40vh',
-    minHeight: '25rem',
+    height: '20rem',
     // backgroundImage: 'url(/header.png)',
     background: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/header.png') no-repeat 0% 20%/ cover",
     borderBottom: 1,
   },
   logoBox: {
-    width: "15rem",
-    // maxWidth: "100%",
+    width: "100%",
+    maxWidth: '15rem',
     maxHeight: "100%",
     alignSelf: 'flex-start',
     display: 'flex'
   },
   titleBox: {
-    paddingLeft: "1rem",
-    paddingRight: "1rem",
-    paddingBottom: "2rem",
+    marginBottom: "-1rem",
     width: "100%",
-    display: 'flex'
+    display: 'flex',
+    flexDirection: 'column'
   }
 }))
 
 function Header(props) {
-  const { title } = props;
+  const { group, title } = props;
   const classes = useStyles()
   return (
-    <>
-      <Toolbar
-        className={classes.toolbar}
-      >
-        <Box className={classes.logoBox} component='a' href='/'>
-          <img src='/site-logo.png' alt='site-logo' style={{ maxWidth: "100%", maxHeight: "100%" }} />
-        </Box>
-        <Box className={classes.titleBox}>
+    <Toolbar
+      disableGutters
+      className={classes.toolbar}
+    >
+      <Container maxWidth={false} disableGutters>
+        <Grid container spacing={4} sx={{ padding: 2 }}>
+          <Grid item xs={12} md={2.5}>
+            <Box className={classes.logoBox} component='a' href='/'>
+              <img src='/site-logo.png' alt='site-logo' style={{ maxWidth: "100%", maxHeight: "100%" }} />
+            </Box>
+          </Grid>
+          {/* <Grid item xs={12} md={9.5} /> */}
+        </Grid>
+      </Container>
+      <Container maxWidth={false} disableGutters>
+        <Grid container spacing={4} sx={{ padding: 4 }}>
+          <Grid item xs={0} md={2.5}></Grid>
+          <Grid item xs={12} md={9.5}>
+            <Box className={classes.titleBox}>
 
-          <Typography
-            component="h2"
-            variant="h3"
-            color="white"
-            align="left"
-            fontFamily="Gill Sans"
-            sx={{ textShadow: "2px 2px 2px grey", flex: 1, width: '100%', height: '100%', paddingLeft: 8, paddingRight: 8, wordWrap: 'break-word', overflow: 'visible' }}
-            // noWrap
-          >
-            {title}
-          </Typography>
-        </Box>
-      </Toolbar>
-    </>
+              <Typography
+                component="h2"
+                variant="h3"
+                color="white"
+                align="left"
+                fontFamily="Gill Sans"
+                fontSize="2rem"
+                sx={{ textShadow: "2px 2px 2px grey", flex: 1, width: '100%', height: '100%', wordWrap: 'break-word', overflow: 'visible' }}
+              // noWrap
+              >
+                {group && group === 'hci' ? "RESEARCH_HCI" : "RESEARCH_3DVISION"
+                }
+              </Typography>
+              <Typography
+                component="h2"
+                variant="h3"
+                color="#AFAFAF"
+                align="left"
+                fontFamily="Gill Sans"
+                fontSize="2rem"
+                sx={{ textShadow: "1px 1px 1px white", flex: 1, width: '100%', height: '100%', wordWrap: 'break-word', overflow: 'visible' }}
+              // noWrap
+              >
+                {title}
+              </Typography>
+            </Box>
+
+          </Grid>
+
+        </Grid>
+      </Container>
+    </Toolbar>
   );
 }
 
