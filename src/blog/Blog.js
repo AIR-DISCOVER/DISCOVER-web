@@ -64,15 +64,14 @@ export default function Blog(props) {
   const [posts, setPosts] = useState({})
   useEffect(() => {
     fetch('/resources/posts.json')
-    .then((res) => {
-      res.text()
-        .then((json) => {
-          setPosts(JSON.parse(json));
-          console.log(json)
-        })
-    })
-    .catch((err) => { console.log(err) });
-    fetch('/resources/' + props.group + '/' +props.name + '/index.md')
+      .then((res) => {
+        res.text()
+          .then((json) => {
+            Promise.resolve(json).then(JSON.parse).then((re) => { setPosts(re) }).catch((err) => { console.log(err); console.log(props) })
+          })
+      })
+      .catch((err) => { console.log(err) });
+    fetch('/resources/' + props.group + '/' + props.name + '/index.md')
       .then((res) => {
         res.text()
           .then((text) => {
@@ -85,12 +84,12 @@ export default function Blog(props) {
       .then((res) => {
         res.text()
           .then((json) => {
-            setMeta(JSON.parse(json));
+            Promise.resolve(json).then(JSON.parse).then((re) => { setMeta(re) }).catch((err) => { console.log(err); console.log(props) })
           })
       })
       .catch((err) => { console.log(err) });
-    
-  }, [props.name, props.group])
+
+  }, [props])
 
 
   return (
