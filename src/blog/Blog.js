@@ -122,7 +122,7 @@ export default function Blog(props) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth={false} disableGutters>
-        <Header group={props.group} title={related.length} />
+        <Header group={props.group} title={meta.title} />
         <Grid container spacing={4} sx={{ padding: 4 }}>
           <Sidebar
             posts={posts}
