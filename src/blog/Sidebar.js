@@ -22,7 +22,7 @@ function Sidebar(props) {
   const [sunOpen, setSunOpen] = useState(true);
 
   return (
-    <Grid item xs={12} md={2.5}>
+    <Grid item xs={12} md={2.5} xl={1.8} padding={1}>
       {/* <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
         <Typography variant="h6" gutterBottom>
           {title}
@@ -43,32 +43,28 @@ function Sidebar(props) {
         <Collapse in={hciOpen} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
             {posts.hci && posts.hci.map((post) =>
-              <ListItem sx={{ pl: 4 }}>
-                <a component="a" href={"/#/research/hci/" + post.replace(/\s+/g, '-')}>
-                  <ListItemText primary={post} />
-                </a>
-              </ListItem>
-              )}
+              <ListItemButton component='a' href={"/#/research/hci/" + post.replace(/\s+/g, '-')} sx={{ pl: 4 }}>
+                <ListItemText primary={post} />
+              </ListItemButton>
+            )}
           </List>
         </Collapse>
         <ListItemButton onClick={() => { setSunOpen(!sunOpen) }}>
-          <ListItemText primary="Scene Understanding" />
+          <ListItemText primary="DISCOVER-SUN" />
           {sunOpen ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
         <Collapse in={sunOpen} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
             {posts.sun && posts.sun.map((post) =>
-              <ListItem sx={{ pl: 4 }}>
-                <a component="a" href={"/#/research/sun/" + post.replace(/\s+/g, '-')}>
-                  <ListItemText primary={post} />
-                </a>
-              </ListItem>
-              )}
+              <ListItemButton component='a' href={"/#/research/sun/" + post.replace(/\s+/g, '-')} sx={{ pl: 4 }}>
+                <ListItemText primary={post} />
+              </ListItemButton>
+            )}
           </List>
         </Collapse>
 
       </List>
-      <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
+      {/* <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
       </Typography>
       {social.map((network) => (
@@ -84,7 +80,7 @@ function Sidebar(props) {
             <span>{network.name}</span>
           </Stack>
         </Link>
-      ))}
+      ))} */}
     </Grid>
   );
 }

@@ -56,32 +56,33 @@ function Header(props) {
         </Grid>
       </Container>
       <Container maxWidth={false} disableGutters>
-        <Grid container spacing={4} sx={{ padding: 4 }}>
-          <Grid item xs={0} md={2.5}></Grid>
-          <Grid item xs={12} md={9.5}>
+        <Grid container sx={{ padding: 4 }}>
+          <Grid item xs={0} md={0} xl={1.2} />
+          <Grid item xs={0} md={2.5} xl={1.8} />
+          <Grid item xs={12} md={9.5} xl={6}>
             <Box className={classes.titleBox}>
 
-              <Typography
-                component="h2"
-                variant="h3"
-                color="white"
-                align="left"
-                fontFamily="Gill Sans"
-                fontSize="2rem"
-                sx={{ textShadow: "2px 2px 2px grey", flex: 1, width: '100%', height: '100%', wordWrap: 'break-word', overflow: 'visible' }}
-              // noWrap
-              >
-                {group && group === 'hci' ? "RESEARCH_HCI" : "RESEARCH_3DVISION"
-                }
-              </Typography>
               <Typography
                 component="h2"
                 variant="h3"
                 color="#AFAFAF"
                 align="left"
                 fontFamily="Gill Sans"
-                fontSize="2rem"
-                sx={{ textShadow: "1px 1px 1px white", flex: 1, width: '100%', height: '100%', wordWrap: 'break-word', overflow: 'visible' }}
+                fontSize="1.5rem"
+                sx={{ flex: 1, width: '100%', height: '100%', wordWrap: 'break-word', overflow: 'visible' }}
+              // noWrap
+              >
+                {group && group === 'hci' ? "RESEARCH_HCI" : "RESEARCH_3DVISION"}
+              </Typography>
+              <Typography
+                component="h2"
+                variant="h3"
+                color="white"
+                align="left"
+                fontFamily="Gill Sans"
+                fontSize="2.2rem"
+                paddingBottom="2rem"
+                sx={{ flex: 1, width: '100%', height: '100%', wordWrap: 'break-word', overflow: 'visible' }}
               // noWrap
               >
                 {title}
@@ -89,6 +90,7 @@ function Header(props) {
             </Box>
 
           </Grid>
+          <Grid item xs={0} md={0} xl={3} />
 
         </Grid>
       </Container>
