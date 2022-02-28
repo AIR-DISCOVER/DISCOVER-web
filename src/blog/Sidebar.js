@@ -46,7 +46,7 @@ function Sidebar(props) {
           <List component="div" disablePadding>
             {posts.hci && posts.hci.map((post) =>
               <ListItem sx={{ pl: 4 }}>
-                <a component="a" href={"/research/hci/" + post.replace(/\s+/g, '-')}>
+                <a component="a" href={"/#/research/hci/" + post.replace(/\s+/g, '-')}>
 
                   <ListItemText primary={post}>
                     <Link>d</Link>
