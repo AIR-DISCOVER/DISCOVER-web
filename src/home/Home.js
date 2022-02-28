@@ -40,10 +40,10 @@ const Model = () => {
   );
 };
 
-useGLTF.preload('./rest.gltf')
-useGLTF.preload('./office1.gltf')
-useGLTF.preload('./office2.gltf')
-useGLTF.preload('./indoor.gltf')
+// useGLTF.preload('./rest.gltf')
+// useGLTF.preload('./office1.gltf')
+// useGLTF.preload('./office2.gltf')
+// useGLTF.preload('./indoor.gltf')
 
 const linear = (x, fn) => (fn(x))
 
@@ -339,13 +339,17 @@ function Home() {
   const [state, setState] = useState(true)
   const [tab, setTab] = useState("Home")
   const [jump, setJump] = useState("Home")
+  const [mounted, setMounted] = useState(false)
   const classes = useStyles();
+
+  useEffect(() => { setMounted(true) }, [])
 
   return (
     <div className={classes.main}>
       <div className={classes.canvas}>
         <div className="App">
-          <Scene cref={controlRef} state={state} tab={tab} />
+          {mounted ?
+            <Scene cref={controlRef} state={state} tab={tab} /> : null}
         </div>
       </div>
       <Grid container className={classes.container} >
