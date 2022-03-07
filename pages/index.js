@@ -45,5 +45,5 @@ export default function HomePage() {
 // ----------------------------------------------------------------------
 
 HomePage.getLayout = function getLayout(page) {
-  return <Layout simpleFooter>{page}</Layout>;
+  return <Layout>{page}</Layout>;
 };

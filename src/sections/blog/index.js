@@ -2,6 +2,7 @@ export * from './career';
 export * from './travel';
 export * from './e-learning';
 export * from './marketing';
+export * from './hci';
 
 export { default as BlogSidebar } from './BlogSidebar';
 export { default as BlogAuthorInfo } from './BlogAuthorInfo';

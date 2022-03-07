@@ -1,6 +1,12 @@
 // ----------------------------------------------------------------------
 
 const Routes = {
+  hci: {
+    landing: '/hci',
+    posts: '/hci/blog',
+    post: (slug) => `/hci/blog/${slug}`
+
+  },
   // Marketing
   marketing: {
     landing: '/marketing',

@@ -72,7 +72,7 @@ export default function Header({ transparent }) {
 
           <Box sx={{ flexGrow: 1 }} />
 
-          <Stack spacing={2} direction="row" alignItems="center">
+          {/* <Stack spacing={2} direction="row" alignItems="center">
             <Searchbar
               sx={{
                 ...(isScrolling && { color: 'text.primary' }),
@@ -109,7 +109,7 @@ export default function Header({ transparent }) {
                 </Button>
               </Stack>
             )}
-          </Stack>
+          </Stack> */}
 
           {!isDesktop && (
             <NavMobile

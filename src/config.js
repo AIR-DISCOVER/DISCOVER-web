@@ -10,6 +10,7 @@ export const GOOGLE_API = process.env.GOOGLE_API;
 
 // MARKDOWN FILE DIRECTORY
 // ----------------------------------------------------------------------
+export const HCI_RESEARCH_POSTS_DIRECTORY = '_data/blog-posts/hci';
 
 export const CAREER_POSTS_DIRECTORY = '_data/blog-posts/career';
 export const ELEARNING_POSTS_DIRECTORY = '_data/blog-posts/e-learning';
@@ -17,6 +18,7 @@ export const TRAVEL_POSTS_DIRECTORY = '_data/blog-posts/travel';
 export const MARKETING_POSTS_DIRECTORY = '_data/blog-posts/marketing';
 export const CASE_STUDIES_DIRECTORY = '_data/case-studies';
 export const COMPONENTS_DIRECTORY = '_data/components';
+
 
 // DEFAULT LOCALE
 // ----------------------------------------------------------------------
