@@ -2,31 +2,25 @@ import React, { forwardRef, Suspense, useEffect, useImperativeHandle, useRef, us
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { makeStyles } from '@mui/styles';
-import { OrbitControls, useGLTF } from '@react-three/drei';
-import { OrthographicCamera, PerspectiveCamera } from 'three';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import {
-  Link,
-} from "react-router-dom";
+
 import SvgButton from '../components/elements/SvgButton';
-import Markdown from '../blog/Markdown';
-import { display } from '@mui/system';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { Object3D } from 'three';
 
 const Model = () => {
   const ref = useRef()
   const scenes = useLoader(GLTFLoader,
-    ["/rest.gltf",
-      "/office1.gltf",
-      "/office2.gltf",
-      "/indoor.gltf",]);
+    ["/rest.glb",
+      "/office1.glb",
+      "/office2.glb",
+      "/indoor.glb",]);
   const locations =
     [[-137, -40, 200],
     [-319, -22.25, -210],
     [-70.7, -40, -32],
     [-217.2, -22.25, 93],
     ]
-  // [useLoader(GLTFLoader, "./meeting.gltef"), [-311, -22.25, 128.35]],
 
 
   return (
@@ -39,11 +33,6 @@ const Model = () => {
     </group>
   );
 };
-
-// useGLTF.preload('./rest.gltf')
-// useGLTF.preload('./office1.gltf')
-// useGLTF.preload('./office2.gltf')
-// useGLTF.preload('./indoor.gltf')
 
 const linear = (x, fn) => (fn(x))
 
@@ -173,16 +162,26 @@ const RefDolly = forwardRef((states, ref) => {
       // state.camera.setFocalLength(40 + 10 * Math.sin(state.clock.getElapsedTime() * 2))
     }
     state.camera.updateProjectionMatrix();
+    // console.log(state.camera.position)
   })
   return null
 })
 
+const AddTarget = (props) => {
+  const { scene } = useThree();
+  scene.add(props.target);
+  return null;
+}
+
 const Scene = (states) => {
+  const targetObject = new Object3D();
   return (
     <Canvas className='Canvas'>
       <Suspense fallback={null}>
-        <directionalLight />
-        <ambientLight color={0x7f7f7f} />
+        <AddTarget target={targetObject} />
+        <directionalLight color={0xffffff} intensity={1} target={targetObject} castShadow={true} />
+        <ambientLight color={0xffffff} intensity={0.5} />
+        <hemisphereLight color={0xffffff} intensity={0.1} />
         <Model />
         {/* <OrbitControls /> */}
         <RefDolly ref={states.cref} state_in={states.state} tab={states.tab} />
