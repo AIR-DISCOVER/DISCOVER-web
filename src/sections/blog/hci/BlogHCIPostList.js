@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Pagination, Box } from '@mui/material';
 //
 import BlogHCIPostItem from './BlogHCIPostItem';
+import { useState } from 'react';
 
 // ----------------------------------------------------------------------
 
@@ -11,6 +12,7 @@ BlogHCIPostList.propTypes = {
 };
 
 export default function BlogHCIPostList({ posts }) {
+  const [page, setPage] = useState(1)
   return (
     <>
       <Box
@@ -24,13 +26,15 @@ export default function BlogHCIPostList({ posts }) {
           },
         }}
       >
-        {posts.slice(0, 8).map((post) => (
+        {posts.slice((page - 1) * 8, page * 8).map((post) => (
           <BlogHCIPostItem key={post.slug} post={post} />
         ))}
       </Box>
 
       <Pagination
-        count={10}
+        count={Math.ceil(posts.length / 8)}
+        page={page}
+        onChange={(_, value) => { setPage(value) }}
         color="primary"
         size="large"
         sx={{

@@ -28,7 +28,7 @@ export default function BlogSidebar({ author, recentPosts, advertisement, sx, ..
     <>
       {author && isDesktop && <BlogSidebarAuthor author={author} />}
 
-      {isDesktop && <SearchInput />}
+      {/* {isDesktop && <SearchInput />} */}
 
       <Stack
         spacing={5}
@@ -42,7 +42,7 @@ export default function BlogSidebar({ author, recentPosts, advertisement, sx, ..
         <BlogSidebarCategories />
         <BlogSidebarRecentPosts recentPosts={recentPosts} />
         <BlogSidebarPopularTags />
-        <Advertisement01 advertisement={advertisement} />
+        {/* <Advertisement01 advertisement={advertisement} /> */}
       </Stack>
     </>
   );

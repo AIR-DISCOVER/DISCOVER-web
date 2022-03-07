@@ -20,7 +20,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   position: 'relative',
   padding: theme.spacing(10, 0),
   '& .slick-list': {
-    borderRadius: Number(theme.shape.borderRadius) * 2,
+    borderRadius: 0,
   },
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(15, 0, 10, 0),
@@ -30,7 +30,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 const DotStyle = styled('span')(({ theme }) => ({
   width: 4,
   height: 4,
-  borderRadius: '50%',
+  // borderRadius: '50%',
   backgroundColor: 'currentColor',
   margin: theme.spacing(0, 1),
 }));

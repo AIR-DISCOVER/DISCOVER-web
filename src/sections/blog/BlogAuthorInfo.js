@@ -37,7 +37,7 @@ export default function BlogAuthorInfo({ author }) {
               {role}
             </Typography>
           </Stack>
-          <SocialsButton initialColor links={socialLinks} />
+          {socialLinks && <SocialsButton initialColor links={socialLinks} />}
         </Stack>
 
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>

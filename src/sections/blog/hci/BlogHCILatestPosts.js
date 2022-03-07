@@ -100,6 +100,9 @@ export default function BlogHCILatestPosts({ posts }) {
                   sx={{
                     px: 2,
                     py: { xs: 8, md: 10 },
+                    borderRadius: 2,
+                    backgroundClip: 'content-box',
+                    WebkitBackgroundClip: 'content-box',
                   }}
                 >
                   <PostItem post={post} />
@@ -140,7 +143,7 @@ function PostItem({ post }) {
       component={m.div}
       whileHover="hover"
       sx={{
-        borderRadius: 2,
+        borderRadius: 0,
         overflow: 'hidden',
         position: 'relative',
         boxShadow: (theme) => theme.customShadows.z12,
@@ -153,7 +156,7 @@ function PostItem({ post }) {
       <Stack
         justifyContent="space-between"
         sx={{
-          p: 5,
+          p: 2,
           width: 1,
           height: 1,
           zIndex: 9,

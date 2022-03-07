@@ -51,10 +51,14 @@ export default function BlogHCIPostItem({ post }) {
       whileHover="hover"
       variants={varHover(1)}
       transition={varTranHover()}
-      sx={{ borderRadius: 2, overflow: 'hidden', position: 'relative' }}
+      sx={{
+        borderRadius: 0,
+        overflow: 'hidden', position: 'relative',
+        boxShadow: (theme) => theme.customShadows.z12,
+      }}
     >
       <m.div variants={varHover(1.25)} transition={varTranHover()}>
-        <Image src={coverImg} alt={title} ratio="3/4" />
+        <Image src={coverImg} alt={title} ratio="4/3" />
       </m.div>
 
       <Stack

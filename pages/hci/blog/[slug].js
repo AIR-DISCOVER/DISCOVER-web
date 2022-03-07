@@ -76,14 +76,15 @@ export default function HCIPostPage({ post, posts }) {
   return (
     <Page title={`${title} - Post | HCI`}>
       <RootStyle>
-        <Image alt="hero" src={heroImg} ratio="21/9" />
+        <Image alt="hero" src={heroImg} ratio="21/9w" />
 
         <Container>
           <Breadcrumbs
             sx={{ my: 3 }}
             links={[
               { name: 'Home', href: '/' },
-              { name: 'Blog', href: Routes.hci.posts },
+              { name: 'HCI', href: Routes.hci.landing },
+              { name: 'Research', href: Routes.hci.posts },
               { name: title },
             ]}
           />
@@ -121,31 +122,34 @@ export default function HCIPostPage({ post, posts }) {
                   </Typography>
                 </Stack>
 
-                <Stack direction="row" alignItems="center">
+                {/* <Stack direction="row" alignItems="center">
                   <ShareButton />
                   <FavoriteButton checked={favorite} onChange={handleChangeFavorite} />
-                </Stack>
+                </Stack> */}
               </Stack>
 
               <Divider sx={{ mb: 6 }} />
 
               <Markdown content={content} firstLetter />
+              {tags &&
+                <Stack direction="row" alignItems="center" flexWrap="wrap" sx={{ my: 6 }}>
+                  <Typography variant="subtitle2" sx={{ mr: 1 }}>
+                    Tags:
+                  </Typography>
+                  {tags.map((tag) => (
+                    <Chip key={tag} size="small" label={tag} sx={{ m: 0.5 }} onClick={() => { }} />
+                  ))}
+                </Stack>
+              }
 
-              <Stack direction="row" alignItems="center" flexWrap="wrap" sx={{ my: 6 }}>
-                <Typography variant="subtitle2" sx={{ mr: 1 }}>
-                  Tags:
-                </Typography>
-                {tags.map((tag) => (
-                  <Chip key={tag} size="small" label={tag} sx={{ m: 0.5 }} onClick={() => {}} />
-                ))}
-              </Stack>
-
-              <Stack direction="row" alignItems="center" flexWrap="wrap">
-                <Typography variant="subtitle2" sx={{ mr: 1 }}>
-                  Share:
-                </Typography>
-                <SocialsButton initialColor links={shareLinks} simple={false} />
-              </Stack>
+              {shareLinks &&
+                <Stack direction="row" alignItems="center" flexWrap="wrap">
+                  <Typography variant="subtitle2" sx={{ mr: 1 }}>
+                    Share:
+                  </Typography>
+                  <SocialsButton initialColor links={shareLinks} simple={false} />
+                </Stack>
+              }
 
               <Divider sx={{ mt: 8 }} />
 

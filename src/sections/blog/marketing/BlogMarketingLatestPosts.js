@@ -39,7 +39,7 @@ BlogMarketingLatestPosts.propTypes = {
   posts: PropTypes.array.isRequired,
 };
 
-export default function BlogMarketingLatestPosts({ posts }) {
+export default function BlogMarketingLatestPosts({ posts, name = 'Posts' }) {
   const theme = useTheme();
   const carouselRef = useRef(null);
 
@@ -79,7 +79,7 @@ export default function BlogMarketingLatestPosts({ posts }) {
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
-          Latest Posts
+          Latest {name}
         </Typography>
 
         <Box sx={{ position: 'relative' }}>
@@ -140,7 +140,7 @@ function PostItem({ post }) {
       component={m.div}
       whileHover="hover"
       sx={{
-        borderRadius: 2,
+        borderRadius: 0,
         overflow: 'hidden',
         position: 'relative',
         boxShadow: (theme) => theme.customShadows.z12,

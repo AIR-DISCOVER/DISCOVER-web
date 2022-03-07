@@ -1,67 +1,33 @@
 ---
-title: Believing These 7 Myths About Event Keeps You From Growing
-description: Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.
+title: Robot Guide Dog
+description: A robot dog that can guide.
 category: Branding
-favorited: true
-coverImg: https://zone-assets-api.vercel.app/assets/images/marketing/marketing_2.jpg
-heroImg: https://zone-assets-api.vercel.app/assets/images/marketing/marketing_hero.jpg
-createdAt: '2020-03-16T05:35:07.322Z'
-duration: 8 minutes read
-shareLinks:
-  facebook: facebook-link
-  instagram: instagram-link
-  linkedin: linkedin-link
-  twitter: twitter-link
-tags: [Marketing, Development, HR & Recruiting, Design, Management]
+# favorited: true
+coverImg: /images/Guide_Dog_1.png
+heroImg: /images/Guide_Dog_1.png)
+createdAt: '2022-02-26T15:11'
+# duration: 8 minutes read
+# shareLinks:
+#   facebook: facebook-link
+#   instagram: instagram-link
+#   linkedin: linkedin-link
+#   twitter: twitter-link
+# tags: [Marketing, Development, HR & Recruiting, Design, Management]
 author:
-  name: Jayvion Simon
-  role: Full Stack Designer
-  picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
+  name: Zhang, Yang
+  # role: Full Stack Designer
+  # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
   quotes: Member since Mar 15, 2021
-  about: Integer tincidunt. Nullam dictum felis eu pede mollis pretium. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem.
-  socialLinks:
-    facebook: facebook-link
-    instagram: instagram-link
-    linkedin: linkedin-link
-    twitter: twitter-link
+  about: Self introduction here
+  # socialLinks:
+  #   facebook: facebook-link
+  #   instagram: instagram-link
+  #   linkedin: linkedin-link
+  #   twitter: twitter-link
 ---
 
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh. Donec posuere vulputate arcu. Quisque rutrum.
+In 2020, China has the second largest population of vision-impaired people in the world, with over 17 million individuals visually disabled. Because of the difficulty and prohibitive cost of travel, many blind people are deprived of the same opportunities as sighted people to get around. Guide dogs are the most "intelligent" form of commercial mobility aids available to the visually impaired. A guide dog can remember routes, navigate for the blind, obey commands, and help to avoid obstacles and oncoming traffic. Because of the late development of dog training techniques and large groups of visually impaired people, guide dogs are still not popular in China. Moreover, many blind people have given up this method because they are unable to care for their dogs independently.
 
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
+![alt iii](/images/Guide_Dog_1.png)
 
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh.
-
-![alt marketing](https://zone-assets-api.vercel.app/assets/images/marketing/marketing_8.jpg)
-
-#### Curabitur suscipit suscipit tellus
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-```js
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-
-export default function BoxComponent() {
-  return (
-    <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
-      <Button>Save</Button>
-    </Box>
-  );
-}
-```
-
-#### Nullam accumsan lorem in
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-> Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo.
-
-![alt markdown](https://zone-assets-api.vercel.app/assets/images/marketing/marketing_9.jpg)
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh.
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
+To address the mobility difficulties of the blind, our team seeks to replicate and enhance the advantages and remedy the disadvantages of guide dogs through the use of artificial intelligence and robotics. For example, we use autonomous driving technology to achieve door-to-door navigation and accurate obstacle avoidance in complex road conditions, machine learning to solve the challenges of visual recognition, demonstrative teaching and voice recognition, and natural human-robot interaction technology to tackle the issue of efficient communication and collaboration between users and robot guide dogs. In addition to accuracy and efficiency, our team uses user experience research and human-machine ergonomics experiments to reduce the cognitive load of the blind and improve the long-term comfort of use. Through user feedback and participatory design, we will precisely solve the pain points and design interaction modes that are suitable for visually impaired travelers; finally, we will achieve the optimization of the efficiency and experience of collaborative mobility between blind people and robots.

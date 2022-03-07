@@ -1,67 +1,36 @@
 ---
-title: How 7 Things Will Change The Way You Approach Event
-description: Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.
-category: Design
-favorited: true
-coverImg: https://zone-assets-api.vercel.app/assets/images/marketing/marketing_4.jpg
-heroImg: https://zone-assets-api.vercel.app/assets/images/marketing/marketing_hero.jpg
-createdAt: '2020-03-16T05:35:07.322Z'
-duration: 8 minutes read
-shareLinks:
-  facebook: facebook-link
-  instagram: instagram-link
-  linkedin: linkedin-link
-  twitter: twitter-link
-tags: [Marketing, Development, HR & Recruiting, Design, Management]
+title: V2I Project
+# description: A robot dog that can guide.
+category: Branding
+# favorited: true
+coverImg: /images/V2I_Project_2.png
+heroImg: /images/V2I_Project_1.png
+createdAt: '2022-02-28T13:15'
+# duration: 8 minutes read
+# shareLinks:
+#   facebook: facebook-link
+#   instagram: instagram-link
+#   linkedin: linkedin-link
+#   twitter: twitter-link
+# tags: [Marketing, Development, HR & Recruiting, Design, Management]
 author:
-  name: Lainey Davidson'
-  role: Leader
-  picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_4.jpg
+  name: Xu, Ying
+  # role: Full Stack Designer
+  # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
   quotes: Member since Mar 15, 2021
-  about: Integer tincidunt. Nullam dictum felis eu pede mollis pretium. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem.
-  socialLinks:
-    facebook: facebook-link
-    instagram: instagram-link
-    linkedin: linkedin-link
-    twitter: twitter-link
+  about: Self introduction here
+  # socialLinks:
+  #   facebook: facebook-link
+  #   instagram: instagram-link
+  #   linkedin: linkedin-link
+  #   twitter: twitter-link
 ---
 
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh. Donec posuere vulputate arcu. Quisque rutrum.
+![alt img1](/images/V2I_Project_1.png)
 
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
+The auto industry is undergoing changes that are unseen in a century. Autonomous vehicles are developing rapidly around the world. The companies such as Waymo, Tesla, and Baidu are continually increasing their investment in large-scale autonomous vehicle tests and demonstration applications in order to facilitate future commercial operations in the area of driverless cars. However, the global development of autonomous driving technology is still in the early stages. Even the Level 2 (Partial Driving Automation) autonomous vehicles are in the commercial stage, but there is still limited market space and small-scale application. The development of upper-level automation such as Level 3 and Level 4 is focused on driving tests and regional demonstrations. Nonetheless, the operation scenarios remain to be explored.
 
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh.
 
-![alt marketing](https://zone-assets-api.vercel.app/assets/images/marketing/marketing_8.jpg)
+![alt img2](/images/V2I_Project_2.png)
 
-#### Curabitur suscipit suscipit tellus
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-```js
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-
-export default function BoxComponent() {
-  return (
-    <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
-      <Button>Save</Button>
-    </Box>
-  );
-}
-```
-
-#### Nullam accumsan lorem in
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-> Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo.
-
-![alt markdown](https://zone-assets-api.vercel.app/assets/images/marketing/marketing_9.jpg)
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh.
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
+It is hard to reduce the rate of accidents by autonomous vehicle perception sensing and its follow-up decision. Moreover, the uncertainties in the real-world environment can hardly be ignored by the vehicle perception, especially for some corner cases. This project aims to build a high photorealistic rendering autonomous driving simulation platform and digital twin system that is based on the real traffic data to simulate the testing environment, train the model, and test the V2I for pedestrian safety protection. We intend to explore safe, extensive, economical, and efficient autonomous driving technology solutions and implementation. We are dedicated to helping achieve the commercialization of autonomous driving on a large scale as soon as possible.

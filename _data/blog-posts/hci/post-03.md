@@ -1,67 +1,37 @@
 ---
-title: Don't Waste Time! 7 Facts Until You Reach Your Event
-description: Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc.
-category: Development
-favorited: true
-coverImg: https://zone-assets-api.vercel.app/assets/images/marketing/marketing_3.jpg
-heroImg: https://zone-assets-api.vercel.app/assets/images/marketing/marketing_hero.jpg
-createdAt: '2020-03-16T05:35:07.322Z'
-duration: 8 minutes read
-shareLinks:
-  facebook: facebook-link
-  instagram: instagram-link
-  linkedin: linkedin-link
-  twitter: twitter-link
-tags: [Marketing, Development, HR & Recruiting, Design, Management]
+title: Smart Clothing of Multimodal Physiology Data Perception
+# description: A robot dog that can guide.
+category: Branding
+# favorited: true
+coverImg: /images/Smart_Clothing_1.png
+heroImg: /images/Smart_Clothing_1.png
+createdAt: '2022-02-28T13:15'
+# duration: 8 minutes read
+# shareLinks:
+#   facebook: facebook-link
+#   instagram: instagram-link
+#   linkedin: linkedin-link
+#   twitter: twitter-link
+# tags: [Marketing, Development, HR & Recruiting, Design, Management]
 author:
-  name: Reece Chung
-  role: Full Stack Designer
-  picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_3.jpg
+  name: Zhu, Mingyue
+  # role: Full Stack Designer
+  # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
   quotes: Member since Mar 15, 2021
-  about: Integer tincidunt. Nullam dictum felis eu pede mollis pretium. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem.
-  socialLinks:
-    facebook: facebook-link
-    instagram: instagram-link
-    linkedin: linkedin-link
-    twitter: twitter-link
+  about: Self introduction here
+  # socialLinks:
+  #   facebook: facebook-link
+  #   instagram: instagram-link
+  #   linkedin: linkedin-link
+  #   twitter: twitter-link
 ---
 
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh. Donec posuere vulputate arcu. Quisque rutrum.
+![alt why](/images/Smart_Clothing_1.png)
 
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
+> "The body expresses and influences our minds."
 
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh.
+This project aims to obtain human physiological data and the somatization performance of emotions through the intelligent wearable system. We intend to help people improve self-perception of both physical and psychological states with interactive feedback.
 
-![alt marketing](https://zone-assets-api.vercel.app/assets/images/marketing/marketing_8.jpg)
+Given the fundamental role of cloth's relationship with humans, we hypothesize that the physiological data gathering by the wearable system may be used as a resource for human emotional understanding. The concept of intelligent clothing may provide a valuable link between physical hardware, somatization performance, and human emotions. For this purpose, an innovative wearable sensing platform is currently being set up, focusing on capturing physiological data with a multimodal sensing method. 
 
-#### Curabitur suscipit suscipit tellus
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-```js
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-
-export default function BoxComponent() {
-  return (
-    <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
-      <Button>Save</Button>
-    </Box>
-  );
-}
-```
-
-#### Nullam accumsan lorem in
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-> Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo.
-
-![alt markdown](https://zone-assets-api.vercel.app/assets/images/marketing/marketing_9.jpg)
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
-
-Pellentesque posuere. Phasellus a est. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Phasellus viverra nulla ut metus varius laoreet. Praesent egestas tristique nibh.
-
-Donec posuere vulputate arcu. Quisque rutrum. Curabitur vestibulum aliquam leo. Nam commodo suscipit quam. Vestibulum ullamcorper mauris at ligula.
+Moreover, on the issue of emotion management/regulation, structural interviews with psychological counselors have been conducted and analyzed with the open-coding method. Based on insights from interviews, we focused our attention on the regulation of body perception enhancement, and incentive feedback provides. 

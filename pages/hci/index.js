@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 // utils
 import { getAllPosts } from '../../src/utils/get-mardown/hci/posts';
+import { Grid, Container } from '@mui/material';
 // _data
 import { _testimonials, _brands, _members, _pricingMarketing } from '../../_data/mock';
 // layouts
@@ -23,6 +24,7 @@ import {
   MarketingLandingServices,
   MarketingLandingCaseStudies,
 } from '../../src/sections/@marketing';
+import { BlogHCIFeaturedPosts, BlogHCIPostList } from '../../src/sections/blog/hci'
 
 // ----------------------------------------------------------------------
 
@@ -38,15 +40,19 @@ export default function MarketingLandingPage({ posts, caseStudies }) {
 
       {/* <OurClientsMarketingLanding brands={_brands} /> */}
 
-      <MarketingLandingAbout />
+      {/* <MarketingLandingAbout /> */}
+      <TeamMarketingLangding members={_members} />
 
-      {/* <MarketingLandingServices />
+      <BlogMarketingLatestPosts posts={posts.slice(0, 4)} name='Research' />
+
+      <BlogHCIFeaturedPosts posts={posts.slice(-5)} />
+
+      <MarketingLandingServices />
 
       <MarketingLandingProcess />
 
-      <MarketingLandingCaseStudies caseStudies={caseStudies.slice(-6)} />
+      {/* <MarketingLandingCaseStudies caseStudies={caseStudies.slice(-6)} /> */}
 
-      <TeamMarketingLangding members={_members} />
 
       <PricingMarketing plans={_pricingMarketing} />
 
@@ -54,11 +60,9 @@ export default function MarketingLandingPage({ posts, caseStudies }) {
 
       <TestimonialsMarketing testimonials={_testimonials} />
 
-      <BlogMarketingLatestPosts posts={posts.slice(0, 4)} />
-
       <MarketingFreeSEO />
 
-      <NewsletterMarketing /> */}
+      <NewsletterMarketing />
     </Page>
   );
 }

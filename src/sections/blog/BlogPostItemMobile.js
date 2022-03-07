@@ -56,7 +56,6 @@ export default function BlogPostItemMobile({ post, path, onSiderbar }) {
           width: 80,
           height: 80,
           flexShrink: 0,
-          borderRadius: 1.5,
         }}
       />
 
