@@ -1,58 +1,64 @@
 {
-  "name": "air-web",
-  "version": "0.1.0",
+  "name": "@zone/material-kit",
+  "description": "landing & corporate",
+  "version": "1.3",
   "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.2.0",
-    "@mui/material": "^5.3.1",
-    "@mui/styles": "^5.3.0",
-    "@react-three/drei": "^8.0.0",
-    "@react-three/fiber": "^7.0.24",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "classnames": "^2.3.1",
-    "markdown-to-jsx": "^7.1.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-markdown": "^8.0.0",
-    "react-remark": "^2.1.0",
-    "react-router": "^6.2.1",
-    "react-router-dom": "^6.2.1",
-    "react-scripts": "4.0.3",
-    "react-spring": "^9.4.2",
-    "rehype-autolink-headings": "^6.1.1",
-    "rehype-slug": "^5.0.1",
-    "remark-frontmatter": "^4.0.1",
-    "remark-gfm": "^3.0.1",
-    "remark-toc": "^8.0.1",
-    "three": "^0.135.0",
-    "web-vitals": "^1.0.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "lint": "next lint",
+    "lint:es": "eslint --ext .js,.jsx .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "dev": "next dev -p 7777",
+    "build": "next build",
+    "start": "next start",
+    "export": "yarn build && next export -o _static",
+    "clear-all": "rm -rf .next _static node_modules",
+    "re-start": "rm -rf .next node_modules && yarn install && yarn dev",
+    "re-build": "rm -rf .next node_modules && yarn install && yarn build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@emotion/cache": "^11.7.1",
+    "@emotion/react": "^11.8.1",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.8.1",
+    "@hookform/resolvers": "^2.8.8",
+    "@iconify/icons-carbon": "^1.2.2",
+    "@iconify/react": "^3.1.4",
+    "@mui/lab": "^5.0.0-alpha.71",
+    "@mui/material": "^5.4.4",
+    "autosuggest-highlight": "^3.2.1",
+    "axios": "^0.24.0",
+    "date-fns": "^2.28.0",
+    "framer-motion": "^6.2.8",
+    "google-map-react": "^2.1.10",
+    "gray-matter": "^4.0.3",
+    "next": "^12.1.0",
+    "next-mdx-remote": "^4.0.0",
+    "nprogress": "^0.2.0",
+    "numeral": "^2.0.6",
+    "prism-react-renderer": "^1.3.1",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-countup": "^6.1.1",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.27.1",
+    "react-image-lightbox": "^5.1.4",
+    "react-intersection-observer": "^8.33.1",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-player": "^2.9.0",
+    "react-slick": "^0.28.1",
+    "simplebar-react": "^2.3.6",
+    "slick-carousel": "^1.8.1",
+    "stylis": "^4.0.13",
+    "stylis-plugin-rtl": "^2.1.1",
+    "swr": "^1.2.2",
+    "yup": "^0.32.11"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^12.1.0",
+    "eslint": "^8.10.0",
+    "eslint-config-next": "^12.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.4"
   }
 }
