@@ -8,7 +8,7 @@
     "lint:es": "eslint --ext .js,.jsx .",
     "lint:fix": "eslint --fix --ext .js,.jsx .",
     "dev": "next dev -p 7777",
-    "build": "next build",
+    "build": "next build && next export -o build/",
     "start": "next start",
     "export": "yarn build && next export -o _static",
     "clear-all": "rm -rf .next _static node_modules",
