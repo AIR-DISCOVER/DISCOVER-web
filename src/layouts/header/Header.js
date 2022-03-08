@@ -44,7 +44,7 @@ export default function Header({ transparent }) {
           }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Logo onDark={transparent && !isScrolling} />
+            <Logo onDark={!isLight} />
 
             <Label
               color="info"
