@@ -24,4 +24,4 @@ yarn-error.log*
 *.docx
 .idea/
 .idea/
-.next/
+/.next/

@@ -33,7 +33,7 @@ MarketingLandingPage.propTypes = {
   posts: PropTypes.array,
 };
 
-export default function MarketingLandingPage({ posts, caseStudies }) {
+export default function MarketingLandingPage({ posts }) {
   return (
     <Page title="Landing - HCI">
       <MarketingLandingHero />
@@ -54,15 +54,15 @@ export default function MarketingLandingPage({ posts, caseStudies }) {
       {/* <MarketingLandingCaseStudies caseStudies={caseStudies.slice(-6)} /> */}
 
 
-      <PricingMarketing plans={_pricingMarketing} />
+      {/* <PricingMarketing plans={_pricingMarketing} /> */}
 
-      <MarketingFaqs />
+      {/* <MarketingFaqs /> */}
 
-      <TestimonialsMarketing testimonials={_testimonials} />
+      {/* <TestimonialsMarketing testimonials={_testimonials} /> */}
 
-      <MarketingFreeSEO />
+      {/* <MarketingFreeSEO /> */}
 
-      <NewsletterMarketing />
+      {/* <NewsletterMarketing /> */}
     </Page>
   );
 }
