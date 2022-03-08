@@ -12,7 +12,7 @@ createdAt: '2022-02-26T15:11'
 #   instagram: instagram-link
 #   linkedin: linkedin-link
 #   twitter: twitter-link
-# tags: [Marketing, Development, HR & Recruiting, Design, Management]
+tags: [Development, Banking, Management]
 author:
   name: Zhang, Yang
   # role: Full Stack Designer

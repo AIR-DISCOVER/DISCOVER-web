@@ -12,7 +12,7 @@ createdAt: '2022-02-28T13:15'
 #   instagram: instagram-link
 #   linkedin: linkedin-link
 #   twitter: twitter-link
-# tags: [Marketing, Development, HR & Recruiting, Design, Management]
+# tags: [HR & Recruiting]
 author:
   name: Zhu, Mingyue
   # role: Full Stack Designer

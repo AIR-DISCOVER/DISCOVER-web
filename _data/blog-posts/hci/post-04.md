@@ -12,7 +12,7 @@ createdAt: '2022-02-28T13:15'
 #   instagram: instagram-link
 #   linkedin: linkedin-link
 #   twitter: twitter-link
-# tags: [Marketing, Development, HR & Recruiting, Design, Management]
+tags: [Community]
 author:
   name: Xu, Ying
   # role: Full Stack Designer

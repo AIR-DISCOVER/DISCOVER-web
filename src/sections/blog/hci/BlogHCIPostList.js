@@ -10,7 +10,7 @@ import { useCallback, useEffect, useState } from 'react';
 BlogHCIPostList.propTypes = {
   posts: PropTypes.array.isRequired,
   category: PropTypes.string,
-  tags: PropTypes.array
+  tags: PropTypes.object
 };
 
 export default function BlogHCIPostList({ posts, category, tags }) {
@@ -24,18 +24,21 @@ export default function BlogHCIPostList({ posts, category, tags }) {
     </>
   ), [displayPosts])
   useEffect(() => {
-
-
     let p = [];
     posts.forEach(async e => {
-      if ((category === 'all' || (e.frontmatter.category === category)) && true) {
+      if ((category === 'all' || (e.frontmatter.category === category)) &&
+        (tags.length === 0
+          || (e.frontmatter.tags
+            && e.frontmatter.tags.filter(value => new Set(tags).has(value)).length > 0
+          )
+        )
+      ) {
         p.push(e);
-        await new Promise(r => setTimeout(r, 2000)); // FIXME
-        setDisplayPosts(p)
       }
+      setDisplayPosts(p)
     })
 
-    return () => { setDisplayPosts([]) }
+    // return () => { setDisplayPosts([]) }
   }, [posts, category, tags])
   return (
     <>

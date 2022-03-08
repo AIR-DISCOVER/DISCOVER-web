@@ -50,7 +50,7 @@ export default function MarketingLandingPage({ posts }) {
 
       <BlogHCIFeaturedPosts posts={posts.slice(-5)} />
 
-      <Container sx={{ mt: { xs: 4, md: 10 } }}>
+      <Container sx={{ mt: { xs: 4, md: 10, minHeight: '100vh'} }}>
         <Grid container spacing={{ md: 8 }}>
           <Grid item xs={12} md={8}>
             <BlogHCIPostList posts={posts} category={category} tags={tags} />
@@ -62,7 +62,17 @@ export default function MarketingLandingPage({ posts }) {
                 list: posts.slice(-4),
                 path: '/hci/blog',
               }}
+              tags={tags}
               onSetCate={setCategory}
+              onModTag={(tag) => {
+                if (tags.includes(tag)) {
+                  let tmp = new Set(tags);
+                  tmp.delete(tag)
+                  setTags([...tmp])
+                } else {
+                  setTags([...new Set([...tags, tag])])
+                }
+              }}
             />
           </Grid>
         </Grid>

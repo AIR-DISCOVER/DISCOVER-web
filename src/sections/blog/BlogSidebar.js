@@ -20,10 +20,11 @@ BlogSidebar.propTypes = {
   recentPosts: PropTypes.object,
   sx: PropTypes.object,
   onSetCate: PropTypes.func,
-  onSetTags: PropTypes.func
+  onModTag: PropTypes.func,
+  tags: PropTypes.object,
 };
 
-export default function BlogSidebar({ author, recentPosts, advertisement, sx, onSetCate, onSetTags, ...other }) {
+export default function BlogSidebar({ author, recentPosts, advertisement, sx, tags, onSetCate, onModTag, ...other }) {
   const isDesktop = useResponsive('up', 'md');
 
   return (
@@ -41,9 +42,9 @@ export default function BlogSidebar({ author, recentPosts, advertisement, sx, on
         }}
         {...other}
       >
-        <BlogSidebarCategories onSetCate={onSetCate}/>
+        <BlogSidebarCategories onSetCate={onSetCate} />
         {/* <BlogSidebarRecentPosts recentPosts={recentPosts} /> */}
-        <BlogSidebarPopularTags onSetTags={onSetTags}/>
+        <BlogSidebarPopularTags tags={tags} onModTag={(tag) => onModTag(tag)} />
         {/* <Advertisement01 advertisement={advertisement} /> */}
       </Stack>
     </>
