@@ -27,7 +27,7 @@ BlogSidebarPopularTags.propTypes = {
 
 export default function BlogSidebarPopularTags({ tags, onModTag }) {
   // const router = useRouter();
-  const [selected, setSelected] = useState(Array.from(TAGS).map((i) => tags.includes(i)))
+  const [selected, setSelected] = useState(Array.from(TAGS).map((i) => tags ? tags.includes(i) : false))
 
   return (
     <Box>
