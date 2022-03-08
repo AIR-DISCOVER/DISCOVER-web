@@ -1,7 +1,7 @@
 ---
 title: Smart Clothing of Multimodal Physiology Data Perception
 # description: A robot dog that can guide.
-category: Branding
+category: Management
 # favorited: true
 coverImg: /images/Smart_Clothing_1.png
 heroImg: /images/Smart_Clothing_1.png
@@ -12,7 +12,7 @@ createdAt: '2022-02-28T13:15'
 #   instagram: instagram-link
 #   linkedin: linkedin-link
 #   twitter: twitter-link
-# tags: [Marketing, Development, HR & Recruiting, Design, Management]
+# tags: [HR & Recruiting]
 author:
   name: Zhu, Mingyue
   # role: Full Stack Designer

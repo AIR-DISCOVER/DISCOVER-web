@@ -11,7 +11,6 @@ import { Page } from '../../src/components';
 // sections
 import { PricingMarketing } from '../../src/sections/pricing';
 import { TeamMarketingLangding } from '../../src/sections/team';
-import { BlogMarketingLatestPosts } from '../../src/sections/blog';
 import { NewsletterMarketing } from '../../src/sections/newsletter';
 import { TestimonialsMarketing } from '../../src/sections/testimonials';
 import { OurClientsMarketingLanding } from '../../src/sections/our-clients';
@@ -24,7 +23,9 @@ import {
   MarketingLandingServices,
   MarketingLandingCaseStudies,
 } from '../../src/sections/@marketing';
-import { BlogHCIFeaturedPosts, BlogHCIPostList } from '../../src/sections/blog/hci'
+import { BlogHCIFeaturedPosts, BlogHCIPostList, BlogSidebar, BlogMarketingLatestPosts } from '../../src/sections/blog'
+import { useState } from 'react';
+
 
 // ----------------------------------------------------------------------
 
@@ -33,7 +34,9 @@ MarketingLandingPage.propTypes = {
   posts: PropTypes.array,
 };
 
-export default function MarketingLandingPage({ posts, caseStudies }) {
+export default function MarketingLandingPage({ posts }) {
+  const [category, setCategory] = useState('all')
+  const [tags, setTags] = useState([])
   return (
     <Page title="Landing - HCI">
       <MarketingLandingHero />
@@ -47,22 +50,50 @@ export default function MarketingLandingPage({ posts, caseStudies }) {
 
       <BlogHCIFeaturedPosts posts={posts.slice(-5)} />
 
-      <MarketingLandingServices />
+      <Container sx={{ mt: { xs: 4, md: 10, minHeight: '100vh'} }}>
+        <Grid container spacing={{ md: 8 }}>
+          <Grid item xs={12} md={8}>
+            <BlogHCIPostList posts={posts} category={category} tags={tags} />
+          </Grid>
 
-      <MarketingLandingProcess />
+          <Grid item xs={12} md={4}>
+            <BlogSidebar
+              recentPosts={{
+                list: posts.slice(-4),
+                path: '/hci/blog',
+              }}
+              tags={tags}
+              onSetCate={setCategory}
+              onModTag={(tag) => {
+                if (tags.includes(tag)) {
+                  let tmp = new Set(tags);
+                  tmp.delete(tag)
+                  setTags([...tmp])
+                } else {
+                  setTags([...new Set([...tags, tag])])
+                }
+              }}
+            />
+          </Grid>
+        </Grid>
+      </Container>
+
+      {/* <MarketingLandingServices /> */}
+
+      {/* <MarketingLandingProcess /> */}
 
       {/* <MarketingLandingCaseStudies caseStudies={caseStudies.slice(-6)} /> */}
 
 
-      <PricingMarketing plans={_pricingMarketing} />
+      {/* <PricingMarketing plans={_pricingMarketing} /> */}
 
-      <MarketingFaqs />
+      {/* <MarketingFaqs /> */}
 
-      <TestimonialsMarketing testimonials={_testimonials} />
+      {/* <TestimonialsMarketing testimonials={_testimonials} /> */}
 
-      <MarketingFreeSEO />
+      {/* <MarketingFreeSEO /> */}
 
-      <NewsletterMarketing />
+      {/* <NewsletterMarketing /> */}
     </Page>
   );
 }

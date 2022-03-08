@@ -3,16 +3,43 @@ import PropTypes from 'prop-types';
 import { Pagination, Box } from '@mui/material';
 //
 import BlogHCIPostItem from './BlogHCIPostItem';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 // ----------------------------------------------------------------------
 
 BlogHCIPostList.propTypes = {
   posts: PropTypes.array.isRequired,
+  category: PropTypes.string,
+  tags: PropTypes.object
 };
 
-export default function BlogHCIPostList({ posts }) {
+export default function BlogHCIPostList({ posts, category, tags }) {
   const [page, setPage] = useState(1)
+  let [displayPosts, setDisplayPosts] = useState([]);
+  const RenderPosts = useCallback(() => (
+    <>
+      {displayPosts.slice((page - 1) * 8, page * 8).map((post) => (
+        <BlogHCIPostItem key={post.slug} post={post} />
+      ))}
+    </>
+  ), [displayPosts])
+  useEffect(() => {
+    let p = [];
+    posts.forEach(async e => {
+      if ((category === 'all' || (e.frontmatter.category === category)) &&
+        (tags.length === 0
+          || (e.frontmatter.tags
+            && e.frontmatter.tags.filter(value => new Set(tags).has(value)).length > 0
+          )
+        )
+      ) {
+        p.push(e);
+      }
+      setDisplayPosts(p)
+    })
+
+    // return () => { setDisplayPosts([]) }
+  }, [posts, category, tags])
   return (
     <>
       <Box
@@ -26,9 +53,7 @@ export default function BlogHCIPostList({ posts }) {
           },
         }}
       >
-        {posts.slice((page - 1) * 8, page * 8).map((post) => (
-          <BlogHCIPostItem key={post.slug} post={post} />
-        ))}
+        <RenderPosts />
       </Box>
 
       <Pagination

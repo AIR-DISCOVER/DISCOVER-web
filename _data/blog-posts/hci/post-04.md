@@ -1,7 +1,7 @@
 ---
 title: V2I Project
 # description: A robot dog that can guide.
-category: Branding
+category: Business
 # favorited: true
 coverImg: /images/V2I_Project_2.png
 heroImg: /images/V2I_Project_1.png
@@ -12,7 +12,7 @@ createdAt: '2022-02-28T13:15'
 #   instagram: instagram-link
 #   linkedin: linkedin-link
 #   twitter: twitter-link
-# tags: [Marketing, Development, HR & Recruiting, Design, Management]
+tags: [Community]
 author:
   name: Xu, Ying
   # role: Full Stack Designer
