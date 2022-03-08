@@ -27,7 +27,7 @@ function Logo({ onDark = false, isSimple = false, sx }) {
     <NextLink href="/" passHref>
       <Box
         sx={{
-          width: isSimple ? 64 : 75,
+          width: isSimple ? 64 : 120,
           lineHeight: 0,
           cursor: 'pointer',
           display: 'inline-flex',

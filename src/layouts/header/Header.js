@@ -46,7 +46,7 @@ export default function Header({ transparent }) {
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
             <Logo onDark={!isLight} />
 
-            <Label
+            {/* <Label
               color="info"
               sx={{
                 ml: 0.5,
@@ -59,7 +59,7 @@ export default function Header({ transparent }) {
               }}
             >
               v1.3
-            </Label>
+            </Label> */}
           </Box>
 
           {isDesktop && (
