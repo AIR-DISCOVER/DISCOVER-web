@@ -11,7 +11,6 @@ import { Page } from '../../src/components';
 // sections
 import { PricingMarketing } from '../../src/sections/pricing';
 import { TeamMarketingLangding } from '../../src/sections/team';
-import { BlogMarketingLatestPosts } from '../../src/sections/blog';
 import { NewsletterMarketing } from '../../src/sections/newsletter';
 import { TestimonialsMarketing } from '../../src/sections/testimonials';
 import { OurClientsMarketingLanding } from '../../src/sections/our-clients';
@@ -24,7 +23,9 @@ import {
   MarketingLandingServices,
   MarketingLandingCaseStudies,
 } from '../../src/sections/@marketing';
-import { BlogHCIFeaturedPosts, BlogHCIPostList } from '../../src/sections/blog/hci'
+import { BlogHCIFeaturedPosts, BlogHCIPostList, BlogSidebar, BlogMarketingLatestPosts } from '../../src/sections/blog'
+import { useState } from 'react';
+
 
 // ----------------------------------------------------------------------
 
@@ -34,6 +35,8 @@ MarketingLandingPage.propTypes = {
 };
 
 export default function MarketingLandingPage({ posts }) {
+  const [category, setCategory] = useState('all')
+  const [tags, setTags] = useState([])
   return (
     <Page title="Landing - HCI">
       <MarketingLandingHero />
@@ -47,9 +50,27 @@ export default function MarketingLandingPage({ posts }) {
 
       <BlogHCIFeaturedPosts posts={posts.slice(-5)} />
 
-      <MarketingLandingServices />
+      <Container sx={{ mt: { xs: 4, md: 10 } }}>
+        <Grid container spacing={{ md: 8 }}>
+          <Grid item xs={12} md={8}>
+            <BlogHCIPostList posts={posts} category={category} tags={tags} />
+          </Grid>
 
-      <MarketingLandingProcess />
+          <Grid item xs={12} md={4}>
+            <BlogSidebar
+              recentPosts={{
+                list: posts.slice(-4),
+                path: '/hci/blog',
+              }}
+              onSetCate={setCategory}
+            />
+          </Grid>
+        </Grid>
+      </Container>
+
+      {/* <MarketingLandingServices /> */}
+
+      {/* <MarketingLandingProcess /> */}
 
       {/* <MarketingLandingCaseStudies caseStudies={caseStudies.slice(-6)} /> */}
 

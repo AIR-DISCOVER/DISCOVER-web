@@ -1,7 +1,7 @@
 ---
 title: V2I Project
 # description: A robot dog that can guide.
-category: Branding
+category: Business
 # favorited: true
 coverImg: /images/V2I_Project_2.png
 heroImg: /images/V2I_Project_1.png

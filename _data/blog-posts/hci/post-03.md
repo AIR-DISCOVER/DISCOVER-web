@@ -1,7 +1,7 @@
 ---
 title: Smart Clothing of Multimodal Physiology Data Perception
 # description: A robot dog that can guide.
-category: Branding
+category: Management
 # favorited: true
 coverImg: /images/Smart_Clothing_1.png
 heroImg: /images/Smart_Clothing_1.png

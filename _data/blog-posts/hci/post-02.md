@@ -1,7 +1,7 @@
 ---
 title: Robot Guide Dog
 description: A robot dog that can guide.
-category: Branding
+category: Community
 # favorited: true
 coverImg: /images/Guide_Dog_1.png
 heroImg: /images/Guide_Dog_1.png)
