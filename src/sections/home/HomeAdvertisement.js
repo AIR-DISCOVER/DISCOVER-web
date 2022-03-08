@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { m } from 'framer-motion';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
 import { Button, Stack, Typography, Box } from '@mui/material';
@@ -8,8 +7,9 @@ import { useHoverParallax } from '../../hooks';
 // routes
 import Routes from '../../routes';
 // components
-import { Image } from '../../components';
+import { useRef, useState } from 'react';
 
+import Scene from '../../legacy';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(() => ({
@@ -46,7 +46,7 @@ const BackgroundStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function HomeAdvertisement() {
+export default function HomeAdvertisement({ cref, tab, onClick }) {
   const { offsetX, offsetY, onMouseMoveHandler, onMouseLeaveHandler } = useHoverParallax();
 
   return (
@@ -64,12 +64,13 @@ export default function HomeAdvertisement() {
           variant="contained"
           target="_blank"
           rel="noopener"
-          href={Routes.buyNow}
+          // href={Routes.buyNow}
+          onClick={onClick}
         >
           Purchase Now
         </Button>
       </ContentStyle>
-      <Background offsetX={offsetX} offsetY={offsetY} />
+      <Background cref={cref} tab={tab} offsetX={offsetX} offsetY={offsetY} />
     </RootStyle>
   );
 }
@@ -81,72 +82,11 @@ Background.propTypes = {
   offsetY: PropTypes.func,
 };
 
-function Background({ offsetX, offsetY }) {
+function Background({ offsetX, offsetY, cref, tab }) {
   const boxStyle = { position: 'absolute', top: 0, width: 1, height: 1 };
-
   return (
     <BackgroundStyle>
-      <m.div style={{ x: offsetX(16), y: offsetY(16) }}>
-        <Image
-          alt="screen-07"
-          src="https://zone-assets-api.vercel.app/assets/images/home/advertisement_screen07.png"
-          sx={{ minHeight: 360 }}
-        />
-      </m.div>
-
-      <Box sx={{ ...boxStyle }}>
-        <m.div style={{ x: offsetX(24), y: offsetY(24) }}>
-          <Image
-            alt="screen-06"
-            src="https://zone-assets-api.vercel.app/assets/images/home/advertisement_screen06.png"
-          />
-        </m.div>
-      </Box>
-
-      <Box sx={{ ...boxStyle }}>
-        <m.div style={{ y: offsetY(20) }}>
-          <Image
-            alt="screen-05"
-            src="https://zone-assets-api.vercel.app/assets/images/home/advertisement_screen05.png"
-          />
-        </m.div>
-      </Box>
-
-      <Box sx={{ ...boxStyle }}>
-        <m.div style={{ x: offsetX(-20), y: offsetY(-20) }}>
-          <Image
-            alt="screen-04"
-            src="https://zone-assets-api.vercel.app/assets/images/home/advertisement_screen04.png"
-          />
-        </m.div>
-      </Box>
-
-      <Box sx={{ ...boxStyle }}>
-        <m.div style={{ y: offsetY(20) }}>
-          <Image
-            alt="screen-03"
-            src="https://zone-assets-api.vercel.app/assets/images/home/advertisement_screen03.png"
-          />
-        </m.div>
-      </Box>
-
-      <Box sx={{ ...boxStyle }}>
-        <m.div style={{ x: offsetX(-48), y: offsetY(8) }}>
-          <Image
-            alt="screen-02"
-            src="https://zone-assets-api.vercel.app/assets/images/home/advertisement_screen02.png"
-          />
-        </m.div>
-      </Box>
-
-      <Box sx={{ ...boxStyle }}>
-        <m.div style={{ x: offsetX(20), y: offsetY(20) }}>
-          <Image
-            alt="screen-01"
-            src="https://zone-assets-api.vercel.app/assets/images/home/advertisement_screen01.png"
-          />
-        </m.div>
-      </Box>
+      <Scene cref={cref} tab={tab} />
     </BackgroundStyle>
   );
 }

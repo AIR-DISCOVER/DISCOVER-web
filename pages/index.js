@@ -17,12 +17,35 @@ import {
   HomeFeatureHighlights,
   HomeFlexibleComponents,
 } from '../src/sections/home';
+import { Button } from '@mui/material';
+import { useRef, useState } from 'react';
 
 // ----------------------------------------------------------------------
 
 export default function HomePage() {
+  const controlRef = useRef();
+  const [tab, setTab] = useState("Home")
+
+  const dict = {
+    'Home': 'News',
+    'News': 'Research',
+    'Research': 'People',
+    'People': 'Join Us',
+    'Join Us': 'About',
+    'About': 'Home'
+
+  }
+  const onClick = () => {
+    console.log(tab)
+    let next = dict[tab]
+    setTab(next)
+    controlRef.current && controlRef.current.setTrig(tab, next)
+    controlRef.current && controlRef.current.setF(tab, next)
+  }
   return (
     <Page title="The starting point for your next project">
+      <HomeAdvertisement cref={controlRef} tab={tab} onClick={onClick} />
+
       <HomeHero />
 
       <HomeNewStart />
@@ -37,7 +60,6 @@ export default function HomePage() {
 
       <HomeCombination />
 
-      <HomeAdvertisement />
     </Page>
   );
 }
