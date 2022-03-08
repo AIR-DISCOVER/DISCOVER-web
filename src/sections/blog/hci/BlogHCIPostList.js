@@ -24,15 +24,17 @@ export default function BlogHCIPostList({ posts, category, tags }) {
     </>
   ), [displayPosts])
   useEffect(() => {
-    (async () => {
 
-      let p = [];
-      posts.forEach(e => {
-        ((category === 'all' || (e.frontmatter.category === category)) && true) && p.push(e);
-      })
-      setDisplayPosts(p);
-      await 1;
-    })();
+
+    let p = [];
+    posts.forEach(async e => {
+      if ((category === 'all' || (e.frontmatter.category === category)) && true) {
+        p.push(e);
+        await new Promise(r => setTimeout(r, 2000)); // FIXME
+        setDisplayPosts(p)
+      }
+    })
+
     return () => { setDisplayPosts([]) }
   }, [posts, category, tags])
   return (
