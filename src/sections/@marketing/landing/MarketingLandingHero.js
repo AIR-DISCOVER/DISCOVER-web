@@ -19,25 +19,24 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function MarketingLandingHero() {
+export default function MarketingLandingHero({ pack }) {
   return (
     <RootStyle>
       <Container>
-        <Grid container columnSpacing={10} justifyContent="space-between" alignItems="center">
+        <Grid container columnSpacing={10} justifyContent="space-between" alignItems="center" direction={pack?.inverse && "row-reverse"}>
           <Grid item xs={12} md={6} lg={5} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             <Stack spacing={5}>
               <Typography variant="overline" sx={{ color: 'primary.main' }}>
-                Digital Marketing
+                {pack?.overline}
               </Typography>
 
-              <Typography variant="h1">Boosts Your Website Traffic</Typography>
+              <Typography variant="h1">{pack?.title}</Typography>
 
               <Typography sx={{ color: 'text.secondary' }}>
-                Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis
-                venenatis ante odio sit amet eros.
+                {pack?.description}
               </Typography>
 
-              <Stack
+              {/* <Stack
                 direction={{ xs: 'column', sm: 'row' }}
                 justifyContent={{ xs: 'center', md: 'unset' }}
                 spacing={3}
@@ -75,7 +74,7 @@ export default function MarketingLandingHero() {
                 >
                   See Our Work
                 </Button>
-              </Stack>
+              </Stack> */}
             </Stack>
           </Grid>
 
@@ -89,8 +88,8 @@ export default function MarketingLandingHero() {
             }}
           >
             <Image
-              alt="marketing-market"
-              src="https://zone-assets-api.vercel.app/assets/illustrations/illustration_marketing_market.svg"
+              alt="landing-main"
+              src={pack.landing_img ? pack.landing_img : "https://zone-assets-api.vercel.app/assets/illustrations/illustration_marketing_market.svg"}
             />
           </Grid>
         </Grid>

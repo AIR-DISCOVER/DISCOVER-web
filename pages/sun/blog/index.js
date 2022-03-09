@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 // config
 import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../../../src/config';
 // utils
-import { getAllPosts } from '../../../src/utils/get-mardown/hci/posts';
+import { getAllPosts } from '../../../src/utils/get-mardown/sun/posts';
 // _data
 // layouts
 import Layout from '../../../src/layouts';
@@ -28,18 +28,18 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-HCIBlogPage.propTypes = {
+SUNBlogPage.propTypes = {
   posts: PropTypes.array.isRequired,
 };
 
-export default function HCIBlogPage({ posts }) {
+export default function SUNBlogPage({ posts }) {
   return (
-    <Page title="Blog - HCI">
+    <Page title="Blog - AIR-SUN">
       <RootStyle>
 
-        <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.hci} />
+        <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.sun} />
 
-        <BlogFullPostList posts={posts} route={Routes.hci} group="hci" />
+        <BlogFullPostList posts={posts} route={Routes.sun} group="sun" />
 
       </RootStyle>
     </Page>
@@ -48,7 +48,7 @@ export default function HCIBlogPage({ posts }) {
 
 // ----------------------------------------------------------------------
 
-HCIBlogPage.getLayout = function getLayout(page) {
+SUNBlogPage.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
 

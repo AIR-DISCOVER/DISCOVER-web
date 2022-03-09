@@ -15,13 +15,20 @@ Logo.propTypes = {
   sx: PropTypes.object,
 };
 
-function Logo({ onDark = false, isSimple = false, sx }) {
+function Logo({ force, isSimple = false, sx }) {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
 
-  const PRIMARY_MAIN = theme.palette.primary.main;
-  const LIGHT_COLOR = theme.palette.common.white;
-  const DARK_COLOR = theme.palette.grey[800];
+  const _PRIMARY_MAIN = theme.palette.primary.main;
+  const _LIGHT_COLOR = theme.palette.common.white;
+  const _DARK_COLOR = theme.palette.grey[800];
+
+  var src = '';
+  if (force) {
+    src = force == 'light' ? "/logo/discover-icon-alpha-black.png" : "/logo/discover-icon-alpha.png"
+  } else {
+    src = !isLight ? "/logo/discover-icon-alpha.png" : "/logo/discover-icon-alpha-black.png";
+  }
 
   return (
     <NextLink href="/" passHref>
@@ -34,7 +41,7 @@ function Logo({ onDark = false, isSimple = false, sx }) {
           ...sx,
         }}
       >
-        <Image sx={{ height: '100%', width: '100%' }} src={onDark ? "/discover-icon-alpha.png" : "/discover-icon-alpha-black.png"} />
+        <Image alt="discover-logo" sx={{ height: '100%', width: '100%' }} src={src} />
       </Box>
     </NextLink>
   );

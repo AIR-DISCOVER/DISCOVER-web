@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 // utils
-import { getAllPosts } from '../../src/utils/get-mardown/hci/posts';
+import { getAllPosts } from '../../src/utils/get-mardown/mechanic/posts';
 // _data
-import { _members } from '../../_data/members/hci';
+import { _members } from '../../_data/members/mechanic';
 // layouts
 import Layout from '../../src/layouts';
 // components
@@ -26,8 +26,8 @@ MarketingLandingPage.propTypes = {
 
 export default function MarketingLandingPage({ posts }) {
   return (
-    <Page title="Landing - HCI">
-      <MarketingLandingHero pack={GROUP_INTRO.hci} />
+    <Page title="Landing - Mechanic">
+      <MarketingLandingHero pack={GROUP_INTRO.mechanic} />
 
       {/* <OurClientsMarketingLanding brands={_brands} /> */}
 
@@ -36,9 +36,9 @@ export default function MarketingLandingPage({ posts }) {
 
       <BlogMarketingLatestPosts posts={posts.slice(0, 4)} name='Research' />
 
-      <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.hci} group="hci" />
+      <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.mechanic} />
 
-      <BlogFullPostList posts={posts} route={Routes.hci} group="hci" />
+      <BlogFullPostList posts={posts} route={Routes.mechanic} group="mechanic" />
 
       {/* <MarketingLandingServices /> */}
 

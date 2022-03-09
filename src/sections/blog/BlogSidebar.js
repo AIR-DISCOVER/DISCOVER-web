@@ -4,13 +4,10 @@ import { Stack } from '@mui/material';
 // hooks
 import { useResponsive } from '../../hooks';
 // components
-import { SearchInput } from '../../components';
 //
-import { Advertisement01 } from '../advertisement';
 import BlogSidebarAuthor from './BlogSidebarAuthor';
 import BlogSidebarCategories from './BlogSidebarCategories';
 import BlogSidebarPopularTags from './BlogSidebarPopularTags';
-import BlogSidebarRecentPosts from './BlogSidebarRecentPosts';
 
 // ----------------------------------------------------------------------
 
@@ -21,10 +18,11 @@ BlogSidebar.propTypes = {
   sx: PropTypes.object,
   onSetCate: PropTypes.func,
   onModTag: PropTypes.func,
-  tags: PropTypes.object,
+  tags: PropTypes.array,
+  group: PropTypes.string,
 };
 
-export default function BlogSidebar({ author, recentPosts, advertisement, sx, tags, onSetCate, onModTag, ...other }) {
+export default function BlogSidebar({ author, recentPosts, advertisement, sx, tags, onSetCate, onModTag, group, ...other }) {
   const isDesktop = useResponsive('up', 'md');
 
   return (
@@ -42,9 +40,9 @@ export default function BlogSidebar({ author, recentPosts, advertisement, sx, ta
         }}
         {...other}
       >
-        <BlogSidebarCategories onSetCate={onSetCate} />
+        <BlogSidebarCategories onSetCate={onSetCate} group={group} />
         {/* <BlogSidebarRecentPosts recentPosts={recentPosts} /> */}
-        <BlogSidebarPopularTags tags={tags} onModTag={(tag) => onModTag(tag)} />
+        <BlogSidebarPopularTags tags={tags} onModTag={(tag) => onModTag(tag)} group={group} />
         {/* <Advertisement01 advertisement={advertisement} /> */}
       </Stack>
     </>

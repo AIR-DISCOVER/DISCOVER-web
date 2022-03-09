@@ -1,3 +1,4 @@
+export { default as Background } from './Background';
 export { default as HomeHero } from './HomeHero';
 export { default as HomeFAQs } from './HomeFAQs';
 export { default as HomeNewStart } from './HomeNewStart';

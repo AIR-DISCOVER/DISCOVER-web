@@ -12,7 +12,7 @@ import {
   getAllPosts,
   getPostData,
   getAllPostSlugs,
-} from '../../../src/utils/get-mardown/hci/posts';
+} from '../../../src/utils/get-mardown/sun/posts';
 // config
 import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../../../src/config';
 // layouts
@@ -39,7 +39,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-HCIPostPage.propTypes = {
+SUNPostPage.propTypes = {
   post: PropTypes.shape({
     content: PropTypes.object,
     frontmatter: PropTypes.shape({
@@ -60,7 +60,7 @@ HCIPostPage.propTypes = {
   posts: PropTypes.array,
 };
 
-export default function HCIPostPage({ post, posts }) {
+export default function SUNPostPage({ post, posts }) {
   const { frontmatter, content } = post;
   const { title, description, duration, createdAt, author, favorited, heroImg, shareLinks, tags } =
     frontmatter;
@@ -72,7 +72,7 @@ export default function HCIPostPage({ post, posts }) {
   };
 
   return (
-    <Page title={`${title} - Post | HCI`}>
+    <Page title={`${title} - Post | SUN`}>
       <RootStyle>
         <Image alt="hero" src={heroImg} ratio="21/9w" />
 
@@ -81,8 +81,8 @@ export default function HCIPostPage({ post, posts }) {
             sx={{ my: 3 }}
             links={[
               { name: 'Home', href: '/' },
-              { name: 'HCI', href: Routes.hci.landing },
-              { name: 'Research', href: Routes.hci.posts },
+              { name: 'AIR-SUN', href: Routes.sun.landing },
+              { name: 'Research', href: Routes.sun.posts },
               { name: title },
             ]}
           />
@@ -158,7 +158,7 @@ export default function HCIPostPage({ post, posts }) {
 
         <Divider />
 
-        <BlogLatestPosts posts={posts.slice(0, 4)} router={Routes.hci} />
+        <BlogLatestPosts posts={posts.slice(0, 4)} router={Routes.sun} />
       </RootStyle>
     </Page>
   );
@@ -166,7 +166,7 @@ export default function HCIPostPage({ post, posts }) {
 
 // ----------------------------------------------------------------------
 
-HCIPostPage.getLayout = function getLayout(page) {
+SUNPostPage.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
 

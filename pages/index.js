@@ -7,6 +7,7 @@ import { Page } from '../src/components';
 // sections
 import { PricingHome } from '../src/sections/pricing';
 import {
+  Background,
   HomeHero,
   // HomeFAQs,
   HomeNewStart,
@@ -17,7 +18,6 @@ import {
   HomeFeatureHighlights,
   HomeFlexibleComponents,
 } from '../src/sections/home';
-import { Button } from '@mui/material';
 import { useRef, useState } from 'react';
 
 // ----------------------------------------------------------------------
@@ -44,9 +44,11 @@ export default function HomePage() {
   }
   return (
     <Page title="The starting point for your next project">
-      <HomeAdvertisement cref={controlRef} tab={tab} onClick={onClick} />
+      <Background cref={controlRef} tab={tab} />
 
-      <HomeHero />
+      <HomeAdvertisement onClick={onClick} pack={{ overline: '', main: 'DISCOVER.', button: 'Explore' }} />
+
+      {/* <HomeHero />
 
       <HomeNewStart />
 
@@ -58,7 +60,7 @@ export default function HomePage() {
 
       <PricingHome plans={_pricingHome} />
 
-      <HomeCombination />
+      <HomeCombination /> */}
 
     </Page>
   );
@@ -67,5 +69,5 @@ export default function HomePage() {
 // ----------------------------------------------------------------------
 
 HomePage.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
+  return <Layout transparentHeader background='white'>{page}</Layout>;
 };

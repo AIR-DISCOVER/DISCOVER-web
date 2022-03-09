@@ -11,6 +11,8 @@ export const GOOGLE_API = process.env.GOOGLE_API;
 // MARKDOWN FILE DIRECTORY
 // ----------------------------------------------------------------------
 export const HCI_RESEARCH_POSTS_DIRECTORY = '_data/blog-posts/hci';
+export const SUN_RESEARCH_POSTS_DIRECTORY = '_data/blog-posts/sun';
+export const MECHANIC_RESEARCH_POSTS_DIRECTORY = '_data/blog-posts/mechanic';
 
 export const CAREER_POSTS_DIRECTORY = '_data/blog-posts/career';
 export const ELEARNING_POSTS_DIRECTORY = '_data/blog-posts/e-learning';

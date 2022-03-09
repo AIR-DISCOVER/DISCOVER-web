@@ -87,7 +87,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
   const carouselRef = useRef(null);
 
   const carouselList = lists.filter((list) => list.subheader !== 'Common');
-  const commonList = lists.filter((list) => list.subheader === 'Common')[0];
+  const commonList = lists.filter((list) => list.subheader === 'Common');
 
   const minList = lists.length > 5;
 
@@ -137,14 +137,14 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
         },
       }}
     >
-      <Grid container columns={15} spacing={4}>
+      <Grid container columns={commonList.length > 0 ? 15 : 12} spacing={4}>
         <Grid item xs={12}>
           <Box sx={{ position: 'relative', px: 2, py: 6 }}>
             <Slider ref={carouselRef} {...carouselSettings}>
               {carouselList.map((list) => {
                 const { subheader, items, cover } = list;
 
-                const path = items.length > 0 ? items[0].path : '';
+                const _path = items.length > 0 ? items[0].path : '';
 
                 return (
                   <List key={subheader} disablePadding sx={{ px: 2 }} component={MotionContainer}>
@@ -153,7 +153,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
                     </m.div>
 
                     {cover ? (
-                      <NextLink href={path} passHref>
+                      <NextLink href={_path} passHref>
                         <Box
                           component={m.a}
                           variants={varFade({ distance: 80 }).inLeft}
@@ -221,17 +221,17 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
         </Grid>
 
         {/* Common List */}
-        <Grid
+        {commonList.length > 0 && <Grid
           item
           xs={3}
           sx={{
-            borderLeft: (theme) => `dashed 1px ${theme.palette.divider}`,
+            borderLeft: (_theme) => `dashed 1px ${_theme.palette.divider}`,
           }}
         >
           <List disablePadding sx={{ py: 6 }} component={MotionContainer}>
             <ListSubheaderStyled>{commonList.subheader}</ListSubheaderStyled>
             <Stack spacing={1.5} alignItems="flex-start">
-              {commonList.items.map((item) => {
+              {commonList[0].items.map((item) => {
                 const { title, path } = item;
                 const active = router.pathname === path;
 
@@ -239,7 +239,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
               })}
             </Stack>
           </List>
-        </Grid>
+        </Grid>}
       </Grid>
     </DialogAnimate>
   );

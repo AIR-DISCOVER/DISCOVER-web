@@ -1,20 +1,16 @@
 import PropTypes from 'prop-types';
 // next
-import NextLink from 'next/link';
 // @mui
 import { useTheme } from '@mui/material/styles';
-import { Box, Stack, Button, AppBar, Divider, Container } from '@mui/material';
+import { Box, AppBar, Container } from '@mui/material';
 // hooks
 import { useOffSetTop, useResponsive } from '../../hooks';
 // routes
-import Routes from '../../routes';
 // config
 import { HEADER_DESKTOP_HEIGHT } from '../../config';
 // components
-import { Logo, Label } from '../../components';
+import { Logo } from '../../components';
 //
-import Searchbar from '../Searchbar';
-import LanguagePopover from '../LanguagePopover';
 import { NavMobile, NavDesktop, navConfig } from '../nav';
 import { ToolbarStyle, ToolbarShadowStyle } from './HeaderToolbarStyle';
 
@@ -29,7 +25,7 @@ export default function Header({ transparent }) {
 
   const isDesktop = useResponsive('up', 'md');
 
-  const isLight = theme.palette.mode === 'light';
+  const _isLight = theme.palette.mode === 'light';
 
   const isScrolling = useOffSetTop(HEADER_DESKTOP_HEIGHT);
 
@@ -44,7 +40,7 @@ export default function Header({ transparent }) {
           }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Logo onDark={!isLight} />
+            <Logo force={isScrolling ? 'light' : 'dark'} />
 
             {/* <Label
               color="info"
