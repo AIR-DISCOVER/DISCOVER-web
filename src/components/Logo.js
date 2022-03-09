@@ -34,7 +34,7 @@ function Logo({ onDark = false, isSimple = false, sx }) {
           ...sx,
         }}
       >
-        <Image sx={{ height: '100%', width: '100%' }} src={onDark ? "/discover-icon-alpha.png" : "/discover-icon-alpha-black.png"} />
+        <Image alt="discover-logo" sx={{ height: '100%', width: '100%' }} src={onDark ? "/discover-icon-alpha.png" : "/discover-icon-alpha-black.png"} />
       </Box>
     </NextLink>
   );
