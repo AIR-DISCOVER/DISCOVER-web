@@ -24,11 +24,13 @@ import { Logo, Iconify } from '../../components';
 //
 import { PageLinks } from '../nav/NavConfig';
 import { DISCOVER_INTRO } from '_data/config';
+import { useTheme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export default function Footer() {
+export default function Footer({ fill }) {
   const isDesktop = useResponsive('up', 'md');
+  const theme = useTheme();
 
   const lists = PageLinks.filter((list) => list.subheader !== 'Coming Soon');
 
@@ -37,9 +39,9 @@ export default function Footer() {
     : lists.sort((listA, listB) => Number(listA.order) - Number(listB.order));
 
   return (
-    <>
+    <div style={{ width: '100%', background: fill ? (theme.palette.background.default) : null }}>
       <Divider />
-      <Container sx={{ py: { xs: 8, md: 10 } }}>
+      <Container sx={{ py: { xs: 8, md: 10, } }}>
         <Grid container spacing={3} justifyContent={{ md: 'space-between' }}>
           <Grid item xs={12} md={4}>
             <Stack spacing={{ xs: 3, md: 5 }}>
@@ -134,7 +136,7 @@ export default function Footer() {
           </Stack>
         </Stack>
       </Container>
-    </>
+    </div>
   );
 }
 

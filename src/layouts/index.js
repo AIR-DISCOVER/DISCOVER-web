@@ -16,6 +16,7 @@ Layout.propTypes = {
   simpleFooter: PropTypes.bool,
   simpleHeader: PropTypes.bool,
   transparentHeader: PropTypes.bool,
+  background: PropTypes.string,
 };
 
 export default function Layout({
@@ -25,6 +26,7 @@ export default function Layout({
   disabledFooter,
   simpleHeader,
   simpleFooter,
+  background,
 }) {
   return (
     <>
@@ -41,7 +43,7 @@ export default function Layout({
       {children}
 
       {/* <FooterSimple /> */}
-      {disabledFooter ? null : <>{simpleFooter ? <FooterSimple /> : <Footer />}</>}
+      {disabledFooter ? null : <>{simpleFooter ? <FooterSimple /> : <Footer fill />}</>}
     </>
   );
 }

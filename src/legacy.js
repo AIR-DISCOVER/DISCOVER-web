@@ -118,10 +118,10 @@ const AddTarget = (props) => {
     return null;
 }
 
-const Scene = (states) => {
+const Scene = ({cref, tab, style}) => {
     const targetObject = new Object3D();
     return (
-        <Canvas style={{height: '100vh'}}>
+        <Canvas style={{height: '100vh', ...style}}>
             <Suspense fallback={null}>
                 <AddTarget target={targetObject} />
                 <directionalLight color={0xffffff} intensity={1} target={targetObject} castShadow={true} />
@@ -129,7 +129,7 @@ const Scene = (states) => {
                 <hemisphereLight color={0xffffff} intensity={0.1} />
                 <Model />
                 {/* <OrbitControls /> */}
-                <RefDolly ref={states.cref} tab={states.tab} />
+                <RefDolly ref={cref} tab={tab} />
             </Suspense>
         </Canvas>
     );
