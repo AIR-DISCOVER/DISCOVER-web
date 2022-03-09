@@ -10,7 +10,7 @@ import { useCallback, useEffect, useState } from 'react';
 BlogHCIPostList.propTypes = {
   posts: PropTypes.array.isRequired,
   category: PropTypes.string,
-  tags: PropTypes.object
+  tags: PropTypes.array
 };
 
 export default function BlogHCIPostList({ posts, category, tags }) {
