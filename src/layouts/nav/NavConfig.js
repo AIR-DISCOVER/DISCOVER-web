@@ -10,7 +10,9 @@ export const PageLinks = [
     subheader: 'AIR-SUN',
     cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_marketing.jpg',
     items: [
-      { title: 'Landing', path: Routes.marketing.landing },
+      { title: 'Landing', path: Routes.sun.landing },
+      { title: 'Blog Posts', path: Routes.sun.posts },
+      { title: 'Blog Post', path: Routes.sun.post('post-01') },
     ],
   },
   {
@@ -28,7 +30,9 @@ export const PageLinks = [
     subheader: 'Mechanics',
     cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_career.jpg',
     items: [
-      { title: 'Login', path: Routes.loginIllustration },
+      { title: 'Landing', path: Routes.mechanic.landing },
+      { title: 'Blog Posts', path: Routes.mechanic.posts },
+      { title: 'Blog Post', path: Routes.mechanic.post('post-01') },
     ],
   },
   {

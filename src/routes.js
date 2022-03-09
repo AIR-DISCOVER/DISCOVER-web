@@ -6,6 +6,16 @@ const Routes = {
     posts: '/hci/blog',
     post: (slug) => `/hci/blog/${slug}`
   },
+  sun: {
+    landing: '/sun',
+    posts: '/sun/blog',
+    post: (slug) => `/sun/blog/${slug}`
+  },
+  mechanic: {
+    landing: '/mechanic',
+    posts: '/mechanic/blog',
+    post: (slug) => `/mechanic/blog/${slug}`
+  },
   // Marketing
   marketing: {
     landing: '/marketing',

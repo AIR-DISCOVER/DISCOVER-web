@@ -25,7 +25,7 @@ export default function Header({ transparent }) {
 
   const isDesktop = useResponsive('up', 'md');
 
-  const isLight = theme.palette.mode === 'light';
+  const _isLight = theme.palette.mode === 'light';
 
   const isScrolling = useOffSetTop(HEADER_DESKTOP_HEIGHT);
 
@@ -40,7 +40,7 @@ export default function Header({ transparent }) {
           }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Logo onDark={!isLight} />
+            <Logo />
 
             {/* <Label
               color="info"
