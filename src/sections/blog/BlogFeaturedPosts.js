@@ -7,12 +7,12 @@ import NextLink from 'next/link';
 import { styled, useTheme } from '@mui/material/styles';
 import { Container, Stack, Avatar, Box, Link } from '@mui/material';
 // routes
-import Routes from '../../../routes';
+import Routes from '../../routes';
 // utils
-import { fDate } from '../../../utils/formatTime';
-import cssStyles from '../../../utils/cssStyles';
+import { fDate } from '../../utils/formatTime';
+import cssStyles from '../../utils/cssStyles';
 // components
-import { Image, BgOverlay, CarouselDots, CarouselArrows, TextMaxLine } from '../../../components';
+import { Image, BgOverlay, CarouselDots, CarouselArrows, TextMaxLine } from '../../components';
 
 // ----------------------------------------------------------------------
 
@@ -37,11 +37,12 @@ const DotStyle = styled('span')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-BlogHCIFeaturedPosts.propTypes = {
+BlogFeaturedPosts.propTypes = {
   posts: PropTypes.array.isRequired,
+  route: PropTypes.object
 };
 
-export default function BlogHCIFeaturedPosts({ posts }) {
+export default function BlogFeaturedPosts({ posts, route }) {
   const theme = useTheme();
 
   const [selected, setSelected] = useState(0);
@@ -95,7 +96,7 @@ export default function BlogHCIFeaturedPosts({ posts }) {
         >
           <Slider ref={carouselRef} {...carouselSettings}>
             {posts.map((post) => (
-              <PostItem key={post.slug} post={post} />
+              <PostItem key={post.slug} post={post} route={route} />
             ))}
           </Slider>
         </CarouselArrows>
@@ -143,9 +144,10 @@ PostItem.propTypes = {
     }),
     slug: PropTypes.string,
   }),
+  route: PropTypes.object,
 };
 
-function PostItem({ post }) {
+function PostItem({ post, route }) {
   const { slug, frontmatter } = post;
   const { title, duration, coverImg, author, description, createdAt } = frontmatter;
 
@@ -174,8 +176,8 @@ function PostItem({ post }) {
 
           <NextLink
             passHref
-            as={Routes.hci.post(slug)}
-            href={Routes.hci.post('[slug]')}
+            as={route.post(slug)}
+            href={route.post('[slug]')}
           >
             <Link color="inherit" variant="h3">
               {title}

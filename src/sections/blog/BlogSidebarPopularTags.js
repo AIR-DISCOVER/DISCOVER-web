@@ -21,7 +21,7 @@ const TAGS = [
 // ----------------------------------------------------------------------
 
 BlogSidebarPopularTags.propTypes = {
-  tags: PropTypes.object,
+  tags: PropTypes.array,
   onModTag: PropTypes.func
 };
 

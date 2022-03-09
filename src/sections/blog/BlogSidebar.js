@@ -21,7 +21,7 @@ BlogSidebar.propTypes = {
   sx: PropTypes.object,
   onSetCate: PropTypes.func,
   onModTag: PropTypes.func,
-  tags: PropTypes.object,
+  tags: PropTypes.array,
 };
 
 export default function BlogSidebar({ author, recentPosts, advertisement, sx, tags, onSetCate, onModTag, ...other }) {
