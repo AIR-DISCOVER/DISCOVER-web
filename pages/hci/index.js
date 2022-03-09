@@ -23,7 +23,7 @@ import {
   MarketingLandingServices,
   MarketingLandingCaseStudies,
 } from '../../src/sections/@marketing';
-import { BlogFeaturedPosts, BlogHCIPostList, BlogSidebar, BlogMarketingLatestPosts } from '../../src/sections/blog'
+import { BlogFeaturedPosts, BlogPostList, BlogSidebar, BlogMarketingLatestPosts } from '../../src/sections/blog'
 import { useState } from 'react';
 import Routes from '../../src/routes';
 
@@ -54,7 +54,7 @@ export default function MarketingLandingPage({ posts }) {
       <Container sx={{ mt: { xs: 4, md: 10, minHeight: '100vh' } }}>
         <Grid container spacing={{ md: 8 }}>
           <Grid item xs={12} md={8}>
-            <BlogHCIPostList posts={posts} category={category} tags={tags} />
+            <BlogPostList posts={posts} category={category} tags={tags} router={Routes.hci} />
           </Grid>
 
           <Grid item xs={12} md={4}>

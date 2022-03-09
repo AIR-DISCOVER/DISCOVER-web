@@ -8,3 +8,4 @@ export { default as BlogSidebar } from './BlogSidebar';
 export { default as BlogAuthorInfo } from './BlogAuthorInfo';
 export { default as BlogPrevAndNextPost } from './BlogPrevAndNextPost';
 export { default as BlogFeaturedPosts } from './BlogFeaturedPosts';
+export { default as BlogPostList } from './BlogPostList';

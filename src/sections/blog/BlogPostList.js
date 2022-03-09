@@ -2,24 +2,25 @@ import PropTypes from 'prop-types';
 // @mui
 import { Pagination, Box } from '@mui/material';
 //
-import BlogHCIPostItem from './BlogHCIPostItem';
+import BlogPostItem from './BlogPostItem';
 import { useCallback, useEffect, useState } from 'react';
 
 // ----------------------------------------------------------------------
 
-BlogHCIPostList.propTypes = {
+BlogPostList.propTypes = {
   posts: PropTypes.array.isRequired,
   category: PropTypes.string,
-  tags: PropTypes.array
+  tags: PropTypes.array,
+  router: PropTypes.object
 };
 
-export default function BlogHCIPostList({ posts, category, tags }) {
+export default function BlogPostList({ posts, category, tags, router }) {
   const [page, setPage] = useState(1)
   let [displayPosts, setDisplayPosts] = useState([]);
   const RenderPosts = useCallback(() => (
     <>
       {displayPosts.slice((page - 1) * 8, page * 8).map((post) => (
-        <BlogHCIPostItem key={post.slug} post={post} />
+        <BlogPostItem key={post.slug} post={post} router={router}/>
       ))}
     </>
   ), [displayPosts])
