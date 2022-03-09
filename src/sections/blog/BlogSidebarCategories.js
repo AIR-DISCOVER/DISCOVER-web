@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 // next
-import NextLink from 'next/link';
 // @mui
 import { Stack, Link, Typography, Box } from '@mui/material';
 import { useState } from 'react';

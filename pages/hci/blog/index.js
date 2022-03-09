@@ -6,7 +6,6 @@ import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../../../src/config
 // utils
 import { getAllPosts } from '../../../src/utils/get-mardown/hci/posts';
 // _data
-import _mock from '../../../_data/mock';
 // layouts
 import Layout from '../../../src/layouts';
 // components

@@ -1,8 +1,7 @@
-import React, { forwardRef, Suspense, useEffect, useImperativeHandle, useRef, useState } from 'react'
+import React, { forwardRef, Suspense, useImperativeHandle, useRef, useState } from 'react'
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 // import { makeStyles } from '@mui/material/styles';
-import { Box, Button, Grid, Typography } from '@mui/material';
 
 // import SvgButton from '../components/elements/SvgButton';
 // import ChevronRightIcon from '@mui/icons-material/ChevronRight';

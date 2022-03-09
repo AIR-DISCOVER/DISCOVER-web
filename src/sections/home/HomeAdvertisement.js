@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Button, Stack, Typography, Box } from '@mui/material';
+import { Button, Stack, Typography } from '@mui/material';
 // hooks
 import { useHoverParallax } from '../../hooks';
 // routes
-import Routes from '../../routes';
 // components
-import { useRef, useState } from 'react';
 
 import Scene from '../../legacy';
 // ----------------------------------------------------------------------

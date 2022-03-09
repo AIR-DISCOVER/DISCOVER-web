@@ -22,10 +22,8 @@ import { Page } from '../../../src/components';
 import {
   Image,
   Markdown,
-  ShareButton,
   Breadcrumbs,
   SocialsButton,
-  FavoriteButton,
 } from '../../../src/components';
 // sections
 import { BlogAuthorInfo, BlogLatestPosts } from '../../../src/sections/blog';

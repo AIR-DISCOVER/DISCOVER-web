@@ -12,18 +12,15 @@ import {
   Grid,
   Link,
   Stack,
-  Button,
   Divider,
   Collapse,
   Container,
   Typography,
-  FilledInput,
-  InputAdornment,
 } from '@mui/material';
 // hooks
 import { useResponsive } from '../../hooks';
 // components
-import { Logo, Iconify, SocialsButton, AppStoreButton } from '../../components';
+import { Logo, Iconify } from '../../components';
 //
 import { PageLinks } from '../nav/NavConfig';
 

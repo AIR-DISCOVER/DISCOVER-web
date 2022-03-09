@@ -17,7 +17,6 @@ import {
   HomeFeatureHighlights,
   HomeFlexibleComponents,
 } from '../src/sections/home';
-import { Button } from '@mui/material';
 import { useRef, useState } from 'react';
 
 // ----------------------------------------------------------------------

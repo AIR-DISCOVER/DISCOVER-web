@@ -1,9 +1,8 @@
 // next
-import { useRouter } from 'next/router';
 // @mui
 import { Typography, Chip, Box } from '@mui/material';
 import { PropTypes } from 'prop-types';
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 // ----------------------------------------------------------------------
 
 const TAGS = [

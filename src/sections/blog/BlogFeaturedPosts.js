@@ -7,7 +7,6 @@ import NextLink from 'next/link';
 import { styled, useTheme } from '@mui/material/styles';
 import { Container, Stack, Avatar, Box, Link } from '@mui/material';
 // routes
-import Routes from '../../routes';
 // utils
 import { fDate } from '../../utils/formatTime';
 import cssStyles from '../../utils/cssStyles';

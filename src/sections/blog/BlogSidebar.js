@@ -4,13 +4,10 @@ import { Stack } from '@mui/material';
 // hooks
 import { useResponsive } from '../../hooks';
 // components
-import { SearchInput } from '../../components';
 //
-import { Advertisement01 } from '../advertisement';
 import BlogSidebarAuthor from './BlogSidebarAuthor';
 import BlogSidebarCategories from './BlogSidebarCategories';
 import BlogSidebarPopularTags from './BlogSidebarPopularTags';
-import BlogSidebarRecentPosts from './BlogSidebarRecentPosts';
 
 // ----------------------------------------------------------------------
 
