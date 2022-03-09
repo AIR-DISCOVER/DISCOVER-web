@@ -40,6 +40,7 @@ export default function Layout({
 
       {children}
 
+      {/* <FooterSimple /> */}
       {disabledFooter ? null : <>{simpleFooter ? <FooterSimple /> : <Footer />}</>}
     </>
   );

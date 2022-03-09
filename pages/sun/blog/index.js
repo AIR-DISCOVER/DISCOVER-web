@@ -39,7 +39,7 @@ export default function SUNBlogPage({ posts }) {
 
         <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.sun} />
 
-        <BlogFullPostList posts={posts} route={Routes.sun} />
+        <BlogFullPostList posts={posts} route={Routes.sun} group="sun" />
 
       </RootStyle>
     </Page>

@@ -39,7 +39,7 @@ export default function MechanicBlogPage({ posts }) {
 
         <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.mechanic} />
 
-        <BlogFullPostList posts={posts} route={Routes.mechanic} />
+        <BlogFullPostList posts={posts} route={Routes.mechanic} group="mechanic" />
 
       </RootStyle>
     </Page>

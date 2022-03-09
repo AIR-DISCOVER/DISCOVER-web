@@ -39,7 +39,7 @@ export default function HCIBlogPage({ posts }) {
 
         <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.hci} />
 
-        <BlogFullPostList posts={posts} route={Routes.hci} />
+        <BlogFullPostList posts={posts} route={Routes.hci} group="hci" />
 
       </RootStyle>
     </Page>

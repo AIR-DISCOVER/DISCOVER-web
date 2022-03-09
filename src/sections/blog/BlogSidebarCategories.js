@@ -6,21 +6,15 @@ import { useState } from 'react';
 
 // ----------------------------------------------------------------------
 
-const CATEGORIES = [
-  { name: 'Branding' },
-  { name: 'Community' },
-  { name: 'Tutorials' },
-  { name: 'Business' },
-  { name: 'Management' },
-];
-
+import { CATEGORIES } from '../../../_data/config';
 // ----------------------------------------------------------------------
 
 BlogSidebarCategories.propTypes = {
-  onSetCate: PropTypes.func
+  onSetCate: PropTypes.func,
+  group: PropTypes.string,
 };
 
-export default function BlogSidebarCategories({ onSetCate }) {
+export default function BlogSidebarCategories({ onSetCate, group }) {
   const [activeCate, setActiveCate] = useState('all')
 
   return (
@@ -28,8 +22,8 @@ export default function BlogSidebarCategories({ onSetCate }) {
       <Typography variant="h4" gutterBottom>
         Categories
       </Typography>
-      {CATEGORIES.map((category) => (
-        <CategoryItem emphasize={activeCate === category.name} key={category.name} category={category} onClick={(cate) => {
+      {CATEGORIES[group]?.map((category) => (
+        <CategoryItem emphasize={activeCate === category} key={category} category={category} onClick={(cate) => {
           if (cate === activeCate) {
             setActiveCate('all'); onSetCate('all');
           } else {
@@ -44,16 +38,13 @@ export default function BlogSidebarCategories({ onSetCate }) {
 // ----------------------------------------------------------------------
 
 CategoryItem.propTypes = {
-  category: PropTypes.shape({
-    name: PropTypes.string,
-    path: PropTypes.string,
-  }),
+  category: PropTypes.string,
   onClick: PropTypes.func,
   emphasize: PropTypes.bool
 };
 
 function CategoryItem({ category, onClick, emphasize }) {
-  const { name, path } = category;
+  const name = category;
 
   return (
     <Stack key={name} direction="row" alignItems="center">

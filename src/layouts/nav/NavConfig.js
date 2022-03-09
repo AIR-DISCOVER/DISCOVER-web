@@ -2,47 +2,46 @@
 import Routes from '../../routes';
 // _data
 
+import { HCI_COVER_PIC, SUN_COVER_PIC, MECHANIC_COVER_PIC } from '_data/config';
+
 // ----------------------------------------------------------------------
 
 export const PageLinks = [
   {
     order: '1',
     subheader: 'AIR-SUN',
-    cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_marketing.jpg',
+    cover: SUN_COVER_PIC,
     items: [
-      { title: 'Landing', path: Routes.sun.landing },
-      { title: 'Blog Posts', path: Routes.sun.posts },
-      { title: 'Blog Post', path: Routes.sun.post('post-01') },
+      { title: 'Introduction', path: Routes.sun.landing },
+      { title: 'Research Projects', path: Routes.sun.posts },
     ],
   },
   {
     order: '2',
     subheader: 'HCI',
-    cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_career.jpg',
+    cover: HCI_COVER_PIC,
     items: [
-      { title: 'Landing', path: Routes.hci.landing },
-      { title: 'Blog Posts', path: Routes.hci.posts },
-      { title: 'Blog Post', path: Routes.hci.post('post-01') },
+      { title: 'Introduction', path: Routes.hci.landing },
+      { title: 'Research Projects', path: Routes.hci.posts },
     ],
   },
   {
     order: '3',
     subheader: 'Mechanics',
-    cover: 'https://zone-assets-api.vercel.app/assets/images/menu/menu_career.jpg',
+    cover: MECHANIC_COVER_PIC,
     items: [
-      { title: 'Landing', path: Routes.mechanic.landing },
-      { title: 'Blog Posts', path: Routes.mechanic.posts },
-      { title: 'Blog Post', path: Routes.mechanic.post('post-01') },
+      { title: 'Introduction', path: Routes.mechanic.landing },
+      { title: 'Research Projects', path: Routes.mechanic.posts },
     ],
   },
-  {
-    order: '4',
-    subheader: 'Common',
-    items: [
-      { title: 'Item1', path: '' },
-      { title: 'Item2', path: '' },
-    ],
-  },
+  //   {
+  //     order: '4',
+  //     subheader: 'Common',
+  //     items: [
+  //       { title: 'Item1', path: '' },
+  //       { title: 'Item2', path: '' },
+  //     ],
+  //   },
 ];
 
 export const navConfig = [
@@ -50,6 +49,7 @@ export const navConfig = [
   {
     title: 'Research',
     path: Routes.pages,
-    children: [PageLinks[0], PageLinks[1], PageLinks[2], PageLinks[3]]
+    children: [...PageLinks],
   },
+  // { title: 'Documentation', path: '/' },
 ];

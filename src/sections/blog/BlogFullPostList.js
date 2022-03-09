@@ -4,11 +4,11 @@ import BlogPostList from './BlogPostList'
 import BlogSidebar from './BlogSidebar'
 import { useState } from 'react';
 
-export default function BlogFullPostList({ posts, route }) {
+export default function BlogFullPostList({ posts, route, group }) {
   const [category, setCategory] = useState('all')
   const [tags, setTags] = useState([])
   return (
-    <Container sx={{ mt: { xs: 4, md: 10, minHeight: '100vh' } }}>
+    <Container sx={{ mt: { xs: 4, md: 10, minHeight: '50vh' } }}>
       <Grid container spacing={{ md: 8 }}>
         <Grid item xs={12} md={8}>
           <BlogPostList posts={posts} category={category} tags={tags} route={route} />
@@ -31,6 +31,7 @@ export default function BlogFullPostList({ posts, route }) {
                 setTags([...new Set([...tags, tag])])
               }
             }}
+            group={group}
           />
         </Grid>
       </Grid>

@@ -23,6 +23,7 @@ import { useResponsive } from '../../hooks';
 import { Logo, Iconify } from '../../components';
 //
 import { PageLinks } from '../nav/NavConfig';
+import { DISCOVER_INTRO } from '_data/config';
 
 // ----------------------------------------------------------------------
 
@@ -45,7 +46,7 @@ export default function Footer() {
               <Stack alignItems="flex-start" spacing={3}>
                 <Logo />
                 <Typography variant="body3" sx={{ color: 'text.secondary' }}>
-                  Introduction of DISCOVER Lab
+                  {DISCOVER_INTRO}
                   {/* The starting point for your next project based on easy-to-customize Material-UI ©
                   helps you build apps faster and better. */}
                 </Typography>

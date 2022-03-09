@@ -11,10 +11,10 @@ const Model = () => {
     const ref = useRef()
     const scenes = useLoader(GLTFLoader,
         [
-            "/rest.glb",
-            "/office1.glb",
-            "/office2.glb",
-            "/indoor.glb",
+            "/three/rest.glb",
+            "/three/office1.glb",
+            "/three/office2.glb",
+            "/three/indoor.glb",
         ]);
     const locations =
         [
