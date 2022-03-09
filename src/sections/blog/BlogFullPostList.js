@@ -4,7 +4,7 @@ import BlogPostList from './BlogPostList'
 import BlogSidebar from './BlogSidebar'
 import { useState } from 'react';
 
-export default function BlogFullPostList({ posts, route, recentPath }) {
+export default function BlogFullPostList({ posts, route }) {
   const [category, setCategory] = useState('all')
   const [tags, setTags] = useState([])
   return (
@@ -18,7 +18,7 @@ export default function BlogFullPostList({ posts, route, recentPath }) {
           <BlogSidebar
             recentPosts={{
               list: posts.slice(-4),
-              path: recentPath,
+              path: route.posts,
             }}
             tags={tags}
             onSetCate={setCategory}
