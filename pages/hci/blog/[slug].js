@@ -28,7 +28,7 @@ import {
   FavoriteButton,
 } from '../../../src/components';
 // sections
-import { BlogAuthorInfo, BlogHCILatestPosts } from '../../../src/sections/blog';
+import { BlogAuthorInfo, BlogLatestPosts } from '../../../src/sections/blog';
 
 // ----------------------------------------------------------------------
 
@@ -160,7 +160,7 @@ export default function HCIPostPage({ post, posts }) {
 
         <Divider />
 
-        <BlogHCILatestPosts posts={posts.slice(0, 4)} />
+        <BlogLatestPosts posts={posts.slice(0, 4)} router={Routes.hci} />
       </RootStyle>
     </Page>
   );

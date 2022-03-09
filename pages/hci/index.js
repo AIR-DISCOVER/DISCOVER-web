@@ -23,7 +23,7 @@ import {
   MarketingLandingServices,
   MarketingLandingCaseStudies,
 } from '../../src/sections/@marketing';
-import { BlogFeaturedPosts, BlogPostList, BlogSidebar, BlogMarketingLatestPosts } from '../../src/sections/blog'
+import { BlogFeaturedPosts, BlogFullPostList, BlogMarketingLatestPosts } from '../../src/sections/blog'
 import { useState } from 'react';
 import Routes from '../../src/routes';
 
@@ -36,8 +36,6 @@ MarketingLandingPage.propTypes = {
 };
 
 export default function MarketingLandingPage({ posts }) {
-  const [category, setCategory] = useState('all')
-  const [tags, setTags] = useState([])
   return (
     <Page title="Landing - HCI">
       <MarketingLandingHero />
@@ -51,33 +49,7 @@ export default function MarketingLandingPage({ posts }) {
 
       <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.hci} />
 
-      <Container sx={{ mt: { xs: 4, md: 10, minHeight: '100vh' } }}>
-        <Grid container spacing={{ md: 8 }}>
-          <Grid item xs={12} md={8}>
-            <BlogPostList posts={posts} category={category} tags={tags} router={Routes.hci} />
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <BlogSidebar
-              recentPosts={{
-                list: posts.slice(-4),
-                path: '/hci/blog',
-              }}
-              tags={tags}
-              onSetCate={setCategory}
-              onModTag={(tag) => {
-                if (tags.includes(tag)) {
-                  let tmp = new Set(tags);
-                  tmp.delete(tag)
-                  setTags([...tmp])
-                } else {
-                  setTags([...new Set([...tags, tag])])
-                }
-              }}
-            />
-          </Grid>
-        </Grid>
-      </Container>
+      <BlogFullPostList posts={posts} route={Routes.hci} />    
 
       {/* <MarketingLandingServices /> */}
 

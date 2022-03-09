@@ -14,13 +14,13 @@ BlogPostList.propTypes = {
   router: PropTypes.object
 };
 
-export default function BlogPostList({ posts, category, tags, router }) {
+export default function BlogPostList({ posts, category, tags, route }) {
   const [page, setPage] = useState(1)
   let [displayPosts, setDisplayPosts] = useState([]);
   const RenderPosts = useCallback(() => (
     <>
       {displayPosts.slice((page - 1) * 8, page * 8).map((post) => (
-        <BlogPostItem key={post.slug} post={post} router={router}/>
+        <BlogPostItem key={post.slug} post={post} route={route}/>
       ))}
     </>
   ), [displayPosts])

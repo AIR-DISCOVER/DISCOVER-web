@@ -8,12 +8,12 @@ import NextLink from 'next/link';
 import { styled, useTheme } from '@mui/material/styles';
 import { Box, Link, Stack, Avatar, Container, Typography } from '@mui/material';
 // routes
-import Routes from '../../../routes';
+import Routes from '../../routes';
 // utils
-import { fDate } from '../../../utils/formatTime';
+import { fDate } from '../../utils/formatTime';
 // components
-import { varHover, varTranHover } from '../../../components/animate';
-import { Image, BgOverlay, CarouselArrows, CarouselDots } from '../../../components';
+import { varHover, varTranHover } from '../../components/animate';
+import { Image, BgOverlay, CarouselArrows, CarouselDots } from '../../components';
 
 // ----------------------------------------------------------------------
 
@@ -35,11 +35,12 @@ const DotStyle = styled('span')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-BlogHCILatestPosts.propTypes = {
+BlogLatestPosts.propTypes = {
   posts: PropTypes.array.isRequired,
+  router: PropTypes.object,
 };
 
-export default function BlogHCILatestPosts({ posts }) {
+export default function BlogLatestPosts({ posts, router }) {
   const theme = useTheme();
   const carouselRef = useRef(null);
 
@@ -105,7 +106,7 @@ export default function BlogHCILatestPosts({ posts }) {
                     WebkitBackgroundClip: 'content-box',
                   }}
                 >
-                  <PostItem post={post} />
+                  <PostItem post={post} router={router} />
                 </Box>
               ))}
             </Slider>
@@ -132,9 +133,10 @@ PostItem.propTypes = {
     }),
     slug: PropTypes.string,
   }),
+  router: PropTypes.object,
 };
 
-function PostItem({ post }) {
+function PostItem({ post, router }) {
   const { slug, frontmatter } = post;
   const { title, duration, coverImg, author, createdAt } = frontmatter;
 
@@ -194,8 +196,8 @@ function PostItem({ post }) {
 
           <NextLink
             passHref
-            as={Routes.hci.post(slug)}
-            href={Routes.hci.post('[slug]')}
+            as={router.post(slug)}
+            href={router.post('[slug]')}
           >
             <Link variant="h4" color="inherit">
               {title}

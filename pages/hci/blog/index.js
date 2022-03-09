@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Grid, Container } from '@mui/material';
 // config
 import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../../../src/config';
 // utils
@@ -12,15 +11,12 @@ import _mock from '../../../_data/mock';
 import Layout from '../../../src/layouts';
 // components
 import { Page } from '../../../src/components';
-import { SearchInput } from '../../../src/components';
-// sections
-// import { MarketingFreeSEO } from '../../../src/sections/@marketing';
-// import { NewsletterMarketing } from '../../../src/sections/newsletter';
+
 import {
-  BlogHCIPostList,
-  BlogHCIFeaturedPosts,
-  BlogSidebar,
+  BlogFeaturedPosts,
+  BlogFullPostList,
 } from '../../../src/sections/blog';
+import Routes from '../../../src/routes';
 
 // ----------------------------------------------------------------------
 
@@ -41,40 +37,11 @@ export default function HCIBlogPage({ posts }) {
   return (
     <Page title="Blog - HCI">
       <RootStyle>
-        <SearchInput
-          sx={{
-            mx: 2.5,
-            display: { xs: 'flex', md: 'none' },
-            my: { xs: 4, md: 0 },
-          }}
-        />
 
-        <BlogHCIFeaturedPosts posts={posts.slice(-5)} />
+        <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.hci} />
 
-        <Container sx={{ mt: { xs: 4, md: 10 } }}>
-          <Grid container spacing={{ md: 8 }}>
-            <Grid item xs={12} md={8}>
-              <BlogHCIPostList posts={posts} />
-            </Grid>
+        <BlogFullPostList posts={posts} route={Routes.hci} recentPath='/hci/blog' />
 
-            <Grid item xs={12} md={4}>
-              <BlogSidebar
-                recentPosts={{
-                  list: posts.slice(-4),
-                  path: '/hci/blog',
-                }}
-                advertisement={{
-                  title: 'Advertisement',
-                  description: 'Duis leo. Donec orci lectus, aliquam ut, faucibus non',
-                  imageUrl: _mock.image.marketing(9),
-                  path: '#',
-                }}
-              />
-            </Grid>
-          </Grid>
-        </Container>
-        {/* <MarketingFreeSEO /> */}
-        {/* <NewsletterMarketing /> */}
       </RootStyle>
     </Page>
   );

@@ -39,10 +39,10 @@ BlogPostItem.propTypes = {
     }),
     slug: PropTypes.string,
   }),
-  router: PropTypes.object,
+  route: PropTypes.object,
 };
 
-export default function BlogPostItem({ post, router }) {
+export default function BlogPostItem({ post, route }) {
   const { slug, frontmatter } = post;
   const { title, duration, coverImg, author, createdAt } = frontmatter;
 
@@ -81,8 +81,8 @@ export default function BlogPostItem({ post, router }) {
 
           <NextLink
             passHref
-            as={router.post(slug)}
-            href={router.post('[slug]')}
+            as={route.post(slug)}
+            href={route.post('[slug]')}
           >
             <TextMaxLine variant="h4" asLink>
               {title}

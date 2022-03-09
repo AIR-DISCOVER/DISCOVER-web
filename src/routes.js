@@ -5,7 +5,6 @@ const Routes = {
     landing: '/hci',
     posts: '/hci/blog',
     post: (slug) => `/hci/blog/${slug}`
-
   },
   // Marketing
   marketing: {
