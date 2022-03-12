@@ -14,7 +14,7 @@ createdAt: '2022-02-28T08:42'
 #   twitter: twitter-link
 tags: [Marketing, Development, HR & Recruiting, Design, Management]
 author:
-  name: Chu, Mengdi
+  name: Anonymouse
   # role: Full Stack Designer
   # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
   quotes: Intern since Mar 15, 2021
