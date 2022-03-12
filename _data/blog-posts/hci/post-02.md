@@ -14,7 +14,7 @@ createdAt: '2022-02-26T15:11'
 #   twitter: twitter-link
 tags: [Development, Banking, Management]
 author:
-  name: Zhang, Yang
+  name: Anonymous
   # role: Full Stack Designer
   # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
   quotes: Member since Mar 15, 2021
