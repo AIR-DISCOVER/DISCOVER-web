@@ -14,7 +14,7 @@ createdAt: '2022-02-28T13:15'
 #   twitter: twitter-link
 tags: [Community]
 author:
-  name: Xu, Ying
+  name: Anonymous
   # role: Full Stack Designer
   # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
   quotes: Member since Mar 15, 2021
