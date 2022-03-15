@@ -20,7 +20,11 @@ export const MECHANIC_MEMBERS = [
   { id: 5, name: "Mechanic King", role: "Role", photo: "" },
 ]
 export const CATEGORIES = {
-  hci: ['cate1'],
+  hci: [
+    "Understanding/Modelling People",
+    "Build Human-centred AI System",
+    "Methodology Research about Human-AI Collabration",
+  ],
   sun: ['cate2'],
   mechanic: ['cate3'],
 }
