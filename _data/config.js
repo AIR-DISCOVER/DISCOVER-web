@@ -37,11 +37,7 @@ export const HCI_COVER_PIC = "";
 export const SUN_COVER_PIC = "";
 export const MECHANIC_COVER_PIC = "";
 
-export const DISCOVER_INTRO = "AIR DISCOVER SUN Team is mainly focusing on computer vision which is the art of tracing light, along two paths: \
-- From images to the physical world; \
-- From images to our brains. \
-We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people. \
-"
+export const DISCOVER_INTRO = "AIR DISCOVER SUN Team is mainly focusing on computer vision which is the art of tracing light, along two paths: \n - From images to the physical world; \n - From images to our brains. We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people. "
 
 export const GROUP_INTRO = {
   hci: { overline: "overline", title: "Title", description: "Description", inverse: true },
