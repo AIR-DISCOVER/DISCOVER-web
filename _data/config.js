@@ -6,11 +6,11 @@ export const HCI_MEMBERS = [
   { id: 5, name: "Gao, Jiasi", role: "Role", photo: "" },
 ]
 export const SUN_MEMBERS = [
-  { id: 1, name: "Zhao, Hao", role: "Role", photo: "" },
-  { id: 2, name: "Zhao, Hao", role: "Role", photo: "" },
-  { id: 3, name: "Zhao, Hao", role: "Role", photo: "" },
-  { id: 4, name: "Zhao, Hao", role: "Role", photo: "" },
-  { id: 5, name: "Zhao, Hao", role: "Role", photo: "" },
+  { id: 1, name: "Shi, Yongliang", role: "Role", photo: "/member_photos/sun-shiyongliang.jpeg"},
+  { id: 2, name: "Shi, Yongliang", role: "Role", photo: "" },
+  { id: 3, name: "Shi, Yongliang", role: "Role", photo: "" },
+  { id: 4, name: "Shi, Yongliang", role: "Role", photo: "" },
+  { id: 5, name: "Shi, Yongliang", role: "Role", photo: "" },
 ]
 export const MECHANIC_MEMBERS = [
   { id: 1, name: "Mechanic King", role: "Role", photo: "" },
