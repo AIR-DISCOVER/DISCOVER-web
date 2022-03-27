@@ -7,8 +7,8 @@ export const HCI_MEMBERS = [
 ]
 export const SUN_MEMBERS = [
   { id: 1, name: "Shi, Yongliang", role: "Role", photo: "/member_photos/sun-shiyongliang.jpeg"},
-  { id: 2, name: "Li, Pengfei", role: "Role", photo: "/member_photos/sun-lipengfei.jpeg" },
-  { id: 3, name: "Shi, Yongliang", role: "Role", photo: "" },
+  { id: 2, name: "Chen, Xiaoxue", role: "Role", photo: "/member_photos/sun-chenxiaoxue.jpeg" },
+  { id: 3, name: "Li, Pengfei", role: "Role", photo: "/member_photos/sun-lipengfei.jpeg" },
   { id: 4, name: "Shi, Yongliang", role: "Role", photo: "" },
   { id: 5, name: "Shi, Yongliang", role: "Role", photo: "" },
 ]
