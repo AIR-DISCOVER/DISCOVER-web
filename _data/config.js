@@ -38,10 +38,20 @@ export const HCI_COVER_PIC = "";
 export const SUN_COVER_PIC = "";
 export const MECHANIC_COVER_PIC = "";
 
-export const DISCOVER_INTRO = "Introduction of DISCOVER Lab";
+export const DISCOVER_INTRO = "AIR DISCOVER SUN Team is mainly focusing on computer vision which is the art of tracing light, along two paths: \
+- From images to the physical world; \
+- From images to our brains. \
+We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people. \
+\
+AIR DISCOVER HCI Team is a Human-centered AI research team that focuses on creating AI-driven systems that amplify and augment human abilities and well-being：\
+- Understanding and modeling long-term human behaviors and emotions in the real world through wearable or ubiquitous contactless sensors; \
+- Building novelty human-in-the-loop AI/Robotics systems; \
+- Exploring methods and algorithms enabling effective human-AI collaboration that make human partnerships more productive, creative, accessible, and enjoyable.\
+\
+AIR DISCOVER Hardware Lab aims to fulfill the requirement of robotics research in AIR, especially to unleash the potential of novel sensor/actuator systems for the mobility of robots and 3D printing for various rapid material forming. ";
 
 export const GROUP_INTRO = {
   hci: { overline: "overline", title: "Title", description: "Description", inverse: true },
   sun: { overline: "overline", title: "Title", description: "Description", landing_img: "/member_photos/discover-icon.png" },
-  mechanic: { overline: "overline", title: "Title", description: "Description" },
+  mechanic: { overline: "AIR DISCOVER", title: "SUN Team", description: DISCOVER_INTRO },
 }
