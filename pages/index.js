@@ -1,22 +1,12 @@
 // _data
-import { _pricingHome } from '../_data/mock';
 // layouts
 import Layout from '../src/layouts';
 // components
 import { Page } from '../src/components';
 // sections
-import { PricingHome } from '../src/sections/pricing';
 import {
   Background,
-  HomeHero,
-  // HomeFAQs,
-  HomeNewStart,
-  // HomeDemoPages,
-  HomeForDesigner,
-  HomeCombination,
   HomeAdvertisement,
-  HomeFeatureHighlights,
-  HomeFlexibleComponents,
 } from '../src/sections/home';
 import { useRef, useState } from 'react';
 

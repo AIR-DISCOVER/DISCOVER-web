@@ -1,10 +1,9 @@
 // icons
-import playIcon from '@iconify/icons-carbon/play';
 // @mui
-import { styled, alpha } from '@mui/material/styles';
-import { Grid, Stack, Container, Typography, Button, Box } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import { Grid, Stack, Container, Typography } from '@mui/material';
 // components
-import { Iconify, Image } from '../../../components';
+import { Image } from '../../../components';
 
 // ----------------------------------------------------------------------
 
