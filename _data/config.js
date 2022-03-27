@@ -51,6 +51,6 @@ AIR DISCOVER Hardware Lab aims to fulfill the requirement of robotics research i
 
 export const GROUP_INTRO = {
   hci: { overline: "overline", title: "Title", description: "Description", inverse: true },
-  sun: { overline: "overline", title: "Title", description: "Description", landing_img: "/member_photos/discover-icon.png" },
-  mechanic: { overline: "AIR DISCOVER", title: "SUN Team", description: DISCOVER_INTRO },
+  mechanic: { overline: "overline", title: "Title", description: "Description", landing_img: "/member_photos/discover-icon.png" },
+  sun: { overline: "AIR DISCOVER", title: "SUN Team", description: DISCOVER_INTRO },
 }
