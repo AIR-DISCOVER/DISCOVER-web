@@ -1,6 +1,6 @@
 ---
 title: Robot Guide Dog
-description: A robot dog that can guide.
+description: "Explainable AI refers to methods and techniques that enable humans."
 category: Community
 # favorited: true
 coverImg: /images/Guide_Dog_1.png

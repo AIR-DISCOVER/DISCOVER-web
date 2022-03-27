@@ -25,3 +25,4 @@ yarn-error.log*
 .idea/
 .idea/
 /.next/
+.DS_Store
