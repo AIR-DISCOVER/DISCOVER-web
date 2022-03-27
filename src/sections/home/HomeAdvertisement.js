@@ -6,7 +6,6 @@ import { Button, Stack, Typography, Box } from '@mui/material';
 // hooks
 import { useHoverParallax } from '../../hooks';
 // routes
-import Routes from '../../routes';
 // components
 import { Image } from '../../components';
 
