@@ -2,16 +2,10 @@
 title: Robot Guide Dog
 description: "Explainable AI refers to methods and techniques that enable humans."
 category: Community
-# favorited: true
 coverImg: /images/Guide_Dog_1.png
-heroImg: /images/Guide_Dog_1.png)
+heroImg: /images/Guide_Dog_1.png
 createdAt: '2022-02-26T15:11'
 # duration: 8 minutes read
-# shareLinks:
-#   facebook: facebook-link
-#   instagram: instagram-link
-#   linkedin: linkedin-link
-#   twitter: twitter-link
 tags: [Development, Banking, Management]
 author:
   name: Anonymous
@@ -19,15 +13,29 @@ author:
   # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
   quotes: Member since Mar 15, 2021
   about: Self introduction here
-  # socialLinks:
-  #   facebook: facebook-link
-  #   instagram: instagram-link
-  #   linkedin: linkedin-link
-  #   twitter: twitter-link
 ---
 
-In 2020, China has the second largest population of vision-impaired people in the world, with over 17 million individuals visually disabled. Because of the difficulty and prohibitive cost of travel, many blind people are deprived of the same opportunities as sighted people to get around. Guide dogs are the most "intelligent" form of commercial mobility aids available to the visually impaired. A guide dog can remember routes, navigate for the blind, obey commands, and help to avoid obstacles and oncoming traffic. Because of the late development of dog training techniques and large groups of visually impaired people, guide dogs are still not popular in China. Moreover, many blind people have given up this method because they are unable to care for their dogs independently.
+<!-- 
+coverImg: post封面，在post列表展示
+heroImg: post头图，在post自身页面最上方展示
+# 开头的项目为可选项，如果适用删去#即可显示
+ -->
 
-![alt iii](/images/Guide_Dog_1.png)
+# 一级标题
 
-To address the mobility difficulties of the blind, our team seeks to replicate and enhance the advantages and remedy the disadvantages of guide dogs through the use of artificial intelligence and robotics. For example, we use autonomous driving technology to achieve door-to-door navigation and accurate obstacle avoidance in complex road conditions, machine learning to solve the challenges of visual recognition, demonstrative teaching and voice recognition, and natural human-robot interaction technology to tackle the issue of efficient communication and collaboration between users and robot guide dogs. In addition to accuracy and efficiency, our team uses user experience research and human-machine ergonomics experiments to reduce the cognitive load of the blind and improve the long-term comfort of use. Through user feedback and participatory design, we will precisely solve the pain points and design interaction modes that are suitable for visually impaired travelers; finally, we will achieve the optimization of the efficiency and experience of collaborative mobility between blind people and robots.
+## 二级标题
+
+### 三级标题
+
+> 引用文本
+
+文本里可以包括**强调文本**和*倾斜文本*
+
+<div style='color:red; text-align:center; font-size=2rem; margin: 1rem;'>
+熟悉html的同学也可以直接使用css样式
+</div>
+
+<!-- 这里是注释，不会显示在网页中 -->
+<!-- 下面是图片的引用方式，图片路径需要以/images/开头，后面接图片名称 -->
+<!-- 为了避免图片命名冲突，推荐在图片名称前加上组名缩写如hci，sun等 -->
+![图片的替代文本](/images/Guide_Dog_1.png)
