@@ -6,17 +6,18 @@ export const HCI_MEMBERS = [
   { id: 5, name: "Gao, Jiasi", role: "Role", photo: "" },
 ]
 export const SUN_MEMBERS = [
-  { id: 1, name: "Shi, Yongliang", role: "Role", photo: "/member_photos/sun-shiyongliang.jpeg"},
-  { id: 2, name: "Chen, Xiaoxue", role: "Role", photo: "/member_photos/sun-chenxiaoxue.jpeg" },
-  { id: 3, name: "Li, Pengfei", role: "Role", photo: "/member_photos/sun-lipengfei.jpeg" },
-  { id: 4, name: "Tian, Beiwen", role: "Role", photo: "/member_photos/sun-tianbeiwen.jpg" },
+  { id: 1, name: "Shi, Yongliang", role: "Post doc", photo: "/member_photos/people_Shi_Yongliang.jpeg"},
+  { id: 2, name: "Chen, Xiaoxue", role: "Phd Student", photo: "/member_photos/people_Chen_Xiaoxue.jpeg" },
+  { id: 3, name: "Li, Pengfei", role: "Phd Student", photo: "/member_photos/people_Li_Pengfei.jpeg" },
+  { id: 4, name: "Tian, Beiwen", role: "Researcher", photo: "/member_photos/people_Tian_Beiwen.jpg" },
 ]
 export const MECHANIC_MEMBERS = [
-  { id: 1, name: "Mechanic King", role: "Role", photo: "" },
-  { id: 2, name: "Mechanic King", role: "Role", photo: "" },
-  { id: 3, name: "Mechanic King", role: "Role", photo: "" },
-  { id: 4, name: "Mechanic King", role: "Role", photo: "" },
-  { id: 5, name: "Mechanic King", role: "Role", photo: "" },
+  { id: 1, name: "Zhou, Guyue", role: "Group Leader", photo: "/member_photos/people_Zhou_Guyue.jpeg" },
+  { id: 2, name: "Huang, Pengfei", role: "Researcher", photo: "/member_photos/people_Huang_Pengfei.jpg" },
+  { id: 3, name: "Jiang, Chengyu", role: "Researcher", photo: "/member_photos/people_Jiang_Chengyu.jpg" },
+  { id: 4, name: "Li, Chuxuan", role: "Researcher", photo: "/member_photos/people_Li_Chuxuan.jpg" },
+  { id: 5, name: "Li, Jin", role: "Researcher", photo: "/member_photos/people_Li_Jin.jpg" },
+  { id: 6, name: "Zhang, Xinliang", role: "Engineer", photo: "/member_photos/people_Zhang_Xinliang.png" },
 ]
 export const CATEGORIES = {
   hci: [
@@ -41,6 +42,6 @@ export const DISCOVER_INTRO = "AIR DISCOVER SUN Team is mainly focusing on compu
 
 export const GROUP_INTRO = {
   hci: { overline: "overline", title: "Title", description: "Description", inverse: true },
-  mechanic: { overline: "overline", title: "Title", description: "Description", landing_img: "/member_photos/discover-icon.png" },
+  mechanic: { overline: "RESEARCH GROUP", title: "Robotics", description: "The Robotics group has focused on research in autonomous systems that can move, manipulate, perceive, decide, and interact with human. We are interested in discovering how robot locomotion and execution can improve the system performance in embodied tasks for transportation, manufacturing, and consumer applications. Another domain of our research lies in investigating simulation-to-reality gaps and performing explainable domain transfer learning to shorten deployment duration. Looking forward to a human-robot symbiosis in the future, we therefore aim at developing hardware-aware, scalable algorithms for multi-robot and multi-human collaboration.", landing_img: "/member_photos/discover-icon.png" },
   sun: { overline: "AIR DISCOVER", title: "SUN Team", description: DISCOVER_INTRO },
 }
