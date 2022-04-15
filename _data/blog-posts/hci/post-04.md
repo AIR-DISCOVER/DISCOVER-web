@@ -1,36 +1,23 @@
 ---
-title: V2I Project
-# description: A robot dog that can guide.
-category: Business
-# favorited: true
-coverImg: /images/V2I_Project_2.png
-heroImg: /images/V2I_Project_1.png
-createdAt: '2022-02-28T13:15'
+title: AI Generated Music based on Physiological Perception for Music Therapy 
+# description: 
+category: Human-centred AI System
+coverImg: /images/hci_p4_1.png
+heroImg: /images/hci_p4_1.png
+createdAt: '2022-02-26T15:11'
 # duration: 8 minutes read
-# shareLinks:
-#   facebook: facebook-link
-#   instagram: instagram-link
-#   linkedin: linkedin-link
-#   twitter: twitter-link
-tags: [Community]
+tags: [Music Therapy, AI Generated Music, Physiological Perception, Health, Affective Computing, IoT]
 author:
-  name: Anonymous
-  # role: Full Stack Designer
-  # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
-  quotes: Member since Mar 15, 2021
-  about: Self introduction here
-  # socialLinks:
-  #   facebook: facebook-link
-  #   instagram: instagram-link
-  #   linkedin: linkedin-link
-  #   twitter: twitter-link
+  name: Jingjing Sun
+  # role: 
+  # picture: 
+  # quotes: Member since Mar 15, 2021
+  # about: 
 ---
-
-![alt img1](/images/V2I_Project_1.png)
-
-The auto industry is undergoing changes that are unseen in a century. Autonomous vehicles are developing rapidly around the world. The companies such as Waymo, Tesla, and Baidu are continually increasing their investment in large-scale autonomous vehicle tests and demonstration applications in order to facilitate future commercial operations in the area of driverless cars. However, the global development of autonomous driving technology is still in the early stages. Even the Level 2 (Partial Driving Automation) autonomous vehicles are in the commercial stage, but there is still limited market space and small-scale application. The development of upper-level automation such as Level 3 and Level 4 is focused on driving tests and regional demonstrations. Nonetheless, the operation scenarios remain to be explored.
+Music therapy is the clinical use of music within therapeutic progress to improve the physical, psychological, and social well-being of individuals. It involves a broad range of interactive music activities, such as listening to music, singing, and interacting with musical instruments. Mental health conditions are increasing worldwide, especially under the impact of COVID-19, the global prevalence of mental health issues has massively increased. To address mental well-being, we have decided to explore the use of AI-powered music to engage active listening and interactive music activities. Specifically, we research on 1), how to use AI-generated music to support music therapists during the treatment process; 2), Lego-based musical instrument design for facilitating the treatment process of interactive music therapy.
 
 
-![alt img2](/images/V2I_Project_2.png)
+![AI for Music Therapy](/images/hci_p4_2.png)
 
-It is hard to reduce the rate of accidents by autonomous vehicle perception sensing and its follow-up decision. Moreover, the uncertainties in the real-world environment can hardly be ignored by the vehicle perception, especially for some corner cases. This project aims to build a high photorealistic rendering autonomous driving simulation platform and digital twin system that is based on the real traffic data to simulate the testing environment, train the model, and test the V2I for pedestrian safety protection. We intend to explore safe, extensive, economical, and efficient autonomous driving technology solutions and implementation. We are dedicated to helping achieve the commercialization of autonomous driving on a large scale as soon as possible.
+
+

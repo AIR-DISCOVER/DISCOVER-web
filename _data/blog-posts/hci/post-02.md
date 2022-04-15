@@ -1,44 +1,23 @@
 ---
-title: Robot Guide Dog
-description: "Explainable AI refers to methods and techniques that enable humans."
-category: Community
-coverImg: /images/Guide_Dog_1.png
-heroImg: /images/Guide_Dog_1.png
+title: Proactive Interaction based on Multimodal Physiology Perception
+# description: 
+category: Understanding/Modeling People
+coverImg: /images/hci_p2_1.png
+heroImg: /images/hci_p2_1.png
 createdAt: '2022-02-26T15:11'
 # duration: 8 minutes read
-tags: [Development, Banking, Management]
+tags: [Physiological Perception, Affective Computing, Human-Environment Interaction, Behavior Prediction, Proactive Interaction, Implicit Interaction, Transportation, IoT]
 author:
-  name: Anonymous
-  # role: Full Stack Designer
-  # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
-  quotes: Member since Mar 15, 2021
-  about: Self introduction here
+  name: Mengdi Chu
+  # role: 
+  # picture: 
+  # quotes: Member since Mar 15, 2021
+  # about: 
 ---
-
-第一句话首字/字母大写
-不空行不分段
-
-分段要空行
-
-{/* 这里是注释，不会显示在网页中 */}
-
-{/*
-coverImg: post封面，在post列表展示
-heroImg: post头图，在post自身页面最上方展示
-\# 开头的项目为可选项，如果适用删去#即可显示
- */}
+Physiological data refers to any data that has been collected from the physical body or its systems, e.g., electrocardiogram or ECG/EKG signal, respiratory rate, electrodermal activity or EDA signal, electromyography or EMG signal, electroencephalography, or EEG signal. It is the underlying response expressed when a person is subjected to certain stimuli.
 
 
-# 一级标题
+![Physiological Computing](/images/hci_p2_2.png)
 
-## 二级标题
+Currently, physiological sensing is promised to have wide application prospects in healthcare, smart home, autonomous driving, digital entertainment and other areas. By assessing the physiological signals of the user, the intelligent system can infer the user's emotional state, cognitive load, attention level and behavioral intentions. Our study aims to investigate multimodal physiological computing, enhance the perception of the machine to humans, promote system autonomy and thus improve the efficiency of human-AI collaboration.
 
-### 三级标题
-
-> 引用文本
-
-文本里可以包括**强调文本**和*倾斜文本*
-
-{/* 下面是图片的引用方式，图片路径需要以/images/开头，后面接图片名称 */}
-{/* 为了避免图片命名冲突，推荐在图片名称前加上组名缩写如hci，sun等 */}
-![图片的替代文本](/images/Guide_Dog_1.png)

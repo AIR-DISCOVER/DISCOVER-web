@@ -21,15 +21,48 @@ export const MECHANIC_MEMBERS = [
 ]
 export const CATEGORIES = {
   hci: [
-    "Understanding/Modelling People",
-    "Build Human-centred AI System",
-    "Methodology Research about Human-AI Collabration",
+    "Human-centred AI System",
+    "Human-AI Collaboration Methodology",
+    "Understanding/Modelling People"
   ],
   sun: ['Research'],
   mechanic: [],
 }
 export const TAGS = {
-  hci: ['tag1'],
+  hci: [
+    "Accessibility Technology",
+    "Affective Computing",
+    "AI Generated Music",
+    "AI-aided Design",
+    "Autonomous Driving",
+    "Augmented Reality",
+    "Behavior Prediction",
+    "Children",
+    "Creativity",
+    "Digital Twin",
+    "Explainable AI",
+    "Emotion Regulation",
+    "E-Textiles",
+    "Education",
+    "Human-Robot Interaction",
+    "Human-AI Collaboration",
+    "Human-Environment Interaction",
+    "Health",
+    "Implicit Interaction",
+    "IoT",
+    "Music Therapy",
+    "Manufacture",
+    "Physiological Perception",
+    "Proactive Interaction",
+    "Robotics",
+    "Safety AI",
+    "Trustworthy AI",
+    "Transportation",
+    "Traffic Simulation",
+    "Tangible User Interface",
+    "Visually Impaired People",
+    "Wearable sensor"
+  ],
   sun: ["Transformer", "Semantic Segmentation", "Affordance", "Attribute", "3D Object Detection", "Layout Estimation"],
   mechanic: ['Manufacturing', 'Robotics', 'C2M', 'CAD', 'Collabrative Robot', 'Transportation', 'Autonomy', 'Locomotion', 'Sim2Real'],
 }

@@ -1,37 +1,23 @@
 ---
-title: Smart Clothing of Multimodal Physiology Data Perception
-# description: A robot dog that can guide.
-category: Management
-# favorited: true
-coverImg: /images/Smart_Clothing_1.png
-heroImg: /images/Smart_Clothing_1.png
-createdAt: '2022-02-28T13:15'
+title: Intelligent Guide Robot for Visually Impaired People
+# description: 
+category: Human-centred AI System
+coverImg: /images/hci_p3_1.png
+heroImg: /images/hci_p3_1.png
+createdAt: '2022-02-26T15:11'
 # duration: 8 minutes read
-# shareLinks:
-#   facebook: facebook-link
-#   instagram: instagram-link
-#   linkedin: linkedin-link
-#   twitter: twitter-link
-# tags: [HR & Recruiting]
+tags: [Visually Impaired People, Robotics, Accessibility Technology, Human-Robot Interaction,Transportation]
 author:
-  name: Anonymous
-  # role: Full Stack Designer
-  # picture: https://zone-assets-api.vercel.app/assets/images/avatars/avatar_2.jpg
-  quotes: Member since Mar 15, 2021
-  about: Self introduction here
-  # socialLinks:
-  #   facebook: facebook-link
-  #   instagram: instagram-link
-  #   linkedin: linkedin-link
-  #   twitter: twitter-link
+  name: Yan Zhang
+  # role: 
+  # picture: 
+  # quotes: Member since Mar 15, 2021
+  # about: 
 ---
+In 2020, China has the second largest population of vision-impaired people in the world, with over 17 million individuals visually disabled. Because of the difficulty and the prohibitive cost of travel, many blind people are deprived of the same opportunities as sighted people to get around. For those visually impaired, guide dogs are the most "intelligent" and available form of commercial mobility aids. A guide dog can remember routes, navigate for the blind, obey commands, and help to avoid obstacles and oncoming traffic. However, guide dogs are still not quite popular in China due to the late development of dog training techniques and the multitude of visually impaired people. Moreover, many blind people have to give up this method because they are unable to care for their dogs independently.
 
-![alt why](/images/Smart_Clothing_1.png)
 
-> "The body expresses and influences our minds."
+![Robot Guide Dog](/images/hci_p3_2.png)
 
-This project aims to obtain human physiological data and the somatization performance of emotions through the intelligent wearable system. We intend to help people improve self-perception of both physical and psychological states with interactive feedback.
+To address the mobility difficulties of the blind, our team seeks to replicate and enhance the advantages of guide dogs while overcome their disadvantages through the use of artificial intelligence and robotics. For example, we use autonomous driving technology to achieve door-to-door navigation and accurate obstacle avoidance in complex road conditions. The same technology is also applied in machine learning to conquer the challenges of visual recognition, demonstrative teaching and voice recognition. Meanwhile, we use natural human-robot interaction technology to tackle the issue of efficient communication and collaboration between users and robot guide dogs. In addition to accuracy and efficiency, our team also aims to reduce the cognitive load of the blind and thus improve their long-term comfort of use with the help of user experience researches and human-machine ergonomics experiments. The pain points shall be solved precisely and the interaction modes shall be suitably designed for visually impaired travelers through user feedback and participatory design. Ultimately, we hope to achieve the optimization of both the efficiency and experience of collaborative mobility between blind people and robots.
 
-Given the fundamental role of cloth's relationship with humans, we hypothesize that the physiological data gathering by the wearable system may be used as a resource for human emotional understanding. The concept of intelligent clothing may provide a valuable link between physical hardware, somatization performance, and human emotions. For this purpose, an innovative wearable sensing platform is currently being set up, focusing on capturing physiological data with a multimodal sensing method. 
-
-Moreover, on the issue of emotion management/regulation, structural interviews with psychological counselors have been conducted and analyzed with the open-coding method. Based on insights from interviews, we focused our attention on the regulation of body perception enhancement, and incentive feedback provides. 
