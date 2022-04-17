@@ -97,7 +97,7 @@ export default function NavMobile({ navConfig, sx }) {
             ))}
           </List>
 
-          <Stack spacing={2} sx={{ p: 2.5, pb: 5 }}>
+          {/* <Stack spacing={2} sx={{ p: 2.5, pb: 5 }}>
             <NextLink href={Routes.loginIllustration} passHref>
               <Button fullWidth variant="outlined" color="inherit">
                 Login
@@ -109,7 +109,7 @@ export default function NavMobile({ navConfig, sx }) {
                 Join Us
               </Button>
             </NextLink>
-          </Stack>
+          </Stack> */}
         </Scrollbar>
       </Drawer>
     </>

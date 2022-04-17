@@ -27,7 +27,7 @@ export const PageLinks = [
   },
   {
     order: '3',
-    subheader: 'Mechanics',
+    subheader: 'Robotics',
     cover: MECHANIC_COVER_PIC,
     items: [
       { title: 'Introduction', path: Routes.mechanic.landing },
