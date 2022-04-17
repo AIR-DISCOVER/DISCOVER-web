@@ -33,7 +33,7 @@ export default function HomePage() {
     controlRef.current && controlRef.current.setF(tab, next)
   }
   return (
-    <Page title="The starting point for your next project">
+    <Page title="DISCOVER Lab">
       <Background cref={controlRef} tab={tab} />
 
       <HomeAdvertisement onClick={onClick} pack={{ overline: '', main: 'DISCOVER.', button: 'Explore' }} />
