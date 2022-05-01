@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - master
+      - ci-test
 
 jobs:
   build:
@@ -25,15 +26,26 @@ jobs:
       run: yarn build
       env:
         CI: false
-      
-    - name: Publish to Github Container registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+
+    - name: Alibaba Cloud Container Registry (ACR) Login
+      # You may pin to the exact commit or the version.
+      # uses: aliyun/acr-login@8f767fdbf27e81327587352ff253c682b8d70f6d
+      uses: aliyun/acr-login@v1
       with:
-        name: AIR-DISCOVER/discover-web
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
-        tags: latest
+        # Container registry username
+        username: ${{ secrets.ACR_NAME }} 
+        # Container registry password
+        password: ${{ secrets.ACR_PASSWD }}
+        # Region id
+        region-id: cn-beijing
+        # Container registry server url
+        login-server: ${{ secrets.REGISTRY }} 
+ 
+    - name: Build Docker
+      run: docker built . -t ${{ secrets.REGISTRY}}:latest
+
+    - name: Push to Registry
+      run: docker push ${{ secrets.REGISTRY}}:latest
 
     - name: Docker deployment (by executing remote ssh commands using ssh key)
       uses: appleboy/ssh-action@master
