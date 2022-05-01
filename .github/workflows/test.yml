@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - dev
+      - ci-test
 
 jobs:
   build:
@@ -25,3 +26,32 @@ jobs:
       run: yarn build
       env:
         CI: false
+
+    - name: Alibaba Cloud Container Registry (ACR) Login
+      # You may pin to the exact commit or the version.
+      # uses: aliyun/acr-login@8f767fdbf27e81327587352ff253c682b8d70f6d
+      uses: aliyun/acr-login@v1
+      with:
+        # Container registry username
+        username: ${{ secrets.ACR_NAME }} 
+        # Container registry password
+        password: ${{ secrets.ACR_PASSWD }}
+        # Region id
+        region-id: cn-beijing
+        # Container registry server url
+        login-server: ${{ secrets.REGISTRY }} 
+ 
+    - name: Build Docker
+      run: docker build . -t ${{ secrets.REGISTRY }}:latest
+
+    - name: Push to Registry
+      run: docker push ${{ secrets.REGISTRY }}:latest
+
+    - name: Docker deployment (by executing remote ssh commands using ssh key)
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.DEV_HOST }}
+        username: ${{ secrets.DEV_USERNAME }}
+        key: ${{ secrets.DEV_KEY }}
+        port: ${{ secrets.DEV_PORT }}
+        script: bash ~/deploy.sh
