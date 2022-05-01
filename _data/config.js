@@ -71,7 +71,44 @@ export const HCI_COVER_PIC = "";
 export const SUN_COVER_PIC = "";
 export const MECHANIC_COVER_PIC = "/cover_imgs/mechanic.jpg";
 
-export const DISCOVER_INTRO = "AIR DISCOVER SUN Team is mainly focusing on computer vision which is the art of tracing light, along two paths: \n - From images to the physical world; \n - From images to our brains. We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people. "
+export const DISCOVER_INTRO = (
+  <>
+    <p>
+      <strong>DISCOVER</strong> (<strong>DIS</strong>tributed <strong>CO</strong>llaborative <strong>V</strong>ision and <strong>E</strong>xponential <strong>R</strong>obotics) Lab is a key technical team at Institute for AI Industry Research (AIR), Tsinghua University, aiming to establish an exponential robotic platform which enables robots to reproduce themselves. To achieve the goal, scientists and technologists from DISCOVER Lab are developing top-tier computer vision, computer graphics, and robotics expertise and are working on the cutting-edge technological breakthroughs to address significant practical challenges.
+    </p>
+  </>
+);
+
+export const DISCOVER_RESEARCH_AREA = (
+  <p>
+    DISCVOER Lab conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in transportation and manufacturing industries. In DISCOVER Lab, several research groups are established to develop related expertise.
+  </p>
+);
+
+export const DISCOVER_PAGELINKS = [
+  {
+    order: '1',
+    subheader: 'TEST',
+    cover: SUN_COVER_PIC,
+    items: [
+      { title: 'To understand our core value', path: '' },
+      { title: 'To find our RA/PostDoc/PhD openings', path: '' },
+      { title: 'To find our internship opportunities', path: '' },
+      { title: 'To meet our industrial partners', path: '' },
+    ],
+  },
+  {
+    order: '2',
+    subheader: 'Contact Us',
+    cover: SUN_COVER_PIC,
+    items: [
+      { title: 'TEL: 12345678', path: '' },
+      { title: 'Mail: zhouguyue@air.tsinghua.edu.cn', path: '' },
+      { title: 'Addr: Beijing', path: '' },
+    ],
+  },
+];
+
 export const ROBOTICS_INTRO = "The Robotics group has focused on research in autonomous systems that can move, manipulate, perceive, decide, and interact with human. We are interested in discovering how robot locomotion and execution can improve the system performance in embodied tasks for transportation, manufacturing, and consumer applications. Another domain of our research lies in investigating simulation-to-reality gaps and performing explainable domain transfer learning to shorten deployment duration. Looking forward to a human-robot symbiosis in the future, we therefore aim at developing hardware-aware, scalable algorithms for multi-robot and multi-human collaboration."
 
 export const GROUP_INTRO = {

@@ -25,10 +25,11 @@ export default function Header({ transparent }) {
 
   const isDesktop = useResponsive('up', 'md');
 
-  const _isLight = theme.palette.mode === 'light';
+  const isLight = theme.palette.mode === 'light';
 
   const isScrolling = useOffSetTop(HEADER_DESKTOP_HEIGHT);
 
+  var t = (isLight && isScrolling) ? 'light' : 'dark';
   return (
     <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent' }}>
       <ToolbarStyle disableGutters transparent={transparent} scrolling={isScrolling}>
@@ -40,7 +41,9 @@ export default function Header({ transparent }) {
           }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Logo force={isScrolling ? 'light' : 'dark'} />
+            {transparent ?
+              <Logo force={t} /> :
+              <Logo />}
 
             {/* <Label
               color="info"

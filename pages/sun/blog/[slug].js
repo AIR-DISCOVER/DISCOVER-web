@@ -149,9 +149,9 @@ export default function SUNPostPage({ post, posts }) {
                 </Stack>
               }
 
-              <Divider sx={{ mt: 8 }} />
+              <Divider sx={{ mt: 8, pb: 8}} />
 
-              <BlogAuthorInfo author={author} />
+              {/* <BlogAuthorInfo author={author} /> */}
             </Grid>
           </Grid>
         </Container>

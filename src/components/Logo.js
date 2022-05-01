@@ -15,7 +15,7 @@ Logo.propTypes = {
   sx: PropTypes.object,
 };
 
-function Logo({ force, isSimple = false, sx }) {
+function Logo({ force, isSimple = false, width = 120, sx }) {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
 
@@ -29,12 +29,12 @@ function Logo({ force, isSimple = false, sx }) {
   } else {
     src = !isLight ? "/logo/discover-icon-alpha.png" : "/logo/discover-icon-alpha-black.png";
   }
-
+  console.log(src)
   return (
     <NextLink href="/" passHref>
       <Box
         sx={{
-          width: isSimple ? 64 : 120,
+          width: isSimple ? 64 : width,
           lineHeight: 0,
           cursor: 'pointer',
           display: 'inline-flex',
