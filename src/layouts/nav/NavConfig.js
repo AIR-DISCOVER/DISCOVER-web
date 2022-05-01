@@ -51,5 +51,15 @@ export const navConfig = [
     path: Routes.pages,
     children: [...PageLinks],
   },
+  {
+    title: 'People',
+    path: Routes.sun.landing,
+    // children: [...PageLinks],
+  },
+  {
+    title: 'About Us',
+    path: Routes.pages,
+    children: [...PageLinks],
+  },
   // { title: 'Documentation', path: '/' },
 ];
