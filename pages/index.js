@@ -14,7 +14,7 @@ import { useRef, useState } from 'react';
 
 export default function HomePage() {
   const controlRef = useRef();
-  const [tab, setTab] = useState("Home")
+  // const [tab, setTab] = useState("Home")
 
   const dict = {
     'Home': 'News',
@@ -26,15 +26,17 @@ export default function HomePage() {
 
   }
   const onClick = () => {
-    console.log(tab)
-    let next = dict[tab]
-    setTab(next)
-    controlRef.current && controlRef.current.setTrig(tab, next)
-    controlRef.current && controlRef.current.setF(tab, next)
+    // console.log(tab)
+    // let next = dict[tab]
+    // setTab(next)
+    // controlRef.current && controlRef.current.setTrig(tab, next)
+    console.log('test')
+    console.log(controlRef)
+    controlRef.current && controlRef.current.reset()
   }
   return (
     <Page title="Home">
-      <Background cref={controlRef} tab={tab} />
+      <Background cref={controlRef} />
 
       <HomeAdvertisement onClick={onClick} pack={{ overline: '', main: 'DISCOVER.', button: 'Explore' }} />
 

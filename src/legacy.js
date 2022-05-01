@@ -1,11 +1,14 @@
 import React, { forwardRef, Suspense, useImperativeHandle, useRef, useState } from 'react'
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { OrbitControls } from "@react-three/drei";
 // import { makeStyles } from '@mui/material/styles';
 
 // import SvgButton from '../components/elements/SvgButton';
 // import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Object3D } from 'three';
+import WasdControls from './wasdcontrol';
+import LookControls from './lookcontrol';
 
 const Model = () => {
     const ref = useRef()
@@ -18,7 +21,7 @@ const Model = () => {
         ]);
     const locations =
         [
-            [0,-4,0],
+            [0, -4, 0],
             // [-319, -22.25, -210],
             // [-70.7, -40, -32],
             // [-217.2, -22.25, 93],
@@ -49,6 +52,13 @@ const PathGenerate = (src, dst) => (t) => {
     }
 }
 
+const ResetDolly = forwardRef((_, ref) => {
+    const camera = useThree((state) => state.camera)
+    useImperativeHandle(ref, () => ({
+        reset: () => { camera.position.set(0, 0, 0); camera.rotation.set(0, 0, 0) }
+    }))
+    return null
+})
 const RefDolly = forwardRef((states, ref) => {
     const [trigger, setTrigger] = useState(-1);
     const [fn, setFn] = useState(() => ((t) => [t, 0, 0, 0, 0, 0]));
@@ -118,10 +128,10 @@ const AddTarget = (props) => {
     return null;
 }
 
-const Scene = ({cref, tab, style}) => {
+const Scene = ({ cref, tab, style }) => {
     const targetObject = new Object3D();
     return (
-        <Canvas style={{height: '100vh', ...style}}>
+        <Canvas style={{ height: '100vh', ...style }}>
             <Suspense fallback={null}>
                 <AddTarget target={targetObject} />
                 <directionalLight color={0xffffff} intensity={1} target={targetObject} castShadow={true} />
@@ -129,7 +139,10 @@ const Scene = ({cref, tab, style}) => {
                 <hemisphereLight color={0xffffff} intensity={0.8} />
                 <Model />
                 {/* <OrbitControls /> */}
-                <RefDolly ref={cref} tab={tab} />
+                <LookControls />
+                <WasdControls />
+                <ResetDolly ref={cref} />
+                {/* <RefDolly ref={cref} tab={tab} /> */}
             </Suspense>
         </Canvas>
     );

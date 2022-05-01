@@ -32,12 +32,12 @@ const BackgroundStyle = styled('div')(({ theme }) => ({
 }));
 
 
-export default function Background({ cref, tab, onClick }) {
+export default function Background({ cref, onClick }) {
   const { offsetX, offsetY, onMouseMoveHandler, onMouseLeaveHandler } = useHoverParallax();
 
   return (
     <RootStyle onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler}>
-      <BackgroundInner cref={cref} tab={tab} offsetX={offsetX} offsetY={offsetY} />
+      <BackgroundInner cref={cref} offsetX={offsetX} offsetY={offsetY} />
     </RootStyle>
   );
 }
