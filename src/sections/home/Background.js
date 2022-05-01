@@ -27,17 +27,17 @@ const BackgroundStyle = styled('div')(({ theme }) => ({
     width: '100vw',
     height: '100vh',
     position: 'absolute',
-    backgroundColor: alpha(theme.palette.grey[900], 0.8),
+    backgroundColor: alpha(theme.palette.grey[900], 0.3),
   },
 }));
 
 
-export default function Background({ cref, tab, onClick }) {
+export default function Background({ cref, onClick }) {
   const { offsetX, offsetY, onMouseMoveHandler, onMouseLeaveHandler } = useHoverParallax();
 
   return (
     <RootStyle onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler}>
-      <BackgroundInner cref={cref} tab={tab} offsetX={offsetX} offsetY={offsetY} />
+      <BackgroundInner cref={cref} offsetX={offsetX} offsetY={offsetY} />
     </RootStyle>
   );
 }
