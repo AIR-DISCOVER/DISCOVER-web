@@ -4,7 +4,6 @@ on:
   push:
     branches: 
       - dev
-      - ci-test
 
 jobs:
   build:
@@ -27,8 +26,6 @@ jobs:
       env:
         CI: false
 
-  push:
-    needs: build
     - name: Alibaba Cloud Container Registry (ACR) Login
       # You may pin to the exact commit or the version.
       # uses: aliyun/acr-login@8f767fdbf27e81327587352ff253c682b8d70f6d
