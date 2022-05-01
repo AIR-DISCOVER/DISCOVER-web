@@ -79,6 +79,12 @@ export const DISCOVER_INTRO = (
   </>
 );
 
+export const DISCOVER_RESEARCH_AREA = (
+  <p>
+    DISCVOER Lab conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in transportation and manufacturing industries. In DISCOVER Lab, several research groups are established to develop related expertise.
+  </p>
+);
+
 export const DISCOVER_PAGELINKS = [
   {
     order: '1',

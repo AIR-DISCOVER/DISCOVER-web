@@ -34,14 +34,15 @@ export const PageLinks = [
       { title: 'Research Projects', path: Routes.mechanic.posts },
     ],
   },
-  //   {
-  //     order: '4',
-  //     subheader: 'Common',
-  //     items: [
-  //       { title: 'Item1', path: '' },
-  //       { title: 'Item2', path: '' },
-  //     ],
-  //   },
+  {
+    order: '4',
+    subheader: 'Common',
+    subheaderName: 'Research Area',
+    items: [
+      { title: 'Project 1', path: Routes.page404 },
+      { title: 'Project 2', path: Routes.page404 },
+    ],
+  },
 ];
 
 export const navConfig = [
@@ -53,13 +54,14 @@ export const navConfig = [
   },
   {
     title: 'People',
-    path: Routes.sun.landing,
-    // children: [...PageLinks],
+    path: Routes.page404,
+  },
+  {
+    title: 'News',
+    path: Routes.page404,
   },
   {
     title: 'About Us',
-    path: Routes.pages,
-    children: [...PageLinks],
+    path: Routes.page404,
   },
-  // { title: 'Documentation', path: '/' },
 ];

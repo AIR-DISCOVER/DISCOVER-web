@@ -7,12 +7,13 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 // @mui
 import { styled, useTheme } from '@mui/material/styles';
-import { Box, Grid, List, Link, Stack, ListItem, ListSubheader } from '@mui/material';
+import { Box, Grid, List, Link, Stack, ListItem, ListSubheader, Typography } from '@mui/material';
 // config
 import { HEADER_DESKTOP_HEIGHT } from '../../config';
 //
 import { Image, CarouselDots, CarouselArrows } from '../../components';
 import { DialogAnimate, MotionContainer, varFade } from '../../components/animate';
+import { DISCOVER_RESEARCH_AREA } from '_data/config';
 
 // ----------------------------------------------------------------------
 
@@ -95,7 +96,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
     arrows: false,
     dots: true,
     infinite: false,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     rtl: Boolean(theme.direction === 'rtl'),
     ...CarouselDots(),
@@ -137,9 +138,9 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
         },
       }}
     >
-      <Grid container columns={commonList.length > 0 ? 15 : 12} spacing={4}>
+      <Grid container columns={commonList.length > 0 ? 18 : 12} spacing={4}>
         <Grid item xs={12}>
-          <Box sx={{ position: 'relative', px: 2, py: 6 }}>
+          <Box sx={{ position: 'relative', px: 2, py: 6, ml: 8 }}>
             <Slider ref={carouselRef} {...carouselSettings}>
               {carouselList.map((list) => {
                 const { subheader, items, cover } = list;
@@ -223,13 +224,16 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
         {/* Common List */}
         {commonList.length > 0 && <Grid
           item
-          xs={3}
+          xs={5}
           sx={{
             borderLeft: (_theme) => `dashed 1px ${_theme.palette.divider}`,
           }}
         >
           <List disablePadding sx={{ py: 6 }} component={MotionContainer}>
-            <ListSubheaderStyled>{commonList.subheader}</ListSubheaderStyled>
+            <ListSubheaderStyled>{commonList[0].subheaderName}</ListSubheaderStyled>
+            <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
+              {DISCOVER_RESEARCH_AREA}
+            </Typography>
             <Stack spacing={1.5} alignItems="flex-start">
               {commonList[0].items.map((item) => {
                 const { title, path } = item;
