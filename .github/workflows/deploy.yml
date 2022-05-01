@@ -42,7 +42,7 @@ jobs:
         login-server: ${{ secrets.REGISTRY }} 
  
     - name: Build Docker
-      run: docker built . -t ${{ secrets.REGISTRY }}:latest
+      run: docker build . -t ${{ secrets.REGISTRY }}:latest
 
     - name: Push to Registry
       run: docker push ${{ secrets.REGISTRY }}:latest
