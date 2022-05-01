@@ -11,17 +11,17 @@ const Model = () => {
     const ref = useRef()
     const scenes = useLoader(GLTFLoader,
         [
-            "/three/rest.glb",
-            "/three/office1.glb",
-            "/three/office2.glb",
-            "/three/indoor.glb",
+            "/three/new3.glb",
+            // "/three/office1.glb",
+            // "/three/office2.glb",
+            // "/three/indoor.glb",
         ]);
     const locations =
         [
-            [-137, -40, 200],
-            [-319, -22.25, -210],
-            [-70.7, -40, -32],
-            [-217.2, -22.25, 93],
+            [0,-4,0],
+            // [-319, -22.25, -210],
+            // [-70.7, -40, -32],
+            // [-217.2, -22.25, 93],
         ]
     return (
         <group ref={ref}>
@@ -96,10 +96,10 @@ const RefDolly = forwardRef((states, ref) => {
     }));
     useFrame((state) => {
         if (states.tab === "Home") {
-            state.camera.position.set(0, 0, 0)
+            state.camera.position.set(3, 0, -8)
             state.camera.rotation.set(0, 0, 0)
-            state.camera.position.z = 0 + Math.sin(state.clock.getElapsedTime()) * 30
-            state.camera.rotation.y = Math.PI * Math.cos(state.clock.getElapsedTime() * 0.25)
+            state.camera.position.z = -8 + Math.sin(state.clock.getElapsedTime()) * 1.1
+            state.camera.rotation.y = 3 + Math.PI * Math.cos(state.clock.getElapsedTime() * 0.25)
         } else {
             const position = fn((state.clock.getElapsedTime() - trigger) / 1)
             state.camera.position.set(position[0], position[1], position[2])
@@ -125,8 +125,8 @@ const Scene = ({cref, tab, style}) => {
             <Suspense fallback={null}>
                 <AddTarget target={targetObject} />
                 <directionalLight color={0xffffff} intensity={1} target={targetObject} castShadow={true} />
-                <ambientLight color={0xffffff} intensity={0.5} />
-                <hemisphereLight color={0xffffff} intensity={0.1} />
+                <ambientLight color={0xffffff} intensity={0.3} />
+                <hemisphereLight color={0xffffff} intensity={0.8} />
                 <Model />
                 {/* <OrbitControls /> */}
                 <RefDolly ref={cref} tab={tab} />

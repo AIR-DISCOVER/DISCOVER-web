@@ -27,7 +27,7 @@ const BackgroundStyle = styled('div')(({ theme }) => ({
     width: '100vw',
     height: '100vh',
     position: 'absolute',
-    backgroundColor: alpha(theme.palette.grey[900], 0.8),
+    backgroundColor: alpha(theme.palette.grey[900], 0.3),
   },
 }));
 

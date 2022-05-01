@@ -61,7 +61,11 @@ export const navConfig = [
     path: Routes.page404,
   },
   {
-    title: 'About Us',
+    title: 'Teaching',
     path: Routes.page404,
   },
+  // {
+  //   title: 'About Us',
+  //   path: Routes.page404,
+  // },
 ];
