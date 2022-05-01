@@ -76,19 +76,32 @@ export const DISCOVER_INTRO = (
     <p>
       <strong>DISCOVER</strong> (<strong>DIS</strong>tributed <strong>CO</strong>llaborative <strong>V</strong>ision and <strong>E</strong>xponential <strong>R</strong>obotics) Lab is a key technical team at Institute for AI Industry Research (AIR), Tsinghua University, aiming to establish an exponential robotic platform which enables robots to reproduce themselves. To achieve the goal, scientists and technologists from DISCOVER Lab are developing top-tier computer vision, computer graphics, and robotics expertise and are working on the cutting-edge technological breakthroughs to address significant practical challenges.
     </p>
-    <br />
-    <p>To understand our core value</p>
-    <p>To find our RA/PostDoc/PhD openings</p>
-    <p>To find our internship opportunities</p>
-    <p>To meet our industrial partners</p>
-    <br />
-    <div>Contact Us</div>
-    <p>Tel: AIR的电话</p>
-    <p>Mail: zhouguyue@air.tsinghua.edu.cn</p>
-    <p>Addr: AIR的地址</p>
   </>
 );
 
+export const DISCOVER_PAGELINKS = [
+  {
+    order: '1',
+    subheader: 'TEST',
+    cover: SUN_COVER_PIC,
+    items: [
+      { title: 'To understand our core value', path: '' },
+      { title: 'To find our RA/PostDoc/PhD openings', path: '' },
+      { title: 'To find our internship opportunities', path: '' },
+      { title: 'To meet our industrial partners', path: '' },
+    ],
+  },
+  {
+    order: '2',
+    subheader: 'Contact Us',
+    cover: SUN_COVER_PIC,
+    items: [
+      { title: 'TEL: 12345678', path: '' },
+      { title: 'Mail: zhouguyue@air.tsinghua.edu.cn', path: '' },
+      { title: 'Addr: Beijing', path: '' },
+    ],
+  },
+];
 
 export const ROBOTICS_INTRO = "The Robotics group has focused on research in autonomous systems that can move, manipulate, perceive, decide, and interact with human. We are interested in discovering how robot locomotion and execution can improve the system performance in embodied tasks for transportation, manufacturing, and consumer applications. Another domain of our research lies in investigating simulation-to-reality gaps and performing explainable domain transfer learning to shorten deployment duration. Looking forward to a human-robot symbiosis in the future, we therefore aim at developing hardware-aware, scalable algorithms for multi-robot and multi-human collaboration."
 

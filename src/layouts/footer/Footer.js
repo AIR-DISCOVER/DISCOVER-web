@@ -23,7 +23,7 @@ import { useResponsive } from '../../hooks';
 import { Logo, Iconify } from '../../components';
 //
 import { PageLinks } from '../nav/NavConfig';
-import { DISCOVER_INTRO, DISCOVER_INTRO_EXTRA } from '_data/config';
+import { DISCOVER_CONTACT, DISCOVER_INTRO, DISCOVER_INTRO_EXTRA, DISCOVER_PAGELINKS } from '_data/config';
 import { useTheme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
@@ -44,10 +44,23 @@ export default function Footer({ fill }) {
       <Container sx={{ py: { xs: 8, md: 10, } }}>
         <Grid container spacing={3} justifyContent={{ md: 'space-between' }}>
           <Grid item xs={12} md={8}>
+            <Logo width={'40%'} />
+          </Grid>
+          <Grid item xs={12} md={4}>
             <Stack spacing={{ xs: 3, md: 5 }}>
               <Stack alignItems="flex-start" spacing={3}>
-                <Logo width={'25%'}/>
-                <Typography variant="body3" sx={{ color: 'text.secondary' }}>
+                <Typography variant="body2" sx={{ color: 'text.primary' }}>
+                  {DISCOVER_CONTACT}
+                  {/* The starting point for your next project based on easy-to-customize Material-UI ©
+                  helps you build apps faster and better. */}
+                </Typography>
+              </Stack>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} md={5}>
+            <Stack spacing={{ xs: 3, md: 5 }}>
+              <Stack alignItems="flex-start" spacing={3}>
+                <Typography variant="body3" sx={{ color: 'text.secondary', lineHeight: '2rem', mt: 0.8 }}>
                   {DISCOVER_INTRO}
                   {/* The starting point for your next project based on easy-to-customize Material-UI ©
                   helps you build apps faster and better. */}
@@ -56,22 +69,22 @@ export default function Footer({ fill }) {
             </Stack>
           </Grid>
 
-
-          {/* <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={1} />
+          <Grid item xs={12} md={6}>
             {isDesktop ? (
-              <Masonry columns={3} spacing={3}>
-                {renderLists.map((list) => (
+              <Masonry columns={2} spacing={1}>
+                {DISCOVER_PAGELINKS.map((list) => (
                   <ListDesktop key={list.subheader} list={list} />
                 ))}
               </Masonry>
             ) : (
               <Stack spacing={1.5}>
-                {renderLists.map((list) => (
+                {DISCOVER_PAGELINKS.map((list) => (
                   <ListMobile key={list.subheader} list={list} />
                 ))}
               </Stack>
             )}
-          </Grid> */}
+          </Grid>
         </Grid>
       </Container>
 
