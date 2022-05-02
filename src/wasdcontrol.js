@@ -43,8 +43,8 @@ export default function WasdControls() {
     const [speedX, setSpeedX] = useState(0)
     const [speedY, setSpeedY] = useState(0)
     useFrame((_, delta) => {
-        const d = code.current.has('ShiftLeft') ? 0.1 : 0.05
-        const maxSpeed = code.current.has('ShiftLeft') ? 24 : 12
+        const d = code.current.has('ShiftLeft') ? 0.2 : 0.05
+        const maxSpeed = 12
         if ((code.current.has('KeyW') ||
             code.current.has('KeyA') ||
             code.current.has('KeyS') ||
