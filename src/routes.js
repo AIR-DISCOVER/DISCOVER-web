@@ -76,6 +76,10 @@ const Routes = {
   page500: '/500',
   people: '/people',
   news: '/news',
+  aboutus: '/about-us',
+  aboutus_core_value: '/about-us#core-value',
+  aboutus_partner: '/about-us#partner',
+  aboutus_join_us: '/about-us#joinus',
   // Others
   pages: '/pages',
   componentsUI: '/components-ui',

@@ -116,11 +116,9 @@ export const MECHANIC_COVER_PIC = "/cover_imgs/mechanic.jpg";
 export const NEWS_MARKDOWN_PATH = '_data/news.md'
 
 export const DISCOVER_INTRO = (
-  <>
-    <p>
-      <strong>DISCOVER</strong> (<strong>DIS</strong>tributed <strong>CO</strong>llaborative <strong>V</strong>ision and <strong>E</strong>xponential <strong>R</strong>obotics) Lab is a key technical team at Institute for AI Industry Research (AIR), Tsinghua University, aiming to establish an exponential robotic platform which enables robots to reproduce themselves. To achieve the goal, scientists and technologists from DISCOVER Lab are developing top-tier computer vision, computer graphics, and robotics expertise and are working on the cutting-edge technological breakthroughs to address significant practical challenges.
-    </p>
-  </>
+  <p>
+    <strong>DISCOVER</strong> (<strong>DIS</strong>tributed <strong>CO</strong>llaborative <strong>V</strong>ision and <strong>E</strong>xponential <strong>R</strong>obotics) Lab is a key technical team at Institute for AI Industry Research (AIR), Tsinghua University, aiming to establish an exponential robotic platform which enables robots to reproduce themselves. To achieve the goal, scientists and technologists from DISCOVER Lab are developing top-tier computer vision, computer graphics, and robotics expertise and are working on the cutting-edge technological breakthroughs to address significant practical challenges.
+  </p>
 );
 
 export const DISCOVER_RESEARCH_AREA = (
@@ -135,10 +133,10 @@ export const DISCOVER_PAGELINKS = [
     subheader: 'About Us',
     cover: SUN_COVER_PIC,
     items: [
-      { title: 'To understand our core value', path: '' },
-      { title: 'To find our RA/PostDoc/PhD openings', path: '' },
-      { title: 'To find our internship opportunities', path: '' },
-      { title: 'To meet our industrial partners', path: '' },
+      { title: 'To understand our core value', path: Routes.aboutus_core_value },
+      { title: 'To meet our industrial partners', path: Routes.aboutus_partner },
+      { title: 'To find our RA/PostDoc/PhD openings', path: Routes.aboutus_join_us },
+      { title: 'To find our internship opportunities', path: Routes.aboutus_join_us },
     ],
   },
   {
@@ -149,26 +147,30 @@ export const DISCOVER_PAGELINKS = [
       {
         title: (
           <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-            <Iconify icon={mobileIcon} sx={{ mr: 1, minWidth: '1rem'}} />
+            <Iconify icon={mobileIcon} sx={{ mr: 1, minWidth: '1rem' }} />
             <span>
               188 8888 8888
             </span>
           </div>), path: ''
       },
-      { title: (
-        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
-          <Iconify icon={emailIcon} sx={{ mr: 1, minWidth: '1rem'}} />
-          <span>
-            zhouguyue@air.tsinghua.edu.cn
-          </span>
-        </div>), path: '' },
-      { title: (
-        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
-          <Iconify icon={locationIcon} sx={{ mr: 1, mt: '0.35rem', minWidth: '1rem'}} />
-          <span>
-            Addr: 12 / F, block C, Qidi science and technology building, Tsinghua Science and Technology Park, Beijing
-          </span>
-        </div>), path: '' },
+      {
+        title: (
+          <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+            <Iconify icon={emailIcon} sx={{ mr: 1, minWidth: '1rem' }} />
+            <span>
+              zhouguyue@air.tsinghua.edu.cn
+            </span>
+          </div>), path: ''
+      },
+      {
+        title: (
+          <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+            <Iconify icon={locationIcon} sx={{ mr: 1, mt: '0.35rem', minWidth: '1rem' }} />
+            <span>
+              Addr: 12 / F, block C, Qidi science and technology building, Tsinghua Science and Technology Park, Beijing
+            </span>
+          </div>), path: ''
+      },
     ],
   },
 ]

@@ -15,6 +15,7 @@ import {
 import cssStyles from '../../utils/cssStyles';
 // components
 import { Iconify } from '../../components';
+import NextLink from 'next/link';
 
 // ----------------------------------------------------------------------
 
@@ -39,7 +40,8 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function NewsletterTravel() {
+export default function NewsletterTravel({ title, comment, link, url }) {
+
   return (
     <RootStyle>
       <Container>
@@ -52,13 +54,26 @@ export default function NewsletterTravel() {
                 textAlign: { xs: 'center', md: 'left' },
               }}
             >
-              <Typography variant="h2">Newsletter</Typography>
+              <Typography variant="h2">{title[0]}</Typography>
               <Typography>
-                Sign up now to receive hot special offers
-                <br /> and information about the best tours!
+                {comment[0]}
               </Typography>
+              <NextLink href={url[0]} passHref>
+                <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' } }}>
+                  {link[0]}
+                </Typography>
+              </NextLink>
+              <Typography variant="h2">{title[1]}</Typography>
+              <Typography>
+                {comment[1]}
+              </Typography>
+              <NextLink href={url[1]} passHref>
+                <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' } }}>
+                  {link[1]}
+                </Typography>
+              </NextLink>
 
-              <FilledInput
+              {/* <FilledInput
                 fullWidth
                 placeholder="Enter your email"
                 endAdornment={
@@ -75,7 +90,7 @@ export default function NewsletterTravel() {
                     py: '18px',
                   },
                 }}
-              />
+              /> */}
             </Stack>
           </Grid>
         </Grid>

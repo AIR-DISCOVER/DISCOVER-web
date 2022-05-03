@@ -71,13 +71,13 @@ export default function MarketingCaseStudyPage({ post }) {
             <Grid item xs={12} md={2}>
               {/* <MarketingCaseStudySummary frontmatter={frontmatter} /> */}
               <BoxStyled style={{ height: '100%', width: '100%', display: 'flex', alignItems: 'start', justifyContent: 'end' }}>
-                <div>
+                <div style={{ marginTop: 16 }}>
                   2022
                 </div>
               </BoxStyled>
             </Grid>
             <Grid item xs={12} md={10}>
-              <Markdown content={content} />
+              <Markdown content={content} move />
               {/* <MarketingCaseStudyGallery images={galleryImgs} /> */}
             </Grid>
           </Grid>

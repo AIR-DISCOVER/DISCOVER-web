@@ -12,6 +12,7 @@ import { Grid, Box, Container, Typography, Button } from '@mui/material';
 import { fShortenNumber } from '../../../utils/formatNumber';
 // components
 import { Iconify, CountUpNumber, Image } from '../../../components';
+import { DISCOVER_INTRO } from '_data/config';
 
 // ----------------------------------------------------------------------
 
@@ -83,13 +84,7 @@ export default function MarketingAbout() {
           <Grid item xs={12} md={6} lg={6} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             <Typography variant="h2">Who We Are?</Typography>
             <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-              Vivamus consectetuer hendrerit lacus. Curabitur a felis in nunc fringilla tristique.
-              Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit.
-              <br />
-              <br />
-              Nam pretium turpis et arcu. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl
-              dignissim dolor, a pretium mi sem ut ipsum. Praesent venenatis metus at tortor
-              pulvinar varius.
+              {DISCOVER_INTRO}
             </Typography>
 
             <Button

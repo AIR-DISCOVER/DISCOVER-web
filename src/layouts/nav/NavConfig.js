@@ -12,8 +12,8 @@ export const PageLinks = [
     subheader: 'Robotics Group',
     cover: MECHANIC_COVER_PIC,
     items: [
-      { title: 'Introduction', path: Routes.mechanic.landing },
-      { title: 'Research Projects', path: Routes.mechanic.posts },
+      { title: 'A brief sentence about robotics group.', path: Routes.mechanic.landing },
+      // { title: 'Research Projects', path: Routes.mechanic.posts },
     ],
   },
   {
@@ -21,8 +21,8 @@ export const PageLinks = [
     subheader: 'Vision Group',
     cover: SUN_COVER_PIC,
     items: [
-      { title: 'Introduction', path: Routes.sun.landing },
-      { title: 'Research Projects', path: Routes.sun.posts },
+      { title: 'A brief sentence about the computer vision group.', path: Routes.sun.landing },
+      // { title: 'Research Projects', path: Routes.sun.posts },
     ],
   },
   {
@@ -30,8 +30,8 @@ export const PageLinks = [
     subheader: 'HCI Group',
     cover: HCI_COVER_PIC,
     items: [
-      { title: 'Introduction', path: Routes.hci.landing },
-      { title: 'Research Projects', path: Routes.hci.posts },
+      { title: 'A brief sentence about HCI group.', path: Routes.hci.landing },
+      // { title: 'Research Projects', path: Routes.hci.posts },
     ],
   },
   {
@@ -64,6 +64,6 @@ export const navConfig = [
   },
   {
     title: 'About Us',
-    path: Routes.comingsoon,
+    path: Routes.aboutus,
   },
 ];

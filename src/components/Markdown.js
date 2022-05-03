@@ -1,3 +1,5 @@
+import { m } from 'framer-motion';
+import { MotionViewport, varFade } from './animate';
 import PropTypes from 'prop-types';
 import okaidia from 'prism-react-renderer/themes/okaidia';
 import { MDXRemote } from 'next-mdx-remote';
@@ -74,24 +76,24 @@ Markdown.propTypes = {
   firstLetter: PropTypes.bool,
 };
 
-export default function Markdown({ content, firstLetter = false }) {
+export default function Markdown({ content, firstLetter = false, move = false }) {
   return (
     <RootStyle firstLetter={firstLetter}>
-      <MDXRemote {...content} components={components} />
+      <MDXRemote {...content} components={components(move)} />
     </RootStyle>
   );
 }
 
 // ----------------------------------------------------------------------
 
-export const components = {
-  p: (props) => <Typography {...props} />,
+export const components = (move) => ({
+  p: (props) => move ? (<m.div variants={varFade().inUp}><Typography {...props} /></m.div>) : (<Typography {...props} />),
   hr: (props) => <Divider {...props} />,
   a: LinkMDX,
   blockquote: BlockquoteMDX,
   img: ImageMDX,
   code: CodeMDX,
-};
+});
 
 // ----------------------------------------------------------------------
 

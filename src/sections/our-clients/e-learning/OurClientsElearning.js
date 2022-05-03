@@ -25,13 +25,14 @@ export default function CustomerElearning({ brands }) {
   const theme = useTheme();
 
   const carouselSettings = {
-    arrows: false,
+    arrows: true,
+    // infinite: true,
     slidesToShow: 6,
     slidesToScroll: 1,
     rtl: Boolean(theme.direction === 'rtl'),
     autoplay: true,
     speed: 5000,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 0,
     cssEase: 'linear',
     responsive: [
       {
