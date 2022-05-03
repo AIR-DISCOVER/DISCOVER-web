@@ -142,30 +142,33 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
         {/* Common List */}
         {commonList.length > 0 && <Grid
           item
-          xs={5}
+          xs={7}
+          md={7}
           sx={{
             borderRight: (_theme) => `dashed 1px ${_theme.palette.divider}`,
-            ml: 8,
-            pr: 8
+            ml: 6,
+            pr: 4
           }}
         >
           <List disablePadding sx={{ py: 6 }} component={MotionContainer}>
             {/* <ListSubheaderStyled>{commonList[0].subheaderName}</ListSubheaderStyled> */}
-            <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
-              {DISCOVER_RESEARCH_AREA}
-            </Typography>
-            <Stack spacing={1.5} alignItems="flex-start">
-              {commonList[0].items.map((item) => {
-                const { title, path } = item;
-                const active = router.pathname === path;
+            <m.div variants={varFade({ distance: 80 }).inRight}>
+              <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
+                {DISCOVER_RESEARCH_AREA}
+              </Typography>
+              <Stack spacing={1.5} alignItems="flex-start">
+                {commonList[0].items.map((item) => {
+                  const { title, path } = item;
+                  const active = router.pathname === path;
 
-                return <LinkItem key={title} title={title} href={path} active={active} />;
-              })}
-            </Stack>
+                  return <LinkItem key={title} title={title} href={path} active={active} />;
+                })}
+              </Stack>
+            </m.div>
           </List>
         </Grid>}
-        <Grid item xs={11}>
-          <Box sx={{ position: 'relative', px: 2, py: 6, mr: 8 }}>
+        <Grid item xs={10} md={10}>
+          <Box sx={{ position: 'relative', px: 2, py: 6, mr: 0 }}>
             <Slider ref={carouselRef} {...carouselSettings}>
               {carouselList.map((list) => {
                 const { subheader, items, cover } = list;
@@ -245,8 +248,6 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
             )}
           </Box>
         </Grid>
-
-
       </Grid>
     </DialogAnimate>
   );

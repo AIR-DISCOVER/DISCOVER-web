@@ -1,3 +1,39 @@
+import NextLink from 'next/link';
+import Routes from 'src/routes';
+import { styled, useTheme } from '@mui/material/styles';
+import { Box } from '@react-three/drei';
+import { ListSubheader } from '@mui/material';
+
+const StyledDiv = styled(Box, {
+  shouldForwardProp: (prop) => prop !== 'active',
+})(({ active, theme }) => ({
+  ...theme.typography.body3,
+  padding: 0,
+  width: 'auto',
+  cursor: 'pointer',
+  fontWeight: 'bold',
+  textDecoration: 'underline',
+  textDecorationThickness: '0.1rem',
+  color: theme.palette.text.secondary,
+  transition: theme.transitions.create('color'),
+  '&:hover': {
+    color: theme.palette.text.primary,
+  },
+  ...(active && {
+    ...theme.typography.subtitle3,
+    color: theme.palette.text.primary,
+  }),
+}));
+
+const BoxStyled = styled((props) => (
+  // <span {...props}/>
+  <ListSubheader disableSticky disableGutters {...props} />
+))(({ theme }) => ({
+  ...theme.typography.h5,
+  marginBottom: theme.spacing(1),
+  color: theme.palette.text.primary,
+}));
+
 export const HCI_MEMBERS = [
   { id: 1, name: "Gao, Jiasi", role: "Role", photo: "" },
   { id: 2, name: "Gao, Jiasi", role: "Role", photo: "" },
@@ -67,8 +103,8 @@ export const TAGS = {
   mechanic: ['Manufacturing', 'Robotics', 'C2M', 'CAD', 'Collabrative Robot', 'Transportation', 'Autonomy', 'Locomotion', 'Sim2Real'],
 }
 
-export const HCI_COVER_PIC = "";
-export const SUN_COVER_PIC = "";
+export const HCI_COVER_PIC = "/cover_imgs/hci.png";
+export const SUN_COVER_PIC = "/cover_imgs/air-sun.jpeg";
 export const MECHANIC_COVER_PIC = "/cover_imgs/mechanic.jpg";
 
 export const DISCOVER_INTRO = (
@@ -81,7 +117,7 @@ export const DISCOVER_INTRO = (
 
 export const DISCOVER_RESEARCH_AREA = (
   <p>
-    DISCVOER Lab conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in transportation and manufacturing industries. In DISCOVER Lab, several research groups are established to develop related expertise.
+    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25}}>DISCOVER Lab</BoxStyled> conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.page404} passHref><StyledDiv>transportation</StyledDiv></NextLink> and <NextLink href={Routes.page404} passHref><StyledDiv>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
   </p>
 );
 
@@ -99,6 +135,18 @@ export const DISCOVER_PAGELINKS = [
   },
   {
     order: '2',
+    subheader: 'Contact Us',
+    cover: SUN_COVER_PIC,
+    items: [
+      { title: 'Tel : 188 8888 8888', path: '' },
+      { title: 'Mail: zhouguyue@air.tsinghua.edu.cn', path: '' },
+      { title: 'Addr: 12 / F, block C, Qidi science and technology building, Tsinghua Science and Technology Park, Beijing', path: '' },
+    ],
+  },
+]
+export const DISCOVER_ABOUT_US_SIMPLE = [
+  {
+    order: '1',
     subheader: 'Contact Us',
     cover: SUN_COVER_PIC,
     items: [

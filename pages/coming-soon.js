@@ -36,7 +36,7 @@ const SeparatorStyle = styled(Typography)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function ComingSoonPage() {
-  const countdown = useCountdown(new Date('07/07/2022 21:30'));
+  const countdown = useCountdown(new Date('05/31/2022 21:30'));
 
   return (
     <Page title="Coming Soon">
@@ -65,7 +65,7 @@ export default function ComingSoonPage() {
             {TimeBox(countdown.seconds, 'Seconds')}
           </CountdownStyle>
 
-          <FilledInput
+          {/* <FilledInput
             fullWidth
             placeholder="Enter your email"
             endAdornment={
@@ -80,11 +80,11 @@ export default function ComingSoonPage() {
               my: 5,
               '& .MuiFilledInput-input': { py: '18px' },
             }}
-          />
+          /> */}
 
-          <Stack alignItems="center">
+          {/* <Stack alignItems="center">
             <SocialsButton initialColor />
-          </Stack>
+          </Stack> */}
         </Stack>
       </RootStyle>
     </Page>

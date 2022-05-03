@@ -39,8 +39,6 @@ export const PageLinks = [
     subheader: 'Common',
     subheaderName: 'Research Area',
     items: [
-      { title: 'Project 1', path: Routes.page404 },
-      { title: 'Project 2', path: Routes.page404 },
     ],
   },
 ];
@@ -54,18 +52,18 @@ export const navConfig = [
   },
   {
     title: 'People',
-    path: Routes.page404,
+    path: Routes.people,
   },
   {
     title: 'News',
-    path: Routes.page404,
+    path: Routes.comingsoon,
   },
   {
     title: 'Teaching',
-    path: Routes.page404,
+    path: Routes.comingsoon,
   },
-  // {
-  //   title: 'About Us',
-  //   path: Routes.page404,
-  // },
+  {
+    title: 'About Us',
+    path: Routes.comingsoon,
+  },
 ];

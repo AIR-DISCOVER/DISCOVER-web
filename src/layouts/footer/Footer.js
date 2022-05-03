@@ -23,8 +23,10 @@ import { useResponsive } from '../../hooks';
 import { Logo, Iconify } from '../../components';
 //
 import { PageLinks } from '../nav/NavConfig';
-import { DISCOVER_CONTACT, DISCOVER_INTRO, DISCOVER_INTRO_EXTRA, DISCOVER_PAGELINKS } from '_data/config';
+import { DISCOVER_ABOUT_US_SIMPLE, DISCOVER_CONTACT, DISCOVER_INTRO, DISCOVER_INTRO_EXTRA, DISCOVER_PAGELINKS } from '_data/config';
 import { useTheme } from '@mui/material/styles';
+import { MarketingContactInfo } from 'src/sections/@marketing';
+import { CareerContactInfo } from 'src/sections/@career';
 
 // ----------------------------------------------------------------------
 
@@ -68,7 +70,6 @@ export default function Footer({ fill }) {
               </Stack>
             </Stack>
           </Grid>
-
           <Grid item xs={12} md={1} />
           <Grid item xs={12} md={6}>
             {isDesktop ? (
@@ -85,7 +86,18 @@ export default function Footer({ fill }) {
               </Stack>
             )}
           </Grid>
+          {/* <Grid item xs={12} md={12}>
+            {isDesktop ? (null
+            ) : (
+              <Stack spacing={1.5}>
+                {DISCOVER_ABOUT_US_SIMPLE.map((list) => (
+                  <ListMobile key={list.subheader} list={list} />
+                ))}
+              </Stack>
+            )} 
+          </Grid> */}
         </Grid>
+        {/* <CareerContactInfo /> */}
       </Container>
 
       <Divider />
@@ -110,7 +122,7 @@ export default function Footer({ fill }) {
           </Stack> */}
         </Stack>
       </Container>
-    </div>
+    </div >
   );
 }
 
