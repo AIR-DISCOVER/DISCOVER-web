@@ -43,12 +43,12 @@ export default function TeamMarketingAbout({ members }) {
         <Box
           sx={{
             display: 'grid',
-            rowGap: { xs: 4, md: 5 },
+            rowGap: { xs: 4, md: 8 },
             columnGap: 3,
             gridTemplateColumns: {
-              xs: 'repeat(1, 1fr)',
-              sm: 'repeat(2, 1fr)',
-              md: 'repeat(4, 1fr)',
+              xs: 'repeat(2, 1fr)',
+              sm: 'repeat(4, 1fr)',
+              md: 'repeat(6, 1fr)',
             },
           }}
         >

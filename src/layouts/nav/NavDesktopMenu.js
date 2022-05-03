@@ -139,8 +139,33 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
       }}
     >
       <Grid container columns={commonList.length > 0 ? 18 : 12} spacing={4}>
-        <Grid item xs={12}>
-          <Box sx={{ position: 'relative', px: 2, py: 6, ml: 8 }}>
+        {/* Common List */}
+        {commonList.length > 0 && <Grid
+          item
+          xs={5}
+          sx={{
+            borderRight: (_theme) => `dashed 1px ${_theme.palette.divider}`,
+            ml: 8,
+            pr: 8
+          }}
+        >
+          <List disablePadding sx={{ py: 6 }} component={MotionContainer}>
+            {/* <ListSubheaderStyled>{commonList[0].subheaderName}</ListSubheaderStyled> */}
+            <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
+              {DISCOVER_RESEARCH_AREA}
+            </Typography>
+            <Stack spacing={1.5} alignItems="flex-start">
+              {commonList[0].items.map((item) => {
+                const { title, path } = item;
+                const active = router.pathname === path;
+
+                return <LinkItem key={title} title={title} href={path} active={active} />;
+              })}
+            </Stack>
+          </List>
+        </Grid>}
+        <Grid item xs={11}>
+          <Box sx={{ position: 'relative', px: 2, py: 6, mr: 8 }}>
             <Slider ref={carouselRef} {...carouselSettings}>
               {carouselList.map((list) => {
                 const { subheader, items, cover } = list;
@@ -221,29 +246,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
           </Box>
         </Grid>
 
-        {/* Common List */}
-        {commonList.length > 0 && <Grid
-          item
-          xs={5}
-          sx={{
-            borderLeft: (_theme) => `dashed 1px ${_theme.palette.divider}`,
-          }}
-        >
-          <List disablePadding sx={{ py: 6 }} component={MotionContainer}>
-            <ListSubheaderStyled>{commonList[0].subheaderName}</ListSubheaderStyled>
-            <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
-              {DISCOVER_RESEARCH_AREA}
-            </Typography>
-            <Stack spacing={1.5} alignItems="flex-start">
-              {commonList[0].items.map((item) => {
-                const { title, path } = item;
-                const active = router.pathname === path;
 
-                return <LinkItem key={title} title={title} href={path} active={active} />;
-              })}
-            </Stack>
-          </List>
-        </Grid>}
       </Grid>
     </DialogAnimate>
   );

@@ -88,7 +88,7 @@ export const DISCOVER_RESEARCH_AREA = (
 export const DISCOVER_PAGELINKS = [
   {
     order: '1',
-    subheader: 'TEST',
+    subheader: 'About Us',
     cover: SUN_COVER_PIC,
     items: [
       { title: 'To understand our core value', path: '' },

@@ -44,7 +44,7 @@ export default function Footer({ fill }) {
       <Container sx={{ py: { xs: 8, md: 10, } }}>
         <Grid container spacing={3} justifyContent={{ md: 'space-between' }}>
           <Grid item xs={12} md={8}>
-            <Logo width={'40%'} />
+            <Logo withoutText width={'40%'} />
           </Grid>
           <Grid item xs={12} md={4}>
             <Stack spacing={{ xs: 3, md: 5 }}>
