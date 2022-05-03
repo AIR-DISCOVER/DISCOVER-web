@@ -16,6 +16,7 @@ import {
   Collapse,
   Container,
   Typography,
+  ListSubheader,
 } from '@mui/material';
 // hooks
 import { useResponsive } from '../../hooks';
@@ -24,14 +25,24 @@ import { Logo, Iconify } from '../../components';
 //
 import { PageLinks } from '../nav/NavConfig';
 import { DISCOVER_ABOUT_US_SIMPLE, DISCOVER_CONTACT, DISCOVER_INTRO, DISCOVER_INTRO_EXTRA, DISCOVER_PAGELINKS } from '_data/config';
-import { useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import { MarketingContactInfo } from 'src/sections/@marketing';
 import { CareerContactInfo } from 'src/sections/@career';
+
+const BoxStyled = styled((props) => (
+  // <span {...props}/>
+  <ListSubheader disableSticky disableGutters {...props} />
+))(({ theme }) => ({
+  ...theme.typography.h5,
+  // marginBottom: theme.spacing(1),
+  color: theme.palette.text.primary,
+}));
 
 // ----------------------------------------------------------------------
 
 export default function Footer({ fill }) {
   const isDesktop = useResponsive('up', 'md');
+  const isLarge = useResponsive('up', 'lg');
   const theme = useTheme();
 
   const lists = PageLinks.filter((list) => list.subheader !== 'Coming Soon');
@@ -43,26 +54,27 @@ export default function Footer({ fill }) {
   return (
     <div style={{ width: '100%', background: fill ? (theme.palette.background.default) : null }}>
       <Divider />
-      <Container sx={{ py: { xs: 8, md: 10, } }}>
-        <Grid container spacing={3} justifyContent={{ md: 'space-between' }}>
-          <Grid item xs={12} md={8}>
-            <Logo withoutText width={'40%'} />
+      <Container sx={{ py: { xs: 6, md: 8, } }}>
+        <Grid container columnSpacing={4} rowSpacing={isDesktop ? 0 : 4} justifyContent={{ md: 'space-between' }}>
+          <Grid item xs={12} md={6}>
+            <Logo withoutText width={'15rem'} />
           </Grid>
-          <Grid item xs={12} md={4}>
+          {isDesktop ?
+            <Grid item xs={12} md={isLarge ? 3 : 6}>
+              <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'end', alignItems: 'start' }}>
+                <BoxStyled sx={{ m: 0.8 }}>About Us</BoxStyled>
+              </div>
+            </Grid> : null}
+          {isLarge ?
+            <Grid item xs={12} md={3}>
+              <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'end', alignItems: 'start' }}>
+                <BoxStyled sx={{ m: 0.8, ml: 1.3 }}>Contact Us</BoxStyled>
+              </div>
+            </Grid> : null}
+          <Grid item xs={12} md={6}>
             <Stack spacing={{ xs: 3, md: 5 }}>
               <Stack alignItems="flex-start" spacing={3}>
-                <Typography variant="body2" sx={{ color: 'text.primary' }}>
-                  {DISCOVER_CONTACT}
-                  {/* The starting point for your next project based on easy-to-customize Material-UI ©
-                  helps you build apps faster and better. */}
-                </Typography>
-              </Stack>
-            </Stack>
-          </Grid>
-          <Grid item xs={12} md={5}>
-            <Stack spacing={{ xs: 3, md: 5 }}>
-              <Stack alignItems="flex-start" spacing={3}>
-                <Typography variant="body3" sx={{ color: 'text.secondary', lineHeight: '2rem', mt: 0.8 }}>
+                <Typography variant="body3" sx={{ color: 'text.secondary', lineHeight: '2rem', mt: 0.4 }}>
                   {DISCOVER_INTRO}
                   {/* The starting point for your next project based on easy-to-customize Material-UI ©
                   helps you build apps faster and better. */}
@@ -70,10 +82,10 @@ export default function Footer({ fill }) {
               </Stack>
             </Stack>
           </Grid>
-          <Grid item xs={12} md={1} />
+          {/* <Grid item xs={12} md={1} /> */}
           <Grid item xs={12} md={6}>
             {isDesktop ? (
-              <Masonry columns={2} spacing={1}>
+              <Masonry columns={isLarge ? 2 : 1} spacing={1} sx={{ margin: 0 }}>
                 {DISCOVER_PAGELINKS.map((list) => (
                   <ListDesktop key={list.subheader} list={list} />
                 ))}
@@ -167,9 +179,9 @@ function ListDesktop({ list }) {
 
   return (
     <Stack alignItems="flex-start" sx={{ pb: { md: 1 } }}>
-      <Typography variant="h6">{subheader}</Typography>
+      {/* <Typography variant="h6">{subheader}</Typography> */}
       {items?.map((link) => (
-        <NextLinkItem key={link.title} href={link.path}>
+        <NextLinkItem key={link.title} href={link.path} sx={{ lineHeight: '2rem', mt: 0 }}>
           {link.title}
         </NextLinkItem>
       ))}

@@ -56,7 +56,7 @@ export const navConfig = [
   },
   {
     title: 'News',
-    path: Routes.comingsoon,
+    path: Routes.news,
   },
   {
     title: 'Teaching',

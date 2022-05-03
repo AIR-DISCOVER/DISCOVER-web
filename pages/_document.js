@@ -36,13 +36,13 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
 
           {/* Fonts */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.lug.ustc.edu.cn" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap"
+            href="https://fonts.lug.ustc.edu.cn/css2?family=Barlow:wght@500;600;700&display=swap"
             rel="stylesheet"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+            href="https://fonts.lug.ustc.edu.cn/css2?family=Poppins:wght@400;500;600&display=swap"
             rel="stylesheet"
           />
         </Head>

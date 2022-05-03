@@ -1,16 +1,7 @@
-// _data
-// layouts
 import Layout from '../src/layouts';
-// components
 import { Page } from '../src/components';
-// sections
-import {
-  Background,
-  HomeAdvertisement,
-} from '../src/sections/home';
-import { useRef, useState } from 'react';
 import { TeamMarketingAbout } from '../src/sections/team';
-import { MECHANIC_MEMBERS  } from '../_data/config';
+import { HCI_MEMBERS, MECHANIC_MEMBERS, SUN_MEMBERS } from '../_data/config';
 
 // ----------------------------------------------------------------------
 
@@ -18,7 +9,7 @@ export default function HomePage() {
 
   return (
     <Page title="Home">
-      <TeamMarketingAbout members={MECHANIC_MEMBERS} />
+      <TeamMarketingAbout members={MECHANIC_MEMBERS.concat(HCI_MEMBERS.concat(SUN_MEMBERS)).sort((a, b) => { return a.name > b.name })} />
 
       {/* <HomeHero />
 

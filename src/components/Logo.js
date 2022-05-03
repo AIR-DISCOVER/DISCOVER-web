@@ -25,7 +25,7 @@ function Logo({ force, isSimple = false, width = 120, sx, withoutText = false })
 
   var src = '';
   if (withoutText) {
-    src = '/logo/discover-icon-without-text.jpg'
+    src = '/logo/discover-icon-without-text.png'
   }
   else if (force) {
     src = force == 'light' ? "/logo/discover-icon-alpha-black.png" : "/logo/discover-icon-alpha.png"

@@ -30,6 +30,7 @@ export default function TeamMarketingAbout({ members }) {
             mx: 'auto',
             maxWidth: 480,
             textAlign: 'center',
+            mt: { xs: 8, md: 10 },
             mb: { xs: 8, md: 10 },
           }}
         >

@@ -3,6 +3,12 @@ import Routes from 'src/routes';
 import { styled, useTheme } from '@mui/material/styles';
 import { Box } from '@react-three/drei';
 import { ListSubheader } from '@mui/material';
+import locationIcon from '@iconify/icons-carbon/location';
+import mobileIcon from '@iconify/icons-carbon/mobile';
+import emailIcon from '@iconify/icons-carbon/email';
+import timeIcon from '@iconify/icons-carbon/time';
+import launchIcon from '@iconify/icons-carbon/launch';
+import { Iconify } from 'src/components';
 
 const StyledDiv = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'active',
@@ -35,14 +41,14 @@ const BoxStyled = styled((props) => (
 }));
 
 export const HCI_MEMBERS = [
-  { id: 1, name: "Gao, Jiasi", role: "Role", photo: "" },
-  { id: 2, name: "Gao, Jiasi", role: "Role", photo: "" },
-  { id: 3, name: "Gao, Jiasi", role: "Role", photo: "" },
-  { id: 4, name: "Gao, Jiasi", role: "Role", photo: "" },
-  { id: 5, name: "Gao, Jiasi", role: "Role", photo: "" },
+  { id: 1, name: "Gong, Jiangtao", role: "Researcher", photo: "" },
+  { id: 2, name: "Gao, Jiasi", role: "Post Doc", photo: "" },
+  { id: 3, name: "Chu, Mengdi", role: "Researcher", photo: "" },
+  { id: 4, name: "Guo, Haole", role: "Researcher", photo: "" },
+  { id: 5, name: "Zhang, Yan", role: "Researcher", photo: "" },
 ]
 export const SUN_MEMBERS = [
-  { id: 1, name: "Shi, Yongliang", role: "Post doc", photo: "/member_photos/people_Shi_Yongliang.jpeg" },
+  { id: 1, name: "Shi, Yongliang", role: "Post Doc", photo: "/member_photos/people_Shi_Yongliang.jpeg" },
   { id: 2, name: "Chen, Xiaoxue", role: "Phd Student", photo: "/member_photos/people_Chen_Xiaoxue.jpeg" },
   { id: 3, name: "Li, Pengfei", role: "Phd Student", photo: "/member_photos/people_Li_Pengfei.jpeg" },
   { id: 4, name: "Tian, Beiwen", role: "Researcher", photo: "/member_photos/people_Tian_Beiwen.jpg" },
@@ -107,6 +113,8 @@ export const HCI_COVER_PIC = "/cover_imgs/hci.png";
 export const SUN_COVER_PIC = "/cover_imgs/air-sun.jpeg";
 export const MECHANIC_COVER_PIC = "/cover_imgs/mechanic.jpg";
 
+export const NEWS_MARKDOWN_PATH = '_data/news.md'
+
 export const DISCOVER_INTRO = (
   <>
     <p>
@@ -117,7 +125,7 @@ export const DISCOVER_INTRO = (
 
 export const DISCOVER_RESEARCH_AREA = (
   <p>
-    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25}}>DISCOVER Lab</BoxStyled> conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.page404} passHref><StyledDiv>transportation</StyledDiv></NextLink> and <NextLink href={Routes.page404} passHref><StyledDiv>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
+    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>DISCOVER Lab</BoxStyled> conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.page404} passHref><StyledDiv>transportation</StyledDiv></NextLink> and <NextLink href={Routes.page404} passHref><StyledDiv>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
   </p>
 );
 
@@ -138,9 +146,29 @@ export const DISCOVER_PAGELINKS = [
     subheader: 'Contact Us',
     cover: SUN_COVER_PIC,
     items: [
-      { title: 'Tel : 188 8888 8888', path: '' },
-      { title: 'Mail: zhouguyue@air.tsinghua.edu.cn', path: '' },
-      { title: 'Addr: 12 / F, block C, Qidi science and technology building, Tsinghua Science and Technology Park, Beijing', path: '' },
+      {
+        title: (
+          <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+            <Iconify icon={mobileIcon} sx={{ mr: 1, minWidth: '1rem'}} />
+            <span>
+              188 8888 8888
+            </span>
+          </div>), path: ''
+      },
+      { title: (
+        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
+          <Iconify icon={emailIcon} sx={{ mr: 1, minWidth: '1rem'}} />
+          <span>
+            zhouguyue@air.tsinghua.edu.cn
+          </span>
+        </div>), path: '' },
+      { title: (
+        <div style={{ display: 'flex', justifyContent: 'start', alignItems: 'start' }}>
+          <Iconify icon={locationIcon} sx={{ mr: 1, mt: '0.35rem', minWidth: '1rem'}} />
+          <span>
+            Addr: 12 / F, block C, Qidi science and technology building, Tsinghua Science and Technology Park, Beijing
+          </span>
+        </div>), path: '' },
     ],
   },
 ]

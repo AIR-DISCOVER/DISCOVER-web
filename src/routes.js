@@ -75,6 +75,7 @@ const Routes = {
   page404: '/404',
   page500: '/500',
   people: '/people',
+  news: '/news',
   // Others
   pages: '/pages',
   componentsUI: '/components-ui',
