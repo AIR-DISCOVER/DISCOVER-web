@@ -10,7 +10,7 @@ import { Object3D } from 'three';
 import WasdControls from './wasdcontrol';
 import LookControls from './lookcontrol';
 
-const Model = () => {
+const Model = ({ onLoading }) => {
     const ref = useRef()
     const scenes = useLoader(GLTFLoader,
         [
@@ -18,7 +18,9 @@ const Model = () => {
             // "/three/office1.glb",
             // "/three/office2.glb",
             // "/three/indoor.glb",
-        ]);
+        ], null, xhr => {
+            onLoading(xhr.loaded / 97888600 * 100)
+        });
     const locations =
         [
             [0, -4, 0],
@@ -177,7 +179,7 @@ const AddTarget = (props) => {
     return null;
 }
 
-const Scene = ({ cref, tab, style }) => {
+const Scene = ({ cref, style, modelCallback = () => { } }) => {
     const targetObject = new Object3D();
     return (
         <Canvas style={{ height: '100vh', ...style }}>
@@ -186,7 +188,7 @@ const Scene = ({ cref, tab, style }) => {
                 <directionalLight color={0xffffff} intensity={1} target={targetObject} castShadow={true} />
                 <ambientLight color={0xffffff} intensity={0.3} />
                 <hemisphereLight color={0xffffff} intensity={0.8} />
-                <Model />
+                <Model onLoading={modelCallback} />
                 {/* <OrbitControls /> */}
                 {/* <LookControls /> */}
                 {/* <WasdControls /> */}

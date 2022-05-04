@@ -32,7 +32,6 @@ function Logo({ force, isSimple = false, width = 120, sx, withoutText = false })
   } else {
     src = !isLight ? "/logo/discover-icon-alpha.png" : "/logo/discover-icon-alpha-black.png";
   }
-  console.log(src)
   return (
     <NextLink href="/" passHref>
       <Box

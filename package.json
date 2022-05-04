@@ -49,6 +49,7 @@
     "react-lazy-load-image-component": "^1.5.1",
     "react-player": "^2.9.0",
     "react-slick": "^0.28.1",
+    "react-use": "^17.3.2",
     "simplebar-react": "^2.3.6",
     "slick-carousel": "^1.8.1",
     "stylis": "^4.0.13",

@@ -26,12 +26,9 @@ export default function HomePage() {
 
   }
   const onClick = () => {
-    // console.log(tab)
     // let next = dict[tab]
     // setTab(next)
     // controlRef.current && controlRef.current.setTrig(tab, next)
-    console.log('test')
-    console.log(controlRef)
     controlRef.current && controlRef.current.reset()
   }
   return (

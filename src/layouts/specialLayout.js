@@ -32,8 +32,6 @@ export default function Layout({
 }) {
   const controlRef = useRef();
   const onClick = (title) => {
-    console.log('clicked ' + title)
-    // console.log(controlRef)
     controlRef.current && controlRef.current.setF(title)
   }
   return (
