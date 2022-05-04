@@ -99,7 +99,7 @@ const ModernDolly = forwardRef((states, ref) => {
     }));
     useFrame((state) => {
 
-        const position = fn((state.clock.getElapsedTime() - trigger) / 1)
+        const position = fn((state.clock.getElapsedTime() - trigger) / 2.5)
         state.camera.position.set(position[0], position[1], position[2])
         state.camera.rotation.set(position[3], position[4], position[5])
         state.camera.updateProjectionMatrix();

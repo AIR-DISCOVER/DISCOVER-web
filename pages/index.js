@@ -38,7 +38,7 @@ export default function HomePage() {
     <Page title="Home">
       {/* <Background cref={controlRef} /> */}
 
-      <HomeAdvertisement onClick={() => { }} pack={{ overline: 'A simple overline description', main: 'DISCOVER.', button: 'Explore' }} />
+      <HomeAdvertisement onClick={() => { }} pack={{ overline: 'Towards unknown. Towards future. ', main: 'DISCOVER.', button: 'Explore' }} />
 
       {/* <HomeHero />
 

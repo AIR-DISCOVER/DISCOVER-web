@@ -34,7 +34,7 @@ export default function MarketingLandingPage({ posts }) {
       {/* <MarketingLandingAbout /> */}
       <TeamMarketingLangding members={_members} />
 
-      <BlogMarketingLatestPosts posts={posts.slice(0, 4)} name='Research' />
+      {/* <BlogMarketingLatestPosts posts={posts.slice(0, 4)} name='Research' /> */}
 
       <BlogFeaturedPosts posts={posts.slice(-5)} route={Routes.sun} />
 
