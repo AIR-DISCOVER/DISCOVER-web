@@ -57,7 +57,7 @@ export default function HomeAdvertisement({ onClick, pack }) {
         <Typography variant="h1" component="h2" sx={{ mt: 1, mb: 8 }}>
           {pack?.main}
         </Typography>
-        <Button
+        {/* <Button
           size="large"
           variant="contained"
           target="_blank"
@@ -65,7 +65,7 @@ export default function HomeAdvertisement({ onClick, pack }) {
           onClick={onClick}
         >
           {pack?.button}
-        </Button>
+        </Button> */}
       </ContentStyle>
       {/* <Background offsetX={offsetX} offsetY={offsetY} /> */}
     </RootStyle>

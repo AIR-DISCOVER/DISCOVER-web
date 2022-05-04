@@ -20,7 +20,7 @@ Header.propTypes = {
   transparent: PropTypes.bool,
 };
 
-export default function Header({ transparent }) {
+export default function Header({ transparent, onEnter = () => { } }) {
   const theme = useTheme();
 
   const isDesktop = useResponsive('up', 'md');
@@ -66,6 +66,7 @@ export default function Header({ transparent }) {
               isScrolling={isScrolling}
               isTransparent={transparent}
               navConfig={navConfig}
+              onEnter={onEnter}
             />
           )}
 

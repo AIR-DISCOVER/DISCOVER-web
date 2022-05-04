@@ -1,6 +1,6 @@
 // _data
 // layouts
-import Layout from '../src/layouts';
+import Layout from '../src/layouts/specialLayout';
 // components
 import { Page } from '../src/components';
 // sections
@@ -36,9 +36,9 @@ export default function HomePage() {
   }
   return (
     <Page title="Home">
-      <Background cref={controlRef} />
+      {/* <Background cref={controlRef} /> */}
 
-      <HomeAdvertisement onClick={onClick} pack={{ overline: '', main: 'DISCOVER.', button: 'Explore' }} />
+      <HomeAdvertisement onClick={() => { }} pack={{ overline: 'A simple overline description', main: 'DISCOVER.', button: 'Explore' }} />
 
       {/* <HomeHero />
 
