@@ -1,7 +1,7 @@
 import NextLink from 'next/link';
 import Routes from 'src/routes';
 import { styled, useTheme } from '@mui/material/styles';
-import { Box } from '@react-three/drei';
+import { Box } from '@mui/material';
 import { ListSubheader } from '@mui/material';
 import locationIcon from '@iconify/icons-carbon/location';
 import mobileIcon from '@iconify/icons-carbon/mobile';
@@ -123,7 +123,7 @@ export const DISCOVER_INTRO = (
 
 export const DISCOVER_RESEARCH_AREA = (
   <p>
-    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>DISCOVER Lab</BoxStyled> conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.page404} passHref><StyledDiv>transportation</StyledDiv></NextLink> and <NextLink href={Routes.page404} passHref><StyledDiv>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
+    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>DISCOVER Lab</BoxStyled> conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.comingsoon} passHref><StyledDiv component={'span'}>transportation</StyledDiv></NextLink> and <NextLink href={Routes.comingsoon} passHref><StyledDiv component={'span'}>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
   </p>
 );
 
@@ -189,8 +189,41 @@ export const DISCOVER_ABOUT_US_SIMPLE = [
 
 export const ROBOTICS_INTRO = "The Robotics group has focused on research in autonomous systems that can move, manipulate, perceive, decide, and interact with human. We are interested in discovering how robot locomotion and execution can improve the system performance in embodied tasks for transportation, manufacturing, and consumer applications. Another domain of our research lies in investigating simulation-to-reality gaps and performing explainable domain transfer learning to shorten deployment duration. Looking forward to a human-robot symbiosis in the future, we therefore aim at developing hardware-aware, scalable algorithms for multi-robot and multi-human collaboration."
 
+export const SUN_INTRO = (<p>
+  AIR DISCOVER SUN Team is mainly focusing on computer vision which is the art of tracing light, along two paths:<br />
+  A. From images to the physical world;<br />
+  B. From images to our brains.<br />
+  We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people.
+</p>)
+
+export const HCI_INTRO = (
+  <p>
+    AIR DISCOVER HCI Team is an Human-centered AI research team that focuses on creating AI-driven systems that amplify and augment human abilities and well-beings.<br />
+    <br />
+    We are now interested in the following three research topics:<br />
+    A. Understanding and modelling long-term human behaviours and emotions in  the real-world through wearable or ubiquitous contactless sensors.<br />
+    B. Building novelty human-in-the-loop AI/Robotics systems, such as in transportation, manufacturing, education, health, work, housing, and entertainment.<br />
+    C. Exploring methods and algorithms enabling effective human-AI collaboration that make human partnerships more productive, creative, accessible and enjoyable.<br />
+    <br />
+    We welcome talents and partners from multi-disciplines,  such as computer science, robotics, design, arts, cognitive science, psychology, sociology, and etc.
+
+  </p>
+)
 export const GROUP_INTRO = {
-  hci: { overline: "overline", title: "Title", description: "Description", inverse: true },
-  mechanic: { overline: "RESEARCH GROUP", title: "Robotics", description: ROBOTICS_INTRO, landing_img: "/member_photos/discover-icon.png" },
-  sun: { overline: "AIR DISCOVER", title: "SUN Team", description: DISCOVER_INTRO },
+  hci: { overline: "AIR DISCOVER", title: <span>HCI <Box component={'span'} sx={{ color: 'text.secondary' }}>Team</Box> </span>, description: HCI_INTRO, inverse: true, landing_img: "/landing_imgs/hci.png" },
+  mechanic: {
+    overline: "AIR DISCOVER", title: <span>
+      <Box component={'span'} sx={{ color: 'brown' }}>R</Box>
+      <Box component={'span'} sx={{ color: 'primary.main' }}>o</Box>
+      <Box component={'span'} sx={{ color: 'primary.dark' }}>b</Box>
+      <Box component={'span'} sx={{ color: 'primary.light' }}>o</Box>
+      <Box component={'span'} sx={{ color: 'secondary.main' }}>t</Box>
+      <Box component={'span'} sx={{ color: 'secondary.dark' }}>i</Box>
+      <Box component={'span'} sx={{ color: 'green' }}>c</Box>
+      <Box component={'span'} sx={{ color: 'purple' }}>s</Box>
+      {' '}
+      <Box component={'span'} sx={{ color: 'text.secondary' }}>Team</Box>
+    </span>, description: ROBOTICS_INTRO, landing_img: "/landing_imgs/robotics.png"
+  },
+  sun: { overline: "AIR DISCOVER", title: "SUN Team", description: SUN_INTRO },
 }

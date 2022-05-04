@@ -5,3 +5,4 @@ export { default as CareerLandingTopCompanies } from './CareerLandingTopCompanie
 export { default as CareerLangdingConnections } from './CareerLangdingConnections';
 export { default as CareerLandingHotCategories } from './CareerLandingHotCategories';
 export { default as CareerLangdingForRecruiters } from './CareerLangdingForRecruiters';
+export { default as SUNLandingHero } from './SUNLandingHero';

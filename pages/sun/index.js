@@ -8,14 +8,16 @@ import Layout from '../../src/layouts';
 // components
 import { Page } from '../../src/components';
 // sections
-import { TeamMarketingLangding } from '../../src/sections/team';
+import { TeamElearningAbout, TeamMarketingLangding } from '../../src/sections/team';
 import {
   MarketingLandingHero,
 } from '../../src/sections/@marketing';
 import { BlogFeaturedPosts, BlogFullPostList, BlogMarketingLatestPosts } from '../../src/sections/blog'
 import Routes from '../../src/routes';
 import { GROUP_INTRO } from '../../_data/config';
-
+import {
+  SUNLandingHero,
+} from '../../src/sections/@career'
 
 // ----------------------------------------------------------------------
 
@@ -27,12 +29,13 @@ MarketingLandingPage.propTypes = {
 export default function MarketingLandingPage({ posts }) {
   return (
     <Page title="Landing - AIR-SUN">
-      <MarketingLandingHero pack={GROUP_INTRO.sun} />
-
+      <SUNLandingHero pack={GROUP_INTRO.sun}/>
+      {/* <MarketingLandingHero pack={GROUP_INTRO.sun} /> */}
       {/* <OurClientsMarketingLanding brands={_brands} /> */}
 
       {/* <MarketingLandingAbout /> */}
-      <TeamMarketingLangding members={_members} />
+      {/* <TeamMarketingLangding members={_members} /> */}
+      <TeamElearningAbout members={_members} />
 
       {/* <BlogMarketingLatestPosts posts={posts.slice(0, 4)} name='Research' /> */}
 
@@ -63,7 +66,7 @@ export default function MarketingLandingPage({ posts }) {
 // ----------------------------------------------------------------------
 
 MarketingLandingPage.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
+  return <Layout transparentHeader>{page}</Layout>;
 };
 
 // ----------------------------------------------------------------------

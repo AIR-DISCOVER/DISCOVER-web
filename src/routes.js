@@ -12,9 +12,9 @@ const Routes = {
     post: (slug) => `/sun/blog/${slug}`
   },
   mechanic: {
-    landing: '/mechanic',
-    posts: '/mechanic/blog',
-    post: (slug) => `/mechanic/blog/${slug}`
+    landing: '/robotics',
+    posts: '/robotics/blog',
+    post: (slug) => `/robotics/blog/${slug}`
   },
   // Marketing
   marketing: {
