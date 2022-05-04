@@ -1,6 +1,6 @@
 // @mui
 import { styled } from '@mui/material/styles';
-import { Typography, Container, Box } from '@mui/material';
+import { Typography, Container, Box, Grid } from '@mui/material';
 // components
 import { SvgIconStyle } from '../../../components';
 
@@ -100,21 +100,26 @@ export default function MarketingAboutCoreValues() {
             gridTemplateColumns: {
               xs: 'repeat(1, 1fr)',
               sm: 'repeat(1, 1fr)',
-              md: 'repeat(2, 1fr)',
+              md: 'repeat(1, 1fr)',
+              lg: 'repeat(2, 1fr)',
             },
           }}
         >
           {CORE_VALUES.map((value) => (
-            <div key={value.title}>
-              <SvgIconStyle
-                src={value.icon}
-                sx={{ width: 64, height: 64, mx: 'auto', color: 'primary.main' }}
-              />
-              <Typography variant="h5" sx={{ mt: 5, mb: 2 }}>
-                {value.title}
-              </Typography>
-              <Typography sx={{ color: 'text.secondary' }}> {value.description} </Typography>
-            </div>
+            <Grid container spacing={{ xs: 4, md: 2 }} key={value.title}>
+              <Grid item xs={12} md={3} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <SvgIconStyle
+                  src={value.icon}
+                  sx={{ width: 64, height: 64, mx: 'auto', color: 'primary.main' }}
+                />
+                <Typography variant="h5" sx={{ mt: 5, mb: 0 }}>
+                  {value.title}
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={9} sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', md: 'start' } }}>
+                <Typography sx={{ color: 'text.secondary', textAlign: { xs: 'center', md: 'start' } }}> {value.description} </Typography>
+              </Grid>
+            </Grid>
           ))}
         </Box>
       </Container>

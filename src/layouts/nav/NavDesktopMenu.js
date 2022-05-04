@@ -138,19 +138,23 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
         },
       }}
     >
-      <Grid container columns={commonList.length > 0 ? 18 : 12} spacing={4}>
+      <Grid container columns={commonList.length > 0 ? {xl: 16, lg: 18, md: 18 } : 12} spacing={2}>
         {/* Common List */}
         {commonList.length > 0 && <Grid
           item
-          xs={7}
-          md={7}
+          xs={6}
+          md={18}
+          lg={6}
+          xl={4}
           sx={{
-            borderRight: (_theme) => `dashed 1px ${_theme.palette.divider}`,
-            ml: 6,
+            lg: {
+              borderRight: (_theme) => `dashed 1px ${_theme.palette.divider}`,
+            },
+            pl: 4,
             pr: 4
           }}
         >
-          <List disablePadding sx={{ py: 6 }} component={MotionContainer}>
+          <List disablePadding sx={{ pt: 4, pb: { md: 2, lg: 4 }, pl: 4 }} component={MotionContainer}>
             {/* <ListSubheaderStyled>{commonList[0].subheaderName}</ListSubheaderStyled> */}
             <m.div variants={varFade({ distance: 80 }).inRight}>
               <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
@@ -167,8 +171,8 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
             </m.div>
           </List>
         </Grid>}
-        <Grid item xs={10} md={10}>
-          <Box sx={{ position: 'relative', px: 2, py: 6, mr: 0 }}>
+        <Grid item xs={12} md={18} lg={12}>
+          <Box sx={{ position: 'relative', px: 2, py: { md: 2, lg: 4 }, mr: 2 }}>
             <Slider ref={carouselRef} {...carouselSettings}>
               {carouselList.map((list) => {
                 const { subheader, items, cover } = list;

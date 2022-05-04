@@ -31,7 +31,7 @@ const RootStyle = styled('div')(({ theme }) => ({
       direction: 'right',
       url: 'https://zone-assets-api.vercel.app/assets/images/travel/travel_newsletter.jpg',
       startColor: `${alpha(theme.palette.grey[900], 0)} 0%`,
-      endColor: `${alpha(theme.palette.grey[900], 1)} 50%`,
+      endColor: `${alpha(theme.palette.grey[900], 1)} 40%`,
     }),
     backgroundPosition: 'center, left ',
     backgroundSize: 'cover, auto 100%',
@@ -45,33 +45,38 @@ export default function NewsletterTravel({ title, comment, link, url }) {
   return (
     <RootStyle>
       <Container>
-        <Grid container spacing={3} justifyContent="flex-end">
-          <Grid item xs={12} md={5}>
-            <Stack
-              spacing={3}
+        <Grid container spacing={8} justifyContent="flex-end">
+          <Grid item xs={12} md={8}>
+            <Grid container columns={8}
+              spacing={8}
               sx={{
                 color: 'common.white',
                 textAlign: { xs: 'center', md: 'left' },
+                minHeight: '20rem'
               }}
             >
-              <Typography variant="h2">{title[0]}</Typography>
-              <Typography>
-                {comment[0]}
-              </Typography>
-              <NextLink href={url[0]} passHref>
-                <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' } }}>
-                  {link[0]}
+              <Grid item xs={8} md={4}>
+                <Typography variant="h3">{title[0]}</Typography>
+                <Typography>
+                  {comment[0]}
                 </Typography>
-              </NextLink>
-              <Typography variant="h2">{title[1]}</Typography>
-              <Typography>
-                {comment[1]}
-              </Typography>
-              <NextLink href={url[1]} passHref>
-                <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' } }}>
-                  {link[1]}
+                <NextLink href={url[0]} passHref>
+                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4}}>
+                    {link[0]}
+                  </Typography>
+                </NextLink>
+              </Grid>
+              <Grid item xs={8} md={4}>
+                <Typography variant="h3">{title[1]}</Typography>
+                <Typography>
+                  {comment[1]}
                 </Typography>
-              </NextLink>
+                <NextLink href={url[1]} passHref>
+                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4}}>
+                    {link[1]}
+                  </Typography>
+                </NextLink>
+              </Grid>
 
               {/* <FilledInput
                 fullWidth
@@ -91,7 +96,7 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                   },
                 }}
               /> */}
-            </Stack>
+            </Grid>
           </Grid>
         </Grid>
       </Container>

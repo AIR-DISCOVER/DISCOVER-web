@@ -14,4 +14,4 @@ On February 24, the world's first Vehicle-Infrastructure Cooperative Autonomous 
 
 "Excellent research platform, high quality humanistic environment and excellent academic talents are the common reasons for both scientists to join AIR.
 
-[jump test](https://www.baidu.com)
+[Click me to visit Baidu](https://www.baidu.com)
