@@ -37,7 +37,7 @@ export default function TeamMarketingMember({ member }) {
                 easing: theme.transitions.easing.sharp,
                 duration: theme.transitions.duration.short,
               }),
-            '&:hover': { opacity: 1 },
+            // '&:hover': { opacity: 1 },
           }}
         >
           <Box
@@ -50,7 +50,7 @@ export default function TeamMarketingMember({ member }) {
               justifyContent: 'center',
             }}
           >
-            <SocialsButton color="primary" links={socialLinks} />
+            {/* <SocialsButton color="primary" links={socialLinks} /> */}
           </Box>
         </BgOverlay>
 

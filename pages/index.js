@@ -1,6 +1,6 @@
 // _data
 // layouts
-import Layout from '../src/layouts';
+import Layout from '../src/layouts/specialLayout';
 // components
 import { Page } from '../src/components';
 // sections
@@ -26,19 +26,16 @@ export default function HomePage() {
 
   }
   const onClick = () => {
-    // console.log(tab)
     // let next = dict[tab]
     // setTab(next)
     // controlRef.current && controlRef.current.setTrig(tab, next)
-    console.log('test')
-    console.log(controlRef)
     controlRef.current && controlRef.current.reset()
   }
   return (
     <Page title="Home">
-      <Background cref={controlRef} />
+      {/* <Background cref={controlRef} /> */}
 
-      <HomeAdvertisement onClick={onClick} pack={{ overline: '', main: 'DISCOVER.', button: 'Explore' }} />
+      <HomeAdvertisement onClick={() => { }} pack={{ overline: 'Towards unknown. Towards future. ', main: 'DISCOVER.', button: 'Explore' }} />
 
       {/* <HomeHero />
 

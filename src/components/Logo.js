@@ -15,7 +15,7 @@ Logo.propTypes = {
   sx: PropTypes.object,
 };
 
-function Logo({ force, isSimple = false, width = 120, sx }) {
+function Logo({ force, isSimple = false, width = 120, sx, withoutText = false }) {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
 
@@ -24,12 +24,14 @@ function Logo({ force, isSimple = false, width = 120, sx }) {
   const _DARK_COLOR = theme.palette.grey[800];
 
   var src = '';
-  if (force) {
+  if (withoutText) {
+    src = '/logo/discover-icon-without-text.png'
+  }
+  else if (force) {
     src = force == 'light' ? "/logo/discover-icon-alpha-black.png" : "/logo/discover-icon-alpha.png"
   } else {
     src = !isLight ? "/logo/discover-icon-alpha.png" : "/logo/discover-icon-alpha-black.png";
   }
-  console.log(src)
   return (
     <NextLink href="/" passHref>
       <Box

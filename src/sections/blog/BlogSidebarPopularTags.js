@@ -5,7 +5,15 @@ import { PropTypes } from 'prop-types';
 import { useState } from 'react';
 // ----------------------------------------------------------------------
 
-import { TAGS } from '../../../_data/config';
+// import { TAGS } from '../../../_data/config';
+import * as SUN from '../../../_data/sun-config';
+import * as HCI from '../../../_data/hci-config';
+import * as ROBOTICS from '../../../_data/robotics-config';
+const TAGS = {
+  'hci': HCI.TAGS,
+  'sun': SUN.TAGS,
+  'mechanic': ROBOTICS.TAGS,
+}
 // ----------------------------------------------------------------------
 
 BlogSidebarPopularTags.propTypes = {

@@ -6,8 +6,17 @@ import { useState } from 'react';
 
 // ----------------------------------------------------------------------
 
-import { CATEGORIES } from '../../../_data/config';
+// import { CATEGORIES } from '../../../_data/config';
+import * as SUN from '../../../_data/sun-config';
+import * as HCI from '../../../_data/hci-config';
+import * as ROBOTICS from '../../../_data/robotics-config';
 // ----------------------------------------------------------------------
+
+const CATEGORIES = {
+  'hci': HCI.CATEGORIES,
+  'sun': SUN.CATEGORIES,
+  'machanic': ROBOTICS.CATEGORIES,
+}
 
 BlogSidebarCategories.propTypes = {
   onSetCate: PropTypes.func,

@@ -12,9 +12,9 @@ const Routes = {
     post: (slug) => `/sun/blog/${slug}`
   },
   mechanic: {
-    landing: '/mechanic',
-    posts: '/mechanic/blog',
-    post: (slug) => `/mechanic/blog/${slug}`
+    landing: '/robotics',
+    posts: '/robotics/blog',
+    post: (slug) => `/robotics/blog/${slug}`
   },
   // Marketing
   marketing: {
@@ -59,6 +59,12 @@ const Routes = {
     about: '/e-learning/about-us',
     contact: '/e-learning/contact-us',
   },
+  programs: {
+    visiting: '/programs/visiting',
+    visiting_summer_camp: '/programs/visiting#summer-camp',
+    visiting_winter_camp: '/programs/visiting#winter-camp',
+    visiting_program: '/programs/visiting#program',
+  },
   // Common
   loginCover: '/auth/login-cover',
   registerCover: '/auth/register-cover',
@@ -74,6 +80,12 @@ const Routes = {
   support: '/support',
   page404: '/404',
   page500: '/500',
+  people: '/people',
+  news: '/news',
+  aboutus: '/about-us',
+  aboutus_core_value: '/about-us#core-value',
+  aboutus_partner: '/about-us#partner',
+  aboutus_join_us: '/about-us#joinus',
   // Others
   pages: '/pages',
   componentsUI: '/components-ui',

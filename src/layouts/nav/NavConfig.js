@@ -2,45 +2,92 @@
 import Routes from '../../routes';
 // _data
 
-import { HCI_COVER_PIC, SUN_COVER_PIC, MECHANIC_COVER_PIC } from '_data/config';
+import {
+  DISCOVER_RESEARCH_AREA, DISCOVER_PROGRAMS_OVERVIEW,
+} from '_data/config';
 
+import * as HCI from '../../../_data/hci-config'
+import * as SUN from '../../../_data/sun-config'
+import * as ROBOTICS from '../../../_data/robotics-config'
 // ----------------------------------------------------------------------
 
-export const PageLinks = [
+export const ProgramsPageLinks = [
   {
     order: '1',
-    subheader: 'AIR-SUN',
-    cover: SUN_COVER_PIC,
-    items: [
-      { title: 'Introduction', path: Routes.sun.landing },
-      { title: 'Research Projects', path: Routes.sun.posts },
-    ],
+    subheader: 'Common',
+    description: DISCOVER_PROGRAMS_OVERVIEW,
+    items: [],
   },
   {
     order: '2',
-    subheader: 'HCI',
-    cover: HCI_COVER_PIC,
+    subheader: 'PostDoctoral Program',
+    // cover: SUN_COVER_PIC,
     items: [
-      { title: 'Introduction', path: Routes.hci.landing },
-      { title: 'Research Projects', path: Routes.hci.posts },
+      { title: 'PostDoctoral Program', path: Routes.comingsoon },
     ],
   },
   {
     order: '3',
-    subheader: 'Robotics',
-    cover: MECHANIC_COVER_PIC,
+    subheader: 'PostGraduate Program',
+    // cover: HCI_COVER_PIC,
     items: [
-      { title: 'Introduction', path: Routes.mechanic.landing },
-      { title: 'Research Projects', path: Routes.mechanic.posts },
+      { title: 'PostGraduate Program', path: Routes.comingsoon },
+    ],
+  },
+  {
+    order: '4',
+    subheader: 'UnderGraduate Enrichment',
+    // cover: MECHANIC_COVER_PIC,
+    items: [
+      { title: 'Introduction to Intelligent Systems', path: Routes.comingsoon },
+      { title: 'RoboMater University AI Challenge', path: Routes.comingsoon },
+      { title: 'Student Research Training', path: Routes.comingsoon },
+      { title: 'Final Year Project', path: Routes.comingsoon },
+    ],
+  },
+  {
+    order: '5',
+    subheader: 'Visiting Program',
+    // cover: MECHANIC_COVER_PIC,
+    items: [
+      { title: 'Winter Camp Program', path: Routes.programs.visiting_winter_camp },
+      { title: 'Summer Camp Program', path: Routes.programs.visiting_summer_camp },
+      { title: 'Internship Program', path: Routes.programs.visiting_program },
+    ],
+  },
+]
+export const ResearchPageLinks = [
+  {
+    order: '1',
+    subheader: 'Robotics Group',
+    cover: ROBOTICS.COVER_PIC,
+    items: [
+      { title: 'A brief sentence about robotics group.', path: Routes.mechanic.landing },
+    ],
+  },
+  {
+    order: '2',
+    subheader: 'Vision Group',
+    cover: SUN.COVER_PIC,
+    items: [
+      { title: 'A brief sentence about the computer vision group.', path: Routes.sun.landing },
+      // { title: 'Research Projects', path: Routes.sun.posts },
+    ],
+  },
+  {
+    order: '3',
+    subheader: 'HCI Group',
+    cover: HCI.COVER_PIC,
+    items: [
+      { title: 'A brief sentence about HCI group.', path: Routes.hci.landing },
+      // { title: 'Research Projects', path: Routes.hci.posts },
     ],
   },
   {
     order: '4',
     subheader: 'Common',
-    subheaderName: 'Research Area',
+    description: DISCOVER_RESEARCH_AREA,
     items: [
-      { title: 'Project 1', path: Routes.page404 },
-      { title: 'Project 2', path: Routes.page404 },
     ],
   },
 ];
@@ -50,22 +97,23 @@ export const navConfig = [
   {
     title: 'Research',
     path: Routes.pages,
-    children: [...PageLinks],
+    children: [...ResearchPageLinks],
+  },
+  {
+    title: 'Programs',
+    path: Routes.comingsoon,
+    children: [...ProgramsPageLinks],
   },
   {
     title: 'People',
-    path: Routes.page404,
+    path: Routes.people,
   },
   {
     title: 'News',
-    path: Routes.page404,
+    path: Routes.news,
   },
   {
-    title: 'Teaching',
-    path: Routes.page404,
+    title: 'About Us',
+    path: Routes.aboutus,
   },
-  // {
-  //   title: 'About Us',
-  //   path: Routes.page404,
-  // },
 ];

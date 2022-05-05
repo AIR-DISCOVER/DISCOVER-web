@@ -33,6 +33,7 @@ import RtlLayout from '../src/components/RtlLayout';
 import ProgressBar from '../src/components/ProgressBar';
 import ThemeColorPresets from '../src/components/ThemeColorPresets';
 import MotionLazyContainer from '../src/components/animate/MotionLazyContainer';
+import GlobalStateStore from '../src/store/GlobalStateStore';
 
 // ----------------------------------------------------------------------
 
@@ -60,9 +61,11 @@ export default function MyApp(props) {
             <ThemeColorPresets>
               <MotionLazyContainer>
                 <RtlLayout>
-                  <Settings />
-                  <ProgressBar />
-                  {getLayout(<Component {...pageProps} />)}
+                  <GlobalStateStore>
+                    {/* <Settings /> */}
+                    <ProgressBar />
+                    {getLayout(<Component {...pageProps} />)}
+                  </GlobalStateStore>
                 </RtlLayout>
               </MotionLazyContainer>
             </ThemeColorPresets>

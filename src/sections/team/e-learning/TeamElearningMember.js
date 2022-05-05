@@ -30,7 +30,7 @@ export default function TeamElearningMember({ member }) {
       <Box sx={{ position: 'relative' }}>
         <Shape />
 
-        <BgOverlay
+        {/* <BgOverlay
           sx={{
             opacity: 0,
             transition: (theme) =>
@@ -40,8 +40,8 @@ export default function TeamElearningMember({ member }) {
               }),
             '&:hover': { opacity: 1 },
           }}
-        >
-          <Box
+        > */}
+          {/* <Box
             sx={{
               width: 1,
               zIndex: 9,
@@ -52,8 +52,8 @@ export default function TeamElearningMember({ member }) {
             }}
           >
             <SocialsButton color="primary" links={socialLinks} />
-          </Box>
-        </BgOverlay>
+          </Box> */}
+        {/* </BgOverlay> */}
         <Image src={photo} alt={name} ratio="1/1" />
       </Box>
     </Card>

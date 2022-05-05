@@ -23,15 +23,28 @@ TeamElearningAbout.propTypes = {
 export default function TeamElearningAbout({ members }) {
   return (
     <RootStyle>
-      <Container>
+      <Container sx={{
+
+        mt: { xs: 2, md: 8 },
+        mb: { xs: 2, md: 8 },
+      }}>
         <Typography
           variant="h2"
           sx={{
             textAlign: 'center',
-            mb: { xs: 8, md: 10 },
+            mb: { xs: 2, md: 2 },
           }}
         >
-          Our Teachers
+          Meet our team
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            textAlign: 'center',
+            mb: { xs: 8, md: 10, opacity: 0.72 },
+          }}
+        >
+          Great Team is the Key to Success
         </Typography>
 
         <Box

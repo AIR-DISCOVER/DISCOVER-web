@@ -12,6 +12,8 @@ import { Grid, Box, Container, Typography, Button } from '@mui/material';
 import { fShortenNumber } from '../../../utils/formatNumber';
 // components
 import { Iconify, CountUpNumber, Image } from '../../../components';
+import { DISCOVER_INTRO } from '_data/config';
+import Routes from 'src/routes';
 
 // ----------------------------------------------------------------------
 
@@ -83,23 +85,51 @@ export default function MarketingAbout() {
           <Grid item xs={12} md={6} lg={6} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             <Typography variant="h2">Who We Are?</Typography>
             <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
-              Vivamus consectetuer hendrerit lacus. Curabitur a felis in nunc fringilla tristique.
-              Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit.
-              <br />
-              <br />
-              Nam pretium turpis et arcu. Praesent porttitor, nulla vitae posuere iaculis, arcu nisl
-              dignissim dolor, a pretium mi sem ut ipsum. Praesent venenatis metus at tortor
-              pulvinar varius.
+              {DISCOVER_INTRO}
             </Typography>
 
-            <Button
-              variant="outlined"
-              color="inherit"
-              size="large"
-              endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
-            >
-              Check Our Work
-            </Button>
+            <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+              Check our work:
+            </Typography>
+            {/* <Grid container spacing={2} xs={12} md={12} lg={12} width="100%" alignItems='center' justifyContent='center'> */}
+              {/* <Grid item md={12} lg={4}> */}
+
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  size="large"
+                  sx={{mr: 1, mt: 1}}
+                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+                  href={Routes.mechanic.landing}
+                  >
+                  Robotics Group
+                </Button>
+              {/* </Grid> */}
+              {/* <Grid item md={12} lg={4}> */}
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  size="large"
+                  sx={{mr: 1, mt: 1}}
+                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+                  href={Routes.sun.landing}
+                  >
+                  Vision Group
+                </Button>
+              {/* </Grid> */}
+              {/* <Grid item md={12} lg={4}> */}
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  size="large"
+                  sx={{mr: 1, mt: 1}}
+                  href={Routes.hci.landing}
+                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+                  >
+                  HCI Group
+                </Button>
+              {/* </Grid> */}
+            {/* </Grid> */}
           </Grid>
         </Grid>
 
@@ -109,7 +139,7 @@ export default function MarketingAbout() {
           }}
         />
 
-        <Box
+        {/* <Box
           sx={{
             textAlign: 'center',
             display: 'grid',
@@ -124,7 +154,7 @@ export default function MarketingAbout() {
           {SUMMARY.map((value, index) => (
             <BoxItem key={value.title} value={value} index={index} />
           ))}
-        </Box>
+        </Box> */}
       </Container>
     </RootStyle>
   );

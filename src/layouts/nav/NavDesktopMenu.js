@@ -93,13 +93,19 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
   const minList = lists.length > 5;
 
   const carouselSettings = {
-    arrows: false,
+    arrows: true,
+    autoplay: true,
+    autoplayspeed: 50,
     dots: true,
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     rtl: Boolean(theme.direction === 'rtl'),
-    ...CarouselDots(),
+    ...CarouselDots({
+      sx: {
+        pt: 8
+      }
+    }),
   };
 
   const handlePrevious = () => {
@@ -138,9 +144,41 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
         },
       }}
     >
-      <Grid container columns={commonList.length > 0 ? 18 : 12} spacing={4}>
-        <Grid item xs={12}>
-          <Box sx={{ position: 'relative', px: 2, py: 6, ml: 8 }}>
+      <Grid container columns={commonList.length > 0 ? { xl: 16, lg: 18, md: 18 } : 12} spacing={2}>
+        {/* Common List */}
+        {commonList.length > 0 && <Grid
+          item
+          xs={6}
+          md={18}
+          lg={6}
+          xl={4}
+          sx={{
+            lg: {
+              borderRight: (_theme) => `dashed 1px ${_theme.palette.divider}`,
+            },
+            pl: 4,
+            pr: 4
+          }}
+        >
+          <List disablePadding sx={{ pt: 4, pb: { md: 2, lg: 4 }, pl: 4 }} component={MotionContainer}>
+            {/* <ListSubheaderStyled>{commonList[0].subheaderName}</ListSubheaderStyled> */}
+            <m.div variants={varFade({ distance: 80 }).inRight}>
+              <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
+                {commonList[0].description}
+              </Typography>
+              <Stack spacing={1.5} alignItems="flex-start">
+                {commonList[0].items.map((item) => {
+                  const { title, path } = item;
+                  const active = router.pathname === path;
+
+                  return <LinkItem key={title} title={title} href={path} active={active}/>;
+                })}
+              </Stack>
+            </m.div>
+          </List>
+        </Grid>}
+        <Grid item xs={12} md={18} lg={12}>
+          <Box sx={{ position: 'relative', px: 2, py: { md: 2, lg: 4 }, mr: 2 }}>
             <Slider ref={carouselRef} {...carouselSettings}>
               {carouselList.map((list) => {
                 const { subheader, items, cover } = list;
@@ -175,23 +213,25 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
                           />
                         </Box>
                       </NextLink>
-                    ) : (
-                      <Box
-                        sx={{
-                          mb: 2.5,
-                          height: 132,
-                          borderRadius: 1.5,
-                          display: 'flex',
-                          typography: 'h5',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          color: 'text.disabled',
-                          bgcolor: 'background.neutral',
-                        }}
-                      >
-                        Coming Soon!
-                      </Box>
-                    )}
+                    ) : undefined
+                      // (
+                      //   <Box
+                      //     sx={{
+                      //       mb: 2.5,
+                      //       height: 132,
+                      //       borderRadius: 1.5,
+                      //       display: 'flex',
+                      //       typography: 'h5',
+                      //       alignItems: 'center',
+                      //       justifyContent: 'center',
+                      //       color: 'text.disabled',
+                      //       bgcolor: 'background.neutral',
+                      //     }}
+                      //   >
+                      //     Coming Soon!
+                      //   </Box>
+                      // )
+                    }
 
                     <Stack spacing={1.5} alignItems="flex-start">
                       {items?.map((item) => {
@@ -220,30 +260,6 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
             )}
           </Box>
         </Grid>
-
-        {/* Common List */}
-        {commonList.length > 0 && <Grid
-          item
-          xs={5}
-          sx={{
-            borderLeft: (_theme) => `dashed 1px ${_theme.palette.divider}`,
-          }}
-        >
-          <List disablePadding sx={{ py: 6 }} component={MotionContainer}>
-            <ListSubheaderStyled>{commonList[0].subheaderName}</ListSubheaderStyled>
-            <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
-              {DISCOVER_RESEARCH_AREA}
-            </Typography>
-            <Stack spacing={1.5} alignItems="flex-start">
-              {commonList[0].items.map((item) => {
-                const { title, path } = item;
-                const active = router.pathname === path;
-
-                return <LinkItem key={title} title={title} href={path} active={active} />;
-              })}
-            </Stack>
-          </List>
-        </Grid>}
       </Grid>
     </DialogAnimate>
   );
@@ -274,7 +290,7 @@ function LinkItem({ title, href, active }) {
         }
       >
         <SubLinkStyle active={active}>
-          <IconBulletStyle active={active} />
+          {/* <IconBulletStyle active={active} /> */}
           {title}
         </SubLinkStyle>
       </Link>

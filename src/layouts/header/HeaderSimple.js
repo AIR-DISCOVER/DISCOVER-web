@@ -37,7 +37,7 @@ export default function HeaderSimple({ transparent }) {
         >
           <Logo onDark={transparent && !isScrolling} />
 
-          <Stack
+          {/* <Stack
             direction="row"
             alignItems="center"
             divider={<Divider orientation="vertical" sx={{ height: 24 }} />}
@@ -61,7 +61,7 @@ export default function HeaderSimple({ transparent }) {
                 Support
               </Link>
             </NextLink>
-          </Stack>
+          </Stack> */}
         </Container>
       </ToolbarStyle>
 

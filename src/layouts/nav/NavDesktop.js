@@ -69,7 +69,7 @@ NavDesktop.propTypes = {
   navConfig: PropTypes.array.isRequired,
 };
 
-export default function NavDesktop({ isScrolling, isTransparent, navConfig }) {
+export default function NavDesktop({ isScrolling, isTransparent, navConfig, onEnter = () => { } }) {
   return (
     <Stack
       direction="row"
@@ -91,6 +91,7 @@ export default function NavDesktop({ isScrolling, isTransparent, navConfig }) {
           item={link}
           isScrolling={isScrolling}
           isTransparent={isTransparent}
+          onEnter={onEnter}
         />
       ))}
     </Stack>
@@ -109,7 +110,7 @@ NavItemDesktop.propTypes = {
   }),
 };
 
-function NavItemDesktop({ item, isScrolling, isTransparent }) {
+function NavItemDesktop({ item, isScrolling, isTransparent, onEnter = () => { } }) {
   const { title, path, children } = item;
 
   const { pathname, asPath } = useRouter();
@@ -141,6 +142,7 @@ function NavItemDesktop({ item, isScrolling, isTransparent }) {
           open={open}
           scrolling={isScrolling}
           transparent={isTransparent}
+          onMouseEnter={() => {onEnter(title)}}
         >
           {title}
           <Iconify
@@ -163,23 +165,14 @@ function NavItemDesktop({ item, isScrolling, isTransparent }) {
     );
   }
 
-  if (title === 'Documentation') {
-    return (
+  return (
+    <NextLink key={title} href={path} passHref>
       <RootLinkStyle
-        href={path}
-        target="_blank"
-        rel="noopener"
+        onMouseEnter={() => onEnter(title)}
+        active={isActiveRoot}
         scrolling={isScrolling}
         transparent={isTransparent}
       >
-        {title}
-      </RootLinkStyle>
-    );
-  }
-
-  return (
-    <NextLink key={title} href={path} passHref>
-      <RootLinkStyle active={isActiveRoot} scrolling={isScrolling} transparent={isTransparent}>
         {title}
       </RootLinkStyle>
     </NextLink>
