@@ -54,7 +54,7 @@ export default function HomeAdvertisement({ onClick, pack }) {
         <Typography variant="h3" sx={{ opacity: 0.72 }}>
           {pack?.overline}
         </Typography>
-        <Typography variant="h1" component="h2" sx={{ mt: 1, mb: 8 }}>
+        <Typography variant="h1" component="h2" sx={{ mt: 1, mb: 8, textShadow: '4px 4px 8px #444444' }}>
           {pack?.main}
         </Typography>
         {/* <Button

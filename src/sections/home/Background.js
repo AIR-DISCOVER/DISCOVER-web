@@ -9,9 +9,10 @@ import { useInterval } from 'react-use';
 // components
 
 import Scene from '../../legacy';
-import { useEffect, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { set } from 'date-fns';
 import { Box } from '@mui/material';
+import { Context } from 'src/store/GlobalStateStore';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(() => ({
@@ -32,42 +33,41 @@ const BackgroundStyle = styled('div')(({ theme, progress, fade }) => ({
     width: '100vw',
     height: '100vh',
     position: 'absolute',
-    backgroundColor: alpha(theme.palette.grey[900], progress < 1 ? 1 : (1 - 0.6 * fade)),
+    backgroundColor: alpha(theme.palette.grey[900], progress < 1 ? 1 : (1- 0.6 * fade)),
   },
 }));
 
 
 
 export default function Background({ cref }) {
-  const { offsetX, offsetY, onMouseMoveHandler, onMouseLeaveHandler } = useHoverParallax();
-  const [timer, setTimer] = useState(0)
-  const [progress, setProgress] = useState(0.);
-  const ref = useRef()
-  ref.current = 0.
-  const [count, setCount] = useState(0);
-  const [interval, setInterval] = useState(null);
 
+  const { offsetX, offsetY, onMouseMoveHandler, onMouseLeaveHandler } = useHoverParallax();
+  const [store, dispatch] = useContext(Context)
+  const [interval, setInterval] = useState(null);
   const onSetProgress = (_progress) => {
-    setProgress(_progress)
-    // ref.current = _progress
-    if (_progress >= 100) { setInterval(50); console.log('start') }
+    dispatch({ type: 'PROGRESS_INCREASE', payload: _progress })
   }
 
   useInterval(
     () => {
-      setCount(count + 50)
+      dispatch({ type: 'FADE_SET', payload: store.fade + 100 })
     }, interval
   )
 
-  useEffect(() => { }, [])
+  useEffect(() => {
+    if (store.progress >= 100) {
+      dispatch({ type: 'FADE_SET', payload: 0. })
+    }
+  }, [])
 
   useEffect(() => {
-    if (count > 1000) setInterval(null)
-  }, [count])
+    if (store.fade > 1000) setInterval(null)
+    else if (store.progress >= 100) setInterval(100)
+  }, [store])
 
   return (
     <RootStyle onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler}>
-      <BackgroundInner cref={cref} offsetX={offsetX} offsetY={offsetY} progress={progress} setProgress={onSetProgress} fade={count / 1000} />
+      <BackgroundInner cref={cref} offsetX={offsetX} offsetY={offsetY} progress={store.progress} setProgress={onSetProgress} fade={store.fade / 1000} />
     </RootStyle>
   );
 }
