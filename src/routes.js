@@ -59,6 +59,12 @@ const Routes = {
     about: '/e-learning/about-us',
     contact: '/e-learning/contact-us',
   },
+  programs: {
+    visiting: '/programs/visiting',
+    visiting_summer_camp: '/programs/visiting#summer-camp',
+    visiting_winter_camp: '/programs/visiting#winter-camp',
+    visiting_program: '/programs/visiting#program',
+  },
   // Common
   loginCover: '/auth/login-cover',
   registerCover: '/auth/register-cover',

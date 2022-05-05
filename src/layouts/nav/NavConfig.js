@@ -3,9 +3,12 @@ import Routes from '../../routes';
 // _data
 
 import {
-  HCI_COVER_PIC, SUN_COVER_PIC, MECHANIC_COVER_PIC, DISCOVER_RESEARCH_AREA, DISCOVER_PROGRAMS_OVERVIEW
+  DISCOVER_RESEARCH_AREA, DISCOVER_PROGRAMS_OVERVIEW,
 } from '_data/config';
 
+import * as HCI from '../../../_data/hci-config'
+import * as SUN from '../../../_data/sun-config'
+import * as ROBOTICS from '../../../_data/robotics-config'
 // ----------------------------------------------------------------------
 
 export const ProgramsPageLinks = [
@@ -21,7 +24,6 @@ export const ProgramsPageLinks = [
     // cover: SUN_COVER_PIC,
     items: [
       { title: 'PostDoctoral Program', path: Routes.comingsoon },
-      // { title: 'Research Projects', path: Routes.comingsoon },
     ],
   },
   {
@@ -30,7 +32,6 @@ export const ProgramsPageLinks = [
     // cover: HCI_COVER_PIC,
     items: [
       { title: 'PostGraduate Program', path: Routes.comingsoon },
-      // { title: 'Research Projects', path: Routes.comingsoon },
     ],
   },
   {
@@ -49,9 +50,9 @@ export const ProgramsPageLinks = [
     subheader: 'Visiting Program',
     // cover: MECHANIC_COVER_PIC,
     items: [
-      { title: 'Winter Camp Program', path: Routes.comingsoon },
-      { title: 'Summer Camp Program', path: Routes.comingsoon },
-      { title: 'Internship Program', path: Routes.comingsoon },
+      { title: 'Winter Camp Program', path: Routes.programs.visiting_winter_camp },
+      { title: 'Summer Camp Program', path: Routes.programs.visiting_summer_camp },
+      { title: 'Internship Program', path: Routes.programs.visiting_program },
     ],
   },
 ]
@@ -59,7 +60,7 @@ export const ResearchPageLinks = [
   {
     order: '1',
     subheader: 'Robotics Group',
-    cover: MECHANIC_COVER_PIC,
+    cover: ROBOTICS.COVER_PIC,
     items: [
       { title: 'A brief sentence about robotics group.', path: Routes.mechanic.landing },
     ],
@@ -67,7 +68,7 @@ export const ResearchPageLinks = [
   {
     order: '2',
     subheader: 'Vision Group',
-    cover: SUN_COVER_PIC,
+    cover: SUN.COVER_PIC,
     items: [
       { title: 'A brief sentence about the computer vision group.', path: Routes.sun.landing },
       // { title: 'Research Projects', path: Routes.sun.posts },
@@ -76,7 +77,7 @@ export const ResearchPageLinks = [
   {
     order: '3',
     subheader: 'HCI Group',
-    cover: HCI_COVER_PIC,
+    cover: HCI.COVER_PIC,
     items: [
       { title: 'A brief sentence about HCI group.', path: Routes.hci.landing },
       // { title: 'Research Projects', path: Routes.hci.posts },

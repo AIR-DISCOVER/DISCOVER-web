@@ -1,2 +1,2 @@
-import { HCI_MEMBERS } from '../../config'
-export const _members = HCI_MEMBERS;
+import { MEMBERS } from '../../hci-config'
+export const _members = MEMBERS;

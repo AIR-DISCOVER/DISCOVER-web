@@ -1,2 +1,2 @@
-import { MECHANIC_MEMBERS } from '../../config';
-export const _members = MECHANIC_MEMBERS;
+import { MEMBERS } from '../../robotics-config';
+export const _members = MEMBERS;

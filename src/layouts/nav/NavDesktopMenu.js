@@ -171,7 +171,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
                   const { title, path } = item;
                   const active = router.pathname === path;
 
-                  return <LinkItem key={title} title={title} href={path} active={active} />;
+                  return <LinkItem key={title} title={title} href={path} active={active}/>;
                 })}
               </Stack>
             </m.div>
