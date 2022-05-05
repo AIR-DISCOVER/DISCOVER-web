@@ -39,10 +39,10 @@ export const ProgramsPageLinks = [
     subheader: 'UnderGraduate Enrichment',
     // cover: MECHANIC_COVER_PIC,
     items: [
-      { title: 'Introduction to Intelligent Systems', path: Routes.comingsoon },
-      { title: 'RoboMater University AI Challenge', path: Routes.comingsoon },
-      { title: 'Student Research Training', path: Routes.comingsoon },
-      { title: 'Final Year Project', path: Routes.comingsoon },
+      { title: 'Introduction to Intelligent Systems', path: Routes.programs.undergraduate_is },
+      { title: 'RoboMater University AI Challenge', path: Routes.programs.undergraduate_robomaster },
+      { title: 'Student Research Training', path: Routes.programs.undergraduate_srt },
+      { title: 'Final Year Project', path: Routes.programs.undergraduate_fyp },
     ],
   },
   {

@@ -182,3 +182,61 @@ export const VISITING_PROGRAM = {
     },
   ],
 }
+
+export const INTELLIGENT_SYSTEM_PROGRAM = {
+  title: "intelligent system program title",
+  intro: "intelligent system program intro",
+  imageURL: "https://zone-assets-api.vercel.app/assets/illustrations/illustration_teams.svg",
+  beforeEntry: "Sign up: ",
+  entry: [
+    {
+      id: 1,
+      description: 'intelligent system program',
+      href: Routes.comingsoon,
+    },
+  ],
+}
+
+export const ROBOMASTER_PROGRAM = {
+  title: "robomaster program title",
+  intro: "robomaster program intro",
+  imageURL: "https://zone-assets-api.vercel.app/assets/illustrations/illustration_teams.svg",
+  beforeEntry: "Sign up: ",
+  entry: [
+    {
+      id: 1,
+      description: 'robomaster program',
+      href: Routes.comingsoon,
+    },
+  ],
+  reverse: true
+}
+
+export const SRT_PROGRAM = {
+  title: "srt program title",
+  intro: "srt program intro",
+  imageURL: "https://zone-assets-api.vercel.app/assets/illustrations/illustration_teams.svg",
+  beforeEntry: "Sign up: ",
+  entry: [
+    {
+      id: 1,
+      description: 'srt program',
+      href: Routes.comingsoon,
+    },
+  ],
+}
+
+export const FINAL_YEAR_PROGRAM = {
+  title: "final year program title",
+  intro: "final year program intro",
+  imageURL: "https://zone-assets-api.vercel.app/assets/illustrations/illustration_teams.svg",
+  beforeEntry: "Sign up: ",
+  entry: [
+    {
+      id: 1,
+      description: 'final year program',
+      href: Routes.comingsoon,
+    },
+  ],
+  reverse: true
+}

@@ -33,7 +33,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function MarketingAboutUsPage() {
   return (
-    <Page title="About Us - Marketing">
+    <Page title="Visiting Program">
       <RootStyle>
         <a id='summer-camp' />
         <ProgramCard program={SUMMER_CAMP}/>
