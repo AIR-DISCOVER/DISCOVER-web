@@ -23,7 +23,7 @@ import { useResponsive } from '../../hooks';
 // components
 import { Logo, Iconify } from '../../components';
 //
-import { PageLinks } from '../nav/NavConfig';
+// import { PageLinks } from '../nav/NavConfig';
 import { DISCOVER_ABOUT_US_SIMPLE, DISCOVER_CONTACT, DISCOVER_INTRO, DISCOVER_INTRO_EXTRA, DISCOVER_PAGELINKS } from '_data/config';
 import { styled, useTheme } from '@mui/material/styles';
 import { MarketingContactInfo } from 'src/sections/@marketing';
@@ -45,11 +45,11 @@ export default function Footer({ fill }) {
   const isLarge = useResponsive('up', 'lg');
   const theme = useTheme();
 
-  const lists = PageLinks.filter((list) => list.subheader !== 'Coming Soon');
+  // const lists = PageLinks.filter((list) => list.subheader !== 'Coming Soon');
 
-  const renderLists = isDesktop
-    ? lists
-    : lists.sort((listA, listB) => Number(listA.order) - Number(listB.order));
+  // const renderLists = isDesktop
+  //   ? lists
+  //   : lists.sort((listA, listB) => Number(listA.order) - Number(listB.order));
 
   return (
     <div style={{ width: '100%', background: fill ? (theme.palette.background.default) : null }}>

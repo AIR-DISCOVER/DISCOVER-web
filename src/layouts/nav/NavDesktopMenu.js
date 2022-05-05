@@ -93,13 +93,19 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
   const minList = lists.length > 5;
 
   const carouselSettings = {
-    arrows: false,
+    arrows: true,
+    autoplay: true,
+    autoplayspeed: 50,
     dots: true,
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     rtl: Boolean(theme.direction === 'rtl'),
-    ...CarouselDots(),
+    ...CarouselDots({
+      sx: {
+        pt: 8
+      }
+    }),
   };
 
   const handlePrevious = () => {
@@ -138,7 +144,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
         },
       }}
     >
-      <Grid container columns={commonList.length > 0 ? {xl: 16, lg: 18, md: 18 } : 12} spacing={2}>
+      <Grid container columns={commonList.length > 0 ? { xl: 16, lg: 18, md: 18 } : 12} spacing={2}>
         {/* Common List */}
         {commonList.length > 0 && <Grid
           item
@@ -158,7 +164,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
             {/* <ListSubheaderStyled>{commonList[0].subheaderName}</ListSubheaderStyled> */}
             <m.div variants={varFade({ distance: 80 }).inRight}>
               <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3 }}>
-                {DISCOVER_RESEARCH_AREA}
+                {commonList[0].description}
               </Typography>
               <Stack spacing={1.5} alignItems="flex-start">
                 {commonList[0].items.map((item) => {
@@ -207,23 +213,25 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
                           />
                         </Box>
                       </NextLink>
-                    ) : (
-                      <Box
-                        sx={{
-                          mb: 2.5,
-                          height: 132,
-                          borderRadius: 1.5,
-                          display: 'flex',
-                          typography: 'h5',
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          color: 'text.disabled',
-                          bgcolor: 'background.neutral',
-                        }}
-                      >
-                        Coming Soon!
-                      </Box>
-                    )}
+                    ) : undefined
+                      // (
+                      //   <Box
+                      //     sx={{
+                      //       mb: 2.5,
+                      //       height: 132,
+                      //       borderRadius: 1.5,
+                      //       display: 'flex',
+                      //       typography: 'h5',
+                      //       alignItems: 'center',
+                      //       justifyContent: 'center',
+                      //       color: 'text.disabled',
+                      //       bgcolor: 'background.neutral',
+                      //     }}
+                      //   >
+                      //     Coming Soon!
+                      //   </Box>
+                      // )
+                    }
 
                     <Stack spacing={1.5} alignItems="flex-start">
                       {items?.map((item) => {

@@ -78,9 +78,8 @@ const ModernDolly = forwardRef((states, ref) => {
                 dst = [14.30, 0, -22.14, 0, Math.PI / 3, 0]
             } else if (target === 'News') {
                 dst = [9.73, -1, -9.2, 0, Math.PI * 3 / 2, 0]
-            } else if (target === 'Teaching') {
-                // TODO
-                return
+            } else if (target === 'Programs') {
+                dst = [8.17, 0, 6.23, 0, Math.PI * 5 / 12, 0]
             } else if (target === 'About Us') {
                 dst = [16.03, 0, -22.15, 0, Math.PI / 12 * 20, 0]
             } else {

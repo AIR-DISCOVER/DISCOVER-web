@@ -50,7 +50,7 @@ export default function Background({ cref }) {
 
   useInterval(
     () => {
-      dispatch({ type: 'FADE_SET', payload: store.fade + 100 })
+      dispatch({ type: 'FADE_SET', payload: store.fade + 20 })
     }, interval
   )
 
@@ -62,7 +62,7 @@ export default function Background({ cref }) {
 
   useEffect(() => {
     if (store.fade > 1000) setInterval(null)
-    else if (store.progress >= 100) setInterval(100)
+    else if (store.progress >= 100) setInterval(20)
   }, [store])
 
   return (

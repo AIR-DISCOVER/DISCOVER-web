@@ -62,6 +62,7 @@ export default function WasdControls() {
         if (code.current.has('KeyE')) turnLeft(-d / Math.PI * 2)
         moveForward(delta * speedX)
         moveRight(delta * speedY)
+        console.log(camera.position)
     })
     return null
 }

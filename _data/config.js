@@ -127,6 +127,12 @@ export const DISCOVER_RESEARCH_AREA = (
   </p>
 );
 
+export const DISCOVER_PROGRAMS_OVERVIEW = (
+  <p>
+    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>Programs</BoxStyled> DISCOVER Lab conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.comingsoon} passHref><StyledDiv component={'span'}>transportation</StyledDiv></NextLink> and <NextLink href={Routes.comingsoon} passHref><StyledDiv component={'span'}>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
+  </p>
+);
+
 export const DISCOVER_PAGELINKS = [
   {
     order: '1',
