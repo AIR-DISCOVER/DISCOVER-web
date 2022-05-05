@@ -9,7 +9,7 @@ import { useInterval } from 'react-use';
 // components
 
 import Scene from '../../legacy';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { set } from 'date-fns';
 import { Box } from '@mui/material';
 // ----------------------------------------------------------------------
@@ -37,30 +37,37 @@ const BackgroundStyle = styled('div')(({ theme, progress, fade }) => ({
 }));
 
 
+
 export default function Background({ cref }) {
   const { offsetX, offsetY, onMouseMoveHandler, onMouseLeaveHandler } = useHoverParallax();
   const [timer, setTimer] = useState(0)
   const [progress, setProgress] = useState(0.);
+  const ref = useRef()
+  ref.current = 0.
+  const [count, setCount] = useState(0);
+  const [interval, setInterval] = useState(null);
+
   const onSetProgress = (_progress) => {
     setProgress(_progress)
-    if (_progress >= 100) { setInterval(10); console.log('start') }
+    // ref.current = _progress
+    if (_progress >= 100) { setInterval(50); console.log('start') }
   }
-  const [count, setCount] = useState(30);
-  const [interval, setInterval] = useState(null);
 
   useInterval(
     () => {
-      setCount(count + 10)
-      console.log(count)
+      setCount(count + 50)
     }, interval
   )
+
+  useEffect(() => { }, [])
 
   useEffect(() => {
     if (count > 1000) setInterval(null)
   }, [count])
+
   return (
     <RootStyle onMouseMove={onMouseMoveHandler} onMouseLeave={onMouseLeaveHandler}>
-      <BackgroundInner cref={cref} offsetX={offsetX} offsetY={offsetY} progress={progress} setProgress={onSetProgress} fade={Math.min(count / 10, 1)} />
+      <BackgroundInner cref={cref} offsetX={offsetX} offsetY={offsetY} progress={progress} setProgress={onSetProgress} fade={count / 1000} />
     </RootStyle>
   );
 }
@@ -90,7 +97,10 @@ function BackgroundInner({ offsetX, offsetY, cref, progress, setProgress, fade }
   return (
     <BackgroundStyle progress={progress} fade={fade}>
       {progress < 100 ? (
-        < LinearProgress variant='determinate' value={progress} bar={{ transition: 'none' }} sx={{ width: '100%', }} />
+        // <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', paddingTop: '10rem', position: 'absolute' }}>
+
+        <LinearProgress variant='determinate' value={progress} bar={{ transition: 'none' }} sx={{ zIndex: 9 }} />
+        // </div>
       ) : null}
       <Scene cref={cref} modelCallback={setProgress} />
     </BackgroundStyle>
