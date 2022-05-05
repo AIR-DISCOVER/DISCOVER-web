@@ -64,6 +64,11 @@ const Routes = {
     visiting_summer_camp: '/programs/visiting#summer-camp',
     visiting_winter_camp: '/programs/visiting#winter-camp',
     visiting_program: '/programs/visiting#program',
+    undergraduate: '/programs/undergraduate',
+    undergraduate_is: '/programs/undergraduate#intelligent-system',
+    undergraduate_robomaster: '/programs/undergraduate#robomaster',
+    undergraduate_srt: '/programs/undergraduate#srt',
+    undergraduate_fyp: '/programs/undergraduate#final-year-project',
   },
   // Common
   loginCover: '/auth/login-cover',
