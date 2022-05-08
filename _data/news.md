@@ -1,10 +1,10 @@
-#### 02/17  AIR & Dji: RoboMaster University Sim2Real Challenge
+#### 02/17  Dji: RoboMaster University Sim2Real Challenge
 
 ICRA (IEEE International Conference on Robotics and Automation) is the top annual conference in robotics and automation organized by the Institute of Electrical and Electronics Engineers (IEEE).
 
 <br />
 
-#### 10/15  AIR DISCOVER | WANG He: Estimation and Tracking of 6Dof Pose
+#### 10/15  AIR DISCOVER | WANG He: Estimation and Tracking of Dof Pose
 
 The 6Dof Pose, (including 3Dof Translation and 3Dof Rotation) is an important physical property to transform the object from the world coordinate system to the camera coordinate system, and the estimation and tracking of the 6Dof Pose is widely used in robot vision, grasping and control.
 

@@ -66,8 +66,8 @@ export const CATEGORIES = [
 ]
 
 export const MEMBERS = [
-    { id: 1, name: "Gong, Jiangtao", role: "Researcher", photo: "" },
-    { id: 2, name: "Gao, Jiasi", role: "Post Doc", photo: "" },
+    { id: 1, name: "Gong, Jiangtao", role: "Group Leader", photo: "" },
+    { id: 2, name: "Gao, Jiasi", role: "Postdoc Fellow", photo: "" },
     { id: 3, name: "Chu, Mengdi", role: "Researcher", photo: "" },
     { id: 4, name: "Guo, Haole", role: "Researcher", photo: "" },
     { id: 5, name: "Zhang, Yan", role: "Researcher", photo: "" },

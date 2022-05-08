@@ -128,6 +128,26 @@ export default function MarketingAbout() {
                   >
                   HCI Group
                 </Button>
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  size="large"
+                  sx={{mr: 1, mt: 1}}
+                  href={Routes.page404}
+                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+                  >
+                  Transportation Area
+                </Button>
+                <Button
+                  variant="outlined"
+                  color="inherit"
+                  size="large"
+                  sx={{mr: 1, mt: 1}}
+                  href={Routes.page404}
+                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+                  >
+                  Manufacturing Area
+                </Button>
               {/* </Grid> */}
             {/* </Grid> */}
           </Grid>

@@ -79,9 +79,10 @@ NavDesktopMenu.propTypes = {
   isScrolling: PropTypes.bool,
   lists: PropTypes.array,
   onClose: PropTypes.func,
+  showNum: PropTypes.number,
 };
 
-export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) {
+export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling, showNum = 3}) {
   const router = useRouter();
   const theme = useTheme();
 
@@ -98,7 +99,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling }) 
     autoplayspeed: 50,
     dots: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: showNum,
     slidesToScroll: 3,
     rtl: Boolean(theme.direction === 'rtl'),
     ...CarouselDots({

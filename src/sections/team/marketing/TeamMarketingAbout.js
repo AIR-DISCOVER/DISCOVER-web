@@ -34,10 +34,10 @@ export default function TeamMarketingAbout({ members }) {
             mb: { xs: 8, md: 10 },
           }}
         >
-          <Typography variant="h2">Great Team Is The Key</Typography>
+          <Typography variant="h2">Our Team</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            Since wire-frame renderings are relatively simple and fast to calculate, they are often
-            used in cases
+            {/* Since wire-frame renderings are relatively simple and fast to calculate, they are often
+            used in cases */}
           </Typography>
         </Stack>
 

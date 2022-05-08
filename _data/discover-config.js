@@ -1,4 +1,4 @@
-export const PHONE_NUMBER = '188 8888 8888'
+export const PHONE_NUMBER = '(010) 8215 1160'
 
 export const EMAIL = 'zhouguyue@air.tsinghua.edu.cn'
 
