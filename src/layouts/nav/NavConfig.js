@@ -23,7 +23,7 @@ export const ProgramsPageLinks = [
     subheader: 'PostDoctoral Program',
     // cover: SUN_COVER_PIC,
     items: [
-      { title: 'PostDoctoral Program', path: Routes.comingsoon },
+      { title: 'PostDoctoral Program', path: Routes.programs.postdoc },
     ],
   },
   {
@@ -31,7 +31,7 @@ export const ProgramsPageLinks = [
     subheader: 'PostGraduate Program',
     // cover: HCI_COVER_PIC,
     items: [
-      { title: 'PostGraduate Program', path: Routes.comingsoon },
+      { title: 'PostGraduate Program', path: Routes.programs.postgraduate },
     ],
   },
   {

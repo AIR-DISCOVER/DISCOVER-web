@@ -69,6 +69,8 @@ const Routes = {
     undergraduate_robomaster: '/programs/undergraduate#robomaster',
     undergraduate_srt: '/programs/undergraduate#srt',
     undergraduate_fyp: '/programs/undergraduate#final-year-project',
+    postgraduate: '/programs/postgraduate',
+    postdoc: '/programs/postdoc',
   },
   // Common
   loginCover: '/auth/login-cover',

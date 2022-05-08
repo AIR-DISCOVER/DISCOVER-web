@@ -35,7 +35,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function MarketingAboutUsPage() {
   return (
-    <Page title="About Us - Marketing">
+    <Page title="About Us">
       <RootStyle>
         <MarketingAbout />
 

@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import { styled, useTheme } from '@mui/material/styles';
 import { Typography, Stack, Container } from '@mui/material';
 // components
-import { SvgIconStyle } from '../../../components';
+import { Image, SvgIconStyle } from '../../../components';
 
 // ----------------------------------------------------------------------
 
@@ -58,7 +58,15 @@ export default function CustomerElearning({ brands }) {
 
         <Slider {...carouselSettings}>
           {brands.map((brand) => (
-            <SvgIconStyle key={brand.id} src={brand.image} sx={{ width: 106, height: 32 }} />
+            <Image
+              alt={brand.name}
+              src={brand.image}
+              sx={{
+                width: 106,
+                height: 64,
+                mx: 'auto',
+              }}
+            />
           ))}
         </Slider>
       </Container>

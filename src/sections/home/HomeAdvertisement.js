@@ -54,7 +54,12 @@ export default function HomeAdvertisement({ onClick, pack }) {
         <Typography variant="h3" sx={{ opacity: 0.72 }}>
           {pack?.overline}
         </Typography>
-        <Typography variant="h1" component="h2" sx={{ mt: 1, mb: 8, textShadow: '4px 4px 8px #444444' }}>
+        <Typography variant="h1" component="h2" sx={{
+          mt: 1, mb: 8, textShadow: '4px 4px 8px #444444',
+          '&:hover': { color: 'rgba(250, 255, 255, 1)', textShadow: '2px 2px 1px rgba(153, 204, 255, 0.3), 3px 3px 1px rgba(102, 153, 204, 0.3), 4px 4px 8px rgba(68, 68, 68, 1)' }
+        }}
+        >
+          {/* <Typography variant="h1" component="h2" sx={{ mt: 1, mb: 8, textShadow: '4px 4px 8px #444444' }}> */}
           {pack?.main}
         </Typography>
         {/* <Button
@@ -68,7 +73,7 @@ export default function HomeAdvertisement({ onClick, pack }) {
         </Button> */}
       </ContentStyle>
       {/* <Background offsetX={offsetX} offsetY={offsetY} /> */}
-    </RootStyle>
+    </RootStyle >
   );
 }
 
