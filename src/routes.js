@@ -2,18 +2,18 @@
 
 const Routes = {
   hci: {
-    landing: '/hci',
-    posts: '/hci/blog',
+    landing: '/hci/',
+    posts: '/hci/blog/',
     post: (slug) => `/hci/blog/${slug}`
   },
   sun: {
-    landing: '/sun',
-    posts: '/sun/blog',
+    landing: '/sun/',
+    posts: '/sun/blog/',
     post: (slug) => `/sun/blog/${slug}`
   },
   mechanic: {
-    landing: '/robotics',
-    posts: '/robotics/blog',
+    landing: '/robotics/',
+    posts: '/robotics/blog/',
     post: (slug) => `/robotics/blog/${slug}`
   },
   // Marketing
@@ -85,7 +85,7 @@ const Routes = {
   pricing02: '/pricing-02',
   checkout: '/checkout',
   support: '/support',
-  page404: '/404',
+  page404: '/404/',
   page500: '/500',
   people: '/people',
   news: '/news',
