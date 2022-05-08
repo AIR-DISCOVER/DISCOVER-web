@@ -12,30 +12,16 @@ import { useRef, useState } from 'react';
 
 // ----------------------------------------------------------------------
 
-export default function HomePage() {
+const HomePage = () => {
   const controlRef = useRef();
-  // const [tab, setTab] = useState("Home")
-
-  const dict = {
-    'Home': 'News',
-    'News': 'Research',
-    'Research': 'People',
-    'People': 'Join Us',
-    'Join Us': 'About',
-    'About': 'Home'
-
-  }
   const onClick = () => {
-    // let next = dict[tab]
-    // setTab(next)
-    // controlRef.current && controlRef.current.setTrig(tab, next)
     controlRef.current && controlRef.current.reset()
   }
   return (
     <Page title="Home">
       {/* <Background cref={controlRef} /> */}
 
-      <HomeAdvertisement onClick={() => { }} pack={{ overline: 'Towards unknown. Towards future. ', main: 'DISCOVER.', button: 'Explore' }} />
+      <HomeAdvertisement onClick={onClick} pack={{ overline: 'Towards the unknown. Towards the future. ', main: 'DISCOVER.', button: 'Explore' }} />
 
       {/* <HomeHero />
 
@@ -54,6 +40,8 @@ export default function HomePage() {
     </Page>
   );
 }
+
+export default HomePage;
 
 // ----------------------------------------------------------------------
 

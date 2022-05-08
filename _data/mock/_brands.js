@@ -26,5 +26,6 @@ export const _brands = BRANDS_NAME.map((brand, index) => ({
 export const _brandsColor = BRANDS_NAME.map((brand, index) => ({
   id: _mock.id(index),
   name: brand,
-  image: `https://zone-assets-api.vercel.app/assets/logos/${brand}_original.svg`,
+  // image: `https://zone-assets-api.vercel.app/assets/logos/${brand}_original.svg`,
+  image: `/partner_icons/anker.svg`,
 }));
