@@ -15,7 +15,7 @@ const CORE_VALUES = [
       learn from different backgrounds and caltures<br />
       engage deeply in open and respectful discussion
     </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_agreement.svg',
+    icon: '/value_icons/open.svg',
   },
   {
     title: 'Novel',
@@ -25,7 +25,7 @@ const CORE_VALUES = [
       start a paradigm shift, not just follow<br />
       try everything once if it is not clear
     </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_transparency.svg',
+    icon: '/value_icons/novel.svg',
   },
   {
     title: 'Flexible',
@@ -37,7 +37,7 @@ const CORE_VALUES = [
         any constructive solutions are welcome
       </p>
     ),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_reputation.svg',
+    icon: '/value_icons/flexible.svg',
   },
   {
     title: 'Practical',
@@ -47,7 +47,7 @@ const CORE_VALUES = [
       solve problems according to requirements from customers instead of reviewers<br />
       committed to the ethical use of technology that improves life rather than degrades it
     </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_popularity.svg',
+    icon: '/value_icons/practical.svg',
   },
   {
     title: 'Teamwork',
@@ -57,7 +57,7 @@ const CORE_VALUES = [
       never say "it's not my job" or turn away when something needs doing<br />
       deliverables are powerful when they are frequently used by others
     </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_popularity.svg',
+    icon: '/value_icons/teamwork.svg',
   },
   {
     title: 'Science',
@@ -66,7 +66,7 @@ const CORE_VALUES = [
       aim high, think big while small step, move fast<br />
       science is a privilege and we have to earn it every day<br />
       engaged in the scientific process, irrespective of academic authority or big title    </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_popularity.svg',
+    icon: '/value_icons/science.svg',
   },
 ];
 
