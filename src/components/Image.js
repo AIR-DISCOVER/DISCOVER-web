@@ -12,7 +12,7 @@ Image.propTypes = {
   sx: PropTypes.object,
 };
 
-export default function Image({ ratio, disabledEffect = false, effect = 'blur', sx, ...other }) {
+export default function Image({ ratio, disabledEffect = false, effect = 'blur', fit = 'cover', sx, ...other }) {
   if (ratio) {
     return (
       <Box
@@ -41,7 +41,7 @@ export default function Image({ ratio, disabledEffect = false, effect = 'blur', 
           wrapperClassName="wrapper"
           effect={disabledEffect ? undefined : effect}
           placeholderSrc="https://zone-assets-api.vercel.app/assets/img_placeholder.svg"
-          sx={{ width: 1, height: 1, objectFit: 'cover' }}
+          sx={{ width: 1, height: 1, objectFit: fit }}
           {...other}
         />
       </Box>
@@ -64,7 +64,7 @@ export default function Image({ ratio, disabledEffect = false, effect = 'blur', 
         wrapperClassName="wrapper"
         effect={disabledEffect ? undefined : effect}
         placeholderSrc="https://zone-assets-api.vercel.app/assets/img_placeholder.svg"
-        sx={{ width: 1, height: 1, objectFit: 'cover' }}
+        sx={{ width: 1, height: 1, objectFit: fit }}
         {...other}
       />
     </Box>

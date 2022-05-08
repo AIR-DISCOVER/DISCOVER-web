@@ -58,15 +58,9 @@ export default function CustomerElearning({ brands }) {
 
         <Slider {...carouselSettings}>
           {brands.map((brand) => (
-            <Image
-              alt={brand.name}
-              src={brand.image}
-              sx={{
-                width: 106,
-                height: 64,
-                mx: 'auto',
-              }}
-            />
+            <Image alt={brand.name} src={brand.image} fit="contain" sx={{ height: 72, mx: 'auto' }} />
+            // <SvgIconStyle key={brand.id} src={brand.image} sx={{ width: 106, height: 64 }} />
+
           ))}
         </Slider>
       </Container>
