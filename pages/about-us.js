@@ -80,9 +80,9 @@ export default function MarketingAboutUsPage() {
           ]}
           url={[
             Routes.programs.postdoc,
-            Routes.programs.postdoc,
-            Routes.programs.postdoc,
-            Routes.programs.postdoc,
+            Routes.programs.postgraduate,
+            Routes.programs.undergraduate,
+            Routes.programs.visiting,
           ]}
         />
       </RootStyle>
