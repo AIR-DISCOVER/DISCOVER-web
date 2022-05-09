@@ -15,6 +15,14 @@ import * as SUN from './sun-config';
 import * as ROBOTICS from './robotics-config';
 import { Typography } from '@mui/material';
 
+const Block = ({ title, content }) =>
+  <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+    <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+      {title}
+    </Typography>
+    {content}
+  </div>
+
 const StyledDiv = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'active',
 })(({ active, theme }) => ({
@@ -235,7 +243,6 @@ export const WINTER_CAMP = {
       src={"/images/winter_camp.gif"}
     /> */}
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
-
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Location
       </Typography>
@@ -441,4 +448,104 @@ export const FINAL_YEAR_PROGRAM = {
     },
   ],
   reverse: true
+}
+
+export const CAREER_PROFESSOR = {
+  // bgURL: '/images/winter_camp.gif',
+  title: "Professors / Associate Professors / Assistant Professors (AI + Transportation)",
+  intro: <span>
+    <Block title="Job Responsibilities" content={<>
+      Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:
+      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
+      <li>Computer vision, including image classification, facial recognition, object detection, image segmentation, image recognition, image/video understanding, and model compression;</li>
+      <li>Machine learning systems, including distributed optimization methods for machine learning, federated learning, and efficient neural networks;</li>
+      <li>Intelligent information retrieval, such as ranking, neural information retrieval, recommendation systems, user mining and modeling;</li>
+      <li>Data mining, including data crowdsourcing, social network mining, large image modeling and analysis, and stream data computing;</li>
+      <li>Decision-making optimization, including reinforcement learning, multi-agent learning, and large-scale optimization.</li>
+    </>} />
+    <Block title="Qualifications and Requirements" content={<>
+      <li>Candidates should hold a doctoral degree (within three years of graduation and under 35 years old, for post-doc positions) in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
+      <li>Candidates should have internationally recognized academic achievements; or rich R&D experience in industry;</li>
+      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
+    </>} />
+    <Block title="Salary and Benefits" content={<>
+      <li>World-class research environment, internationally competitive package, Tsinghua benefits;</li>
+      <li>Open and collaborative academic atmosphere, sufficient start-up funds;</li>
+      <li>Research platform at Tsinghua with abundant data and top-tier industrial resources;</li>
+      <li>Mature pipeline for technology industrialization and incubation.</li>
+    </>} />
+    <Block title="Contact Us" content={<>
+      Please send your resume to airhr@tsinghua.edu.cn.
+    </>} />
+  </span>,
+  imageURL: "/images/winter_camp.gif",
+  beforeEntry: undefined,
+  entry: undefined,
+}
+
+export const CAREER_POSTDOC = {
+  // bgURL: '/images/winter_camp.gif',
+  title: "Post-Doctorals (AI + Transportation)",
+  intro: <span>
+    <Block title="Job Responsibilities" content={<>
+      Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
+      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
+      <li>Computer vision, including image classification, facial recognition, object detection, image segmentation, image recognition, image/video understanding, and model compression;</li>
+      <li>Machine learning systems, including distributed optimization methods for machine learning, federated learning, and efficient neural networks;</li>
+      <li>Intelligent information retrieval, such as ranking, neural information retrieval, recommendation systems, user mining and modeling;</li>
+      <li>Data mining, including data crowdsourcing, social network mining, large image modeling and analysis, and stream data computing;</li>
+      <li>Decision-making optimization, including reinforcement learning, multi-agent learning, and large-scale optimization.</li>
+    </>} />
+    <Block title="Qualifications and Requirements" content={<>
+      <li>Candidates should hold a doctoral degree (within three years of graduation and under 35 years old, for post-doc positions) in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
+      <li>Candidates should have internationally recognized academic achievements; or rich R&D experience in industry;</li>
+      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
+    </>} />
+    <Block title="Salary and Benefits" content={<>
+      <li>World-class research environment, internationally competitive package, Tsinghua benefits;</li>
+      <li>Open and collaborative academic atmosphere, sufficient start-up funds;</li>
+      <li>Research platform at Tsinghua with abundant data and top-tier industrial resources;</li>
+      <li>Mature pipeline for technology industrialization and incubation.</li>
+    </>} />
+    <Block title="Contact Us" content={<>
+      Please send your resume to airhr@tsinghua.edu.cn.
+    </>} />
+  </span>,
+  imageURL: "/images/winter_camp.gif",
+  beforeEntry: undefined,
+  entry: undefined,
+}
+export const CAREER_RESEARCHER = {
+  // bgURL: '/images/winter_camp.gif',
+  title: "Research Engineers (AI + Transportation)",
+  intro: <span>
+    <Block title="Job Responsibilities" content={<>
+      Carry out research that enables AI Transportation, and develop industrial applications of the following research areas:
+      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
+      <li>Decision-making optimization in autonomous driving, V2X and smart transportation systems, using reinforcement learning, multi-agent learning, and large-scale optimization;</li>
+      <li>Computer vision, including image classification and image segmentation;</li>
+      <li>Machine learning systems;</li>
+      <li>Intelligent information retrieval, such as ranking, neural information retrieval, recommendation systems, user mining and modeling.</li>
+    </>} />
+    <Block title="Salary and Benefits" content={<>
+      <li>Open and collaborative academic atmosphere, and a chance to work with great minds;</li>
+      <li>Research platform at Tsinghua with abundant data and top-tier industrial resources;</li>
+      <li>Mature pipeline for technology industrialization and incubation.</li>
+      <li>Good work-life balance, and comfortable work environment.</li>
+    </>} />
+    <Block title="Qualifications and Requirements" content={<>
+      <li>Candidates should be graduates from well-known universities with a degree in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence, or other related majors;</li>
+      <li>Candidates should have at least three years of working experience at renowned research institutes, or leading companies, in related fields;</li>
+      <li>Candidates should have academic or industrial experience in autonomous driving, V2X, or smart transportation system building;</li>
+      <li>Candidates should be proficient in NLP/ML/DL models and algorithms (e.g. GBDT/MLP/CNN/RNN/LSTM/Transformer), and familiar with reinforcement learning algorithms;</li>
+      <li>Candidates should be skilled in one or more mainstream deep learning frameworks (Caffe, TensorFlow, PyTorch, PaddlePaddle), and familiar with their architecture and implementation mechanisms;</li>
+      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
+    </>} />
+    <Block title="Contact Us" content={<>
+      Please send your resume to airhr@tsinghua.edu.cn.
+    </>} />
+  </span>,
+  imageURL: "/images/winter_camp.gif",
+  beforeEntry: undefined,
+  entry: undefined,
 }
