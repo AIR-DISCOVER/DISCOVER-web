@@ -23,7 +23,7 @@ export const ProgramsPageLinks = [
     subheader: 'Career',
     // cover: SUN_COVER_PIC,
     items: [
-      { title: 'Learn more ..', path: Routes.programs.postdoc },
+      { title: 'Learn more ..', path: Routes.programs.career },
     ],
   },
   {

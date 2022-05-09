@@ -87,7 +87,7 @@ export default function MarketingAbout() {
   return (
     <RootStyle>
       <Box sx={{ px: 0, mx: 0, width: '100%' }}>
-        <CoverDiv bgURL="/images/discover.jpeg" >
+        <CoverDiv bgURL="/images/discover.jpg" >
           <Box item xs={12} md={6} lg={6} sx={{
             textAlign: {
               xs: 'center', md: 'left',

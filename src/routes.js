@@ -74,7 +74,7 @@ const Routes = {
     undergraduate_srt: '/programs/undergraduate#srt',
     undergraduate_fyp: '/programs/undergraduate#final-year-project',
     postgraduate: '/programs/postgraduate',
-    postdoc: '/programs/postdoc',
+    career: '/programs/career',
   },
   // Common
   loginCover: '/auth/login-cover',

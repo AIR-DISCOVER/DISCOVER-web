@@ -67,10 +67,10 @@ export default function MarketingAboutUsPage() {
             "Visiting",
           ]}
           comment={[
-            "This is a great oppotunity. You will be about to maximize you value.",
-            "This is a great oppotunity. You will be about to maximize you value.",
-            "This is a great oppotunity. You will be about to maximize you value.",
-            "This is a great oppotunity. You will be about to maximize you value.",
+            // "This is a great oppotunity. You will be about to maximize you value.",
+            // "This is a great oppotunity. You will be about to maximize you value.",
+            // "This is a great oppotunity. You will be about to maximize you value.",
+            // "This is a great oppotunity. You will be about to maximize you value.",
           ]}
           link={[
             "Join us",
@@ -79,7 +79,7 @@ export default function MarketingAboutUsPage() {
             "Join us",
           ]}
           url={[
-            Routes.programs.postdoc,
+            Routes.programs.career,
             Routes.programs.postgraduate,
             Routes.programs.undergraduate,
             Routes.programs.visiting,
