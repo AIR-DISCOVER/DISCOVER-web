@@ -40,7 +40,7 @@ export const CATEGORIES = [
 ]
 
 export const MEMBERS = [
-    { id: 1, name: "Zhou, Guyue", role: "Lab Director", photo: "/member_photos/people_Zhou_Guyue.jpeg" },
+    { id: 1, name: "Zhou, Guyue", role: "Group Leader", photo: "/member_photos/people_Zhou_Guyue.jpeg" },
     { id: 2, name: "Huang, Pengfei", role: "Researcher", photo: "/member_photos/people_Huang_Pengfei.jpg" },
     { id: 3, name: "Jiang, Chengyu", role: "Researcher", photo: "/member_photos/people_Jiang_Chengyu.jpg" },
     { id: 4, name: "Li, Chuxuan", role: "Researcher", photo: "/member_photos/people_Li_Chuxuan.jpg" },

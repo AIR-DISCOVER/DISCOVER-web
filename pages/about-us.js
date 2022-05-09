@@ -26,9 +26,9 @@ import Routes from '../src/routes';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  paddingTop: HEADER_MOBILE_HEIGHT,
+  paddingTop: 0,
   [theme.breakpoints.up('md')]: {
-    paddingTop: HEADER_DESKTOP_HEIGHT,
+    paddingTop: 0,
   },
 }));
 
@@ -93,5 +93,5 @@ export default function MarketingAboutUsPage() {
 // ----------------------------------------------------------------------
 
 MarketingAboutUsPage.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
+  return <Layout transparentHeader>{page}</Layout>;
 };
