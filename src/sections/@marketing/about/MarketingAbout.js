@@ -14,6 +14,8 @@ import { fShortenNumber } from '../../../utils/formatNumber';
 import { Iconify, CountUpNumber, Image } from '../../../components';
 import { DISCOVER_INTRO } from '_data/config';
 import Routes from 'src/routes';
+import cssStyles from 'src/utils/cssStyles';
+import { HEADER_DESKTOP_HEIGHT, HEADER_MOBILE_HEIGHT } from 'src/config';
 
 // ----------------------------------------------------------------------
 
@@ -27,12 +29,31 @@ const SUMMARY = [
 const COLORS = ['primary', 'secondary', 'warning', 'success'];
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(10, 0),
+  padding: theme.spacing(0, 0),
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(15, 0),
+    padding: theme.spacing(0, 0),
   },
 }));
 
+const CoverDiv = styled('div', { shouldForwardProp: (prop) => prop != 'bgURL' })(({ bgURL, theme }) => ({
+  padding: theme.spacing(0, 10),
+  ...cssStyles(theme).bgImage({
+    url: bgURL,
+    startColor: `${alpha(theme.palette.grey[900], 0.5)}`,
+    endColor: `${alpha(theme.palette.grey[0], 1)} 95%`,
+  }),
+  [theme.breakpoints.up('md')]: {
+    minHeight: '100vh',
+    ...cssStyles(theme).bgImage({
+      direction: 'bottom',
+      url: bgURL,
+      startColor: `${alpha(theme.palette.grey[900], 0.25)} 35%`,
+      endColor: `${alpha(theme.palette.grey[0], 1)} 85%`,
+    }),
+    backgroundPosition: 'center, top ',
+    backgroundSize: 'contain',
+  },
+}));
 const IconStyle = styled('div', {
   shouldForwardProp: (prop) => prop !== 'color',
 })(({ color, theme }) => ({
@@ -65,24 +86,15 @@ const IconStyle = styled('div', {
 export default function MarketingAbout() {
   return (
     <RootStyle>
-      <Container>
-        <Grid container spacing={3} justifyContent="space-between" alignItems="center">
-          <Grid
-            item
-            xs={12}
-            md={6}
-            lg={5}
-            sx={{
-              display: { xs: 'none', md: 'block' },
-            }}
-          >
-            <Image
-              alt="teams"
-              src="https://zone-assets-api.vercel.app/assets/illustrations/illustration_teams.svg"
-            />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={6} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+      <Box sx={{ px: 0, mx: 0, width: '100%' }}>
+        <CoverDiv bgURL="/images/discover.jpeg" >
+          <Box item xs={12} md={6} lg={6} sx={{
+            textAlign: {
+              xs: 'center', md: 'left',
+            },
+            pt: { xs: HEADER_MOBILE_HEIGHT / 8, md: HEADER_DESKTOP_HEIGHT / 8 }
+          }}>
+            <Box sx={{ height: '60vh' }}></Box>
             <Typography variant="h2">Who We Are?</Typography>
             <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
               {DISCOVER_INTRO}
@@ -92,90 +104,72 @@ export default function MarketingAbout() {
               Check our work:
             </Typography>
             {/* <Grid container spacing={2} xs={12} md={12} lg={12} width="100%" alignItems='center' justifyContent='center'> */}
-              {/* <Grid item md={12} lg={4}> */}
+            {/* <Grid item md={12} lg={4}> */}
 
-                <Button
-                  variant="outlined"
-                  color="inherit"
-                  size="large"
-                  sx={{mr: 1, mt: 1}}
-                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
-                  href={Routes.mechanic.landing}
-                  >
-                  Robotics Group
-                </Button>
-              {/* </Grid> */}
-              {/* <Grid item md={12} lg={4}> */}
-                <Button
-                  variant="outlined"
-                  color="inherit"
-                  size="large"
-                  sx={{mr: 1, mt: 1}}
-                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
-                  href={Routes.sun.landing}
-                  >
-                  Vision Group
-                </Button>
-              {/* </Grid> */}
-              {/* <Grid item md={12} lg={4}> */}
-                <Button
-                  variant="outlined"
-                  color="inherit"
-                  size="large"
-                  sx={{mr: 1, mt: 1}}
-                  href={Routes.hci.landing}
-                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
-                  >
-                  HCI Group
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="inherit"
-                  size="large"
-                  sx={{mr: 1, mt: 1}}
-                  href={Routes.area.transportation}
-                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
-                  >
-                  Transportation Area
-                </Button>
-                <Button
-                  variant="outlined"
-                  color="inherit"
-                  size="large"
-                  sx={{mr: 1, mt: 1}}
-                  href={Routes.area.manufacturing}
-                  endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
-                  >
-                  Manufacturing Area
-                </Button>
-              {/* </Grid> */}
+            <Button
+              variant="outlined"
+              color="inherit"
+              size="large"
+              sx={{ mr: 1, mt: 1 }}
+              endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+              href={Routes.mechanic.landing}
+            >
+              Robotics Group
+            </Button>
             {/* </Grid> */}
-          </Grid>
-        </Grid>
-
+            {/* <Grid item md={12} lg={4}> */}
+            <Button
+              variant="outlined"
+              color="inherit"
+              size="large"
+              sx={{ mr: 1, mt: 1 }}
+              endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+              href={Routes.sun.landing}
+            >
+              Vision Group
+            </Button>
+            {/* </Grid> */}
+            {/* <Grid item md={12} lg={4}> */}
+            <Button
+              variant="outlined"
+              color="inherit"
+              size="large"
+              sx={{ mr: 1, mt: 1 }}
+              href={Routes.hci.landing}
+              endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+            >
+              HCI Group
+            </Button>
+            <Button
+              variant="outlined"
+              color="inherit"
+              size="large"
+              sx={{ mr: 1, mt: 1 }}
+              href={Routes.area.transportation}
+              endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+            >
+              Transportation Area
+            </Button>
+            <Button
+              variant="outlined"
+              color="inherit"
+              size="large"
+              sx={{ mr: 1, mt: 1 }}
+              href={Routes.area.manufacturing}
+              endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
+            >
+              Manufacturing Area
+            </Button>
+            {/* </Grid> */}
+            {/* </Grid> */}
+          </Box>
+        </CoverDiv>
         <Box
           sx={{
             my: { xs: 8, md: 15 },
           }}
         />
-
-        {/* <Box
-          sx={{
-            textAlign: 'center',
-            display: 'grid',
-            gap: { xs: 5, md: 8 },
-            gridTemplateColumns: {
-              xs: 'repeat(1, 1fr)',
-              sm: 'repeat(2, 1fr)',
-              md: 'repeat(4, 1fr)',
-            },
-          }}
-        >
-          {SUMMARY.map((value, index) => (
-            <BoxItem key={value.title} value={value} index={index} />
-          ))}
-        </Box> */}
-      </Container>
+      </Box>
     </RootStyle>
   );
 }

@@ -36,8 +36,7 @@ export default function TeamMarketingAbout({ members }) {
         >
           <Typography variant="h2">Our Team</Typography>
           <Typography sx={{ color: 'text.secondary' }}>
-            {/* Since wire-frame renderings are relatively simple and fast to calculate, they are often
-            used in cases */}
+            Great Team is the Key to Success
           </Typography>
         </Stack>
 
