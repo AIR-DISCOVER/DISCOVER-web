@@ -19,15 +19,15 @@ const CoverDiv = styled('div', { shouldForwardProp: (prop) => prop != 'bgURL' })
   padding: theme.spacing(10, 0),
   ...cssStyles(theme).bgImage({
     url: bgURL,
-    startColor: `${alpha(theme.palette.grey[900], 0.88)}`,
-    endColor: `${alpha(theme.palette.grey[900], 0.88)}`,
+    startColor: `${alpha(theme.palette.grey[900], 0)}`,
+    endColor: `${alpha(theme.palette.grey[900], 0)}`,
   }),
   [theme.breakpoints.up('md')]: {
     ...cssStyles(theme).bgImage({
       direction: 'left',
       url: bgURL,
-      startColor: `${alpha(theme.palette.grey[900], 0)} 0%`,
-      endColor: `${alpha(theme.palette.grey[900], 1)} 70%`,
+      startColor: `${alpha(theme.palette.grey[900], 0)} 50%`,
+      endColor: `${alpha(theme.palette.grey[900], 0)} 70%`,
     }),
     backgroundPosition: 'center, left ',
     backgroundSize: 'cover',
@@ -77,11 +77,11 @@ export default function ProgramCard({ program }) {
   return (
     <RootStyle>
       <CoverDiv bgURL={bgURL} sx={{ py: 4 }}>
-        <Container disableGutters >
+        <Box sx={{ px: 8 }} >
           <Typography variant="h2" sx={{ color: 'white', minHeight: '20vh', display: 'flex', alignItems: 'center' }}>{title}</Typography>
-        </Container>
+        </Box>
       </CoverDiv>
-      <Container sx={{ py: 8, columnCount: 2, columnGap: 8 }}>
+      <Box sx={{ py: { sm: 2, md: 8 }, px: 8, columnCount: { sm: 1, md: 2 }, columnGap: 8 }}>
         {/* <Grid
             item
             xs={12}
@@ -139,7 +139,7 @@ export default function ProgramCard({ program }) {
             <BoxItem key={value.title} value={value} index={index} />
           ))}
         </Box> */}
-      </Container>
+      </Box>
     </RootStyle>
   );
 }
