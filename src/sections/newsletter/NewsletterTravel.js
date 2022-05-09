@@ -55,29 +55,54 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                 minHeight: '20rem'
               }}
             >
-              <Grid item xs={8} md={4}>
-                <Typography variant="h3">{title[0]}</Typography>
-                <Typography>
-                  {comment[0]}
-                </Typography>
-                <NextLink href={url[0]} passHref>
-                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4}}>
-                    {link[0]}
+              <Grid item container>
+                <Grid item xs={8} md={4}>
+                  <Typography variant="h3">{title[0]}</Typography>
+                  <Typography>
+                    {comment[0]}
                   </Typography>
-                </NextLink>
-              </Grid>
-              <Grid item xs={8} md={4}>
-                <Typography variant="h3">{title[1]}</Typography>
-                <Typography>
-                  {comment[1]}
-                </Typography>
-                <NextLink href={url[1]} passHref>
-                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4}}>
-                    {link[1]}
+                  <NextLink href={url[0]} passHref>
+                    <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
+                      {link[0]}
+                    </Typography>
+                  </NextLink>
+                </Grid>
+                <Grid item xs={8} md={4}>
+                  <Typography variant="h3">{title[1]}</Typography>
+                  <Typography>
+                    {comment[1]}
                   </Typography>
-                </NextLink>
+                  <NextLink href={url[1]} passHref>
+                    <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
+                      {link[1]}
+                    </Typography>
+                  </NextLink>
+                </Grid>
               </Grid>
-
+              <Grid item container>
+                <Grid item xs={8} md={4}>
+                  <Typography variant="h3">{title[2]}</Typography>
+                  <Typography>
+                    {comment[2]}
+                  </Typography>
+                  <NextLink href={url[2]} passHref>
+                    <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
+                      {link[2]}
+                    </Typography>
+                  </NextLink>
+                </Grid>
+                <Grid item xs={8} md={4}>
+                  <Typography variant="h3">{title[3]}</Typography>
+                  <Typography>
+                    {comment[3]}
+                  </Typography>
+                  <NextLink href={url[3]} passHref>
+                    <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
+                      {link[3]}
+                    </Typography>
+                  </NextLink>
+                </Grid>
+              </Grid>
               {/* <FilledInput
                 fullWidth
                 placeholder="Enter your email"

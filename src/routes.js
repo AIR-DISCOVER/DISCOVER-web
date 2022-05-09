@@ -59,6 +59,10 @@ const Routes = {
     about: '/e-learning/about-us',
     contact: '/e-learning/contact-us',
   },
+  area: {
+    manufacturing: '/area/manufacturing',
+    transportation: '/area/transportation',
+  },
   programs: {
     visiting: '/programs/visiting',
     visiting_summer_camp: '/programs/visiting#summer-camp',

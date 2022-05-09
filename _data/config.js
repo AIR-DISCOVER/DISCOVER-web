@@ -46,6 +46,10 @@ const BoxStyled = styled((props) => (
 
 
 export const NEWS_MARKDOWN_PATH = '_data/news.md'
+export const PROGRAMS_POSTDOC_PATH = '_data/programs/postdoc.md'
+export const PROGRAMS_POSTGRADUATE_PATH = '_data/programs/postgraduate.md'
+export const AREA_MANUFACTURING_PATH = '_data/area/manufacturing.md'
+export const AREA_TRANSPORTATION_PATH = '_data/area/transportation.md'
 
 export const DISCOVER_INTRO = (
   <p>
@@ -55,7 +59,7 @@ export const DISCOVER_INTRO = (
 
 export const DISCOVER_RESEARCH_AREA = (
   <p>
-    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>Research</BoxStyled> DISCOVER Lab conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.comingsoon} passHref><StyledDiv component={'span'}>transportation</StyledDiv></NextLink> and <NextLink href={Routes.comingsoon} passHref><StyledDiv component={'span'}>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
+    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>Research</BoxStyled> DISCOVER Lab conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.area.transportation} passHref><StyledDiv component={'span'}>transportation</StyledDiv></NextLink> and <NextLink href={Routes.area.manufacturing} passHref><StyledDiv component={'span'}>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
   </p>
 );
 
@@ -91,7 +95,7 @@ export const DISCOVER_PAGELINKS = [
             <span>
               {DISCOVER.PHONE_NUMBER}
             </span>
-          </div>), path: ''
+          </div>), path: undefined
       },
       {
         title: (
@@ -100,7 +104,7 @@ export const DISCOVER_PAGELINKS = [
             <span>
               {DISCOVER.EMAIL}
             </span>
-          </div>), path: ''
+          </div>), path: undefined
       },
       {
         title: (
@@ -109,7 +113,7 @@ export const DISCOVER_PAGELINKS = [
             <span>
               {DISCOVER.ADDRESS}
             </span>
-          </div>), path: ''
+          </div>), path: undefined
       },
     ],
   },

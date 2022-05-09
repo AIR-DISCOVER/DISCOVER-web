@@ -72,9 +72,9 @@ const CORE_VALUES = [
 
 const RootStyle = styled('div')(({ theme }) => ({
   textAlign: 'center',
-  padding: theme.spacing(8, 0),
+  padding: theme.spacing(8, 0, 0),
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(15, 0),
+    padding: theme.spacing(15, 0, 0),
   },
 }));
 
@@ -110,9 +110,9 @@ export default function MarketingAboutCoreValues() {
               <Grid item xs={12} md={3} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <SvgIconStyle
                   src={value.icon}
-                  sx={{ width: 64, height: 64, mx: 'auto', color: 'primary.main' }}
+                  sx={{ width: 64, height: 64, mt: 1, mx: 'auto', color: 'primary.main' }}
                 />
-                <Typography variant="h5" sx={{ mt: 5, mb: 0 }}>
+                <Typography variant="h5" sx={{ mt: 1, mb: 0 }}>
                   {value.title}
                 </Typography>
               </Grid>

@@ -59,8 +59,18 @@ export default function MarketingAboutUsPage() {
         {/* <NewsletterMarketing /> */}
         <a id='joinus'></a>
         <NewsletterTravel
-          title={["Postdoc opening", "Internship Oppotunities"]}
-          comment={["This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. ", "This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. "]}
+          title={[
+            "Postdoc opening",
+            "Internship Oppotunities",
+            "Internship Oppotunities",
+            "Internship Oppotunities",
+          ]}
+          comment={[
+            "This is a great oppotunity. You will be about to maximize you value.",
+            "This is a great oppotunity. You will be about to maximize you value.",
+            "This is a great oppotunity. You will be about to maximize you value.",
+            "This is a great oppotunity. You will be about to maximize you value.",
+          ]}
           link={["Join us", "Join us"]}
           url={["https://air.tsinghua.edu.cn/en/info/1029/1349.htm", "https://air.tsinghua.edu.cn/en/info/1030/1287.htm"]}
         />
