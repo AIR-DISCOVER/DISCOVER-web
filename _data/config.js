@@ -210,7 +210,7 @@ export const SUMMER_CAMP = {
 }
 
 export const WINTER_CAMP = {
-  bgURL: '/images/winter_camp.gif',
+  // bgURL: '/images/winter_camp.gif',
   title: "Winter Camp Program",
   intro: <span>
     This event will be held annually with different research subjects.<br />
