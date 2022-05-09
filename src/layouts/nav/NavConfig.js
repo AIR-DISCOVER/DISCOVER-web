@@ -47,7 +47,7 @@ export const ProgramsPageLinks = [
     subheader: 'Visiting',
     // cover: MECHANIC_COVER_PIC,
     items: [
-      { title: 'Learn more ..', path: Routes.programs.visiting_winter_camp },
+      { title: 'Learn more ..', path: Routes.programs.visiting },
     ],
   },
 ]

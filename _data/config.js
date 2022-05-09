@@ -8,11 +8,12 @@ import mobileIcon from '@iconify/icons-carbon/mobile';
 import emailIcon from '@iconify/icons-carbon/email';
 import timeIcon from '@iconify/icons-carbon/time';
 import launchIcon from '@iconify/icons-carbon/launch';
-import { Iconify } from 'src/components';
+import { Iconify, Image } from 'src/components';
 import * as DISCOVER from './discover-config';
 import * as HCI from './hci-config';
 import * as SUN from './sun-config';
 import * as ROBOTICS from './robotics-config';
+import { Typography } from '@mui/material';
 
 const StyledDiv = styled(Box, {
   shouldForwardProp: (prop) => prop !== 'active',
@@ -128,67 +129,255 @@ export const GROUP_INTRO = {
 // ==============================================================================
 
 export const SUMMER_CAMP = {
-  title: "Summer camp title",
-  intro: "Summer camp intro",
-  imageURL: "https://zone-assets-api.vercel.app/assets/illustrations/illustration_teams.svg",
-  beforeEntry: "Sign up: ",
-  entry: [
-    {
-      id: 1,
-      description: 'summer 2021',
-      href: Routes.comingsoon,
-    },
-    {
-      id: 2,
-      description: 'summer 2022',
-      href: Routes.comingsoon,
-    },
-    {
-      id: 3,
-      description: 'summer 2023',
-      href: Routes.comingsoon,
-    },
-  ],
+  bgURL: "",
+  title: "Summer camp program",
+  intro: <span>
+    This event will be held annually with different research projects.<br />
+    <br />
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      At May 1st, 2022, DISCOVER Lab held the 2nd summer camp, students participating in this camp joined one of the following 3 research fields and 13 projects of their own choice, based on their direction of interest and skills.
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Robotics
+      </Typography>
+      <li>Multi-robot collaborative automated testing system</li>
+      <li>UAV SLAM based on high precision map</li>
+      <li>Object throwing-catch system for mobile robots</li>
+      <li>Motion control system for footed robots</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Computer Vision
+      </Typography>
+      <li>Adversarial trajectory generation based on pedestrian intention</li>
+      <li>Online structured indoor 3D reconstruction and understanding</li>
+      <li>Weakly supervised object affordance learning</li>
+      <li>Self-supervised superpixel and edge extraction based on attention</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Human-Computer Interaction
+      </Typography>
+      <li>Research on intelligent navigation robots for blind people</li>
+      <li>Research on AI music therapy system and intelligent musical instruments</li>
+      <li>Research on intelligent clothing and proactive health management system</li>
+      <li>Research on intelligent building block kit for children's emotional education</li>
+      <li>Research on human-AI collaboration system for autonomous driving</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Location
+      </Typography>
+      Tsinghua Tuspark, Beijing, China
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Duration
+      </Typography>
+      May - Sept, annually
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Application
+      </Typography>
+      April 1st  - May 1st, annually
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Requirements
+      </Typography>
+      <li>Graduate/undergraduate/ PhD students enrolled in well known institutions.</li>
+      <li>Passion for research, excellent basic skills, outstanding innovation and practical ability.</li>
+      <li>At least 2 months of on site work time guaranteed during the summer camp.</li>
+      <li>Research experience in robotics, computer vision, and human-computer interaction are preferred.</li>
+      <li>Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and other related subjects.</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        For summer camp, contact us
+      </Typography>
+      Please send your resume or portfolio to chumengdi@air.tsinghua.edu.cn, and name by [summer camp]-[reseach field]-[research direction ].
+    </div>
+  </span>,
+  beforeEntry: undefined,
+  entry: undefined
 }
 
 export const WINTER_CAMP = {
-  reverse: true,
-  title: "Winter camp title",
-  intro: "Winter camp intro",
-  imageURL: "https://zone-assets-api.vercel.app/assets/illustrations/illustration_teams.svg",
-  beforeEntry: "Sign up: ",
-  entry: [
-    {
-      id: 1,
-      description: 'winter 2021',
-      href: Routes.comingsoon,
-    },
-    {
-      id: 2,
-      description: 'winter 2022',
-      href: Routes.comingsoon,
-    },
-    {
-      id: 3,
-      description: 'winter 2023',
-      href: Routes.comingsoon,
-    },
-  ],
+  bgURL: '/images/winter_camp.gif',
+  title: "Winter camp program",
+  intro: <span>
+    This event will be held annually with different research subjects.<br />
+    <br />
+    At the beginning of 2022, DISCOVER Lab held the 1st winter camp， 2021-2022 Robotics Training Camp.<br />
+    Students participating in this camp joined one of the following nine programs based on their interest and skills. Winter camp focuses on training engineering skills.<br />
+    <br />
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <li>Robot group planning and control.</li>
+      <li>Robot for Robomaster Sim2real challenge.<br /></li>
+      <li>Indoor 3D reconstruction.<br /></li>
+      <li>Weakly supervised annotation for environmental understanding.<br /></li>
+      <li>Wheel-legged robot.<br /></li>
+      <li>Indoor autonomous navigation for wheel robots.<br /></li>
+      <li>Robotic arm development with reinforcement learning.<br /></li>
+      <li>Research on multimodal perception and generation.<br /></li>
+      <li>Research on multimodal affective computing.<br /></li>
+    </div>
+    {/* <Image
+      alt="teams"
+      sx={{ borderRadius: 2, my: 2 }}
+      src={"/images/winter_camp.gif"}
+    /> */}
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Location
+      </Typography>
+      Tsinghua Tuspark, Beijing, China
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Duration
+      </Typography>
+      Jan - March, annually
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Application
+      </Typography>
+      Dec 1st  - Jan 1st, annually
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Requirements
+      </Typography>
+      1. graduate/undergraduate/PhD students enrolled in well known institutions. <br />
+      2. passion for research, excellent in basic skills, outstanding innovation and practical ability. <br />
+      3. At least 1 month of on site work time guaranteed during the winter camp. <br />
+      4. Research experience in robotics, computer vision, and human-computer interaction are preferred. <br />
+      5. Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and other related subjects.
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        For winter camp, contact us
+      </Typography>
+      Please send your resume or portfolio to guohaole@air.tsinghua.edu.cn, and name by [summer camp]-[reseach field]-[research direction ].
+    </div>
+  </span>,
+  imageURL: "/images/winter_camp.gif",
+  beforeEntry: undefined,
+  entry: undefined,
 }
 
 export const VISITING_PROGRAM = {
-  title: "Visiting program title",
-  intro: "Visiting program intro",
-  imageURL: "https://zone-assets-api.vercel.app/assets/illustrations/illustration_teams.svg",
-  beforeEntry: "Sign up: ",
-  entry: [
-    {
-      id: 1,
-      description: 'visiting program',
-      href: Routes.comingsoon,
-    },
-  ],
+  title: "Intern program",
+  intro: <span>
+    Conduct research in cutting-edge algorithms including federated learning, privacy computing, AI security, and data integration; cooperate with leading companies in the industry to apply these technologies to the industry; and deliver quality research output.<br />
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Location
+      </Typography>
+      Tsinghua Tuspark, Beijing, China
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Basic requirements
+      </Typography>
+      <li>Candidates should be currently enrolled in a bachelor's / master's / doctor's program in computer science, electronics, automation, robotics, mathematics, material chemistry, or other related majors.</li>
+      <li>Candidate should have strong self-motivation and teamwork abilities.</li>
+      <li>The internship should last at least 6 months, 3 days per week.</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Skill requirements (You should meet at least one of them)
+      </Typography>
+      <li>Have interests or research experience in AI and reinforcement learning, be familiar with mainstream deep learning frameworks, and be able to read related literature and implement algorithms independently.</li>
+      <li>Be familiar with and have worked on projects about robotics, Raspberry Pi, Arduino, embedded systems, mechatronics design and 3D printing.</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Salary and benefits
+      </Typography>
+      <li>First-class research platform and innovation atmosphere</li>
+      <li>A competitive salary</li>
+      <li>An internship certificate</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        For Intern program， contact us
+      </Typography>
+      Please send your resume to guohaole@air.tsinghua.edu.cn, and name the subject by [Your Name]-[School]-[Year]-[Major]-[When can you begin internship].
+    </div>
+  </span>,
+  beforeEntry: undefined,
+  entry: undefined,
 }
+
+export const STAR_PROGRAM = {
+  title: "S.T.A.R. program",
+  intro: <span>
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Research Field
+      </Typography>
+      Computer Vision, Deep Learning, Reinforcement Learning, Adversarial Learning, Robotics, Computer Graphics, Natural Language Processing, Data Mining, Personalized Recommendation, Causal Inference, Graph Neural Networks, Intelligent Computing Systems, Edge Computing, Mobile Computing, AIOT, Security and Data Protection, Federated Learning, Distributed Machine Learning and Operations Optimization, Bioinformatics, Medicinal Chemistry, Interaction Design, Additive Manufacturing.
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Requirements
+      </Typography>
+      <li>Working in or will start PhD/master's degree program in a well-known domestic or international institution.</li>
+      <li>Passion for scientific research, excellent basic quality, outstanding innovation and practical ability.</li>
+      <li>Full-time internship for ≥ 6 months (some directions require ≥ 8 months).</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Benefits
+      </Typography>
+      <li>Cooperate directly with top scientists in the field of artificial intelligence, share the high-quality scientific resources of Tsinghua University and partners, and output high-level academic results.</li>
+      <li>Understanding the needs of the industry, Transforming worldclass scientific research results into real-life applications.</li>
+      <li>Priority hiring opportunities for doctoral/postdoctoral/full-time positions.</li>
+      <li>High-quality resources and strong recommendations from industry giants (including but not limited to recommendation letters).</li>
+      <li>First-hand information about cutting-edge lectures, forums and competition activities.</li>
+      <li>Co-work with other talented students.</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        Salary and benefits
+      </Typography>
+      <li>First-class research platform and innovation atmosphere</li>
+      <li>A competitive salary</li>
+      <li>An internship certificate</li>
+    </div>
+
+    <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
+      <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+        For S.T.A.R program, contact us:
+      </Typography>
+      Please send your resume to airhr@air.tsinghua.edu.cn,and name by [Your Name]-[School]-[Year]-[Major]-[STAR program]-[Research Field].
+    </div>
+  </span>,
+  beforeEntry: undefined,
+  entry: undefined,
+}
+
 
 export const ROBOMASTER_PROGRAM = {
   title: "Make your own robots to win the competition!",

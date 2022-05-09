@@ -13,9 +13,10 @@ import { TeamMarketingAbout } from '../../src/sections/team';
 import { NewsletterMarketing, NewsletterTravel } from '../../src/sections/newsletter';
 import { OurClientsElearning, OurClientsMarketingAbout } from '../../src/sections/our-clients';
 import {
-  ProgramCard
+  ProgramCard, ProgramCard2
 } from '../../src/sections/@marketing';
 import {
+  STAR_PROGRAM,
   SUMMER_CAMP,
   SUMMER_CAMP_ENTRY, SUMMER_CAMP_INTRO, SUMMER_CAMP_PIC_URL, VISITING_PROGRAM, VISITING_PROGRAM_ENTRY, VISITING_PROGRAM_INTRO, VISITING_PROGRAM_PIC_URL, WINTER_CAMP, WINTER_CAMP_ENTRY, WINTER_CAMP_INTRO, WINTER_CAMP_PIC_URL
 } from '../../_data/config';
@@ -36,11 +37,14 @@ export default function MarketingAboutUsPage() {
     <Page title="Visiting Program">
       <RootStyle>
         <a id='summer-camp' />
-        <ProgramCard program={SUMMER_CAMP}/>
+        <ProgramCard2 program={SUMMER_CAMP} />
         <a id='winter-camp' />
-        <ProgramCard program={WINTER_CAMP}/>
+        <ProgramCard2 program={WINTER_CAMP} />
+        <a id='star' />
+        <ProgramCard2 program={STAR_PROGRAM} />
         <a id='program' />
-        <ProgramCard program={VISITING_PROGRAM}/>
+        <ProgramCard2 program={VISITING_PROGRAM} />
+        
       </RootStyle>
     </Page>
   );
