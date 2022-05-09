@@ -72,6 +72,7 @@ export default function ProgramCard({ program }) {
             <Image
               alt="teams"
               src={imageURL}
+              sx={{ borderRadius: 2 }}
             />
           </Grid>
 
