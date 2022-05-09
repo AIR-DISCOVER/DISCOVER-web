@@ -3,18 +3,14 @@ import _mock from './_mock';
 // ----------------------------------------------------------------------
 
 const BRANDS_NAME = [
-  'airbnb',
-  'dropbox',
-  'facebook',
-  'google',
-  'heroku',
-  'lenovo',
-  'microsoft',
-  'netflix',
-  'slack',
-  'spotify',
-  'tripadvisor',
-  'vimeo',
+  { name: 'anker', image: '/partner_icons/anker.png' },
+  { name: 'baidu', image: '/partner_icons/baidu.png' },
+  { name: 'dji', image: '/partner_icons/dji.png' },
+  { name: 'qianzhi', image: '/partner_icons/qianzhi.png' },
+  { name: 'qimeng', image: '/partner_icons/qimeng.png' },
+  { name: 'sinovation ventures', image: '/partner_icons/sinovation ventures.png' },
+  { name: 'xiaomi', image: '/partner_icons/xiaomi.png' },
+  { name: 'tuxingqiyuan', image: '/partner_icons/tuxingqiyuan.svg' },
 ];
 
 export const _brands = BRANDS_NAME.map((brand, index) => ({
@@ -25,7 +21,7 @@ export const _brands = BRANDS_NAME.map((brand, index) => ({
 
 export const _brandsColor = BRANDS_NAME.map((brand, index) => ({
   id: _mock.id(index),
-  name: brand,
+  name: brand.name,
   // image: `https://zone-assets-api.vercel.app/assets/logos/${brand}_original.svg`,
-  image: `/partner_icons/anker.svg`,
+  image: brand.image,
 }));

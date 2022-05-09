@@ -69,7 +69,7 @@ NavDesktop.propTypes = {
   navConfig: PropTypes.array.isRequired,
 };
 
-export default function NavDesktop({ isScrolling, isTransparent, navConfig, onEnter = () => { } }) {
+export default function NavDesktop({ isScrolling, isTransparent, navConfig, onEnter = () => { }, showNum = 3 }) {
   return (
     <Stack
       direction="row"
@@ -111,7 +111,7 @@ NavItemDesktop.propTypes = {
 };
 
 function NavItemDesktop({ item, isScrolling, isTransparent, onEnter = () => { } }) {
-  const { title, path, children } = item;
+  const { title, path, children, showNum = 3 } = item;
 
   const { pathname, asPath } = useRouter();
 
@@ -142,7 +142,7 @@ function NavItemDesktop({ item, isScrolling, isTransparent, onEnter = () => { } 
           open={open}
           scrolling={isScrolling}
           transparent={isTransparent}
-          onMouseEnter={() => {onEnter(title)}}
+          onMouseEnter={() => { onEnter(title) }}
         >
           {title}
           <Iconify
@@ -160,6 +160,7 @@ function NavItemDesktop({ item, isScrolling, isTransparent, onEnter = () => { } 
           isOpen={open}
           onClose={handleClose}
           isScrolling={isScrolling}
+          showNum={showNum}
         />
       </>
     );

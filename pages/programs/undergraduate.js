@@ -39,14 +39,14 @@ export default function MarketingAboutUsPage() {
   return (
     <Page title="Undergraduate Enrichment">
       <RootStyle>
-        <a id='intelligent-system' />
-        <ProgramCard program={INTELLIGENT_SYSTEM_PROGRAM}/>
+        {/* <a id='intelligent-system' /> */}
+        {/* <ProgramCard program={INTELLIGENT_SYSTEM_PROGRAM}/> */}
         <a id='robomaster' />
         <ProgramCard program={ROBOMASTER_PROGRAM}/>
         <a id='srt' />
         <ProgramCard program={SRT_PROGRAM}/>
-        <a id='final-year-project' />
-        <ProgramCard program={FINAL_YEAR_PROGRAM}/>
+        {/* <a id='final-year-project' /> */}
+        {/* <ProgramCard program={FINAL_YEAR_PROGRAM}/> */}
       </RootStyle>
     </Page>
   );

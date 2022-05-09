@@ -51,22 +51,16 @@ export default function CustomerElearning({ brands }) {
       <Container>
         <Stack spacing={3} sx={{ mb: 8, mx: 'auto', maxWidth: 480, textAlign: 'center' }}>
           <Typography variant="h2">We Work With</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>
+          {/* <Typography sx={{ color: 'text.secondary' }}>
             Quisque aliquet, libero consequat elementum convallis.
-          </Typography>
+          </Typography> */}
         </Stack>
 
         <Slider {...carouselSettings}>
           {brands.map((brand) => (
-            <Image
-              alt={brand.name}
-              src={brand.image}
-              sx={{
-                width: 106,
-                height: 64,
-                mx: 'auto',
-              }}
-            />
+            <Image alt={brand.name} src={brand.image} fit="contain" sx={{ height: 48, mx: 'auto' }} />
+            // <SvgIconStyle key={brand.id} src={brand.image} sx={{ width: 106, height: 64 }} />
+
           ))}
         </Slider>
       </Container>

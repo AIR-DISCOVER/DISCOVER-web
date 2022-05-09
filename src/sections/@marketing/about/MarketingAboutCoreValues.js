@@ -10,63 +10,63 @@ const CORE_VALUES = [
   {
     title: 'Open',
     description: (<p>
-      ideas become stronger when shared<br />
-      better ideas come from dialog and debate<br />
-      learn from different backgrounds and caltures<br />
-      engage deeply in open and respectful discussion
+      Ideas become stronger when shared<br />
+      Better ideas come from dialog and debate<br />
+      Learn from different cultures<br />
+      Engage deeply in open discussion
     </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_agreement.svg',
+    icon: '/value_icons/open.svg',
   },
   {
     title: 'Novel',
     description: (<p>
-      pay attention to the true nature instead of the convention<br />
-      focus on creating new ideas, not publishing papers<br />
-      start a paradigm shift, not just follow<br />
-      try everything once if it is not clear
+      Pay attention to the true nature <br />
+      Focus on creating new ideas <br />
+      Aim at a paradigm shift <br />
+      Always try something new
     </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_transparency.svg',
+    icon: '/value_icons/novel.svg',
   },
   {
     title: 'Flexible',
     description: (
       <p>
-        the only restriction is to make your deliverables perfect<br />
-        move first and ask permission later for grey areas<br />
-        anything is allowed if you won't hurt others<br />
-        any constructive solutions are welcome
+        Care more about results <br />
+        Move first for grey areas<br />
+        Do if nothing gets worse<br />
+        Change is the only constant
       </p>
     ),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_reputation.svg',
+    icon: '/value_icons/flexible.svg',
   },
   {
     title: 'Practical',
     description: (<p>
-      become self critical about potential uses of our technology<br />
-      spend your time at the frontline to figure out a practical problem<br />
-      solve problems according to requirements from customers instead of reviewers<br />
-      committed to the ethical use of technology that improves life rather than degrades it
+      Sensitive to potential applications<br />
+      Find practical problems at front lines<br />
+      Start from customer needs<br />
+      Improve life rather than degrade it
     </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_popularity.svg',
+    icon: '/value_icons/practical.svg',
   },
   {
     title: 'Teamwork',
     description: (<p>
-      play on a team and win as a team<br />
-      behave in a way that reflects well on the team<br />
-      never say "it's not my job" or turn away when something needs doing<br />
-      deliverables are powerful when they are frequently used by others
+      Play on a team and win as a team<br />
+      Behave that reflects well on the team<br />
+      Never turn away when problem comes<br />
+      Make deliverables friendly to users
     </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_popularity.svg',
+    icon: '/value_icons/teamwork.svg',
   },
   {
     title: 'Science',
     description: (<p>
-      integrity is the foundation of science<br />
-      aim high, think big while small step, move fast<br />
-      science is a privilege and we have to earn it every day<br />
-      engaged in the scientific process, irrespective of academic authority or big title    </p>),
-    icon: 'https://zone-assets-api.vercel.app/assets/icons/ic_popularity.svg',
+      Integrity is the foundation<br />
+      Aim high while move fast<br />
+      Engaged in the scientific process<br />
+      Earn the science privilege every day</p>),
+    icon: '/value_icons/science.svg',
   },
 ];
 
