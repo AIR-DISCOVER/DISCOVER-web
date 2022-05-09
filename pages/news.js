@@ -3,7 +3,7 @@ import { Container, Grid, Stack, Typography } from '@mui/material';
 import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../src/config';
 import Layout from '../src/layouts';
 import { Page, Markdown } from '../src/components';
-import { NEWS_MARKDOWN_PATH } from '../_data/config';
+import { NEWS_2022_PATH, NEWS_2021_PATH } from '../_data/config';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import {
@@ -32,14 +32,8 @@ const BoxStyled = styled((props) => (
   color: theme.palette.text.primary,
 }));
 
-
-export async function Process() {
-  const { data: _frontmatter, _content } = matter(NEWS);
-  return { content: await serialize(_content), frontmatter: _frontmatter }
-}
-
 export default function MarketingCaseStudyPage({ post }) {
-  const { frontmatter, content } = post;
+  const { content_2021, content_2022 } = post;
   return (
     <Page title="News">
       <RootStyle>
@@ -52,10 +46,10 @@ export default function MarketingCaseStudyPage({ post }) {
             mt: { xs: 8, md: 10 },
           }}
         >
-          <Typography variant="h2">News Page Title</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>
+          <Typography variant="h2">DISCOVER Lab News</Typography>
+          {/* <Typography sx={{ color: 'text.secondary' }}>
             News page comments here blahblahblah
-          </Typography>
+          </Typography> */}
         </Stack>
         <Container>
           <Grid
@@ -71,13 +65,25 @@ export default function MarketingCaseStudyPage({ post }) {
             <Grid item xs={12} md={2}>
               {/* <MarketingCaseStudySummary frontmatter={frontmatter} /> */}
               <BoxStyled style={{ height: '100%', width: '100%', display: 'flex', alignItems: 'start', justifyContent: 'end' }}>
-                <div style={{ marginTop: 16 }}>
+                <div style={{ marginTop: 16, textAlign: 'center' }}>
                   2022
                 </div>
               </BoxStyled>
             </Grid>
             <Grid item xs={12} md={10}>
-              <Markdown content={content} move />
+              <Markdown content={content_2022} move />
+              {/* <MarketingCaseStudyGallery images={galleryImgs} /> */}
+            </Grid>
+            <Grid item xs={12} md={2}>
+              {/* <MarketingCaseStudySummary frontmatter={frontmatter} /> */}
+              <BoxStyled style={{ height: '100%', width: '100%', display: 'flex', alignItems: 'start', justifyContent: 'end' }}>
+                <div style={{ marginTop: 16, textAlign: 'center' }}>
+                  2021
+                </div>
+              </BoxStyled>
+            </Grid>
+            <Grid item xs={12} md={10}>
+              <Markdown content={content_2021} move />
               {/* <MarketingCaseStudyGallery images={galleryImgs} /> */}
             </Grid>
           </Grid>
@@ -96,9 +102,11 @@ MarketingCaseStudyPage.getLayout = function getLayout(page) {
 export async function getStaticProps() {
   // MDX text - can be from a local file, database, anywhere
   const fs = require('fs')
-  const fileContents = fs.readFileSync(NEWS_MARKDOWN_PATH, 'utf-8');
-  const { data: frontmatter, content } = matter(fileContents);
-  const post = { frontmatter, content, };
-  return { props: { post: { ...post, content: await serialize(post.content) } } }
+  const fileContents_2022 = fs.readFileSync(NEWS_2022_PATH, 'utf-8');
+  const fileContents_2021 = fs.readFileSync(NEWS_2021_PATH, 'utf-8');
+  const { data: frontmatter_2022, content: content_2022 } = matter(fileContents_2022);
+  const { data: frontmatter_2021, content: content_2021 } = matter(fileContents_2021);
+  const post = { frontmatter_2022, content_2022, frontmatter_2021, content_2021 };
+  return { props: { post: { ...post, content_2022: await serialize(post.content_2022), content_2021: await serialize(post.content_2021) } } }
 
 }
