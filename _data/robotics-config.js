@@ -46,7 +46,7 @@ export const MEMBERS = [
     { id: 4, name: "Li, Chuxuan", role: "Researcher", photo: "/member_photos/people_Li_Chuxuan.jpg" },
     // { id: 5, name: "Li, Jin", role: "Researcher", photo: "/member_photos/people_Li_Jin.jpg" },
     { id: 5, name: "Zhang, Xinliang", role: "Engineer", photo: "/member_photos/people_Zhang_Xinliang.jpg" },
-    { id: 6, name: "Wang, Zheng", role: "Project Manager", photo: "" },
-    { id: 7, name: "Huang, Yao", role: "Master Student", photo: "" },
+    { id: 6, name: "Wang, Zheng", role: "Project Manager", photo: "/member_photos/people_Wang_Zheng.jpg" },
+    { id: 7, name: "Huang, Yao", role: "Master Student", photo: "/member_photos/people_Huang_Yao.jpg" },
     { id: 7, name: "Chen, Yilun", role: "Chief Scientist", photo: "" },
 ]

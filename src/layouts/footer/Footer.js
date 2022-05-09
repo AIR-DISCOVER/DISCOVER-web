@@ -145,9 +145,9 @@ NextLinkItem.propTypes = {
   sx: PropTypes.object,
 };
 
-function NextLinkItem({ children, sx, ...other }) {
-  return (
-    <NextLink passHref {...other}>
+function NextLinkItem({ children, sx, href = undefined, ...other }) {
+  return href ? (
+    <NextLink passHref href={href} {...other}>
       <Link
         variant="body3"
         sx={{
@@ -162,6 +162,22 @@ function NextLinkItem({ children, sx, ...other }) {
         {children}
       </Link>
     </NextLink>
+  ) : (
+    <Link
+    variant="body3"
+    sx={{
+      mt: 1,
+      color: 'text.secondary',
+      cursor: 'inherit',
+      '&:hover': {
+        // color: 'text.primary',
+        textDecoration: 'none'
+      },
+      ...sx,
+    }}
+  >
+    {children}
+  </Link>
   );
 }
 

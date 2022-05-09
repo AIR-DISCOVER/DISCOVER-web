@@ -21,6 +21,7 @@ import {
   MarketingAboutOurVision,
   MarketingAboutCoreValues,
 } from '../src/sections/@marketing';
+import Routes from '../src/routes';
 
 // ----------------------------------------------------------------------
 
@@ -59,10 +60,30 @@ export default function MarketingAboutUsPage() {
         {/* <NewsletterMarketing /> */}
         <a id='joinus'></a>
         <NewsletterTravel
-          title={["Postdoc opening", "Internship Oppotunities"]}
-          comment={["This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. ", "This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. This is a great oppotunity. You will be about to maximize you value. "]}
-          link={["Join us", "Join us"]}
-          url={["https://air.tsinghua.edu.cn/en/info/1029/1349.htm", "https://air.tsinghua.edu.cn/en/info/1030/1287.htm"]}
+          title={[
+            "Career",
+            "Postgraduate",
+            "Undergraduate",
+            "Visiting",
+          ]}
+          comment={[
+            "This is a great oppotunity. You will be about to maximize you value.",
+            "This is a great oppotunity. You will be about to maximize you value.",
+            "This is a great oppotunity. You will be about to maximize you value.",
+            "This is a great oppotunity. You will be about to maximize you value.",
+          ]}
+          link={[
+            "Join us",
+            "Join us",
+            "Join us",
+            "Join us",
+          ]}
+          url={[
+            Routes.programs.postdoc,
+            Routes.programs.postgraduate,
+            Routes.programs.undergraduate,
+            Routes.programs.visiting,
+          ]}
         />
       </RootStyle>
     </Page>

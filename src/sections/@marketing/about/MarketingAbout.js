@@ -133,7 +133,7 @@ export default function MarketingAbout() {
                   color="inherit"
                   size="large"
                   sx={{mr: 1, mt: 1}}
-                  href={Routes.page404}
+                  href={Routes.area.transportation}
                   endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
                   >
                   Transportation Area
@@ -143,7 +143,7 @@ export default function MarketingAbout() {
                   color="inherit"
                   size="large"
                   sx={{mr: 1, mt: 1}}
-                  href={Routes.page404}
+                  href={Routes.area.manufacturing}
                   endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
                   >
                   Manufacturing Area

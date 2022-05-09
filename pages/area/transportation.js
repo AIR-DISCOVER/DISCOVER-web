@@ -3,7 +3,7 @@ import { Box, Container, Grid, Stack, Typography } from '@mui/material';
 import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../../src/config';
 import Layout from '../../src/layouts';
 import { Page, Markdown } from '../../src/components';
-import { NEWS_MARKDOWN_PATH, PROGRAMS_POSTDOC_PATH } from '../../_data/config';
+import { AREA_TRANSPORTATION_PATH } from '../../_data/config';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import {
@@ -84,7 +84,7 @@ MarketingCaseStudyPage.getLayout = function getLayout(page) {
 export async function getStaticProps() {
   // MDX text - can be from a local file, database, anywhere
   const fs = require('fs')
-  const fileContents = fs.readFileSync(PROGRAMS_POSTDOC_PATH, 'utf-8');
+  const fileContents = fs.readFileSync(AREA_TRANSPORTATION_PATH, 'utf-8');
   const { data: frontmatter, content } = matter(fileContents);
   const post = { frontmatter, content, };
   return { props: { post: { ...post, content: await serialize(post.content) } } }

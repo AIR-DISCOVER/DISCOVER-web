@@ -20,7 +20,7 @@ export const ProgramsPageLinks = [
   },
   {
     order: '2',
-    subheader: 'PostDoctoral Program',
+    subheader: 'Career',
     // cover: SUN_COVER_PIC,
     items: [
       { title: 'Learn more ..', path: Routes.programs.postdoc },
@@ -28,7 +28,7 @@ export const ProgramsPageLinks = [
   },
   {
     order: '3',
-    subheader: 'PostGraduate Program',
+    subheader: 'PostGraduate',
     // cover: HCI_COVER_PIC,
     items: [
       { title: 'Learn more ..', path: Routes.programs.postgraduate },
@@ -36,7 +36,7 @@ export const ProgramsPageLinks = [
   },
   {
     order: '4',
-    subheader: 'UnderGraduate Enrichment',
+    subheader: 'UnderGraduate',
     // cover: MECHANIC_COVER_PIC,
     items: [
       { title: 'Learn more ..', path: Routes.programs.undergraduate },
@@ -44,7 +44,7 @@ export const ProgramsPageLinks = [
   },
   {
     order: '5',
-    subheader: 'Visiting Program',
+    subheader: 'Visiting',
     // cover: MECHANIC_COVER_PIC,
     items: [
       { title: 'Learn more ..', path: Routes.programs.visiting_winter_camp },

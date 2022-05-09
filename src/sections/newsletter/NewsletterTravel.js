@@ -31,7 +31,7 @@ const RootStyle = styled('div')(({ theme }) => ({
       direction: 'right',
       url: 'https://zone-assets-api.vercel.app/assets/images/travel/travel_newsletter.jpg',
       startColor: `${alpha(theme.palette.grey[900], 0)} 0%`,
-      endColor: `${alpha(theme.palette.grey[900], 1)} 40%`,
+      endColor: `${alpha(theme.palette.grey[900], 1)} 70%`,
     }),
     backgroundPosition: 'center, left ',
     backgroundSize: 'cover, auto 100%',
@@ -61,7 +61,7 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                   {comment[0]}
                 </Typography>
                 <NextLink href={url[0]} passHref>
-                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4}}>
+                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
                     {link[0]}
                   </Typography>
                 </NextLink>
@@ -72,12 +72,33 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                   {comment[1]}
                 </Typography>
                 <NextLink href={url[1]} passHref>
-                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4}}>
+                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
                     {link[1]}
                   </Typography>
                 </NextLink>
               </Grid>
-
+              <Grid item xs={8} md={4}>
+                <Typography variant="h3">{title[2]}</Typography>
+                <Typography>
+                  {comment[2]}
+                </Typography>
+                <NextLink href={url[2]} passHref>
+                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
+                    {link[2]}
+                  </Typography>
+                </NextLink>
+              </Grid>
+              <Grid item xs={8} md={4}>
+                <Typography variant="h3">{title[3]}</Typography>
+                <Typography>
+                  {comment[3]}
+                </Typography>
+                <NextLink href={url[3]} passHref>
+                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
+                    {link[3]}
+                  </Typography>
+                </NextLink>
+              </Grid>
               {/* <FilledInput
                 fullWidth
                 placeholder="Enter your email"

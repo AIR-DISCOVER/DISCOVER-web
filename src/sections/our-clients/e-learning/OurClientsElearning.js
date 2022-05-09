@@ -9,7 +9,7 @@ import { Image, SvgIconStyle } from '../../../components';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Stack)(({ theme }) => ({
-  padding: theme.spacing(8, 0),
+  padding: theme.spacing(0, 0),
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(10, 0),
   },
@@ -48,7 +48,7 @@ export default function CustomerElearning({ brands }) {
 
   return (
     <RootStyle>
-      <Container>
+      <Container sx={{my: 8}}>
         <Stack spacing={3} sx={{ mb: 8, mx: 'auto', maxWidth: 480, textAlign: 'center' }}>
           <Typography variant="h2">We Work With</Typography>
           {/* <Typography sx={{ color: 'text.secondary' }}>
