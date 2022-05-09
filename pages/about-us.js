@@ -21,6 +21,7 @@ import {
   MarketingAboutOurVision,
   MarketingAboutCoreValues,
 } from '../src/sections/@marketing';
+import Routes from '../src/routes';
 
 // ----------------------------------------------------------------------
 
@@ -71,8 +72,18 @@ export default function MarketingAboutUsPage() {
             "This is a great oppotunity. You will be about to maximize you value.",
             "This is a great oppotunity. You will be about to maximize you value.",
           ]}
-          link={["Join us", "Join us"]}
-          url={["https://air.tsinghua.edu.cn/en/info/1029/1349.htm", "https://air.tsinghua.edu.cn/en/info/1030/1287.htm"]}
+          link={[
+            "Join us",
+            "Join us",
+            "Join us",
+            "Join us",
+          ]}
+          url={[
+            Routes.programs.postdoc,
+            Routes.programs.postdoc,
+            Routes.programs.postdoc,
+            Routes.programs.postdoc,
+          ]}
         />
       </RootStyle>
     </Page>
