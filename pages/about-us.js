@@ -61,10 +61,10 @@ export default function MarketingAboutUsPage() {
         <a id='joinus'></a>
         <NewsletterTravel
           title={[
-            "Postdoc opening",
-            "Internship Oppotunities",
-            "Internship Oppotunities",
-            "Internship Oppotunities",
+            "Career",
+            "Postgraduate",
+            "Undergraduate",
+            "Visiting",
           ]}
           comment={[
             "This is a great oppotunity. You will be about to maximize you value.",
