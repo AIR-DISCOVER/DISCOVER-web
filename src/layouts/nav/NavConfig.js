@@ -21,7 +21,7 @@ export const ProgramsPageLinks = [
   {
     order: '2',
     subheader: 'Career',
-    // cover: SUN_COVER_PIC,
+    cover: "/cover_imgs/career.jpg",
     items: [
       { title: 'Learn more ..', path: Routes.programs.career },
     ],
@@ -29,7 +29,7 @@ export const ProgramsPageLinks = [
   {
     order: '3',
     subheader: 'PostGraduate',
-    // cover: HCI_COVER_PIC,
+    cover: "/cover_imgs/postgraduate.jpg",
     items: [
       { title: 'Learn more ..', path: Routes.programs.postgraduate },
     ],
@@ -37,7 +37,7 @@ export const ProgramsPageLinks = [
   {
     order: '4',
     subheader: 'UnderGraduate',
-    // cover: MECHANIC_COVER_PIC,
+    cover: "/cover_imgs/undergraduate.jpg",
     items: [
       { title: 'Learn more ..', path: Routes.programs.undergraduate },
     ],
@@ -45,7 +45,7 @@ export const ProgramsPageLinks = [
   {
     order: '5',
     subheader: 'Visiting',
-    // cover: MECHANIC_COVER_PIC,
+    cover: "/cover_imgs/visiting.jpg",
     items: [
       { title: 'Learn more ..', path: Routes.programs.visiting },
     ],

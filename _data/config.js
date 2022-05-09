@@ -54,7 +54,8 @@ const BoxStyled = styled((props) => (
 }));
 
 
-export const NEWS_MARKDOWN_PATH = '_data/news.md'
+export const NEWS_2022_PATH = '_data/news_2022.md'
+export const NEWS_2021_PATH = '_data/news_2021.md'
 export const PROGRAMS_POSTDOC_PATH = '_data/programs/postdoc.md'
 export const PROGRAMS_POSTGRADUATE_PATH = '_data/programs/postgraduate.md'
 export const AREA_MANUFACTURING_PATH = '_data/area/manufacturing.md'

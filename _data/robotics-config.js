@@ -48,5 +48,5 @@ export const MEMBERS = [
     { id: 5, name: "Zhang, Xinliang", role: "Engineer", photo: "/member_photos/people_Zhang_Xinliang.jpg" },
     { id: 6, name: "Wang, Zheng", role: "Project Manager", photo: "/member_photos/people_Wang_Zheng.jpg" },
     { id: 7, name: "Huang, Yao", role: "Master Student", photo: "/member_photos/people_Huang_Yao.jpg" },
-    { id: 7, name: "Chen, Yilun", role: "Chief Scientist", photo: "" },
+    { id: 7, name: "Chen, Yilun", role: "Chief Scientist", photo: "/member_photos/people_Chen_Yilun.jpg" },
 ]

@@ -34,9 +34,9 @@ export const CATEGORIES = [
 
 export const MEMBERS = [
     { id: 1, name: "Shi, Yongliang", role: "Postdoc Fellow", photo: "/member_photos/people_Shi_Yongliang.jpeg" },
-    { id: 2, name: "Zhou, Qiang", role: "Researcher", photo: "" },
+    { id: 2, name: "Zhou, Qiang", role: "Researcher", photo: "/member_photos/people_Zhou_Qiang.jpg" },
     { id: 3, name: "Chen, Xiaoxue", role: "Phd Student", photo: "/member_photos/people_Chen_Xiaoxue.jpg" },
     { id: 4, name: "Li, Pengfei", role: "Phd Student", photo: "/member_photos/people_Li_Pengfei.jpeg" },
     { id: 5, name: "Li, Yang", role: "Researcher", photo: "/member_photos/people_Li_Yang.jpg" },
-    { id: 6, name: "Tian, Beiwen", role: "Researcher", photo: "" },
+    { id: 6, name: "Tian, Beiwen", role: "Researcher", photo: "/member_photos/people_Tian_Beiwen.jpg" },
 ]
