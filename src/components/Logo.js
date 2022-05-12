@@ -15,7 +15,7 @@ Logo.propTypes = {
   sx: PropTypes.object,
 };
 
-function Logo({ force, isSimple = false, width = 120, sx, withoutText = false }) {
+function Logo({ force, isSimple = false, width = 200, sx, withoutText = false }) {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
 
@@ -28,9 +28,9 @@ function Logo({ force, isSimple = false, width = 120, sx, withoutText = false })
     src = '/logo/discover-icon-without-text.png'
   }
   else if (force) {
-    src = force == 'light' ? "/logo/discover-icon-alpha-black.png" : "/logo/discover-icon-alpha.png"
+    src = force == 'light' ? "/logo/air-discover-icon-alpha-black.png" : "/logo/air-discover-icon-alpha.png"
   } else {
-    src = !isLight ? "/logo/discover-icon-alpha.png" : "/logo/discover-icon-alpha-black.png";
+    src = !isLight ? "/logo/air-discover-icon-alpha.png" : "/logo/air-discover-icon-alpha-black.png";
   }
   return (
     <NextLink href="/" passHref>

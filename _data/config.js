@@ -396,12 +396,12 @@ export const ROBOMASTER_PROGRAM = {
     {
       id: 1,
       description: 'Course Homepage',
-      href: Routes.comingsoon,
+      href: "https://air.tsinghua.edu.cn/robomaster/course_ug.html",
     },
     {
       id: 2,
       description: 'RMUS 2022',
-      href: Routes.comingsoon,
+      href: "https://air.tsinghua.edu.cn/robomaster/sim2real_icra22.html",
     },
   ],
 }

@@ -95,7 +95,7 @@ export default function ProgramCard({ program }) {
                 size="large"
                 sx={{ mr: 1, mt: 1 }}
                 endIcon={<Iconify icon={directionStraightRight} sx={{ width: 22, height: 22 }} />}
-                href={item.description}
+                href={item.href}
               >
                 {item.description}
               </Button>
