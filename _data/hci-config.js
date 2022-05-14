@@ -13,9 +13,6 @@ export const INTRO = {
             A. Understanding and modelling long-term human behaviours and emotions in  the real-world through wearable or ubiquitous contactless sensors.<br />
             B. Building novelty human-in-the-loop AI/Robotics systems, such as in transportation, manufacturing, education, health, work, housing, and entertainment.<br />
             C. Exploring methods and algorithms enabling effective human-AI collaboration that make human partnerships more productive, creative, accessible and enjoyable.<br />
-            <br />
-            We welcome talents and partners from multi-disciplines,  such as computer science, robotics, design, arts, cognitive science, psychology, sociology, and etc.
-
         </p>
     ),
     inverse: true,

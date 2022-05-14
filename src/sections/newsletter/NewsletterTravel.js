@@ -47,7 +47,7 @@ export default function NewsletterTravel({ title, comment, link, url }) {
       <Container>
         <Grid container spacing={8} justifyContent="flex-end">
           <Grid item xs={12} md={8}>
-            <Grid container columns={8}
+            <Grid container columns={9}
               spacing={8}
               sx={{
                 color: 'common.white',
@@ -55,7 +55,7 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                 minHeight: '20rem'
               }}
             >
-              <Grid item xs={8} md={4}>
+              <Grid item xs={9} md={3}>
                 <Typography variant="h3">{title[0]}</Typography>
                 <Typography>
                   {comment[0]}
@@ -66,7 +66,7 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                   </Typography>
                 </NextLink>
               </Grid>
-              <Grid item xs={8} md={4}>
+              <Grid item xs={9} md={3}>
                 <Typography variant="h3">{title[1]}</Typography>
                 <Typography>
                   {comment[1]}
@@ -77,7 +77,7 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                   </Typography>
                 </NextLink>
               </Grid>
-              <Grid item xs={8} md={4}>
+              <Grid item xs={9} md={3}>
                 <Typography variant="h3">{title[2]}</Typography>
                 <Typography>
                   {comment[2]}
@@ -88,17 +88,7 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                   </Typography>
                 </NextLink>
               </Grid>
-              <Grid item xs={8} md={4}>
-                <Typography variant="h3">{title[3]}</Typography>
-                <Typography>
-                  {comment[3]}
-                </Typography>
-                <NextLink href={url[3]} passHref>
-                  <Typography sx={{ cursor: 'pointer', textDecoration: 'underline 1px', fontWeight: 'bold', '&:hover': { fontWeight: 'bolder', textDecoration: 'underline 2px' }, mt: 4 }}>
-                    {link[3]}
-                  </Typography>
-                </NextLink>
-              </Grid>
+
               {/* <FilledInput
                 fullWidth
                 placeholder="Enter your email"

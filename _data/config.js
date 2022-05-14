@@ -453,7 +453,7 @@ export const FINAL_YEAR_PROGRAM = {
 
 export const CAREER_PROFESSOR = {
   // bgURL: '/images/winter_camp.gif',
-  title: "Professors / Associate Professors / Assistant Professors (AI + Transportation)",
+  title: "Professors / Associate Professors / Assistant Professors",
   intro: <span>
     <Block title="Job Responsibilities" content={<>
       Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:
@@ -476,7 +476,7 @@ export const CAREER_PROFESSOR = {
       <li>Mature pipeline for technology industrialization and incubation.</li>
     </>} />
     <Block title="Contact Us" content={<>
-      Please send your resume to airhr@tsinghua.edu.cn.
+      Please send your resume to zhouguyue@air.tsinghua.edu.cn.
     </>} />
   </span>,
   imageURL: "/images/winter_camp.gif",
@@ -486,7 +486,7 @@ export const CAREER_PROFESSOR = {
 
 export const CAREER_POSTDOC = {
   // bgURL: '/images/winter_camp.gif',
-  title: "Post-Doctorals (AI + Transportation)",
+  title: "Postdoc Fellowe",
   intro: <span>
     <Block title="Job Responsibilities" content={<>
       Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
@@ -509,7 +509,7 @@ export const CAREER_POSTDOC = {
       <li>Mature pipeline for technology industrialization and incubation.</li>
     </>} />
     <Block title="Contact Us" content={<>
-      Please send your resume to airhr@tsinghua.edu.cn.
+      Please send your resume to zhouguyue@air.tsinghua.edu.cn.
     </>} />
   </span>,
   imageURL: "/images/winter_camp.gif",
@@ -518,7 +518,7 @@ export const CAREER_POSTDOC = {
 }
 export const CAREER_RESEARCHER = {
   // bgURL: '/images/winter_camp.gif',
-  title: "Research Engineers (AI + Transportation)",
+  title: "Researcher",
   intro: <span>
     <Block title="Job Responsibilities" content={<>
       Carry out research that enables AI Transportation, and develop industrial applications of the following research areas:
@@ -543,7 +543,7 @@ export const CAREER_RESEARCHER = {
       <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
     </>} />
     <Block title="Contact Us" content={<>
-      Please send your resume to airhr@tsinghua.edu.cn.
+      Please send your resume to zhouguyue@air.tsinghua.edu.cn.
     </>} />
   </span>,
   imageURL: "/images/winter_camp.gif",

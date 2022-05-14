@@ -61,10 +61,9 @@ export default function MarketingAboutUsPage() {
         <a id='joinus'></a>
         <NewsletterTravel
           title={[
-            "Career",
-            "Postgraduate",
-            "Undergraduate",
-            "Visiting",
+            "Postdoc Fellow",
+            "Researcher",
+            "Intern",
           ]}
           comment={[
             // "This is a great oppotunity. You will be about to maximize you value.",
@@ -76,10 +75,8 @@ export default function MarketingAboutUsPage() {
             "Join us",
             "Join us",
             "Join us",
-            "Join us",
           ]}
           url={[
-            Routes.programs.career,
             Routes.programs.postgraduate,
             Routes.programs.undergraduate,
             Routes.programs.visiting,

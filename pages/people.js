@@ -12,7 +12,10 @@ export default function HomePage() {
 
   return (
     <Page title="Home">
-      <TeamMarketingAbout members={ROBOTICS.MEMBERS.concat(HCI.MEMBERS.concat(SUN.MEMBERS)).sort((a, b) => { return a.name > b.name })} />
+      <TeamMarketingAbout members={
+        (ROBOTICS.MEMBERS.concat(HCI.MEMBERS.concat(SUN.MEMBERS)).sort((a, b) => { return a.name > b.name }))
+          .filter((v, i, a) => a.findIndex(v2 => (v.name === v2.name)) === i)
+      } />
 
       {/* <HomeHero />
 

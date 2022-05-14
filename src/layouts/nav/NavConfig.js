@@ -28,7 +28,7 @@ export const ProgramsPageLinks = [
   },
   {
     order: '3',
-    subheader: 'PostGraduate',
+    subheader: 'Postgraduate',
     cover: "/cover_imgs/postgraduate.jpg",
     items: [
       { title: 'Learn more ..', path: Routes.programs.postgraduate },
@@ -36,7 +36,7 @@ export const ProgramsPageLinks = [
   },
   {
     order: '4',
-    subheader: 'UnderGraduate',
+    subheader: 'Undergraduate',
     cover: "/cover_imgs/undergraduate.jpg",
     items: [
       { title: 'Learn more ..', path: Routes.programs.undergraduate },
