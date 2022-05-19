@@ -123,6 +123,7 @@ export default function Footer({ fill }) {
         >
           <Typography variant="body3" sx={{ color: 'text.secondary' }}>
             © 2022. All rights reserved
+          <a href='http://beian.miit.gov.cn'> 京ICP备2022014381号</a>
           </Typography>
           {/* <Stack direction="row" spacing={3} justifyContent="center">
             <Link variant="body3" sx={{ color: 'text.secondary' }}>
