@@ -90,8 +90,9 @@ export const DISCOVER_PAGELINKS = [
     items: [
       { title: 'To Understand Our Core Values', path: Routes.aboutus_core_value },
       { title: 'To Meet Our Industrial Partners', path: Routes.aboutus_partner },
-      { title: 'To Find Our Research Openings', path: Routes.aboutus_join_us },
-      { title: 'To Find Our Internship Opportunities', path: Routes.aboutus_join_us },
+      { title: 'To Find Our Postdoc Fellow Openings', path: Routes.programs.career + '#postdoc'},
+      { title: 'To Find Our Researcher Openings', path:   Routes.programs.career + '#researcher'},
+      { title: 'To Find Our Internship Opportunities', path:  Routes.programs.visiting + '#program' },
     ],
   },
   {
@@ -488,6 +489,7 @@ export const CAREER_POSTDOC = {
   // bgURL: '/images/winter_camp.gif',
   title: "Postdoc Fellowe",
   intro: <span>
+
     <Block title="Job Responsibilities" content={<>
       Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
       <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
