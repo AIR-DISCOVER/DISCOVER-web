@@ -290,7 +290,7 @@ export const WINTER_CAMP = {
 export const VISITING_PROGRAM = {
   title: "Internship Program",
   intro: <span>
-    Conduct research in cutting-edge algorithms including federated learning, privacy computing, AI security, and data integration; cooperate with leading companies in the industry to apply these technologies to the industry; and deliver quality research output.<br />
+    Conduct research in the cutting-edge algorithms including federated learning, privacy computing, AI security, and data integration; cooperate with leading companies in the industry to apply these technologies to the industry; and deliver quality research output.<br />
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Location
