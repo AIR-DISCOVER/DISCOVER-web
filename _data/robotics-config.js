@@ -2,20 +2,20 @@ import { Box } from '@mui/material';
 // 
 
 export const INTRO = {
-    overline: "AIR DISCOVER",
+    //overline: "AIR DISCOVER",
     title: (<span>
-        <Box component={'span'} sx={{ color: 'brown' }}>R</Box>
-        <Box component={'span'} sx={{ color: 'primary.main' }}>o</Box>
-        <Box component={'span'} sx={{ color: 'primary.dark' }}>b</Box>
-        <Box component={'span'} sx={{ color: 'primary.light' }}>o</Box>
-        <Box component={'span'} sx={{ color: 'secondary.main' }}>t</Box>
-        <Box component={'span'} sx={{ color: 'secondary.dark' }}>i</Box>
-        <Box component={'span'} sx={{ color: 'green' }}>c</Box>
-        <Box component={'span'} sx={{ color: 'purple' }}>s</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'brown' }}>R</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'primary.main' }}>o</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'primary.dark' }}>b</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'primary.light' }}>o</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'secondary.main' }}>t</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'secondary.dark' }}>i</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'green' }}>c</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'purple' }}>s</Box>
         {' '}
-        <Box component={'span'} sx={{ color: 'text.secondary' }}>Team</Box>
+        <Box component={'span'} sx={{ fontSize: '60px', color: 'text.secondary' }}>Group</Box>
     </span>),
-    description: (`The Robotics group has focused on research in autonomous systems that can move, manipulate, perceive, decide, and interact with human.
+    description: (`The Robotics group has focused on research in autonomous systems that can move, manipulate, perceive, decide, and interact with humans.
 We are interested in discovering how robot locomotion and execution can improve the system performance in embodied tasks for transportation, manufacturing, and consumer applications.
 Another domain of our research lies in investigating simulation-to-reality gaps and performing explainable domain transfer learning to shorten deployment duration. 
 Looking forward to a human-robot symbiosis in the future, we therefore aim at developing hardware-aware, scalable algorithms for multi-robot and multi-human collaboration.`)
