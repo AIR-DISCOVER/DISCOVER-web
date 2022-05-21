@@ -489,11 +489,11 @@ export const CAREER_PROFESSOR = {
 
 export const CAREER_POSTDOC = {
   // bgURL: '/images/winter_camp.gif',
-  title: "Postdoc Fellowe",
+  title: "Postdoc Fellow",
   intro: <span>
 
     <Block title="Job Responsibilities" content={<>
-      Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
+      Candidates should carry out research that enables autonomous driving, V2X, and AI Transportation. He or she should produce influential research outcomes and promote industrial application of the following research areas:
       <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
       <li>Computer vision, including image classification, facial recognition, object detection, image segmentation, image recognition, image/video understanding, and model compression;</li>
       <li>Machine learning systems, including distributed optimization methods for machine learning, federated learning, and efficient neural networks;</li>
@@ -503,13 +503,14 @@ export const CAREER_POSTDOC = {
     </>} />
     <Block title="Qualifications and Requirements" content={<>
       <li>Candidates should hold a doctoral degree (within three years of graduation and under 35 years old, for post-doc positions) in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
-      <li>Candidates should have internationally recognized academic achievements; or rich R&D experience in industry;</li>
+      <li>Candidates should have internationally recognized academic achievements or rich R&D experiences in the industry.</li>
       <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
     </>} />
     <Block title="Salary and Benefits" content={<>
-      <li>World-class research environment, internationally competitive package, Tsinghua benefits;</li>
-      <li>Open and collaborative academic atmosphere, sufficient start-up funds;</li>
-      <li>Research platform at Tsinghua with abundant data and top-tier industrial resources;</li>
+      At DISCOVER Lab we will provide you with:
+      <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua's employee;</li>
+      <li>Open and collaborative academic atmosphere together with sufficient start-up funds;</li>
+      <li>Research platform at Tsinghua with top-tier industrial resources which offer abundant data and scenarios for technological innovation;</li>
       <li>Mature pipeline for technology industrialization and incubation.</li>
     </>} />
     <Block title="Contact Us" content={<>
