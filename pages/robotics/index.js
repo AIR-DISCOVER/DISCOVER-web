@@ -32,7 +32,7 @@ export default function MarketingLandingPage({ posts }) {
       {/* <OurClientsMarketingLanding brands={_brands} /> */}
 
       {/* <MarketingLandingAbout /> */}
-      <TeamMarketingLangding members={_members} />
+      <TeamMarketingLangding members={_members} group="mechanic" />
 
       {/* <BlogMarketingLatestPosts posts={posts.slice(0, 4)} name='Research' /> */}
 

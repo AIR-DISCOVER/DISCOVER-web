@@ -17,7 +17,7 @@ TeamMarketingMember.propTypes = {
   }),
 };
 
-export default function TeamMarketingMember({ member }) {
+export default function TeamMarketingMember({ member, group }) {
   const { name, role, photo, socialLinks } = member;
 
   return (
@@ -63,7 +63,7 @@ export default function TeamMarketingMember({ member }) {
         {name}
       </Typography>
       <Typography variant="body3" sx={{ color: 'text.disabled', textAlign: 'center' }}>
-        {role}
+        {name === "Zhou, Guyue" ? (group === "sun" ? "Group Leader (Interim)" : "Group Leader") : role}
       </Typography>
     </div>
   );

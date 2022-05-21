@@ -60,7 +60,7 @@ TeamMarketingLangding.propTypes = {
   members: PropTypes.array.isRequired,
 };
 
-export default function TeamMarketingLangding({ members }) {
+export default function TeamMarketingLangding({ members, group }) {
   const theme = useTheme();
 
   const carouselRef = useRef(null);
@@ -147,7 +147,7 @@ export default function TeamMarketingLangding({ members }) {
                 color: 'common.white',
               }}
             >
-              <TeamMarketingMember member={member} />
+              <TeamMarketingMember member={member} group={group}/>
             </Box>
           ))}
         </Slider>
