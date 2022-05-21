@@ -27,7 +27,9 @@ export const TAGS = [
 ]
 
 export const CATEGORIES = [
-    "Research",
+    "Physical Scene Decomposition",
+    "Cognitive Scene Understanding",
+    "Robot-centric Scene Interpretation",
 ]
 
 export const MEMBERS = [

@@ -1,7 +1,7 @@
 ---
 title: "PQ-Transformer: Jointly Parsing 3D Objects and Layouts from Point Clouds"
 description: The first transformer architecture to jointly parse 3D objects and layouts.
-category: research
+category: Cognitive Scene Understanding
 coverImg: /images/sun_pq_1.PNG
 heroImg: /images/sun_pq_1.PNG
 createdAt: '2022-04-06T12:34'
