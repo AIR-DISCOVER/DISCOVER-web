@@ -88,7 +88,7 @@ export const DISCOVER_PAGELINKS = [
     order: '1',
     subheader: 'About Us',
     items: [
-      { title: 'To understand our core value', path: Routes.aboutus_core_value },
+      { title: 'To Understand Our Core Values', path: Routes.aboutus_core_value },
       { title: 'To meet our industrial partners', path: Routes.aboutus_partner },
       { title: 'To find our RA/PostDoc/PhD openings', path: Routes.aboutus_join_us },
       { title: 'To find our internship opportunities', path: Routes.aboutus_join_us },
