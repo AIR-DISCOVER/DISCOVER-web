@@ -1,11 +1,17 @@
 ---
 title: Postgraduate Program
-description: test description
 ---
 
-#### 10/15  AIR DISCOVER | WANG He: Estimation and Tracking of Dof Pose
+DISCOVER Lab hosts Tsinghua University's postgraduate programs from the Department of Computer Science and Technology (CS) and School of Vehicle and Mobility (SVM) respectively, including regular PhD (CS and SVM), international PhD/Master (CS and SVM), and Master of Engineering Management (SVM). Candidates who are interested in pursuing postgraduate study at DISCOVER Lab, please send your resume or portfolio to zhouguyue@air.tsinghua.edu.cn. Some useful links are listed as follows.
 
-The 6Dof Pose, (including 3Dof Translation and 3Dof Rotation) is an important physical property to transform the object from the world coordinate system to the camera coordinate system, and the estimation and tracking of the 6Dof Pose is widely used in robot vision, grasping and control.
+[Department of Computer Science and Technology, Tsinghua University](https://www.cs.tsinghua.edu.cn/)
 
+[School of Vehicle and Mobility, Tsinghua University](http://www.svm.tsinghua.edu.cn/)
 
-On October 22, AIR DISCOVER "Young Scientist Forum III" was held at Turing Lecture Hall, Institute for AI Industry Research, Tsinghua University (AIR). In this issue, we are honored to invite Prof. WANG He, Assistant Professor and PhD supervisor of Frontier Computing Research Center, Peking University, to introduce three papers on estimation and tracking of 6Dof Pose (including 3Dof translation and 3Dof rotation).
+[Application Instructions for Bachelor's Degree Holders to Pursue Doctoral Degrees](https://yz.tsinghua.edu.cn/en/info/1035/1046.htm)
+
+[Admission to Graduate Programs of Tsinghua University (International Students)](https://yz.tsinghua.edu.cn/en/Admissions/How_to_Apply.htm)
+
+[Application Portal (International Students)](http://gradadmission.tsinghua.edu.cn/f/login)
+
+[Application Instructions for Master of Engineering Management Programs of Tsinghua University:](http://www.imem.tsinghua.edu.cn/zsxx/zsjz.htm)
