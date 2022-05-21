@@ -1,7 +1,7 @@
 ---
 title: A Multimodal Robotic Platform for Mobile Manipulation
 #description: "Explainable AI refers to methods and techniques that enable humans."
-# category: Community
+category: A Multimodal Robotic Platform
 coverImg: /images/robotics_HDmap2.png
 heroImg: /images/robotics_HDmap2.png
 createdAt: '2022-04-07T19:32'
