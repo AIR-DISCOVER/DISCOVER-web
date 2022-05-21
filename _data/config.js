@@ -359,10 +359,10 @@ export const STAR_PROGRAM = {
         Benefits
       </Typography>
       <li>Cooperate directly with top scientists in the field of artificial intelligence, share the high-quality scientific resources of Tsinghua University and partners, and output high-level academic results.</li>
-      <li>Understanding the needs of the industry, Transforming worldclass scientific research results into real-life applications.</li>
-      <li>Priority hiring opportunities for doctoral/postdoctoral/full-time positions.</li>
-      <li>High-quality resources and strong recommendations from industry giants (including but not limited to recommendation letters).</li>
-      <li>First-hand information about cutting-edge lectures, forums and competition activities.</li>
+      <li>Understand the needs of the industry and transform world-class scientific research results into real-life applications.</li>
+      <li>Have the priority hiring opportunities for doctoral/postdoctoral/full-time positions.</li>
+      <li>Enjoy High-quality resources and strong recommendations from industry giants (including but not limited to recommendation letters).</li>
+      <li>Share First-hand information about cutting-edge lectures, forums and competition activities.</li>
       <li>Co-work with other talented students.</li>
     </div>
 
@@ -370,7 +370,7 @@ export const STAR_PROGRAM = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Salary and benefits
       </Typography>
-      <li>First-class research platform and innovation atmosphere</li>
+      <li>A first-class research platform and innovation atmosphere</li>
       <li>A competitive salary</li>
       <li>An internship certificate</li>
     </div>
