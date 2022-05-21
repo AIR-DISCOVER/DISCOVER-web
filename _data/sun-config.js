@@ -3,15 +3,13 @@ export const INTRO = {
     title: "SUN Team",
     description: (
         <p>
-            AIR DISCOVER HCI Team is an Human-centered AI research team that focuses on creating AI-driven systems that amplify and augment human abilities and well-beings.<br />
+            AIR-SUN（Scene UNderstanding）is the computer vision group of DISCOVER. Computer vision is the art of tracing light, along two paths:<br />
             <br />
-            We are now interested in the following three research topics:<br />
-            A. Understanding and modelling long-term human behaviours and emotions in  the real-world through wearable or ubiquitous contactless sensors.<br />
-            B. Building novelty human-in-the-loop AI/Robotics systems, such as in transportation, manufacturing, education, health, work, housing, and entertainment.<br />
-            C. Exploring methods and algorithms enabling effective human-AI collaboration that make human partnerships more productive, creative, accessible and enjoyable.<br />
+            A. From images to the physical world.<br />
+            B. From images to our brains.
             <br />
-            We welcome talents and partners from multi-disciplines,  such as computer science, robotics, design, arts, cognitive science, psychology, sociology, and etc.
-
+            <br />
+            We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people.
         </p>
     )
 }
