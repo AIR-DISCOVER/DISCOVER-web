@@ -290,7 +290,7 @@ export const WINTER_CAMP = {
 export const VISITING_PROGRAM = {
   title: "Internship Program",
   intro: <span>
-    Conduct research in the cutting-edge algorithms including federated learning, privacy computing, AI security, and data integration; cooperate with leading companies in the industry to apply these technologies to the industry; and deliver quality research output.<br />
+    Interns at DISCOVER Lab should conduct research in cutting-edge algorithms including federated learning, privacy computing, AI security, and data integration. He/she should also cooperate with leading companies in the industry to apply these technologies to the industry and deliver quality research output.<br />
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Location
@@ -303,7 +303,7 @@ export const VISITING_PROGRAM = {
         Basic requirements
       </Typography>
       <li>Candidates should be currently enrolled in a bachelor's / master's / doctor's program in computer science, electronics, automation, robotics, mathematics, material chemistry, or other related majors.</li>
-      <li>Candidate should have strong self-motivation and teamwork abilities.</li>
+      <li>Candidates should have strong self-motivation and teamwork abilities.</li>
       <li>The internship should last at least 6 months, 3 days per week.</li>
     </div>
 
@@ -311,7 +311,7 @@ export const VISITING_PROGRAM = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Skill requirements (You should meet at least one of them)
       </Typography>
-      <li>Have interests or research experience in AI and reinforcement learning, be familiar with mainstream deep learning frameworks, and be able to read related literature and implement algorithms independently.</li>
+      <li>Have interests or research experiences in AI and reinforcement learning. Be familiar with mainstream deep learning frameworks and be able to read related literature and implement algorithms independently.</li>
       <li>Be familiar with and have worked on projects about robotics, Raspberry Pi, Arduino, embedded systems, mechatronics design and 3D printing.</li>
     </div>
 
@@ -319,7 +319,7 @@ export const VISITING_PROGRAM = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Salary and benefits
       </Typography>
-      <li>First-class research platform and innovation atmosphere</li>
+      <li>A first-class research platform and innovation atmosphere</li>
       <li>A competitive salary</li>
       <li>An internship certificate</li>
     </div>
