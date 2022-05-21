@@ -35,7 +35,7 @@ export default function TeamElearningAbout({ members }) {
             mb: { xs: 2, md: 2 },
           }}
         >
-          Meet our group
+          Meet Our Group
         </Typography>
         <Typography
           variant="h5"
