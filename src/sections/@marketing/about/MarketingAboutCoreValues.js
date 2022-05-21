@@ -8,64 +8,64 @@ import { SvgIconStyle } from '../../../components';
 
 const CORE_VALUES = [
   {
-    title: 'Open',
+    title: 'Openess',
     description: (<p>
-      Ideas become stronger when shared<br />
-      Better ideas come from dialog and debate<br />
-      Learn from different cultures<br />
-      Engage deeply in open discussion
+      Ideas Become Stronger When Shared<br />
+      Better Ideas Come from Debates<br />
+      Learn from Different Cultures<br />
+      Engage Deeply in Open Discussions
     </p>),
     icon: '/value_icons/open.svg',
   },
   {
-    title: 'Novel',
+    title: 'Novelty',
     description: (<p>
-      Pay attention to the true nature <br />
-      Focus on creating new ideas <br />
-      Aim at a paradigm shift <br />
-      Always try something new
+      Pay Attention to the Real Nature <br />
+      Generating New Ideas Dedicatedly <br />
+      Aim at a Paradigm Shift  <br />
+      Always Try Something New
     </p>),
     icon: '/value_icons/novel.svg',
   },
   {
-    title: 'Flexible',
+    title: 'Flexibility',
     description: (
       <p>
-        Care more about results <br />
-        Move first for grey areas<br />
-        Do if nothing gets worse<br />
-        Change is the only constant
+        Care More about Results <br />
+        Move First for Grey Areas<br />
+        Do It if Nothing Gets Worse<br />
+        Change is the Only Constant
       </p>
     ),
     icon: '/value_icons/flexible.svg',
   },
   {
-    title: 'Practical',
+    title: 'Practicality',
     description: (<p>
-      Sensitive to potential applications<br />
-      Find practical problems at front lines<br />
-      Start from customer needs<br />
-      Improve life rather than degrade it
+      Be Sensitive to Potential Applications<br />
+      Find Problems from Firsthand Experiences<br />
+      Start from Customer Needs<br />
+      Improve Life Rather than Degrade It
     </p>),
     icon: '/value_icons/practical.svg',
   },
   {
     title: 'Teamwork',
     description: (<p>
-      Play on a team and win as a team<br />
-      Behave that reflects well on the team<br />
-      Never turn away when problem comes<br />
-      Make deliverables friendly to users
+      Play in a Team and Win as a Team<br />
+      Avoid Things that Bring Bad Effects<br />
+      Never Turn Away When Problem Occurs<br />
+      Make Deliverables User-friendly
     </p>),
     icon: '/value_icons/teamwork.svg',
   },
   {
     title: 'Science',
     description: (<p>
-      Integrity is the foundation<br />
-      Aim high while move fast<br />
-      Engaged in the scientific process<br />
-      Earn the science privilege every day</p>),
+      Integrity is the Foundation<br />
+      Aim High and Move Fast<br />
+      Engage in the Scientific Process<br />
+      Earn the Science Privilege Every Day</p>),
     icon: '/value_icons/science.svg',
   },
 ];

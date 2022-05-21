@@ -63,13 +63,13 @@ export const AREA_TRANSPORTATION_PATH = '_data/area/transportation.md'
 
 export const DISCOVER_INTRO = (
   <p>
-    <strong>DISCOVER</strong> (<strong>DIS</strong>tributed <strong>CO</strong>llaborative <strong>V</strong>ision and <strong>E</strong>xponential <strong>R</strong>obotics) Lab is a key technical team at Institute for AI Industry Research (AIR), Tsinghua University, aiming to establish an exponential robotic platform which enables robots to reproduce themselves. To achieve the goal, scientists and technologists from DISCOVER Lab are developing top-tier computer vision, computer graphics, and robotics expertise and are working on the cutting-edge technological breakthroughs to address significant practical challenges.
+    <strong>DISCOVER</strong> (<strong>DIS</strong>tributed <strong>CO</strong>llaborative <strong>V</strong>ision and <strong>E</strong>xponential <strong>R</strong>obotics) Lab is a key technical team at Institute for AI Industry Research (AIR), Tsinghua University, aiming to establish an exponential robotic platform which enables robots to reproduce themselves. To achieve the goal, scientists and technologists from DISCOVER Lab are developing top-tier computer vision, computer graphics, and robotics expertise and are working on cutting-edge technological breakthroughs to address significant practical challenges.
   </p>
 );
 
 export const DISCOVER_RESEARCH_AREA = (
   <p>
-    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>Research</BoxStyled> DISCOVER Lab conducts advanced research in a wide range of areas, including cyber physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.area.transportation} passHref><StyledDiv component={'span'}>transportation</StyledDiv></NextLink> and <NextLink href={Routes.area.manufacturing} passHref><StyledDiv component={'span'}>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
+    <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>Research</BoxStyled> DISCOVER Lab conducts advanced research in a wide range of areas, including cyber-physical system modeling, human-in-the-loop intelligent systems, collaborative multi-modal perception, and multi-agent intelligence, to accelerate the fourth industrial revolution in <NextLink href={Routes.area.transportation} passHref><StyledDiv component={'span'}>transportation</StyledDiv></NextLink> and <NextLink href={Routes.area.manufacturing} passHref><StyledDiv component={'span'}>manufacturing</StyledDiv></NextLink> industries. In DISCOVER Lab, several research groups are established to develop related expertise.
   </p>
 );
 
@@ -77,7 +77,7 @@ export const DISCOVER_PROGRAMS_OVERVIEW = (
   <p>
     <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>Programs</BoxStyled>
     <span>
-      DISCOVER Lab offers diverse academic programs for different applicants. Professor, scientist, post-doctoral, researcher, and engineer positions are open to develop your academic career.
+      DISCOVER Lab offers diverse academic programs for different applicants. Professor, scientist, postdoc fellow, researcher, and engineer positions are open to develop your academic career.
       Meanwhile, students (and perspective students) from Tsinghua University are welcome to follow our postgraduate and undergraduate programs. Moreover, non-Tsinghua students can also join our Lab via visiting programs.
     </span>
   </p>
@@ -88,10 +88,11 @@ export const DISCOVER_PAGELINKS = [
     order: '1',
     subheader: 'About Us',
     items: [
-      { title: 'To understand our core value', path: Routes.aboutus_core_value },
-      { title: 'To meet our industrial partners', path: Routes.aboutus_partner },
-      { title: 'To find our RA/PostDoc/PhD openings', path: Routes.aboutus_join_us },
-      { title: 'To find our internship opportunities', path: Routes.aboutus_join_us },
+      { title: 'To Understand Our Core Values', path: Routes.aboutus_core_value },
+      { title: 'To Meet Our Industrial Partners', path: Routes.aboutus_partner },
+      { title: 'To Find Our Postdoc Fellow Openings', path: Routes.programs.career + '#postdoc'},
+      { title: 'To Find Our Researcher Openings', path:   Routes.programs.career + '#researcher'},
+      { title: 'To Find Our Internship Opportunities', path:  Routes.programs.visiting + '#program' },
     ],
   },
   {
@@ -144,7 +145,7 @@ export const SUMMER_CAMP = {
     This event will be held annually with different research projects.<br />
     <br />
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
-      At May 1st, 2022, DISCOVER Lab held the 2nd summer camp, students participating in this camp joined one of the following 3 research fields and 13 projects of their own choice, based on their direction of interest and skills.
+    At May 1st, 2022, DISCOVER Lab held the 2nd summer camp. Students participating in this camp were provided with the following 3 research fields and 13 projects, of which they could pick out one field and one project based on their own direction of interests and skills：
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Robotics
       </Typography>
@@ -168,11 +169,11 @@ export const SUMMER_CAMP = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Human-Computer Interaction
       </Typography>
-      <li>Research on intelligent navigation robots for blind people</li>
-      <li>Research on AI music therapy system and intelligent musical instruments</li>
-      <li>Research on intelligent clothing and proactive health management system</li>
-      <li>Research on intelligent building block kit for children's emotional education</li>
-      <li>Research on human-AI collaboration system for autonomous driving</li>
+      <li>Intelligent navigation robots for blind people</li>
+      <li>AI music therapy system and intelligent musical instruments</li>
+      <li>Intelligent clothing and proactive health management system</li>
+      <li>Intelligent building block kit for children's emotional education</li>
+      <li>Human-AI collaboration system for autonomous driving</li>
     </div>
 
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
@@ -200,11 +201,11 @@ export const SUMMER_CAMP = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Requirements
       </Typography>
-      <li>Graduate/undergraduate/ PhD students enrolled in well known institutions.</li>
-      <li>Passion for research, excellent basic skills, outstanding innovation and practical ability.</li>
-      <li>At least 2 months of on site work time guaranteed during the summer camp.</li>
-      <li>Research experience in robotics, computer vision, and human-computer interaction are preferred.</li>
-      <li>Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and other related subjects.</li>
+      <li>Graduate/undergraduate/ PhD students enrolled in well known institutions;</li>
+      <li>Passion for research, excellent basic skills, outstanding innovation and practical ability;</li>
+      <li>At least 2 months of on site work time guaranteed during the summer camp;</li>
+      <li>Research experience in robotics, computer vision, and human-computer interaction are preferred;</li>
+      <li>Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology or other related subjects</li>
     </div>
 
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
@@ -224,8 +225,7 @@ export const WINTER_CAMP = {
   intro: <span>
     This event will be held annually with different research subjects.<br />
     <br />
-    At the beginning of 2022, DISCOVER Lab held the 1st winter camp， 2021-2022 Robotics Training Camp.<br />
-    Students participating in this camp joined one of the following nine programs based on their interest and skills. Winter camp focuses on training engineering skills.<br />
+    At the beginning of 2022, DISCOVER Lab held the 1st winter camp, 2021-2022 Robotics Training Camp, which focused on engineering skills training. Students participating in this camp have joined one of the following 9 programs based on their interests and skills: <br />
     <br />
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
       <li>Robot group planning and control.</li>
@@ -235,8 +235,8 @@ export const WINTER_CAMP = {
       <li>Wheel-legged robot.<br /></li>
       <li>Indoor autonomous navigation for wheel robots.<br /></li>
       <li>Robotic arm development with reinforcement learning.<br /></li>
-      <li>Research on multimodal perception and generation.<br /></li>
-      <li>Research on multimodal affective computing.<br /></li>
+      <li>Multimodal perception and generation.<br /></li>
+      <li>Multimodal affective computing.<br /></li>
     </div>
     {/* <Image
       alt="teams"
@@ -268,11 +268,11 @@ export const WINTER_CAMP = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Requirements
       </Typography>
-      1. graduate/undergraduate/PhD students enrolled in well known institutions. <br />
-      2. passion for research, excellent in basic skills, outstanding innovation and practical ability. <br />
-      3. At least 1 month of on site work time guaranteed during the winter camp. <br />
-      4. Research experience in robotics, computer vision, and human-computer interaction are preferred. <br />
-      5. Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and other related subjects.
+      1. graduate/undergraduate/PhD students enrolled in well known institutions;<br />
+      2. passion for research, excellent in basic skills, outstanding innovation and practical ability;<br />
+      3. At least 1 month of on site work time guaranteed during the winter camp;<br />
+      4. Research experience in robotics, computer vision, and human-computer interaction are preferred;<br />
+      5. Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and or other related subjects.
     </div>
 
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
@@ -290,7 +290,7 @@ export const WINTER_CAMP = {
 export const VISITING_PROGRAM = {
   title: "Internship Program",
   intro: <span>
-    Conduct research in cutting-edge algorithms including federated learning, privacy computing, AI security, and data integration; cooperate with leading companies in the industry to apply these technologies to the industry; and deliver quality research output.<br />
+    Interns at DISCOVER Lab should conduct research in cutting-edge algorithms including federated learning, privacy computing, AI security, and data integration. He/she should also cooperate with leading companies in the industry to apply these technologies to the industry and deliver quality research output.<br />
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Location
@@ -303,7 +303,7 @@ export const VISITING_PROGRAM = {
         Basic requirements
       </Typography>
       <li>Candidates should be currently enrolled in a bachelor's / master's / doctor's program in computer science, electronics, automation, robotics, mathematics, material chemistry, or other related majors.</li>
-      <li>Candidate should have strong self-motivation and teamwork abilities.</li>
+      <li>Candidates should have strong self-motivation and teamwork abilities.</li>
       <li>The internship should last at least 6 months, 3 days per week.</li>
     </div>
 
@@ -311,7 +311,7 @@ export const VISITING_PROGRAM = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Skill requirements (You should meet at least one of them)
       </Typography>
-      <li>Have interests or research experience in AI and reinforcement learning, be familiar with mainstream deep learning frameworks, and be able to read related literature and implement algorithms independently.</li>
+      <li>Have interests or research experiences in AI and reinforcement learning. Be familiar with mainstream deep learning frameworks and be able to read related literature and implement algorithms independently.</li>
       <li>Be familiar with and have worked on projects about robotics, Raspberry Pi, Arduino, embedded systems, mechatronics design and 3D printing.</li>
     </div>
 
@@ -319,7 +319,7 @@ export const VISITING_PROGRAM = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Salary and benefits
       </Typography>
-      <li>First-class research platform and innovation atmosphere</li>
+      <li>A first-class research platform and innovation atmosphere</li>
       <li>A competitive salary</li>
       <li>An internship certificate</li>
     </div>
@@ -359,10 +359,10 @@ export const STAR_PROGRAM = {
         Benefits
       </Typography>
       <li>Cooperate directly with top scientists in the field of artificial intelligence, share the high-quality scientific resources of Tsinghua University and partners, and output high-level academic results.</li>
-      <li>Understanding the needs of the industry, Transforming worldclass scientific research results into real-life applications.</li>
-      <li>Priority hiring opportunities for doctoral/postdoctoral/full-time positions.</li>
-      <li>High-quality resources and strong recommendations from industry giants (including but not limited to recommendation letters).</li>
-      <li>First-hand information about cutting-edge lectures, forums and competition activities.</li>
+      <li>Understand the needs of the industry and transform world-class scientific research results into real-life applications.</li>
+      <li>Have the priority hiring opportunities for doctoral/postdoctoral/full-time positions.</li>
+      <li>Enjoy High-quality resources and strong recommendations from industry giants (including but not limited to recommendation letters).</li>
+      <li>Share First-hand information about cutting-edge lectures, forums and competition activities.</li>
       <li>Co-work with other talented students.</li>
     </div>
 
@@ -370,7 +370,7 @@ export const STAR_PROGRAM = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Salary and benefits
       </Typography>
-      <li>First-class research platform and innovation atmosphere</li>
+      <li>A first-class research platform and innovation atmosphere</li>
       <li>A competitive salary</li>
       <li>An internship certificate</li>
     </div>
@@ -388,8 +388,8 @@ export const STAR_PROGRAM = {
 
 
 export const ROBOMASTER_PROGRAM = {
-  title: "Make your own robots to win the competition!",
-  intro: "\"Introduction to Intelligent Systems: Design and Practice\" is an undergraduate course set up by DISCOVER Lab and iCenter. In this course, robotic concepts and toolchains are introduced for a robot competition. Meanwhile, we encourage experienced robotic enthusiasts to participate in RoboMaster University Sim2Real Challenge (RMUS), which is an international robotic competition hold at ICRA organized by DISCOVER Lab and DJI.",
+  title: "Robotics Course: Win the Competition! ",
+  intro: "\"Introduction to Intelligent Systems: Design and Practice\" is an undergraduate course set up by DISCOVER Lab and iCenter. In this course, robotic concepts and toolchains are introduced for a robot competition. We highly encourage experienced robotic enthusiasts to participate in RoboMaster University Sim2Real Challenge (RMUS), which is an international robotic competition held at ICRA and is organized by DISCOVER Lab and DJI.",
   imageURL: "/images/lesson.jpg",
   beforeEntry: "Learn more: ",
   entry: [
@@ -424,7 +424,7 @@ export const INTELLIGENT_SYSTEM_PROGRAM = {
 export const SRT_PROGRAM = {
   reverse: true,
   title: "Enrich your project experience",
-  intro: "DISCOVER Club is a student community to fight for hardcore robotic competitions, burnishing solid skills of computer vision, automatic control, mechnical design and others. Specific multi-robot systems are built to accomplish the pre-defined mission. Some technical problems for competitions can be defined in form of Student Research Training (SRT) and Final Year Project (FYP).",
+  intro: "DISCOVER Club is a student community which aims at hardcore robotic competitions, burnishing solid skills in computer vision, automatic control, mechanical design and other astonishing activities. Specific multi-robot systems are built to accomplish such missions. Some existing technical problems in the robotic competition introduced above can be defined and possibly solved in form of Student Research Training (SRT) and Final Year Project (FYP).",
   imageURL: "/images/club.jpg",
   beforeEntry: "Learn more: ",
   entry: [
@@ -456,23 +456,25 @@ export const CAREER_PROFESSOR = {
   title: "Professors / Associate Professors / Assistant Professors",
   intro: <span>
     <Block title="Job Responsibilities" content={<>
-      Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:
-      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
-      <li>Computer vision, including image classification, facial recognition, object detection, image segmentation, image recognition, image/video understanding, and model compression;</li>
-      <li>Machine learning systems, including distributed optimization methods for machine learning, federated learning, and efficient neural networks;</li>
-      <li>Intelligent information retrieval, such as ranking, neural information retrieval, recommendation systems, user mining and modeling;</li>
-      <li>Data mining, including data crowdsourcing, social network mining, large image modeling and analysis, and stream data computing;</li>
-      <li>Decision-making optimization, including reinforcement learning, multi-agent learning, and large-scale optimization.</li>
+      The DISCOVER Lab invites applications for the position of Professor/Associate Professor/Assistant Professor of the Institute for AI Industry Research (AIR), Tsinghua University.
+      <br />
+      <br />
+      DISCOVER (DIStributed COllaborative Vision and Exponential Robotics) Lab is a key technical team at Institute for AI Industry Research (AIR), Tsinghua University, aiming to establish an exponential robotic platform which enables robots to reproduce themselves. To achieve the goal, scientists and technologists from DISCOVER Lab are developing top-tier computer vision, computer graphics, and robotics expertise and are working on cutting-edge technological breakthroughs to address significant practical challenges.
+      <br />
+      <br />
+      We are continuously seeking individuals with strong expertise in machine learning/autonomous driving/robotics. Candidates admitted to our lab will conduct research in cutting-edge fields such as autonomous driving, customer-directed manufacturing and laboratory automation using machine learning, robotics, high-performance computing and other technologies. As an important part of our team, candidates are encouraged to output high-level scientific research results, expand the research influence in related fields in both academia and industry, and promote related industrial applications.
     </>} />
     <Block title="Qualifications and Requirements" content={<>
-      <li>Candidates should hold a doctoral degree (within three years of graduation and under 35 years old, for post-doc positions) in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
-      <li>Candidates should have internationally recognized academic achievements; or rich R&D experience in industry;</li>
-      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
+      <li>Candidates must have earned a PhD degree in computer science, electronic engineering, robotics, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
+      <li>Candidates should have internationally recognized academic achievements or rich R&D experiences in the industry with outstanding achievements in the industrialization of scientific research results;</li>
+      <li>Experience as R&D leaders or senior management positions in well-known domestic or foreign companies is preferred;</li>
+      <li>Candidates should be passionate about scientific research and teaching. Meanwhile, he or she must have a high level of integrity and share Tsinghua's values.</li>
     </>} />
     <Block title="Salary and Benefits" content={<>
-      <li>World-class research environment, internationally competitive package, Tsinghua benefits;</li>
-      <li>Open and collaborative academic atmosphere, sufficient start-up funds;</li>
-      <li>Research platform at Tsinghua with abundant data and top-tier industrial resources;</li>
+      At DISCOVER Lab we will provide you with:
+      <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua's employee;</li>
+      <li>Open and collaborative academic atmosphere together with sufficient start-up funds;</li>
+      <li>Research platform at Tsinghua with top-tier industrial resources which offer abundant data and scenarios for technological innovation;</li>
       <li>Mature pipeline for technology industrialization and incubation.</li>
     </>} />
     <Block title="Contact Us" content={<>
@@ -486,10 +488,11 @@ export const CAREER_PROFESSOR = {
 
 export const CAREER_POSTDOC = {
   // bgURL: '/images/winter_camp.gif',
-  title: "Postdoc Fellowe",
+  title: "Postdoc Fellow",
   intro: <span>
+
     <Block title="Job Responsibilities" content={<>
-      Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
+      Candidates should carry out research that enables autonomous driving, V2X, and AI Transportation. He or she should produce influential research outcomes and promote industrial application of the following research areas:
       <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
       <li>Computer vision, including image classification, facial recognition, object detection, image segmentation, image recognition, image/video understanding, and model compression;</li>
       <li>Machine learning systems, including distributed optimization methods for machine learning, federated learning, and efficient neural networks;</li>
@@ -499,13 +502,14 @@ export const CAREER_POSTDOC = {
     </>} />
     <Block title="Qualifications and Requirements" content={<>
       <li>Candidates should hold a doctoral degree (within three years of graduation and under 35 years old, for post-doc positions) in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
-      <li>Candidates should have internationally recognized academic achievements; or rich R&D experience in industry;</li>
+      <li>Candidates should have internationally recognized academic achievements or rich R&D experiences in the industry.</li>
       <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
     </>} />
     <Block title="Salary and Benefits" content={<>
-      <li>World-class research environment, internationally competitive package, Tsinghua benefits;</li>
-      <li>Open and collaborative academic atmosphere, sufficient start-up funds;</li>
-      <li>Research platform at Tsinghua with abundant data and top-tier industrial resources;</li>
+      At DISCOVER Lab we will provide you with:
+      <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua's employee;</li>
+      <li>Open and collaborative academic atmosphere together with sufficient start-up funds;</li>
+      <li>Research platform at Tsinghua with top-tier industrial resources which offer abundant data and scenarios for technological innovation;</li>
       <li>Mature pipeline for technology industrialization and incubation.</li>
     </>} />
     <Block title="Contact Us" content={<>
@@ -521,7 +525,7 @@ export const CAREER_RESEARCHER = {
   title: "Researcher",
   intro: <span>
     <Block title="Job Responsibilities" content={<>
-      Carry out research that enables AI Transportation, and develop industrial applications of the following research areas:
+      Candidates should carry out research that enables AI Transportation and develop industrial applications in the following research areas:
       <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
       <li>Decision-making optimization in autonomous driving, V2X and smart transportation systems, using reinforcement learning, multi-agent learning, and large-scale optimization;</li>
       <li>Computer vision, including image classification and image segmentation;</li>
@@ -529,17 +533,18 @@ export const CAREER_RESEARCHER = {
       <li>Intelligent information retrieval, such as ranking, neural information retrieval, recommendation systems, user mining and modeling.</li>
     </>} />
     <Block title="Salary and Benefits" content={<>
+      At DISCOVER Lab we will provide you with:
       <li>Open and collaborative academic atmosphere, and a chance to work with great minds;</li>
       <li>Research platform at Tsinghua with abundant data and top-tier industrial resources;</li>
-      <li>Mature pipeline for technology industrialization and incubation.</li>
+      <li>Mature pipeline for technology industrialization and incubation;</li>
       <li>Good work-life balance, and comfortable work environment.</li>
     </>} />
     <Block title="Qualifications and Requirements" content={<>
-      <li>Candidates should be graduates from well-known universities with a degree in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence, or other related majors;</li>
-      <li>Candidates should have at least three years of working experience at renowned research institutes, or leading companies, in related fields;</li>
+      <li>Candidates should be graduates from well-known universities with a degree in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
+      <li>Candidates should have at least three years of working experience at renowned research institutes or leading companies in related fields;</li>
       <li>Candidates should have academic or industrial experience in autonomous driving, V2X, or smart transportation system building;</li>
-      <li>Candidates should be proficient in NLP/ML/DL models and algorithms (e.g. GBDT/MLP/CNN/RNN/LSTM/Transformer), and familiar with reinforcement learning algorithms;</li>
-      <li>Candidates should be skilled in one or more mainstream deep learning frameworks (Caffe, TensorFlow, PyTorch, PaddlePaddle), and familiar with their architecture and implementation mechanisms;</li>
+      <li>Candidates should be proficient in NLP/ML/DL models and algorithms (e.g. GBDT/MLP/CNN/RNN/LSTM/Transformer), and be familiar with reinforcement learning algorithms;</li>
+      <li>Candidates should be skilled in one or more mainstream deep learning frameworks (Caffe, TensorFlow, PyTorch, PaddlePaddle), and be familiar with their architecture and implementation mechanisms;</li>
       <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
     </>} />
     <Block title="Contact Us" content={<>

@@ -1,7 +1,7 @@
 ---
 title: New Paradigm of Customer-to-Manufacturer (C2M)
 # description: "Explainable AI refers to methods and techniques that enable humans."
-# category: Community
+category: Customer to Manufacturer
 coverImg: /images/robotics_C2M.png
 heroImg: /images/robotics_C2M.png
 createdAt: '2022-04-07T17:54'

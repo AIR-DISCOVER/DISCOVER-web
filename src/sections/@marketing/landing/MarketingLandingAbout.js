@@ -46,7 +46,7 @@ export default function MarketingLandingAbout() {
             </Typography>
 
             <Typography variant="h2" sx={{ mt: 2, mb: 3 }}>
-              Who We Are
+              Our Lab
             </Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>

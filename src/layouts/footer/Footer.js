@@ -116,13 +116,13 @@ export default function Footer({ fill }) {
 
       <Container>
         <Stack
-          direction={{ xs: 'column', md: 'row' }}
           spacing={2.5}
           justifyContent="space-between"
           sx={{ py: 3, textAlign: 'center' }}
         >
           <Typography variant="body3" sx={{ color: 'text.secondary' }}>
             © 2022. All rights reserved
+          <a href='http://beian.miit.gov.cn'> 京ICP备2022014381号</a>
           </Typography>
           {/* <Stack direction="row" spacing={3} justifyContent="center">
             <Link variant="body3" sx={{ color: 'text.secondary' }}>

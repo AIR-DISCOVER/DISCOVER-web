@@ -35,9 +35,9 @@ export default function TeamMarketingAbout({ members }) {
           }}
         >
           <Typography variant="h2">Our Team</Typography>
-          {/* <Typography sx={{ color: 'text.secondary' }}>
-            Great Team is the Key to Success
-          </Typography> */}
+          <Typography sx={{fontSize: 26, color: 'text.secondary' }}>
+          Play in a Team and Win as a Team.
+          </Typography>
         </Stack>
 
         <Box

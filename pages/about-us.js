@@ -77,9 +77,9 @@ export default function MarketingAboutUsPage() {
             "Join us",
           ]}
           url={[
-            Routes.programs.postgraduate,
-            Routes.programs.undergraduate,
-            Routes.programs.visiting,
+            Routes.programs.career + '#postdoc',
+            Routes.programs.career + '#researcher',
+            Routes.programs.visiting + '#program',
           ]}
         />
       </RootStyle>

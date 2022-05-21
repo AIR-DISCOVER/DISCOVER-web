@@ -15,7 +15,7 @@ import * as ROBOTICS from '../../../_data/robotics-config';
 const CATEGORIES = {
   'hci': HCI.CATEGORIES,
   'sun': SUN.CATEGORIES,
-  'machanic': ROBOTICS.CATEGORIES,
+  'mechanic': ROBOTICS.CATEGORIES,
 }
 
 BlogSidebarCategories.propTypes = {

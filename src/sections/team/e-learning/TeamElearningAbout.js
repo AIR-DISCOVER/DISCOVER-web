@@ -35,7 +35,7 @@ export default function TeamElearningAbout({ members }) {
             mb: { xs: 2, md: 2 },
           }}
         >
-          Meet our team
+          Meet Our Group
         </Typography>
         <Typography
           variant="h5"
@@ -44,7 +44,7 @@ export default function TeamElearningAbout({ members }) {
             mb: { xs: 8, md: 10, opacity: 0.72 },
           }}
         >
-          Great Team is the Key to Success
+          Play in a Team and Win as a Team
         </Typography>
 
         <Box

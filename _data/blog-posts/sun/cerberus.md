@@ -1,6 +1,6 @@
 ---
 title: "Cerberus Transformer: Joint Semantic, Affordance and Attribute Parsing"
-category: research
+category: Physical Scene Decomposition
 createdAt: '2022-04-05T18:11'
 coverImg: /images/sun_cer_3.jpg
 heroImg: /images/sun_cer_1.PNG

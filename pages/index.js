@@ -21,7 +21,7 @@ const HomePage = () => {
     <Page title="Home">
       {/* <Background cref={controlRef} /> */}
 
-      <HomeAdvertisement onClick={onClick} pack={{ overline: 'Towards the unknown. Towards the future. ', main: 'DISCOVER.', button: 'Explore' }} />
+      <HomeAdvertisement onClick={onClick} pack={{ overline: 'Towards the unknown. Towards the future. ', main: 'DISCOVER', button: 'Explore' }} />
 
       {/* <HomeHero />
 

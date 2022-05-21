@@ -47,7 +47,7 @@ export const ProgramsPageLinks = [
     subheader: 'Visiting',
     cover: "/cover_imgs/visiting.jpg",
     items: [
-      { title: 'Learn more ..', path: Routes.programs.visiting },
+      { title: 'Learn more ..', path: Routes.programs.visiting + '#program' },
     ],
   },
 ]
