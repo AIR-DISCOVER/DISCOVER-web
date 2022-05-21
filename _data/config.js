@@ -389,8 +389,8 @@ export const STAR_PROGRAM = {
 
 
 export const ROBOMASTER_PROGRAM = {
-  title: "Make your own robots to win the competition!",
-  intro: "\"Introduction to Intelligent Systems: Design and Practice\" is an undergraduate course set up by DISCOVER Lab and iCenter. In this course, robotic concepts and toolchains are introduced for a robot competition. Meanwhile, we encourage experienced robotic enthusiasts to participate in RoboMaster University Sim2Real Challenge (RMUS), which is an international robotic competition hold at ICRA organized by DISCOVER Lab and DJI.",
+  title: "Robotics Course: Win the Competition! ",
+  intro: "\"Introduction to Intelligent Systems: Design and Practice\" is an undergraduate course set up by DISCOVER Lab and iCenter. In this course, robotic concepts and toolchains are introduced for a robot competition. We highly encourage experienced robotic enthusiasts to participate in RoboMaster University Sim2Real Challenge (RMUS), which is an international robotic competition held at ICRA and is organized by DISCOVER Lab and DJI.",
   imageURL: "/images/lesson.jpg",
   beforeEntry: "Learn more: ",
   entry: [
