@@ -49,8 +49,8 @@ export default function CustomerElearning({ brands }) {
   return (
     <RootStyle>
       <Container sx={{my: 8}}>
-        <Stack spacing={3} sx={{ mb: 8, mx: 'auto', maxWidth: 480, textAlign: 'center' }}>
-          <Typography variant="h2">We Work With</Typography>
+        <Stack spacing={3} sx={{ mb: 8, mx: 'auto', maxWidth: 2000, textAlign: 'center' }}>
+          <Typography variant="h2">Our Industrial Partners</Typography>
           {/* <Typography sx={{ color: 'text.secondary' }}>
             Quisque aliquet, libero consequat elementum convallis.
           </Typography> */}
