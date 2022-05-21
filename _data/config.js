@@ -145,7 +145,7 @@ export const SUMMER_CAMP = {
     This event will be held annually with different research projects.<br />
     <br />
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
-      At May 1st, 2022, DISCOVER Lab held the 2nd summer camp, students participating in this camp joined one of the following 3 research fields and 13 projects of their own choice, based on their direction of interest and skills.
+    At May 1st, 2022, DISCOVER Lab held the 2nd summer camp. Students participating in this camp were provided with the following 3 research fields and 13 projects, of which they could pick out one field and one project based on their own direction of interests and skills：
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Robotics
       </Typography>
@@ -169,11 +169,11 @@ export const SUMMER_CAMP = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Human-Computer Interaction
       </Typography>
-      <li>Research on intelligent navigation robots for blind people</li>
-      <li>Research on AI music therapy system and intelligent musical instruments</li>
-      <li>Research on intelligent clothing and proactive health management system</li>
-      <li>Research on intelligent building block kit for children's emotional education</li>
-      <li>Research on human-AI collaboration system for autonomous driving</li>
+      <li>Intelligent navigation robots for blind people</li>
+      <li>AI music therapy system and intelligent musical instruments</li>
+      <li>Intelligent clothing and proactive health management system</li>
+      <li>Intelligent building block kit for children's emotional education</li>
+      <li>Human-AI collaboration system for autonomous driving</li>
     </div>
 
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
@@ -201,11 +201,11 @@ export const SUMMER_CAMP = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Requirements
       </Typography>
-      <li>Graduate/undergraduate/ PhD students enrolled in well known institutions.</li>
-      <li>Passion for research, excellent basic skills, outstanding innovation and practical ability.</li>
-      <li>At least 2 months of on site work time guaranteed during the summer camp.</li>
-      <li>Research experience in robotics, computer vision, and human-computer interaction are preferred.</li>
-      <li>Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and other related subjects.</li>
+      <li>Graduate/undergraduate/ PhD students enrolled in well known institutions;</li>
+      <li>Passion for research, excellent basic skills, outstanding innovation and practical ability;</li>
+      <li>At least 2 months of on site work time guaranteed during the summer camp;</li>
+      <li>Research experience in robotics, computer vision, and human-computer interaction are preferred;</li>
+      <li>Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology or other related subjects</li>
     </div>
 
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
