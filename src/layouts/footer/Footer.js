@@ -116,7 +116,6 @@ export default function Footer({ fill }) {
 
       <Container>
         <Stack
-          direction={{ xs: 'column', md: 'row' }}
           spacing={2.5}
           justifyContent="space-between"
           sx={{ py: 3, textAlign: 'center' }}
