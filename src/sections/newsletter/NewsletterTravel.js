@@ -20,6 +20,7 @@ import NextLink from 'next/link';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
+  margin: theme.spacing(40, 0, 0),
   padding: theme.spacing(10, 0),
   ...cssStyles(theme).bgImage({
     url: 'https://zone-assets-api.vercel.app/assets/images/travel/travel_newsletter.jpg',
@@ -55,6 +56,9 @@ export default function NewsletterTravel({ title, comment, link, url }) {
                 minHeight: '20rem'
               }}
             >
+              <Grid item xs={9} md={9}>
+                <Typography variant="h2">Our Recruitment</Typography>
+              </Grid>
               <Grid item xs={9} md={3}>
                 <Typography variant="h3">{title[0]}</Typography>
                 <Typography>

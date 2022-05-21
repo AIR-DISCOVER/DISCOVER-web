@@ -50,14 +50,6 @@ export default function MarketingAboutUsPage() {
 
 <TestimonialsMarketing testimonials={_testimonials} /> */}
 
-        <a id='partner'></a>
-        <OurClientsElearning brands={_brandsColor} />
-
-        {/* <MarketingFaqs /> */}
-
-        {/* <MarketingFreeSEO /> */}
-
-        {/* <NewsletterMarketing /> */}
         <a id='joinus'></a>
         <NewsletterTravel
           title={[
@@ -82,6 +74,15 @@ export default function MarketingAboutUsPage() {
             Routes.programs.visiting + '#program',
           ]}
         />
+        
+        <a id='partner'></a>
+        <OurClientsElearning brands={_brandsColor} />
+
+        {/* <MarketingFaqs /> */}
+
+        {/* <MarketingFreeSEO /> */}
+
+        {/* <NewsletterMarketing /> */}
       </RootStyle>
     </Page>
   );

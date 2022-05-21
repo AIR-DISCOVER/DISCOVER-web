@@ -9,6 +9,7 @@ import { Image, SvgIconStyle } from '../../../components';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Stack)(({ theme }) => ({
+  margin: theme.spacing(10, 0),
   padding: theme.spacing(0, 0),
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(10, 0),
