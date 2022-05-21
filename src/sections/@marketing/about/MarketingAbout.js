@@ -95,13 +95,13 @@ export default function MarketingAbout() {
             pt: { xs: HEADER_MOBILE_HEIGHT / 8, md: HEADER_DESKTOP_HEIGHT / 8 }
           }}>
             <Box sx={{ height: '60vh' }}></Box>
-            <Typography variant="h2">Who We Are?</Typography>
+            <Typography variant="h2">Our Lab</Typography>
             <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
               {DISCOVER_INTRO}
             </Typography>
 
             <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
-              Check our work:
+              Check Our Work:
             </Typography>
             {/* <Grid container spacing={2} xs={12} md={12} lg={12} width="100%" alignItems='center' justifyContent='center'> */}
             {/* <Grid item md={12} lg={4}> */}
