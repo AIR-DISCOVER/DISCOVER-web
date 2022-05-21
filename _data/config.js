@@ -425,7 +425,7 @@ export const INTELLIGENT_SYSTEM_PROGRAM = {
 export const SRT_PROGRAM = {
   reverse: true,
   title: "Enrich your project experience",
-  intro: "DISCOVER Club is a student community to fight for hardcore robotic competitions, burnishing solid skills of computer vision, automatic control, mechnical design and others. Specific multi-robot systems are built to accomplish the pre-defined mission. Some technical problems for competitions can be defined in form of Student Research Training (SRT) and Final Year Project (FYP).",
+  intro: "DISCOVER Club is a student community which aims at hardcore robotic competitions, burnishing solid skills in computer vision, automatic control, mechanical design and other astonishing activities. Specific multi-robot systems are built to accomplish such missions. Some existing technical problems in the robotic competition introduced above can be defined and possibly solved in form of Student Research Training (SRT) and Final Year Project (FYP).",
   imageURL: "/images/club.jpg",
   beforeEntry: "Learn more: ",
   entry: [
