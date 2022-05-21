@@ -112,13 +112,13 @@ export default function TeamMarketingLangding({ members }) {
           <Grid item xs={12} md={4}>
             <Stack sx={{ textAlign: { xs: 'center', md: 'unset' } }}>
               <Typography variant="overline" sx={{ color: 'grey.600' }}>
-                Team
+                Group
               </Typography>
               <Typography variant="h2" sx={{ mt: 2, mb: 3, color: 'primary.main' }}>
-                Meet Our Team
+                Meet Our Group
               </Typography>
               <Typography sx={{ color: 'common.white' }}>
-                Great Team is the Key to Success
+                Play in a Team and Win as a Team
               </Typography>
             </Stack>
           </Grid>
