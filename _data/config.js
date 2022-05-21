@@ -77,7 +77,7 @@ export const DISCOVER_PROGRAMS_OVERVIEW = (
   <p>
     <BoxStyled variant='span' style={{ fontWeight: 'bolder', fontSize: 25 }}>Programs</BoxStyled>
     <span>
-      DISCOVER Lab offers diverse academic programs for different applicants. Professor, scientist, post-doctoral, researcher, and engineer positions are open to develop your academic career.
+      DISCOVER Lab offers diverse academic programs for different applicants. Professor, scientist, postdoc fellow, researcher, and engineer positions are open to develop your academic career.
       Meanwhile, students (and perspective students) from Tsinghua University are welcome to follow our postgraduate and undergraduate programs. Moreover, non-Tsinghua students can also join our Lab via visiting programs.
     </span>
   </p>
@@ -457,23 +457,25 @@ export const CAREER_PROFESSOR = {
   title: "Professors / Associate Professors / Assistant Professors",
   intro: <span>
     <Block title="Job Responsibilities" content={<>
-      Carry out research that enables autonomous driving, V2X, and AI Transportation, produce influential research outcome, and promote industrial application of the following research areas:
-      <li>Machine learning/deep learning/reinforced learning algorithms, including statistical machine learning models, efficient neural networks, representation learning, self-supervised learning, graph representation learning, adversarial learning, multimodal and large-scale pre-training;</li>
-      <li>Computer vision, including image classification, facial recognition, object detection, image segmentation, image recognition, image/video understanding, and model compression;</li>
-      <li>Machine learning systems, including distributed optimization methods for machine learning, federated learning, and efficient neural networks;</li>
-      <li>Intelligent information retrieval, such as ranking, neural information retrieval, recommendation systems, user mining and modeling;</li>
-      <li>Data mining, including data crowdsourcing, social network mining, large image modeling and analysis, and stream data computing;</li>
-      <li>Decision-making optimization, including reinforcement learning, multi-agent learning, and large-scale optimization.</li>
+      The DISCOVER Lab invites applications for the position of Professor/Associate Professor/Assistant Professor of the Institute for AI Industry Research (AIR), Tsinghua University.
+      <br />
+      <br />
+      DISCOVER (DIStributed COllaborative Vision and Exponential Robotics) Lab is a key technical team at Institute for AI Industry Research (AIR), Tsinghua University, aiming to establish an exponential robotic platform which enables robots to reproduce themselves. To achieve the goal, scientists and technologists from DISCOVER Lab are developing top-tier computer vision, computer graphics, and robotics expertise and are working on cutting-edge technological breakthroughs to address significant practical challenges.
+      <br />
+      <br />
+      We are continuously seeking individuals with strong expertise in machine learning/autonomous driving/robotics. Candidates admitted to our lab will conduct research in cutting-edge fields such as autonomous driving, customer-directed manufacturing and laboratory automation using machine learning, robotics, high-performance computing and other technologies. As an important part of our team, candidates are encouraged to output high-level scientific research results, expand the research influence in related fields in both academia and industry, and promote related industrial applications.
     </>} />
     <Block title="Qualifications and Requirements" content={<>
-      <li>Candidates should hold a doctoral degree (within three years of graduation and under 35 years old, for post-doc positions) in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
-      <li>Candidates should have internationally recognized academic achievements; or rich R&D experience in industry;</li>
-      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
+      <li>Candidates must have earned a PhD degree in computer science, electronic engineering, robotics, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
+      <li>Candidates should have internationally recognized academic achievements or rich R&D experiences in the industry with outstanding achievements in the industrialization of scientific research results;</li>
+      <li>Experience as R&D leaders or senior management positions in well-known domestic or foreign companies is preferred;</li>
+      <li>Candidates should be passionate about scientific research and teaching. Meanwhile, he or she must have a high level of integrity and share Tsinghua's values.</li>
     </>} />
     <Block title="Salary and Benefits" content={<>
-      <li>World-class research environment, internationally competitive package, Tsinghua benefits;</li>
-      <li>Open and collaborative academic atmosphere, sufficient start-up funds;</li>
-      <li>Research platform at Tsinghua with abundant data and top-tier industrial resources;</li>
+      At DISCOVER Lab we will provide you with:
+      <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua's employee;</li>
+      <li>Open and collaborative academic atmosphere together with sufficient start-up funds;</li>
+      <li>Research platform at Tsinghua with top-tier industrial resources which offer abundant data and scenarios for technological innovation;</li>
       <li>Mature pipeline for technology industrialization and incubation.</li>
     </>} />
     <Block title="Contact Us" content={<>
