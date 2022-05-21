@@ -1,7 +1,7 @@
 ---
 title: City-scale Ultra-low-altitude HD Map for Micro Air Vehicles
 #description: "Explainable AI refers to methods and techniques that enable humans."
-# category: Community
+category: City-scale Ultra-low-altitude HD Map
 coverImg: /images/robotics_HDmap.png
 heroImg: /images/robotics_HDmap.png
 createdAt: '2022-04-07T19:24'

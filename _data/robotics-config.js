@@ -37,6 +37,10 @@ export const TAGS = [
 ]
 
 export const CATEGORIES = [
+    "Customer to Manufacturer",
+    "City-scale Ultra-low-altitude HD Map",
+    "Simulation to Reality",
+    "A Multimodal Robotic Platform"
 ]
 
 export const MEMBERS = [

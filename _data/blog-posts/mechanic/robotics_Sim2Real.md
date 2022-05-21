@@ -1,7 +1,7 @@
 ---
 title: A Robotic Evaluation Platform from Simulation to Reality
 #description: "Explainable AI refers to methods and techniques that enable humans."
-# category: Community
+category: Simulation to Reality
 coverImg: /images/robotics_sim2real.png
 heroImg: /images/robotics_sim2real.png
 createdAt: '2022-04-07T19:28'
