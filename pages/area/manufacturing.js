@@ -1,19 +1,30 @@
-import { styled } from '@mui/material/styles';
-import { Box, Container, Grid, Stack, Typography } from '@mui/material';
-import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../../src/config';
-import Layout from '../../src/layouts';
-import { Page, Markdown } from '../../src/components';
-import { AREA_MANUFACTURING_PATH } from '../../_data/config';
-import matter from 'gray-matter';
+import PropTypes from 'prop-types';
 import { serialize } from 'next-mdx-remote/serialize';
+// @mui
+import { styled } from '@mui/material/styles';
+import { Container, Grid, Box } from '@mui/material';
+// routes
+import Routes from '../../src/routes';
+import matter from 'gray-matter';
+// config
+import { HEADER_MOBILE_HEIGHT, HEADER_DESKTOP_HEIGHT } from '../../src/config';
+// _data
+import { _testimonials } from '../../_data/mock';
+// layouts
+import Layout from '../../src/layouts';
+// components
+import { Page, Image, Markdown, Breadcrumbs } from '../../src/components';
+// sections
+import { NewsletterMarketing } from '../../src/sections/newsletter';
+import { TestimonialsMarketing } from '../../src/sections/testimonials';
 import {
   MarketingFreeSEO,
   MarketingCaseStudySummary,
   MarketingCaseStudyGallery,
   MarketingCaseStudiesSimilar,
 } from '../../src/sections/@marketing';
-import { useEffect, useState } from 'react';
-// import fileContents from '../_data/news.md'
+import { AREA_MANUFACTURING_PATH, AREA_TRANSPORTATION_PATH } from '../../_data/config';
+
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -23,53 +34,73 @@ const RootStyle = styled('div')(({ theme }) => ({
   },
 }));
 
-const BoxStyled = styled((props) => (
-  <div {...props} />
-  // <ListSubheader disableSticky disableGutters {...props} />
-))(({ theme }) => ({
-  ...theme.typography.h2,
-  marginBottom: theme.spacing(1),
-  color: theme.palette.text.primary,
-}));
+// ----------------------------------------------------------------------
 
-
-export async function Process() {
-  const { data: _frontmatter, _content } = matter(NEWS);
-  return { content: await serialize(_content), frontmatter: _frontmatter }
-}
+MarketingCaseStudyPage.propTypes = {
+  caseStudies: PropTypes.array,
+  caseStudy: PropTypes.shape({
+    content: PropTypes.object,
+    frontmatter: PropTypes.shape({
+      coverImg: PropTypes.string,
+      galleryImgs: PropTypes.array,
+      heroImg: PropTypes.string,
+      title: PropTypes.string,
+    }),
+  }),
+};
 
 export default function MarketingCaseStudyPage({ post }) {
   const { frontmatter, content } = post;
+  const { title, coverImg, heroImg, galleryImgs } = frontmatter;
+
   return (
-    <Page title="News">
+    <Page
+      title={`${title} - Case Study`}
+      meta={
+        <>
+          <meta property="og:image" content={coverImg} />
+        </>
+      }
+    >
       <RootStyle>
-        <Stack
-          spacing={3}
-          sx={{
-            mx: 'auto',
-            maxWidth: '80%',
-            textAlign: 'center',
-            mt: { xs: 8, md: 10 },
-          }}
-        >
-          <Typography variant="h2">{frontmatter.title}</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>
-            {frontmatter.description}
-          </Typography>
-        </Stack>
         <Container>
           <Box
-            // direction={{ md: '' }}
             sx={{
-              pt: { xs: 8, md: 8 },
-              pb: { xs: 10, md: 15 },
-              px: 15
+              pt: { xs: 5, md: 10 },
             }}
           >
-            <Markdown content={content} move />
-            {/* <MarketingCaseStudyGallery images={galleryImgs} /> */}
+            <Image alt="hero" src={heroImg} ratio="16/9" sx={{ borderRadius: 2 }} />
           </Box>
+
+          <Breadcrumbs
+            sx={{ my: { xs: 5, md: 10 } }}
+            links={[
+              { name: 'Home', href: '/' },
+              { name: title },
+            ]}
+          />
+
+          <Grid
+            container
+            spacing={{ md: 8 }}
+            direction={{ md: 'row-reverse' }}
+            sx={{
+              pb: { xs: 10, md: 15 },
+            }}
+          >
+            <Grid item xs={12} md={4}>
+              <MarketingCaseStudySummary frontmatter={frontmatter} />
+            </Grid>
+            <Grid item xs={12} md={8}>
+              <Markdown content={content} />
+              {/* <MarketingCaseStudyGallery images={galleryImgs} /> */}
+            </Grid>
+          </Grid>
         </Container>
+
+        <TestimonialsMarketing testimonials={_testimonials} />
+
+        {/* <MarketingCaseStudiesSimilar caseStudies={caseStudies.slice(0, 3)} /> */}
       </RootStyle>
     </Page>
   );

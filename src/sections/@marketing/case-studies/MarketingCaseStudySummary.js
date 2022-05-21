@@ -63,12 +63,12 @@ export default function MarketingCaseStudySummary({ frontmatter }) {
           <Typography variant="body2">{fDate(createdAt)}</Typography>
         </Stack>
 
-        <Divider sx={{ borderStyle: 'dashed' }} />
+        {/* <Divider sx={{ borderStyle: 'dashed' }} />
 
         <Stack direction="row" alignItems="center" spacing={0.5}>
           <Typography variant="subtitle2">Share:</Typography>
           <SocialsButton initialColor links={socialLinks} />
-        </Stack>
+        </Stack> */}
       </Stack>
     </RootStyle>
   );
