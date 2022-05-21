@@ -225,8 +225,7 @@ export const WINTER_CAMP = {
   intro: <span>
     This event will be held annually with different research subjects.<br />
     <br />
-    At the beginning of 2022, DISCOVER Lab held the 1st winter camp， 2021-2022 Robotics Training Camp.<br />
-    Students participating in this camp joined one of the following nine programs based on their interest and skills. Winter camp focuses on training engineering skills.<br />
+    At the beginning of 2022, DISCOVER Lab held the 1st winter camp, 2021-2022 Robotics Training Camp, which focused on engineering skills training. Students participating in this camp have joined one of the following 9 programs based on their interests and skills: <br />
     <br />
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
       <li>Robot group planning and control.</li>
@@ -236,8 +235,8 @@ export const WINTER_CAMP = {
       <li>Wheel-legged robot.<br /></li>
       <li>Indoor autonomous navigation for wheel robots.<br /></li>
       <li>Robotic arm development with reinforcement learning.<br /></li>
-      <li>Research on multimodal perception and generation.<br /></li>
-      <li>Research on multimodal affective computing.<br /></li>
+      <li>Multimodal perception and generation.<br /></li>
+      <li>Multimodal affective computing.<br /></li>
     </div>
     {/* <Image
       alt="teams"
@@ -269,11 +268,11 @@ export const WINTER_CAMP = {
       <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
         Requirements
       </Typography>
-      1. graduate/undergraduate/PhD students enrolled in well known institutions. <br />
-      2. passion for research, excellent in basic skills, outstanding innovation and practical ability. <br />
-      3. At least 1 month of on site work time guaranteed during the winter camp. <br />
-      4. Research experience in robotics, computer vision, and human-computer interaction are preferred. <br />
-      5. Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and other related subjects.
+      1. graduate/undergraduate/PhD students enrolled in well known institutions;<br />
+      2. passion for research, excellent in basic skills, outstanding innovation and practical ability;<br />
+      3. At least 1 month of on site work time guaranteed during the winter camp;<br />
+      4. Research experience in robotics, computer vision, and human-computer interaction are preferred;<br />
+      5. Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and or other related subjects.
     </div>
 
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
