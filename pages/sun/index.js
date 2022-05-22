@@ -29,8 +29,8 @@ MarketingLandingPage.propTypes = {
 export default function MarketingLandingPage({ posts }) {
   return (
     <Page title="Landing - AIR-SUN">
-      {/* <SUNLandingHero pack={GROUP_INTRO.sun}/> */}
-      <MarketingLandingHero pack={GROUP_INTRO.sun} />
+      <SUNLandingHero pack={GROUP_INTRO.sun}/>
+      {/* <MarketingLandingHero pack={GROUP_INTRO.sun} /> */}
       {/* <OurClientsMarketingLanding brands={_brands} /> */}
 
       {/* <MarketingLandingAbout /> */}
@@ -66,7 +66,7 @@ export default function MarketingLandingPage({ posts }) {
 // ----------------------------------------------------------------------
 
 MarketingLandingPage.getLayout = function getLayout(page) {
-  return <Layout >{page}</Layout>;
+  return <Layout transparentHeader>{page}</Layout>;
 };
 
 // ----------------------------------------------------------------------
