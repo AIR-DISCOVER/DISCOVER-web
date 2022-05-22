@@ -18,7 +18,8 @@ export const INTRO = {
     description: (`The Robotics group has focused on research in autonomous systems that can move, manipulate, perceive, decide, and interact with humans.
 We are interested in discovering how robot locomotion and execution can improve the system performance in embodied tasks for transportation, manufacturing, and consumer applications.
 Another domain of our research lies in investigating simulation-to-reality gaps and performing explainable domain transfer learning to shorten deployment duration. 
-Looking forward to a human-robot symbiosis in the future, we therefore aim at developing hardware-aware, scalable algorithms for multi-robot and multi-human collaboration.`)
+Looking forward to a human-robot symbiosis in the future, we therefore aim at developing hardware-aware, scalable algorithms for multi-robot and multi-human collaboration.`),
+    landing_img: "/landing_imgs/mechanic.jpg",
 }
 
 export const COVER_PIC = "/cover_imgs/mechanic.jpg";
