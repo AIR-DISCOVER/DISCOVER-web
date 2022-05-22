@@ -11,7 +11,8 @@ export const INTRO = {
             <br />
             We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people.
         </p>
-    )
+    ),
+    landing_img: "/landing_imgs/air-sun.jpeg",
 }
 
 export const COVER_PIC = "/cover_imgs/air-sun.jpeg";
