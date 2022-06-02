@@ -28,18 +28,18 @@ export const ProgramsPageLinks = [
   },
   {
     order: '3',
-    subheader: 'Career',
-    cover: "/cover_imgs/career.jpg",
-    items: [
-      { title: 'Learn more ..', path: Routes.programs.career },
-    ],
-  },
-  {
-    order: '4',
     subheader: 'Postgraduate',
     cover: "/cover_imgs/postgraduate.jpg",
     items: [
       { title: 'Learn more ..', path: Routes.programs.postgraduate },
+    ],
+  },
+  {
+    order: '4',
+    subheader: 'Career',
+    cover: "/cover_imgs/career.jpg",
+    items: [
+      { title: 'Learn more ..', path: Routes.programs.career },
     ],
   },
   {
