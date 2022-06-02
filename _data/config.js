@@ -457,7 +457,7 @@ export const CAREER_PROFESSOR = {
     </>} />
     <Block title="Salary and Benefits" content={<>
       At DISCOVER Lab we will provide you with:
-      <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua's employee;</li>
+      <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua employee;</li>
       <li>Open and collaborative academic atmosphere together with sufficient start-up funds;</li>
       <li>Research platform at Tsinghua with top-tier industrial resources which offer abundant data and scenarios for technological innovation;</li>
       <li>Mature pipeline for technology industrialization and incubation.</li>
@@ -492,7 +492,7 @@ export const CAREER_POSTDOC = {
     </>} />
     <Block title="Salary and Benefits" content={<>
       At DISCOVER Lab we will provide you with:
-      <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua's employee;</li>
+      <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua employee;</li>
       <li>Open and collaborative academic atmosphere together with sufficient start-up funds;</li>
       <li>Research platform at Tsinghua with top-tier industrial resources which offer abundant data and scenarios for technological innovation;</li>
       <li>Mature pipeline for technology industrialization and incubation.</li>
