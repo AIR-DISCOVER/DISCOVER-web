@@ -12,17 +12,32 @@ import { Grid, Box, Container, Typography, Button } from '@mui/material';
 import { fShortenNumber } from '../../../utils/formatNumber';
 // components
 import { Iconify, CountUpNumber, Image } from '../../../components';
+import cssStyles from 'src/utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
 
 const COLORS = ['primary', 'secondary', 'warning', 'success'];
 
-const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 0, 10),
+const RootStyle = styled('div')(({ bgURL, direction = 'left', theme }) => ({
+  padding: theme.spacing(10, 0),
+  ...cssStyles(theme).bgImage({
+    direction: direction,
+    url: bgURL,
+    startColor: `${alpha(theme.palette.common.black, 0.88)}`,
+    endColor: `${alpha(theme.palette.common.black, 0.88)}`,
+  }),
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(15, 0),
+    ...cssStyles(theme).bgImage({
+      direction: direction,
+      url: bgURL,
+      startColor: `${alpha(theme.palette.common.black, 0)} 0%`,
+      endColor: `${alpha(theme.palette.common.black, 1)} 65%`,
+    }),
+    backgroundPosition: 'center, left ',
+    backgroundSize: 'cover',
   },
+  color: theme.palette.grey[0]
 }));
 
 const IconStyle = styled('div', {
@@ -57,7 +72,7 @@ const IconStyle = styled('div', {
 export default function ProgramCard({ program }) {
   const { title, intro, imageURL, beforeEntry, entry, reverse } = program
   return (
-    <RootStyle>
+    <RootStyle bgURL={imageURL} direction={reverse ? 'left' : 'right'}>
       <Container>
         <Grid container spacing={3} direction={reverse ? 'row-reverse' : 'row'} justifyContent="space-between" alignItems="center">
           <Grid
@@ -69,20 +84,20 @@ export default function ProgramCard({ program }) {
               display: { xs: 'none', md: 'block' },
             }}
           >
-            <Image
+            {/* <Image
               alt="teams"
               src={imageURL}
               sx={{ borderRadius: 2 }}
-            />
+            /> */}
           </Grid>
 
           <Grid item xs={12} md={6} lg={6} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             <Typography variant="h2">{title}</Typography>
-            <Typography sx={{ mt: 3, mb: 5, color: 'text.secondary' }}>
+            <Typography sx={{ mt: 3, mb: 5, color: 'rgb(128,128,128)', fontSize: '1.1rem' }}>
               {intro}
             </Typography>
 
-            <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'text.secondary' }}>
+            <Typography variant="h5" sx={{ mt: 3, mb: 1, color: 'rgb(128,128,128)', fontSize: '1.1rem' }}>
               {beforeEntry}
             </Typography>
             {/* <Grid container spacing={2} xs={12} md={12} lg={12} width="100%" alignItems='center' justifyContent='center'> */}
