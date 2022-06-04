@@ -20,7 +20,7 @@ TeamMarketingAbout.propTypes = {
   members: PropTypes.array.isRequired,
 };
 
-export default function TeamMarketingAbout({ members }) {
+export default function TeamMarketingAbout({ members, inPeoplePage=false }) {
   return (
     <RootStyle>
       <Container>
@@ -53,7 +53,7 @@ export default function TeamMarketingAbout({ members }) {
           }}
         >
           {members.map((member) => (
-            <TeamMarketingMember key={member.id} member={member} />
+            <TeamMarketingMember key={member.id} member={member} inPeoplePage={inPeoplePage}/>
           ))}
         </Box>
       </Container>

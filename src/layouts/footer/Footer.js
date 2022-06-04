@@ -121,8 +121,8 @@ export default function Footer({ fill }) {
           sx={{ py: 3, textAlign: 'center' }}
         >
           <Typography variant="body3" sx={{ color: 'text.secondary' }}>
-            © 2022. All rights reserved
-          <a href='http://beian.miit.gov.cn'> 京ICP备2022014381号</a>
+            © 2022. All rights reserved{"   "}
+          <NextLinkItem children="京ICP备2022014381号" href="http://beian.miit.gov.cn" />
           </Typography>
           {/* <Stack direction="row" spacing={3} justifyContent="center">
             <Link variant="body3" sx={{ color: 'text.secondary' }}>
@@ -164,20 +164,20 @@ function NextLinkItem({ children, sx, href = undefined, ...other }) {
     </NextLink>
   ) : (
     <Link
-    variant="body3"
-    sx={{
-      mt: 1,
-      color: 'text.secondary',
-      cursor: 'inherit',
-      '&:hover': {
-        // color: 'text.primary',
-        textDecoration: 'none'
-      },
-      ...sx,
-    }}
-  >
-    {children}
-  </Link>
+      variant="body3"
+      sx={{
+        mt: 1,
+        color: 'text.secondary',
+        cursor: 'inherit',
+        '&:hover': {
+          // color: 'text.primary',
+          textDecoration: 'none'
+        },
+        ...sx,
+      }}
+    >
+      {children}
+    </Link>
   );
 }
 

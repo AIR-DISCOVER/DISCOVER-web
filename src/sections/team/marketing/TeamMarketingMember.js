@@ -17,7 +17,7 @@ TeamMarketingMember.propTypes = {
   }),
 };
 
-export default function TeamMarketingMember({ member, group }) {
+export default function TeamMarketingMember({ member, group, inPeoplePage=false }) {
   const { name, role, photo, socialLinks } = member;
 
   return (
@@ -63,7 +63,7 @@ export default function TeamMarketingMember({ member, group }) {
         {name}
       </Typography>
       <Typography variant="body3" sx={{ color: 'text.disabled', textAlign: 'center' }}>
-        {name === "Zhou, Guyue" ? (group === "sun" ? "Group Leader (Interim)" : "Group Leader") : role}
+        {name === "Zhou, Guyue" ? (inPeoplePage ? 'Lab Director' : (group === "sun" ? "Group Leader (Interim)" : "Group Leader")) : role}
       </Typography>
     </div>
   );
