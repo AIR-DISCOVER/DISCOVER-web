@@ -32,7 +32,7 @@ const RootStyle = styled('div')(({ theme }) => ({
       direction: 'right',
       url: 'https://zone-assets-api.vercel.app/assets/images/travel/travel_newsletter.jpg',
       startColor: `${alpha(theme.palette.grey[900], 0)} 0%`,
-      endColor: `${alpha(theme.palette.grey[900], 1)} 70%`,
+      endColor: `${alpha(theme.palette.grey[900], 1)} 40%`,
     }),
     backgroundPosition: 'center, left ',
     backgroundSize: 'cover, auto 100%',

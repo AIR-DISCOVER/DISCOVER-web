@@ -89,10 +89,10 @@ export default function BlogPostItem({ post, route }) {
           </NextLink>
         </Stack>
 
-        <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
+        {/* <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
           <Avatar src={author.picture} sx={{ mr: 1 }} />
           {author.name}
-        </Stack>
+        </Stack> */}
       </Stack>
 
       <BgOverlay direction="top" />

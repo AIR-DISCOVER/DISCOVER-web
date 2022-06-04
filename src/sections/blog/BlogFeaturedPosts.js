@@ -188,10 +188,10 @@ function PostItem({ post, route }) {
           </TextMaxLine>
         </Stack>
 
-        <Stack direction="row" alignItems="center" sx={{ pt: 2, typography: 'body2' }}>
+        {/* <Stack direction="row" alignItems="center" sx={{ pt: 2, typography: 'body2' }}>
           <Avatar src={author.picture} sx={{ mr: 1 }} />
           {author.name}
-        </Stack>
+        </Stack> */}
       </Stack>
     </Stack>
   );

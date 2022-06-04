@@ -110,7 +110,7 @@ export default function HCIPostPage({ post, posts }) {
                 <Typography variant="h5">{description}</Typography>
               </Stack>
 
-              <Divider />
+              {/* <Divider />
               <Stack direction="row" justifyContent="space-between" spacing={1.5} sx={{ py: 3 }}>
                 <Avatar src={author.picture} sx={{ width: 48, height: 48 }} />
                 <Stack spacing={0.5} flexGrow={1}>
@@ -119,12 +119,7 @@ export default function HCIPostPage({ post, posts }) {
                     {fDate(createdAt, 'dd/MM/yyyy p')}
                   </Typography>
                 </Stack>
-
-                {/* <Stack direction="row" alignItems="center">
-                  <ShareButton />
-                  <FavoriteButton checked={favorite} onChange={handleChangeFavorite} />
-                </Stack> */}
-              </Stack>
+              </Stack> */}
 
               <Divider sx={{ mb: 6 }} />
 

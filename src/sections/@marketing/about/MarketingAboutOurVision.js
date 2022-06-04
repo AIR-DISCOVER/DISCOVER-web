@@ -38,9 +38,17 @@ export default function MarketingAboutOurVision() {
     <>
       <RootStyle>
         <Container sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <TypographyStyle variant="h2" sx={{ mb: 5, top: 80 }}>
+          <Typography
+            variant="h2"
+            sx={{
+              mb: { xs: 8, md: 5 },
+            }}
+          >
+            Our Vision
+          </Typography>
+          {/* <TypographyStyle variant="h2" sx={{ mb: 5, top: 80 }}>
             <IconifyStyled icon="bxs:quote-left" sx={{ width: 120, height: 120 }} />
-          </TypographyStyle>
+          </TypographyStyle> */}
 
           {/* <PlayerWithImage
             imgPath="https://zone-assets-api.vercel.app/assets/images/marketing/marketing_about_vision.jpg"
@@ -49,7 +57,7 @@ export default function MarketingAboutOurVision() {
 
           <TypographyStyle
             variant="h4"
-            sx={{ pt: 10, maxWidth: 564, bottom: 80, opacity: 0.72, textAlign: 'justify', fontWeight: 'normal' }}
+            sx={{ pt: 5, maxWidth: 564, bottom: 80, opacity: 0.72, textAlign: 'justify', fontWeight: 'normal' }}
           >
             Modern science and technology have been thriving at unprecedented speed, especially in the field of AI and Robotics. The way people live in the universe shall be significantly changed in our generation. In my imagination, DISCOVER Lab will be a utopia where young talents are encouraged to discover something that may become great in future.
           </TypographyStyle>

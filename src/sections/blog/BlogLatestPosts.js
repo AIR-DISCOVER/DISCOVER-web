@@ -69,7 +69,6 @@ export default function BlogLatestPosts({ posts, router }) {
   const handleNext = () => {
     carouselRef.current?.slickNext();
   };
-
   return (
     <RootStyle>
       <Container>
@@ -81,7 +80,6 @@ export default function BlogLatestPosts({ posts, router }) {
         >
           Latest Posts
         </Typography>
-
         <Box sx={{ position: 'relative' }}>
           <CarouselArrows
             onNext={handleNext}
@@ -204,10 +202,10 @@ function PostItem({ post, router }) {
           </NextLink>
         </Stack>
 
-        <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
+        {/* <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
           <Avatar src={author.picture} sx={{ mr: 1 }} />
           {author.name}
-        </Stack>
+        </Stack> */}
       </Stack>
 
       <BgOverlay direction="top" />

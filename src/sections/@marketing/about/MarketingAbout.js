@@ -51,7 +51,7 @@ const CoverDiv = styled('div', { shouldForwardProp: (prop) => prop != 'bgURL' })
       endColor: `${alpha(theme.palette.grey[0], 1)} 85%`,
     }),
     backgroundPosition: 'center, top ',
-    backgroundSize: 'contain',
+    backgroundSize: 'cover !important',
   },
 }));
 const IconStyle = styled('div', {
@@ -87,7 +87,7 @@ export default function MarketingAbout() {
   return (
     <RootStyle>
       <Box sx={{ px: 0, mx: 0, width: '100%' }}>
-        <CoverDiv bgURL="/images/discover.jpgx" >
+        <CoverDiv bgURL="/images/discover.jpg" >
           <Box item xs={12} md={6} lg={6} sx={{
             textAlign: {
               xs: 'center', md: 'left',

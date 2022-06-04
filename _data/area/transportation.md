@@ -23,3 +23,5 @@ Core technology breakthrough:
 - developing next-gen all-terrain locomotion
 - developing next-gen city-scale SLAM
 - developing next-gen 3D scene understanding
+
+面向自动驾驶的车路协同关键技术与展望: [PDF Download](/transportation_book.pdf)
