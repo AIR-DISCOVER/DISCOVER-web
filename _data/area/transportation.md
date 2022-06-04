@@ -1,14 +1,25 @@
 ---
 title: Transportation Area
+coverImg: /images/area_transportation.png
+heroImg: /images/area_transportation.png
 description: test description
 category: test
 createdAt: 22 May 2022
 website: https://www.test.com
 ---
 
-#### 10/15  AIR DISCOVER | WANG He: Estimation and Tracking of Dof Pose
+## Transportation Area
 
-The 6Dof Pose, (including 3Dof Translation and 3Dof Rotation) is an important physical property to transform the object from the world coordinate system to the camera coordinate system, and the estimation and tracking of the 6Dof Pose is widely used in robot vision, grasping and control.
+Since its inception in 2021, DISCOVER Lab participated in **VICAD (Vehicle-Infrastructure Cooperative Autonomous Driving) whitepaper** (link) with Baidu Apollo in 2021 and 2022 sequentially, hold **RoboMaster University Sim2Real Challenge** (link) at ICRA2022, and worked on a **unified open simulator** (coming soon) and **open software for 3D scene understanding** ([https://github.com/OPEN-AIR-SUN](https://github.com/OPEN-AIR-SUN)).
 
+DISCOVER Lab intends to define future transportation from the following aspects: 
 
-On October 22, AIR DISCOVER "Young Scientist Forum III" was held at Turing Lecture Hall, Institute for AI Industry Research, Tsinghua University (AIR). In this issue, we are honored to invite Prof. WANG He, Assistant Professor and PhD supervisor of Frontier Computing Research Center, Peking University, to introduce three papers on estimation and tracking of 6Dof Pose (including 3Dof translation and 3Dof rotation).
+System-level paradigm shifting: 
+- leveraging from 3-dimensional transportation
+- leveraging from smart infrastructure
+- leveraging from simulation-to-reality transfer 
+
+Core technology breakthrough: 
+- developing next-gen all-terrain locomotion
+- developing next-gen city-scale SLAM
+- developing next-gen 3D scene understanding

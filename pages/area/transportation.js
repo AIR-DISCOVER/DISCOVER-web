@@ -67,18 +67,19 @@ export default function MarketingCaseStudyPage({ post }) {
           <Box
             sx={{
               pt: { xs: 5, md: 10 },
+              mb: { xs: 5, md: 5 },
             }}
           >
             <Image alt="hero" src={heroImg} ratio="16/9" sx={{ borderRadius: 2 }} />
           </Box>
 
-          <Breadcrumbs
+          {/* <Breadcrumbs
             sx={{ my: { xs: 5, md: 10 } }}
             links={[
               { name: 'Home', href: '/' },
               { name: title },
             ]}
-          />
+          /> */}
 
           <Grid
             container
@@ -88,17 +89,17 @@ export default function MarketingCaseStudyPage({ post }) {
               pb: { xs: 10, md: 15 },
             }}
           >
-            <Grid item xs={12} md={4}>
+            {/* <Grid item xs={12} md={4}>
               <MarketingCaseStudySummary frontmatter={frontmatter} />
-            </Grid>
-            <Grid item xs={12} md={8}>
+            </Grid> */}
+            <Grid item xs={12} md={12}>
               <Markdown content={content} />
               {/* <MarketingCaseStudyGallery images={galleryImgs} /> */}
             </Grid>
           </Grid>
         </Container>
 
-        <TestimonialsMarketing testimonials={_testimonials} />
+        {/* <TestimonialsMarketing testimonials={_testimonials} /> */}
 
         {/* <MarketingCaseStudiesSimilar caseStudies={caseStudies.slice(0, 3)} /> */}
       </RootStyle>

@@ -1,14 +1,25 @@
 ---
 title: Transportation Area
+coverImg: /images/area_manufacturing.png
+heroImg: /images/area_manufacturing.png
 description: test description
 category: test
 createdAt: 22 May 2022
 website: https://www.test.com
 ---
 
-#### 10/15  AIR DISCOVER | WANG He: Estimation and Tracking of Dof Pose
+## Manufacturing Area
 
-The 6Dof Pose, (including 3Dof Translation and 3Dof Rotation) is an important physical property to transform the object from the world coordinate system to the camera coordinate system, and the estimation and tracking of the 6Dof Pose is widely used in robot vision, grasping and control.
+In early 2022, DISCOVER Lab established a strategic partnership with the **Department of Mechanical and Energy Engineering**, SUSTech ([https://mee.sustech.edu.cn/en](https://mee.sustech.edu.cn/en)) for jointly conducting advanced research on custom-to-manufacturer.
 
+DISCOVER Lab intends to define future manufacturing from the following aspects: 
 
-On October 22, AIR DISCOVER "Young Scientist Forum III" was held at Turing Lecture Hall, Institute for AI Industry Research, Tsinghua University (AIR). In this issue, we are honored to invite Prof. WANG He, Assistant Professor and PhD supervisor of Frontier Computing Research Center, Peking University, to introduce three papers on estimation and tracking of 6Dof Pose (including 3Dof translation and 3Dof rotation).
+System-level paradigm shifting: 
+- leveraging from robot-centered industry engineering
+- leveraging from human-robot collaboration
+- leveraging from exponential robotic reproduction
+
+Core technology breakthrough: 
+- developing next-gen automated optical inspection
+- developing next-gen vision-guided manipulation
+- developing custom-to-manufacturer optimization
