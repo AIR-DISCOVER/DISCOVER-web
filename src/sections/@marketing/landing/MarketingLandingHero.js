@@ -87,6 +87,7 @@ export default function MarketingLandingHero({ pack }) {
             }}
           >
             <Image
+              sx={{width: '100%'}}
               alt="landing-main"
               src={pack.landing_img ? pack.landing_img : "https://zone-assets-api.vercel.app/assets/illustrations/illustration_marketing_market.svg"}
             />
