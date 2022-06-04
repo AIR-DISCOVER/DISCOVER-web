@@ -14,7 +14,7 @@ const Model = ({ onLoading }) => {
     const ref = useRef()
     const scenes = useLoader(GLTFLoader,
         [
-            "/three/new5.glb",
+            "/three/new3.glb",
             // "/three/office1.glb",
             // "/three/office2.glb",
             // "/three/indoor.glb",

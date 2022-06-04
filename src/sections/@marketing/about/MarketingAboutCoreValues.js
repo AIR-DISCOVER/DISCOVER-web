@@ -20,9 +20,9 @@ const CORE_VALUES = [
   {
     title: 'Novelty',
     description: (<p>
-      Pay Attention to the Real Nature <br />
-      Generating New Ideas Dedicatedly <br />
-      Aim at a Paradigm Shift  <br />
+      Pay Attention to the Real Nature<br />
+      Focus on New Ideas not Papers<br />
+      Aim at a Paradigm Shift<br />
       Always Try Something New
     </p>),
     icon: '/value_icons/novel.svg',
@@ -31,8 +31,8 @@ const CORE_VALUES = [
     title: 'Flexibility',
     description: (
       <p>
-        Care More about Results <br />
-        Move First for Grey Areas<br />
+        Care More about Results<br />
+        Move First When Encountering Grey Areas<br />
         Do It if Nothing Gets Worse<br />
         Change is the Only Constant
       </p>
@@ -53,7 +53,7 @@ const CORE_VALUES = [
     title: 'Teamwork',
     description: (<p>
       Play in a Team and Win as a Team<br />
-      Avoid Things that Bring Bad Effects<br />
+      Do Things that Benefit the Team <br />
       Never Turn Away When Problem Occurs<br />
       Make Deliverables User-friendly
     </p>),
@@ -65,7 +65,7 @@ const CORE_VALUES = [
       Integrity is the Foundation<br />
       Aim High and Move Fast<br />
       Engage in the Scientific Process<br />
-      Earn the Science Privilege Every Day</p>),
+      Earn Esteem as Scientist through Daily Hardwork</p>),
     icon: '/value_icons/science.svg',
   },
 ];
