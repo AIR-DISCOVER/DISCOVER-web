@@ -14,4 +14,4 @@ DISCOVER Lab hosts Tsinghua University's postgraduate programs from the Departme
 
 [Application Portal (International Students)](http://gradadmission.tsinghua.edu.cn/f/login)
 
-[Application Instructions for Master of Engineering Management Programs of Tsinghua University:](http://www.imem.tsinghua.edu.cn/zsxx/zsjz.htm)
+[Application Instructions for Master of Engineering Management Programs of Tsinghua University](http://www.imem.tsinghua.edu.cn/zsxx/zsjz.htm)
