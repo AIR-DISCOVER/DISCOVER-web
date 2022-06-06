@@ -25,9 +25,9 @@ export default function MarketingLandingHero({ pack }) {
         <Grid container columnSpacing={10} justifyContent="space-between" alignItems="center" direction={pack?.inverse && "row-reverse"}>
           <Grid item xs={12} md={6} lg={5} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
             <Stack spacing={5}>
-              <Typography variant="overline" sx={{ color: 'primary.main' }}>
+              {/* <Typography variant="overline" sx={{ color: 'primary.main' }}>
                 {pack?.overline}
-              </Typography>
+              </Typography> */}
 
               <Typography variant="h1">{pack?.title}</Typography>
 
