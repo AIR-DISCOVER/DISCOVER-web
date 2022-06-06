@@ -23,3 +23,5 @@ Core technology breakthrough
 - developing next-gen automated optical inspection
 - developing next-gen vision-guided manipulation
 - developing custom-to-manufacturer optimization
+
+##### [21/11/03 Small Building Block, Big Wisdom | Tsinghua AIR×Qi Meng, Upgrading the Toy Industry](https://air.tsinghua.edu.cn/en/info/1007/1270.htm).
