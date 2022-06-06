@@ -9,12 +9,9 @@ website: https://www.test.com
 ---
 
 ## Transportation Area
-
-Since its inception in 2021, DISCOVER Lab participated in **VICAD (Vehicle-Infrastructure Cooperative Autonomous Driving) whitepaper** (link) with Baidu Apollo in 2021 and 2022 sequentially, hold **RoboMaster University Sim2Real Challenge** (link) at ICRA2022, and worked on a **unified open simulator** (coming soon) and **open software for 3D scene understanding** ([https://github.com/OPEN-AIR-SUN](https://github.com/OPEN-AIR-SUN)).
-
 DISCOVER Lab intends to define future transportation from the following aspects: 
 
-System-level paradigm shifting: 
+System-level paradigm shifting
 - leveraging from 3-dimensional transportation
 - leveraging from smart infrastructure
 - leveraging from simulation-to-reality transfer 
@@ -24,4 +21,4 @@ Core technology breakthrough:
 - developing next-gen city-scale SLAM
 - developing next-gen 3D scene understanding
 
-面向自动驾驶的车路协同关键技术与展望: [PDF Download](/transportation_book.pdf)
+Since its inception in 2021, DISCOVER Lab participated in [**VICAD (Vehicle-Infrastructure Cooperative Autonomous Driving) Whitepaper**](/transportation_book.pdf) with Baidu Apollo in 2021 and 2022 sequentially, hold [**RoboMaster University Sim2Real Challenge**](https://air.tsinghua.edu.cn/robomaster/sim2real_icra22.html) at ICRA2022, and worked on a [**Unified Open Simulator** ]() (coming soon) and [**Open Software for 3D Scene Understanding** ](https://github.com/OPEN-AIR-SUN).
