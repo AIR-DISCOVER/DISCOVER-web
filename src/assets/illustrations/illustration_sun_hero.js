@@ -93,7 +93,7 @@ function SUNHeroIllustration({ ...other }) {
       <Box sx={{ position: 'absolute', transform: 'translate(170px, -110px) rotate(15deg)' }}>
         <m.div style={{ y: offsetY(80) }}>
           <Label
-            text="Topic A"
+            text="De-rendering"
             // icon={
             //   <Image
             //     alt="health care"
@@ -117,7 +117,7 @@ function SUNHeroIllustration({ ...other }) {
       >
         <m.div style={{ y: offsetY(-60) }}>
           <Label
-            text="Topic B"
+            text="Open-set"
             // icon={
             //   <Image
             //     alt="software development"
