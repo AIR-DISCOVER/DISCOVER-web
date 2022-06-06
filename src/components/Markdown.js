@@ -16,6 +16,17 @@ import { Image, Iconify } from '.';
 
 // ----------------------------------------------------------------------
 
+const BoxStyled = styled((props) => (
+  <span {...props} />
+  // <ListSubheader disableSticky disableGutters {...props} />
+))(({ theme }) => ({
+  color: theme.palette.text.primary,
+  textDecoration: 'underline',
+  '&:hover': {
+    textDecoration: `underline orange`,
+  }
+}));
+
 const MARGIN = {
   marginTop: 24,
   marginBottom: 16,
@@ -105,11 +116,17 @@ LinkMDX.propTypes = {
 function LinkMDX(props) {
   return !props.href.includes('http') ? (
     <NextLink href={props.href} passHref>
-      <Link {...props}>{props.children}</Link>
+      <Link {...props}>
+        <BoxStyled>
+          {props.children}
+        </BoxStyled>
+      </Link>
     </NextLink>
   ) : (
     <Link {...props} href={props.href} target="_blank" rel="noopener">
-      {props.children}
+      <BoxStyled>
+        {props.children}
+      </BoxStyled>
     </Link>
   );
 }
