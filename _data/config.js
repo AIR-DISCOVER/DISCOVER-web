@@ -258,8 +258,8 @@ export const WINTER_CAMP = {
 
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
       <Block title="Requirements" content={<>
-        <li>graduate/undergraduate/PhD students enrolled in well known institutions;</li>
-        <li>passion for research, excellent in basic skills, outstanding innovation and practical ability;</li>
+        <li>Graduate/undergraduate/PhD students enrolled in well known institutions;</li>
+        <li>Passion for research, excellent in basic skills, outstanding innovation and practical ability;</li>
         <li>At least 1 month of on site work time guaranteed during the winter camp;</li>
         <li>Research experience in robotics, computer vision, and human-computer interaction are preferred;</li>
         <li>Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and or other related subjects.</li>
