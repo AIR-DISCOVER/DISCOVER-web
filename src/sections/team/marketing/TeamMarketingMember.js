@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
+// next
+import NextLink from 'next/link';
 // @mui
 import { Typography, Box } from '@mui/material';
 // components
@@ -17,10 +19,10 @@ TeamMarketingMember.propTypes = {
   }),
 };
 
-export default function TeamMarketingMember({ member, group, inPeoplePage=false }) {
-  const { name, role, photo, socialLinks } = member;
-
-  return (
+export default function TeamMarketingMember({ member, group, inPeoplePage = false }) {
+  const { name, role, photo, url = undefined } = member;
+  const wrapper = (content, url) => <NextLink href={url} passHref>{content}</NextLink>
+  const card = (
     <div>
       <Box
         component={m.div}
@@ -67,4 +69,6 @@ export default function TeamMarketingMember({ member, group, inPeoplePage=false 
       </Typography>
     </div>
   );
+
+  return url ? wrapper(card, url) : card
 }
