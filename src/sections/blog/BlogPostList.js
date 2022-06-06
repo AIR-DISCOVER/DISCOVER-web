@@ -23,7 +23,7 @@ export default function BlogPostList({ posts, category, tags, route }) {
         <BlogPostItem key={post.slug} post={post} route={route}/>
       ))}
     </>
-  ), [displayPosts])
+  ), [displayPosts, page])
   useEffect(() => {
     let p = [];
     posts.forEach(async e => {
@@ -58,7 +58,7 @@ export default function BlogPostList({ posts, category, tags, route }) {
       </Box>
 
       <Pagination
-        count={Math.ceil(posts.length / 8)}
+        count={Math.ceil(displayPosts.length / 8)}
         page={page}
         onChange={(_, value) => { setPage(value) }}
         color="primary"
