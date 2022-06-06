@@ -3,10 +3,10 @@ export const INTRO = {
     title: "SUN Team",
     description: (
         <p>
-            AIR-SUN（Scene UNderstanding）is the computer vision group of DISCOVER. Computer vision is the art of tracing light, along two paths:<br />
+            AIR-SUN（Scene UNderstanding）is the computer vision group of DISCOVER. Computer vision is the art of tracing light, along two paths:
             <br />
-            A. From images to the physical world.<br />
-            B. From images to our brains.
+            A. De-rendering<br />
+            B. Open-set
             <br />
             <br />
             We believe a methodology that integrates data-driven recognition and closed-form reconstruction would lead to a comprehensive understanding of the world, facilitating emerging AI-empowered robotics applications that collaborate with people.
