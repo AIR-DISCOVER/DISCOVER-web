@@ -41,7 +41,8 @@ export const CATEGORIES = [
     "Customer to Manufacturer",
     "City-scale Ultra-low-altitude HD Map",
     "Simulation to Reality",
-    "A Multimodal Robotic Platform"
+    "A Multimodal Robotic Platform",
+    "Exponential Deep Space"
 ]
 
 export const MEMBERS = [

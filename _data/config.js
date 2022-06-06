@@ -258,8 +258,8 @@ export const WINTER_CAMP = {
 
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
       <Block title="Requirements" content={<>
-        <li>graduate/undergraduate/PhD students enrolled in well known institutions;</li>
-        <li>passion for research, excellent in basic skills, outstanding innovation and practical ability;</li>
+        <li>Graduate/undergraduate/PhD students enrolled in well known institutions;</li>
+        <li>Passion for research, excellent in basic skills, outstanding innovation and practical ability;</li>
         <li>At least 1 month of on site work time guaranteed during the winter camp;</li>
         <li>Research experience in robotics, computer vision, and human-computer interaction are preferred;</li>
         <li>Majors in Electrical Engineering, Automation, Computer Science/Engineering, Human-Computer Interaction, Design, Psychology and or other related subjects.</li>
@@ -482,18 +482,18 @@ export const CAREER_POSTDOC = {
       <li>Computer vision, including physical scene decomposition, cognitive scene understanding, robot-centric scene interpretation;</li>
       <li>Human-computer interaction, including human-centered AI System, human-AI collaboration methodology, understanding/modeling people.</li>
     </>} />
-    <Block title="Qualifications and Requirements" content={<>
-      <li>Candidates should hold a doctoral degree (within three years of graduation and under 35 years old, for post-doc positions) in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;
-</li>
-      <li>Candidates should have internationally recognized academic achievements or rich R&D experiences in the industry;</li>
-      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
-    </>} />
     <Block title="Salary and Benefits" content={<>
       At DISCOVER Lab we will provide you with:
       <li>World-class research environment, internationally competitive package, and welfare benefits as a Tsinghua employee;</li>
       <li>Open and collaborative academic atmosphere together with sufficient start-up funds;</li>
       <li>Research platform at Tsinghua with top-tier industrial resources which offer abundant data and scenarios for technological innovation;</li>
       <li>Mature pipeline for technology industrialization and incubation.</li>
+    </>} />
+    <Block title="Qualifications and Requirements" content={<>
+      <li>Candidates should hold a doctoral degree (within three years of graduation and under 35 years old, for post-doc positions) in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;
+</li>
+      <li>Candidates should have internationally recognized academic achievements or rich R&D experiences in the industry;</li>
+      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
     </>} />
     <Block title="Contact Us" content={<>
       Please send your resume to zhouguyue@air.tsinghua.edu.cn.
@@ -513,17 +513,17 @@ export const CAREER_RESEARCHER = {
       <li>Computer vision, including physical scene decomposition, cognitive scene understanding, robot-centric scene interpretation;</li>
       <li>Human-computer interaction, including human-centered AI System, human-AI collaboration methodology, understanding/modeling people.</li>
     </>} />
-    <Block title="Qualifications and Requirements" content={<>
-      <li>Candidates should be graduates from well-known universities with a degree in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
-      <li>Candidates should have academic or industrial experience in robotics, autonomous driving, computer vision, human-centered AI research, smart manufacturing, smart transportation, digital twins or related fields;</li>
-      <li>Working experience at renowned research institutes or leading companies in related fields will be a plus;</li>
-      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
-    </>} />
     <Block title="Salary and Benefits" content={<>
       At DISCOVER Lab we will provide you with:
       <li>Open and collaborative academic atmosphere, and a chance to work with great minds;</li>
       <li>Research platform at Tsinghua with top-tier industrial resources which offer abundant data and scenarios for technological innovation;</li>
       <li>Comfortable work environment, competitive package, and welfare benefits as a Tsinghua employee.</li>
+    </>} />
+    <Block title="Qualifications and Requirements" content={<>
+      <li>Candidates should be graduates from well-known universities with a degree in computer science, electronic engineering, automation, transportation, applied mathematics, pattern recognition, artificial intelligence or other related majors;</li>
+      <li>Candidates should have academic or industrial experience in robotics, autonomous driving, computer vision, human-centered AI research, smart manufacturing, smart transportation, digital twins or related fields;</li>
+      <li>Working experience at renowned research institutes or leading companies in related fields will be a plus;</li>
+      <li>Candidates should have extraordinary abilities in identifying and solving key research problems, with strong communication and teamwork skills.</li>
     </>} />
     <Block title="Contact Us" content={<>
       Please send your resume to zhouguyue@air.tsinghua.edu.cn.

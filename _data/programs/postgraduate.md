@@ -1,8 +1,14 @@
 ---
 title: Postgraduate Program
 ---
+DISCOVER Lab hosts Tsinghua University's postgraduate programs from the Department of Computer Science and Technology (CS) and School of Vehicle and Mobility (SVM) respectively, including regular PhD (CS and SVM), international PhD/Master (CS and SVM), and Master of Engineering Management (SVM). 
 
-DISCOVER Lab hosts Tsinghua University's postgraduate programs from the Department of Computer Science and Technology (CS) and School of Vehicle and Mobility (SVM) respectively, including regular PhD (CS and SVM), international PhD/Master (CS and SVM), and Master of Engineering Management (SVM). Candidates who are interested in pursuing postgraduate study at DISCOVER Lab, please send your resume or portfolio to zhouguyue@air.tsinghua.edu.cn. Some useful links are listed as follows.
+Candidates who are interested in pursuing postgraduate study at DISCOVER Lab, please send your resume or portfolio to zhouguyue@air.tsinghua.edu.cn. 
+
+<span style={{color: 'black', fontWeight: 'bold'}}>Some useful links are listed as follows:</span>
+
+<br/>
+<br/>
 
 [Department of Computer Science and Technology, Tsinghua University](https://www.cs.tsinghua.edu.cn/)
 
