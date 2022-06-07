@@ -8,7 +8,6 @@ createdAt: 22 May 2022
 website: https://www.test.com
 ---
 
-## Transportation Area
 DISCOVER Lab intends to define future transportation from the following aspects: 
 
 **System-level paradigm shifting**

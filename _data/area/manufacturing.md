@@ -8,8 +8,6 @@ createdAt: 22 May 2022
 website: https://www.test.com
 ---
 
-## Manufacturing Area
-
 DISCOVER Lab intends to define future manufacturing from the following aspects: 
 
 **System-level paradigm shifting**

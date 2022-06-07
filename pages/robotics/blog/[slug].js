@@ -146,7 +146,7 @@ export default function MechanicPostPage({ post, posts }) {
 
               <Divider sx={{ mt: 8 }} />
 
-              <BlogAuthorInfo author={author} />
+              {/* <BlogAuthorInfo author={author} /> */}
             </Grid>
           </Grid>
         </Container>

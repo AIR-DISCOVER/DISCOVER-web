@@ -34,6 +34,15 @@ const RootStyle = styled('div')(({ theme }) => ({
   },
 }));
 
+const BoxStyled = styled((props) => (
+  <Box {...props} />
+))(({ theme }) => ({
+  ...theme.typography.h2,
+  marginBottom: theme.spacing(-4),
+  color: theme.palette.text.primary,
+  marginTop: theme.spacing(10),
+}));
+
 // ----------------------------------------------------------------------
 
 MarketingCaseStudyPage.propTypes = {
@@ -64,6 +73,9 @@ export default function MarketingCaseStudyPage({ post }) {
     >
       <RootStyle>
         <Container>
+          <BoxStyled>
+            Transportation Area
+          </BoxStyled>
           <Box
             sx={{
               pt: { xs: 5, md: 10 },
