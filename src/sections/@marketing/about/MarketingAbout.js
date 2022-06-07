@@ -47,7 +47,7 @@ const CoverDiv = styled('div', { shouldForwardProp: (prop) => prop != 'bgURL' })
     ...cssStyles(theme).bgImage({
       direction: 'bottom',
       url: bgURL,
-      startColor: `${alpha(theme.palette.grey[900], 0.25)} 35%`,
+      startColor: `${alpha(theme.palette.grey[900], 0.25)} 55%`,
       endColor: `${alpha(theme.palette.grey[0], 1)} 85%`,
     }),
     backgroundPosition: 'center, top ',

@@ -22,20 +22,19 @@ export default function MarketingLandingHero({ pack }) {
   return (
     <RootStyle>
       <Container>
-        <Grid container columnSpacing={10} justifyContent="space-between" alignItems="center" direction={pack?.inverse && "row-reverse"}>
+        <Typography variant="h1" sx={{mb: 6}}>{pack?.title}</Typography>
+        <Grid container columnSpacing={10} justifyContent="space-between" alignItems="start" direction={pack?.inverse && "row-reverse"}>
           <Grid item xs={12} md={6} lg={5} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
-            <Stack spacing={5}>
-              {/* <Typography variant="overline" sx={{ color: 'primary.main' }}>
+            {/* <Stack spacing={5}> */}
+            {/* <Typography variant="overline" sx={{ color: 'primary.main' }}>
                 {pack?.overline}
               </Typography> */}
 
-              <Typography variant="h1">{pack?.title}</Typography>
+            <Typography sx={{ color: 'text.secondary' }}>
+              {pack?.description}
+            </Typography>
 
-              <Typography sx={{ color: 'text.secondary' }}>
-                {pack?.description}
-              </Typography>
-
-              {/* <Stack
+            {/* <Stack
                 direction={{ xs: 'column', sm: 'row' }}
                 justifyContent={{ xs: 'center', md: 'unset' }}
                 spacing={3}
@@ -74,7 +73,7 @@ export default function MarketingLandingHero({ pack }) {
                   See Our Work
                 </Button>
               </Stack> */}
-            </Stack>
+            {/* </Stack> */}
           </Grid>
 
           <Grid
@@ -87,7 +86,7 @@ export default function MarketingLandingHero({ pack }) {
             }}
           >
             <Image
-              sx={{width: '100%'}}
+              sx={{ width: '100%' }}
               alt="landing-main"
               src={pack.landing_img ? pack.landing_img : "https://zone-assets-api.vercel.app/assets/illustrations/illustration_marketing_market.svg"}
             />

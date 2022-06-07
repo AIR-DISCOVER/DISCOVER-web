@@ -14,7 +14,7 @@ export const INTRO = {
             C. Exploring methods and algorithms enabling effective human-AI collaboration that make human partnerships more productive, creative, accessible and enjoyable.<br />
         </p>
     ),
-    inverse: true,
+    // inverse: true,
     landing_img: "/landing_imgs/hci.png",
 }
 
