@@ -205,6 +205,7 @@ export default function NavDesktopMenu({ lists, isOpen, onClose, isScrolling, sh
                             sx={{
                               mb: 2.5,
                               minHeight: 80,
+                              height: '15vh',
                               borderRadius: 1.5,
                               cursor: 'pointer',
                               transition: theme.transitions.create('opacity'),
