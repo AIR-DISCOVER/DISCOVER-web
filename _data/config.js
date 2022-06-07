@@ -139,7 +139,7 @@ export const GROUP_INTRO = {
 // ==============================================================================
 
 export const SUMMER_CAMP = {
-  bgURL: "",
+  bgURL: "/fade.png",
   title: "Summer Camp Program",
   intro: <span>
     This event will be held annually with different research projects.<br />
@@ -215,7 +215,7 @@ export const SUMMER_CAMP = {
 }
 
 export const WINTER_CAMP = {
-  // bgURL: '/images/winter_camp.gif',
+  bgURL: "/fade.png",
   title: "Winter Camp Program",
   intro: <span>
     This event will be held annually with different research subjects.<br />
@@ -278,6 +278,7 @@ export const WINTER_CAMP = {
 }
 
 export const VISITING_PROGRAM = {
+  bgURL: "/fade.png",
   title: "Internship Program",
   intro: <span>
     Interns at DISCOVER Lab should conduct research in cutting-edge algorithms including federated learning, privacy computing, AI security, and data integration. He/she should also cooperate with leading companies in the industry to apply these technologies to the industry and deliver quality research output.<br />
@@ -321,6 +322,7 @@ export const VISITING_PROGRAM = {
 }
 
 export const STAR_PROGRAM = {
+  bgURL: "/fade.png",
   title: "STAR Program",
   intro: <span>
     <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>

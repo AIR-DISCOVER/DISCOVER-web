@@ -138,7 +138,7 @@ ImageMDX.propTypes = {
 };
 
 function ImageMDX(props) {
-  return <Image alt={props.alt} ratio="16/9" sx={{ borderRadius: 2, my: 5 }} {...props} />;
+  return <Image alt={props.alt}  sx={{ borderRadius: 2, my: 5 }} {...props} />;
 }
 
 // ----------------------------------------------------------------------
