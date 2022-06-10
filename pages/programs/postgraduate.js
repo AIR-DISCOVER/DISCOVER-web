@@ -41,7 +41,7 @@ export async function Process() {
 export default function MarketingCaseStudyPage({ post }) {
   const { frontmatter, content } = post;
   return (
-    <Page title="News">
+    <Page title="Postgraduate Program">
       <RootStyle>
         <Stack
           spacing={3}

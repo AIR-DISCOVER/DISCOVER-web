@@ -63,7 +63,7 @@ export default function MarketingCaseStudyPage({ post }) {
 
   return (
     <Page
-      title={`${title} - Case Study`}
+      title={`${title}`}
       meta={
         <>
           <meta property="og:image" content={coverImg} />
