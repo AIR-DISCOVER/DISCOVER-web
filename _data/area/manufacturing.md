@@ -1,5 +1,5 @@
 ---
-title: Transportation Area
+title: Manufacturing Area
 coverImg: /images/area_manufacturing.png
 heroImg: /images/area_manufacturing.png
 description: test description
