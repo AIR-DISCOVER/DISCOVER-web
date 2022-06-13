@@ -37,7 +37,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function MarketingAboutUsPage() {
   return (
-    <Page title="Undergraduate Enrichment">
+    <Page title="Undergraduate Program">
       <RootStyle>
         {/* <a id='intelligent-system' /> */}
         {/* <ProgramCard program={INTELLIGENT_SYSTEM_PROGRAM}/> */}

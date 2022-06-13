@@ -26,7 +26,7 @@ MarketingLandingPage.propTypes = {
 
 export default function MarketingLandingPage({ posts }) {
   return (
-    <Page title="Mechanic">
+    <Page title="Robotics">
       <MarketingLandingHero pack={GROUP_INTRO.mechanic} />
 
       {/* <OurClientsMarketingLanding brands={_brands} /> */}
