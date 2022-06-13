@@ -41,4 +41,5 @@ export const MEMBERS = [
     { id: 4, name: "Tian, Beiwen", role: "Researcher", photo: "/member_photos/people_Tian_Beiwen.jpg" },
     { id: 5, name: "Chen, Xiaoxue", role: "PhD Student", photo: "/member_photos/people_Chen_Xiaoxue.jpg" },
     { id: 6, name: "Li, Pengfei", role: "PhD Student", photo: "/member_photos/people_Li_Pengfei.jpeg" },
+    { id: 7, name: "Chen, Frodan", role: "Master Student", photo: "/member_photos/people_Chen_Frodan.jpg" },
 ]
