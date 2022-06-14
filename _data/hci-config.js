@@ -62,7 +62,7 @@ export const CATEGORIES = [
 ]
 
 export const MEMBERS = [
-    { id: 1, name: "Gong, Jiangtao", role: "Group Leader", photo: "/member_photos/people_Gong_Jiangtao.jpg" },
+    { id: 1, name: "Gong, Jiangtao", role: "Group Leader", photo: "/member_photos/people_Gong_Jiangtao.jpg", url: "https://air.tsinghua.edu.cn/info/1046/1635.htm" },
     { id: 2, name: "Gao, Jiasi", role: "Postdoc Fellow", photo: "/member_photos/people_Gao_Jiasi.jpg" },
     { id: 3, name: "Guo, Haole", role: "Researcher", photo: "/member_photos/people_Guo_Haole.jpg" },
     { id: 4, name: "Chu, Mengdi", role: "Researcher", photo: "/member_photos/people_Chu_Mengdi.jpg" },
