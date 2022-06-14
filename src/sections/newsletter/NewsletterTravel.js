@@ -20,7 +20,7 @@ import NextLink from 'next/link';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  margin: theme.spacing(40, 0, 0),
+  margin: theme.spacing(16, 0, 0),
   padding: theme.spacing(10, 0),
   ...cssStyles(theme).bgImage({
     url: 'https://zone-assets-api.vercel.app/assets/images/travel/travel_newsletter.jpg',

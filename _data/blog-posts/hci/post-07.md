@@ -14,7 +14,7 @@ author:
   # quotes: Member since Mar 15, 2021
   # about: 
 ---
-AIR, together with QMAN and QIANZHI, has launched the world's first AI personalized building block product - "Brick Studio". Based on the input image, it can a design personalized anthropoid block model which is named Fangzai. The personalized design of Fangzai could be promoted on a large scale and delivered timely through flexible productions. Such application and delivery are further enlarged and accelerated with AI technology, offering customers novel, engaging, and joyful product experiences.
+AIR, together with QMAN and QIANZHI, has launched the world's first AI personalized building block product - "Brick Studio". Based on the input image, it can design personalized anthropoid block model which is named Fangzai. The personalized design of Fangzai could be promoted on a large scale and delivered timely through flexible productions. Such application and delivery are further enlarged and accelerated with AI technology, offering customers novel, engaging, and joyful product experiences.
 
 
 ![Brick Studio](/images/hci_p7_2.jpg)

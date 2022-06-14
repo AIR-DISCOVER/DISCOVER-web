@@ -9,7 +9,7 @@ import { Iconify, PlayerWithImage } from '../../../components';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(8, 0),
+  padding: theme.spacing(0, 0),
   [theme.breakpoints.up('md')]: {
     padding: theme.spacing(0),
   },
@@ -41,7 +41,7 @@ export default function MarketingAboutOurVision() {
           <Typography
             variant="h2"
             sx={{
-              mb: { xs: 8, md: 5 },
+              mb: { xs: 2, md: 2 },
             }}
           >
             Our Vision
@@ -63,7 +63,7 @@ export default function MarketingAboutOurVision() {
           </TypographyStyle>
           <TypographyStyle
             variant="h4"
-            sx={{ pt: 10, pb: 20, width: '100%', maxWidth: 564, bottom: 80, opacity: 0.32, textAlign: 'end' }}
+            sx={{ pt: 10, pb: 5, width: '100%', maxWidth: 564, bottom: 80, opacity: 0.32, textAlign: 'end' }}
           >
             -- Lab Director, Prof. Zhou, Guyue
           </TypographyStyle>

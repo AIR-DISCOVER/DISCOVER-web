@@ -72,9 +72,9 @@ const CORE_VALUES = [
 
 const RootStyle = styled('div')(({ theme }) => ({
   textAlign: 'center',
-  padding: theme.spacing(8, 0, 0),
+  padding: theme.spacing(0, 0, 0),
   [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(15, 0, 0),
+    padding: theme.spacing(12, 0, 0),
   },
 }));
 
@@ -87,7 +87,7 @@ export default function MarketingAboutCoreValues() {
         <Typography
           variant="h2"
           sx={{
-            mb: { xs: 8, md: 10 },
+            mb: { xs: 4, md: 4 },
           }}
         >
           Our Core Values
