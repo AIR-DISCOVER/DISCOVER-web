@@ -72,7 +72,7 @@ export default function MechanicPostPage({ post, posts }) {
   };
 
   return (
-    <Page title={`${title} - Post | Mechanic`}>
+    <Page title={`${title} - Post | Robotics`}>
       <RootStyle>
         <Image alt="hero" src={heroImg} ratio="21/9w" />
 
@@ -81,7 +81,7 @@ export default function MechanicPostPage({ post, posts }) {
             sx={{ my: 3 }}
             links={[
               { name: 'Home', href: '/' },
-              { name: 'Mechanic', href: Routes.mechanic.landing },
+              { name: 'Robotics', href: Routes.mechanic.landing },
               { name: 'Research', href: Routes.mechanic.posts },
               { name: title },
             ]}
