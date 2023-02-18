@@ -1,4 +1,4 @@
-name: build
+name: robotics_build
 
 on:
   push:
