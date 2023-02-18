@@ -41,10 +41,10 @@ jobs:
         login-server: ${{ secrets.REGISTRY }} 
  
     - name: Build Docker
-      run: docker build . -t ${{ secrets.REGISTRY }}:robotics
+      run: docker build . -t ${{ secrets.IMAGE }}:robotics
 
     - name: Push to Registry
-      run: docker push ${{ secrets.REGISTRY }}:robotics
+      run: docker push ${{ secrets.IMAGE }}:robotics
 
     - name: Docker deployment (by executing remote ssh commands using ssh key)
       uses: appleboy/ssh-action@master
