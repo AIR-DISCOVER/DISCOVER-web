@@ -1,7 +1,7 @@
 ---
 title: "Delving into Shape-aware Zero-shot Semantic Segmentation"
 category: Scene analysis and understanding
-createdAt: '2022-03-029T18:11'
+createdAt: '2023-03-29T18:11'
 coverImg: /images/sun_vision_sazs_1.png
 heroImg: /images/sun_vision_sazs_3.png
 tags: [Zero-shot learning, Semantic Segmentation, Multi-modal]
