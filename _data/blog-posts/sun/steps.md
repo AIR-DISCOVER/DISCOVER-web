@@ -8,7 +8,6 @@ tags: [Self-superviesd Learning, Depth Estimation, Low-light Image Enhancement]
 author:
   name: Zheng, Yupeng
 ---
-## STEPS: Joint Self-Supervised Nighttime Image Enhancement and Depth Estimation
 
 Self-supervised depth estimation draws a lot of attention
 recently as it can promote the 3D sensing capabilities of
