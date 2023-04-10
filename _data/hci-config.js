@@ -67,4 +67,6 @@ export const MEMBERS = [
     { id: 3, name: "Guo, Haole", role: "Researcher", photo: "/member_photos/people_Guo_Haole.jpg" },
     { id: 4, name: "Chu, Mengdi", role: "Researcher", photo: "/member_photos/people_Chu_Mengdi.jpg" },
     { id: 5, name: "Zhang, Yan", role: "Researcher", photo: "/member_photos/people_Zhang_Yan.jpg" },
+    { id: 6, name: "Zheng, Chen", role: "Postdoc Fellow", photo: "/member_photos/people_Zheng_Chen.jpg" },
+    
 ]
