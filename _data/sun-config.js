@@ -42,4 +42,5 @@ export const MEMBERS = [
     { id: 5, name: "Chen, Xiaoxue", role: "PhD Student", photo: "/member_photos/people_Chen_Xiaoxue.jpg" },
     { id: 6, name: "Li, Pengfei", role: "PhD Student", photo: "/member_photos/people_Li_Pengfei.jpeg" },
     { id: 7, name: "Chen, Frodan", role: "Master Student", photo: "/member_photos/people_Chen_Frodan.JPG" },
+    { id: 8, name: "Zhao, Hao", role: "Group Leader", photo: "/member_photos/people_Zhao_Hao.JPG" },
 ]
