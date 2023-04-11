@@ -2,8 +2,8 @@
 title: Planning Assembly Sequence with Graph Transformer
 category: Assembly Sequence Planning
 createdAt: '2023-04-07T20:23'
-coverImg: /images/hci_ASP_01.PNG
-heroImg: /images/hci_ASP_02.PNG
+coverImg: /images/hci_ASP_01.png
+heroImg: /images/hci_ASP_02.png
 tags: [Transformer, Graph Attention, ASP]
 author:
   name: Ma, Lin

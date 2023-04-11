@@ -2,8 +2,8 @@
 title: "Annotating Covert Hazardous Driving Scenarios Online: Utilizing Drivers' Electroencephalography (EEG) Signals"
 category: Neuroscience for AI
 createdAt: '2023-04-04T14:07'
-coverImg: /images/hci_eeg_3.PNG
-heroImg: /images/hci_eeg_1.PNG
+coverImg: /images/hci_eeg_3.png
+heroImg: /images/hci_eeg_1.png
 tags: [Hazard Detection, EEG, Annotation, Neuroscience for AI]
 author:
   name: Chen Zheng, Muxiao Zi, Wenjie Jiang, Mengdi Chu, Yan Zhang, Jirui Yuan, Guyue Zhou and Jiangtao Gong
