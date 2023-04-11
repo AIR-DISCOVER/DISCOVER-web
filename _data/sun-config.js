@@ -34,7 +34,8 @@ export const CATEGORIES = [
 ]
 
 export const MEMBERS = [
-    { id: 0, name: "Zhou, Guyue", role: "Lab Director", photo: "/member_photos/people_Zhou_Guyue.jpeg", url: "https://air.tsinghua.edu.cn/info/1046/1199.htm" },
+    // { id: 0, name: "Zhou, Guyue", role: "Lab Director", photo: "/member_photos/people_Zhou_Guyue.jpeg", url: "https://air.tsinghua.edu.cn/info/1046/1199.htm" },
+    { id: 0, name: "Zhao, Hao", role: "Group Leader", photo: "/member_photos/people_Zhao_Hao.JPG" },
     { id: 1, name: "Shi, Yongliang", role: "Postdoc Fellow", photo: "/member_photos/people_Shi_Yongliang.jpeg" },
     { id: 2, name: "Zhou, Qiang", role: "Researcher", photo: "/member_photos/people_Zhou_Qiang.jpg" },
     { id: 3, name: "Li, Yang", role: "Researcher", photo: "/member_photos/people_Li_Yang.jpg" },
@@ -42,5 +43,4 @@ export const MEMBERS = [
     { id: 5, name: "Chen, Xiaoxue", role: "PhD Student", photo: "/member_photos/people_Chen_Xiaoxue.jpg" },
     { id: 6, name: "Li, Pengfei", role: "PhD Student", photo: "/member_photos/people_Li_Pengfei.jpeg" },
     { id: 7, name: "Chen, Frodan", role: "Master Student", photo: "/member_photos/people_Chen_Frodan.JPG" },
-    { id: 8, name: "Zhao, Hao", role: "Group Leader", photo: "/member_photos/people_Zhao_Hao.JPG" },
 ]

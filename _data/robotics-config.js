@@ -48,11 +48,10 @@ export const CATEGORIES = [
 export const MEMBERS = [
     { id: 1, name: "Zhou, Guyue", role: "Lab Director", photo: "/member_photos/people_Zhou_Guyue.jpeg", url: "https://air.tsinghua.edu.cn/info/1046/1199.htm" },
     { id: 2, name: "Chen, Yilun", role: "Chief Scientist", photo: "/member_photos/people_Chen_Yilun.jpg" },
-    { id: 3, name: "Jiang, Chengyu", role: "Researcher", photo: "/member_photos/people_Jiang_Chengyu.jpg" },
-    { id: 4, name: "Zhang, Xinliang", role: "Engineer", photo: "/member_photos/people_Zhang_Xinliang.jpg" },
-    { id: 5, name: "Huang, Pengfei", role: "Researcher", photo: "/member_photos/people_Huang_Pengfei.jpg" },
-    { id: 6, name: "Li, Chuxuan", role: "Researcher", photo: "/member_photos/people_Li_Chuxuan.jpg" },
+    { id: 3, name: "Rong, Yiming", role: "Distinguished Visiting Professor", photo: "/member_photos/people_Rong_Yiming.PNG" },
+    { id: 4, name: "Huang, Pengfei", role: "Researcher", photo: "/member_photos/people_Huang_Pengfei.jpg" },
+    { id: 5, name: "Li, Chuxuan", role: "Researcher", photo: "/member_photos/people_Li_Chuxuan.jpg" },
     // { id: 5, name: "Li, Jin", role: "Researcher", photo: "/member_photos/people_Li_Jin.jpg" },
-    { id: 7, name: "Wang, Zheng", role: "Project Manager", photo: "/member_photos/people_Wang_Zheng.jpg" },
-    { id: 8, name: "Huang, Yao", role: "Master Student", photo: "/member_photos/people_Huang_Yao.jpg" },
+    { id: 6, name: "Wang, Zheng", role: "Project Manager", photo: "/member_photos/people_Wang_Zheng.jpg" },
+    { id: 7, name: "Huang, Yao", role: "Master Student", photo: "/member_photos/people_Huang_Yao.jpg" },
 ]

@@ -1,12 +1,12 @@
 // @mui
+import { Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { Button, Stack, Typography, InputAdornment, FilledInput } from '@mui/material';
 // layouts
 import Layout from '../src/layouts';
 // hooks
 import useCountdown from '../src/hooks/useCountdown';
 // components
-import { Page, Image, SocialsButton } from '../src/components';
+import { Image, Page } from '../src/components';
 
 // ----------------------------------------------------------------------
 
@@ -36,7 +36,7 @@ const SeparatorStyle = styled(Typography)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function ComingSoonPage() {
-  const countdown = useCountdown(new Date('05/31/2022 21:30'));
+  const countdown = useCountdown(new Date('05/31/2023 21:30'));
 
   return (
     <Page title="Coming Soon">

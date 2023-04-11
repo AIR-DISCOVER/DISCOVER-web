@@ -1,19 +1,15 @@
-import NextLink from 'next/link';
-import Routes from 'src/routes';
-import { styled, useTheme } from '@mui/material/styles';
-import { Box } from '@mui/material';
-import { ListSubheader } from '@mui/material';
+import emailIcon from '@iconify/icons-carbon/email';
 import locationIcon from '@iconify/icons-carbon/location';
 import mobileIcon from '@iconify/icons-carbon/mobile';
-import emailIcon from '@iconify/icons-carbon/email';
-import timeIcon from '@iconify/icons-carbon/time';
-import launchIcon from '@iconify/icons-carbon/launch';
-import { Iconify, Image } from 'src/components';
+import { Box, ListSubheader, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import NextLink from 'next/link';
+import { Iconify } from 'src/components';
+import Routes from 'src/routes';
 import * as DISCOVER from './discover-config';
 import * as HCI from './hci-config';
-import * as SUN from './sun-config';
 import * as ROBOTICS from './robotics-config';
-import { Typography } from '@mui/material';
+import * as SUN from './sun-config';
 
 const Block = ({ title, content }) =>
   <div style={{ pageBreakInside: 'avoid', breakInside: 'avoid-column' }}>
@@ -378,12 +374,17 @@ export const ROBOMASTER_PROGRAM = {
     {
       id: 1,
       description: 'Course Homepage',
-      href: "https://air.tsinghua.edu.cn/robomaster/course_ug.html",
+      href: "https://air-discover.github.io/Intelligent-Systems-2022Fall/",
     },
     {
       id: 2,
       description: 'RMUS 2022',
-      href: "https://air.tsinghua.edu.cn/robomaster/sim2real_icra22.html",
+      // href: "https://air.tsinghua.edu.cn/robomaster/sim2real_icra22.html",
+    },
+    {
+      id: 3,
+      description: 'RMUS 2023',
+      href: "https://air.tsinghua.edu.cn/robomaster/sim2real_icra23.html",
     },
   ],
 }

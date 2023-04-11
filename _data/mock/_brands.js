@@ -12,6 +12,9 @@ const BRANDS_NAME = [
   { name: 'xiaomi', image: '/partner_icons/xiaomi.png' },
   { name: 'tuxingqiyuan', image: '/partner_icons/tuxingqiyuan_icononly.svg' },
   { name: 'sustech', image: '/partner_icons/sustech.svg' },
+  { name: 'horizon', image: '/partner_icons/horizon.jpeg' },
+  { name: 'daimler', image: '/partner_icons/daimler.png' },
+  { name: 'didi', image: '/partner_icons/didi.png' },
 ];
 
 export const _brands = BRANDS_NAME.map((brand, index) => ({
