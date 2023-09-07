@@ -65,7 +65,8 @@ export const MEMBERS = [
     { id: 1, name: "Gong, Jiangtao", role: "Group Leader", photo: "/member_photos/people_Gong_Jiangtao.jpg", url: "https://air.tsinghua.edu.cn/info/1046/1635.htm" },
     { id: 2, name: "Zheng, Chen", role: "Postdoc Fellow", photo: "/member_photos/people_Zheng_Chen.jpg" },
     { id: 3, name: "Gao, Jiasi", role: "Postdoc Fellow", photo: "/member_photos/people_Gao_Jiasi.jpg" },
-    { id: 4, name: "Chu, Mengdi", role: "Researcher", photo: "/member_photos/people_Chu_Mengdi.jpg" },
-    { id: 5, name: "Zhang, Yan", role: "Researcher", photo: "/member_photos/people_Zhang_Yan.jpg" },
+    { id: 4, name: "Shi, Lu", role: "Postdoc Fellow", photo: "/member_photos/people_Shi_Lu.jpg", url: "https://sites.google.com/view/lushi-personal" },
+    { id: 5, name: "Chu, Mengdi", role: "Researcher", photo: "/member_photos/people_Chu_Mengdi.jpg" },
+    { id: 6, name: "Zhang, Yan", role: "Researcher", photo: "/member_photos/people_Zhang_Yan.jpg" },
     
 ]
